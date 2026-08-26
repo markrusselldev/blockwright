@@ -1,0 +1,15 @@
+{
+	"styles": {
+		"blocks": {
+			"core/cover": {
+				"color": {
+					"background": "var:preset|color|surface-2",
+					"text": "var:preset|color|text-1"
+				},
+				"border": {
+					"radius": "var:preset|border-radius|l"
+				}
+			}
+		}
+	}
+}

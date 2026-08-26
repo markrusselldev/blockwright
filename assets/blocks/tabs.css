@@ -1,0 +1,49 @@
+/* Per-block shim: core/tabs states + active indicator (theme.json schema gap).
+   theme.json can't express the [aria-selected] state, the ::before indicator,
+   or the hover transition, and core routes
+   tab-list border to the buttons, so the strip baseline lives here too. Resting
+   spacing (gaps) is token-driven in config/theme/blocks/core-tabs.json.
+
+   Colour model: the base look is monochrome by design, so the active state reads
+   by VALUE - muted inactive labels, strong active label - not hue. The indicator
+   uses the `link` token, which is a visible mid-grey in the base look and re-hues
+   to the brand colour in every colour variation, so the underline gains the brand
+   pop automatically without this file knowing which variation is active. */
+
+/* The tab strip sits on a divider baseline; the active indicator connects to it. */
+.wp-block-tab-list {
+	border-block-end: var(--wp--custom--border--width--thin) solid
+		var(--wp--preset--color--divider);
+}
+
+/* Inactive labels are muted; hover darkens them toward the active label. */
+.wp-block-tab-list button {
+	position: relative;
+	color: var(--wp--preset--color--text-2);
+	transition: color var(--wp--custom--motion--duration--fast)
+		var(--wp--custom--motion--easing--standard);
+}
+
+.wp-block-tab-list button:hover {
+	color: var(--wp--preset--color--text-1);
+}
+
+/* Active tab: full-strength label (strong neutral, always readable). */
+.wp-block-tab-list button[aria-selected="true"] {
+	color: var(--wp--preset--color--text-1);
+}
+
+/* Active indicator: overrides core's 2px currentColor bar with the `link` token
+   (visible in the base look, brand-hued in colour variations). Fully declared so
+   it survives a core markup change, and pulled onto the strip baseline so the two
+   read as one system. */
+.wp-block-tab-list button[aria-selected="true"]::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: calc(-1 * var(--wp--custom--border--width--thin));
+	width: 100%;
+	border-bottom: var(--wp--custom--border--width--medium) solid
+		var(--wp--preset--color--link);
+	pointer-events: none;
+}

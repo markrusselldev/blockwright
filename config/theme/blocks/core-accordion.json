@@ -1,0 +1,11 @@
+{
+	"styles": {
+		"blocks": {
+			"core/accordion": {
+				"spacing": {
+					"blockGap": "var:preset|spacing|x-small"
+				}
+			}
+		}
+	}
+}

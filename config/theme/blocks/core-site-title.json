@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"styles": {
+		"blocks": {
+			"core/site-title": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|headings",
+					"fontSize": "var:preset|font-size|l",
+					"fontWeight": "600"
+				},
+				"color": {
+					"text": "var:preset|color|text-1"
+				},
+				"elements": {
+					"link": {
+						"color": {
+							"text": "var:preset|color|text-1"
+						},
+						":hover": {
+							"color": {
+								"text": "var:preset|color|primary"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

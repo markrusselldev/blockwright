@@ -1,0 +1,229 @@
+/*
+ * Button appearance - the SINGLE source for Gutenberg block buttons (core/button,
+ * plus the search/file block buttons). Token-driven; author overrides respected via
+ * revert-layer. Base look + the three CTA variants (fill / accent / subtle) + hover /
+ * active / disabled all live here.
+ *
+ * Related by design - NOT duplicates:
+ *   - theme.json elements.button - same tokens, for editor parity + the block controls.
+ *   - _interactive.scss - the shared focus-ring + base transition baseline for ALL
+ *     interactive controls, so buttons/links/inputs focus identically.
+ *   - _forms.scss - native form submit/reset <input> buttons (form controls, amber CTA).
+ */
+:where(
+	.wp-element-button,
+	.wp-block-button__link,
+	.wp-block-search__button,
+	.wp-block-file__button
+) {
+	--_bg: var(--wp--custom--button--default--bg);
+	--_bg-h: var(--wp--custom--button--default--bg-hover);
+	--_bg-a: var(--wp--custom--button--default--bg-active);
+	--_tx: var(--wp--custom--button--default--text);
+	--_border: transparent;
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--wp--custom--button--text-gap, 0.5ch);
+	background: var(--_bg);
+	color: var(--_tx);
+	border: var(--wp--custom--border--width--thin, 1px) solid var(--_border);
+	border-radius: var(--wp--custom--button--radius);
+	padding-block: var(--wp--custom--button--py);
+	padding-inline: var(--wp--custom--button--px);
+	line-height: calc(
+		var(--wp--custom--button--height, 2.5rem) - var(
+				--wp--custom--border--width--thin,
+				1px
+			) *
+			2
+	);
+	min-height: var(--wp--custom--button--height, 2.5rem);
+	font-weight: var(--wp--custom--button--weight);
+	font-size: var(--wp--custom--button--font-size);
+	text-decoration: none;
+	cursor: pointer;
+	transition:
+		background-color var(--wp--custom--motion--duration--fast) linear,
+		border-color var(--wp--custom--motion--duration--fast) linear,
+		transform var(--wp--custom--motion--duration--x-fast)
+			var(--wp--custom--motion--easing--standard),
+		filter var(--wp--custom--motion--duration--fast) linear;
+}
+
+/* Respect author overrides */
+:where(.wp-element-button, .wp-block-button__link).has-background,
+:where(.wp-element-button, .wp-block-button__link)[style*="background"] {
+	background: revert-layer;
+	color: revert-layer;
+}
+
+:where(.wp-element-button, .wp-block-button__link).has-text-color,
+:where(.wp-element-button, .wp-block-button__link)[style*="color"] {
+	color: revert-layer;
+}
+
+:where(.wp-element-button, .wp-block-button__link):hover {
+	background: var(--_bg-h);
+}
+
+:where(.wp-element-button, .wp-block-button__link):active {
+	background: var(--_bg-a);
+	transform: translateY(var(--wp--custom--border--width--thin));
+}
+
+/* Focus ring: provided by the shared interactive baseline in _interactive.scss
+   (identical tokens - link colour, form focus-width). Not redefined here. */
+
+:where(.wp-element-button, .wp-block-button__link)[disabled],
+:where(.wp-element-button, .wp-block-button__link).is-disabled,
+:where(.wp-element-button, .wp-block-button__link)[aria-disabled="true"] {
+	opacity: 0.6;
+	pointer-events: none;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   CTA VARIANTS - Marketing buttons with generous sizing and clear hierarchy
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* Shared CTA base - generous padding and prominent typography.
+   is-style-outline is qualified with :not() so it out-specificities core's
+   own outline padding rule (0,4,0) and takes the SAME box as the primary -
+   fixes the size inversion (secondary must never be larger than primary). */
+.wp-block-button.is-style-fill .wp-block-button__link,
+.wp-block-button.is-style-accent .wp-block-button__link,
+.wp-block-button.is-style-subtle .wp-block-button__link,
+.wp-block-button.is-style-outline
+	.wp-block-button__link:not(.has-background):not([style*="background"]) {
+	padding-block: var(--wp--custom--button--cta--py);
+	padding-inline: var(--wp--custom--button--cta--px);
+	border-radius: var(--wp--custom--button--cta--radius);
+	font-weight: var(--wp--custom--button--cta--weight);
+	font-size: var(--wp--custom--button--cta--font-size);
+	min-height: calc(
+		var(--wp--custom--button--cta--py) * 2 +
+			var(--wp--custom--button--cta--font-size) * 1.2 +
+			var(--wp--custom--border--width--thin, 1px) * 2
+	);
+	line-height: 1.2;
+}
+
+/* PRIMARY CTA (is-style-fill) - Solid background, highest emphasis */
+.wp-block-button.is-style-fill
+	.wp-block-button__link:not(.has-background):not([style*="background"]) {
+	--_bg: var(--wp--custom--button--primary--bg);
+	--_bg-h: var(--wp--custom--button--primary--bg-hover);
+	--_bg-a: var(--wp--custom--button--primary--bg-active);
+	--_tx: var(--wp--custom--button--primary--text);
+	--_border: transparent;
+	background: var(--_bg);
+	color: var(--_tx);
+}
+
+.wp-block-button.is-style-fill
+	.wp-block-button__link:not(.has-background):not(
+		[style*="background"]
+	):hover {
+	background: var(--wp--custom--button--primary--bg-hover);
+}
+
+.wp-block-button.is-style-fill
+	.wp-block-button__link:not(.has-background):not(
+		[style*="background"]
+	):active {
+	background: var(--wp--custom--button--primary--bg-active);
+	transform: translateY(var(--wp--custom--border--width--thin));
+}
+
+/* ACCENT CTA (is-style-accent) - Soft accent tint, medium emphasis */
+.wp-block-button.is-style-accent
+	.wp-block-button__link:not(.has-background):not([style*="background"]) {
+	--_bg: var(--wp--custom--button--accent--bg);
+	--_bg-h: var(--wp--custom--button--accent--bg-hover);
+	--_bg-a: var(--wp--custom--button--accent--bg-active);
+	--_tx: var(--wp--custom--button--accent--text);
+	--_border: var(--wp--custom--button--accent--border);
+	background: var(--_bg);
+	color: var(--_tx);
+	border-color: var(--_border);
+}
+
+.wp-block-button.is-style-accent
+	.wp-block-button__link:not(.has-background):not(
+		[style*="background"]
+	):hover {
+	background: var(--wp--custom--button--accent--bg-hover);
+}
+
+.wp-block-button.is-style-accent
+	.wp-block-button__link:not(.has-background):not(
+		[style*="background"]
+	):active {
+	background: var(--wp--custom--button--accent--bg-active);
+	transform: translateY(var(--wp--custom--border--width--thin));
+}
+
+/* SUBTLE CTA (is-style-subtle) - Ghost: accent text only, no border, lowest emphasis */
+.wp-block-button.is-style-subtle
+	.wp-block-button__link:not(.has-background):not([style*="background"]) {
+	--_bg: var(--wp--custom--button--subtle--bg);
+	--_bg-h: var(--wp--custom--button--subtle--bg-hover);
+	--_bg-a: var(--wp--custom--button--subtle--bg-active);
+	--_tx: var(--wp--custom--button--subtle--text);
+	--_border: var(--wp--custom--button--subtle--border);
+	background: var(--_bg);
+	color: var(--_tx);
+	border-color: var(--_border);
+}
+
+.wp-block-button.is-style-subtle
+	.wp-block-button__link:not(.has-background):not(
+		[style*="background"]
+	):hover {
+	background: var(--wp--custom--button--subtle--bg-hover);
+}
+
+.wp-block-button.is-style-subtle
+	.wp-block-button__link:not(.has-background):not(
+		[style*="background"]
+	):active {
+	background: var(--wp--custom--button--subtle--bg-active);
+	transform: translateY(var(--wp--custom--border--width--thin));
+}
+
+/* OUTLINE (core "Outline" style) - themed as the accent secondary.
+   Core leaves this transparent with a currentColor (neutral) 2px border, so it
+   renders black/white in every colour scheme AND misses the CTA sizing above.
+   Re-point it at the subtle (accent-outline)
+   tokens and a thin border so it reads gold, adapts per scheme, and sits at the
+   same size as the primary. Selectors are :not()-qualified (0,5,0) to beat
+   core's outline rules (0,4,0). This corrects already-placed buttons (they
+   already carry .is-style-outline) with no pattern re-insert. */
+.wp-block-button.is-style-outline
+	.wp-block-button__link:not(.has-background):not([style*="background"]) {
+	--_bg: var(--wp--custom--button--outline--bg);
+	--_bg-h: var(--wp--custom--button--outline--bg-hover);
+	--_bg-a: var(--wp--custom--button--outline--bg-active);
+	--_tx: var(--wp--custom--button--outline--text);
+	--_border: var(--wp--custom--button--outline--border);
+	background: var(--_bg);
+	color: var(--_tx);
+	border-color: var(--_border);
+	border-width: var(--wp--custom--border--width--thin, 1px);
+}
+
+.wp-block-button.is-style-outline
+	.wp-block-button__link:not(.has-background):not(
+		[style*="background"]
+	):hover {
+	background: var(--wp--custom--button--outline--bg-hover);
+}
+
+.wp-block-button.is-style-outline
+	.wp-block-button__link:not(.has-background):not(
+		[style*="background"]
+	):active {
+	background: var(--wp--custom--button--outline--bg-active);
+	transform: translateY(var(--wp--custom--border--width--thin));
+}

@@ -1,0 +1,65 @@
+{
+	"settings": {
+		"spacing": {
+			"units": [
+				"rem",
+				"%",
+				"px",
+				"vw",
+				"vh",
+				"ch"
+			],
+			"defaultSpacingSizes": false,
+			"spacingSizes": [
+				{
+					"slug": "xxx-small",
+					"name": "3X Small",
+					"size": "0.25rem"
+				},
+				{
+					"slug": "xx-small",
+					"name": "2X Small",
+					"size": "0.5rem"
+				},
+				{
+					"slug": "x-small",
+					"name": "X Small",
+					"size": "clamp(0.75rem, 0.6875rem + 0.3125vw, 0.9375rem)"
+				},
+				{
+					"slug": "small",
+					"name": "Small",
+					"size": "clamp(1rem, 0.9167rem + 0.4167vw, 1.25rem)"
+				},
+				{
+					"slug": "medium",
+					"name": "Medium",
+					"size": "clamp(1.5rem, 1.375rem + 0.625vw, 1.875rem)"
+				},
+				{
+					"slug": "large",
+					"name": "Large",
+					"size": "clamp(2rem, 1.8333rem + 0.8333vw, 2.5rem)"
+				},
+				{
+					"slug": "x-large",
+					"name": "X Large",
+					"size": "clamp(3rem, 2.75rem + 1.25vw, 3.75rem)"
+				},
+				{
+					"slug": "xx-large",
+					"name": "2X Large",
+					"size": "clamp(4rem, 3.6667rem + 1.6667vw, 5rem)"
+				},
+				{
+					"slug": "xxx-large",
+					"name": "3X Large",
+					"size": "clamp(6rem, 5.5rem + 2.5vw, 7.5rem)"
+				}
+			],
+			"blockGap": true,
+			"margin": true,
+			"padding": true
+		}
+	}
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.9/theme.json",
+  "version": 3,
+  "slug": "post-meta-row",
+  "title": "Post Meta (row)",
+  "blockTypes": [
+    "core/group"
+  ],
+  "style": {
+    "layout": {
+      "type": "flex",
+      "justifyContent": "flex-start",
+      "flexWrap": "wrap",
+      "alignItems": "center"
+    },
+    "spacing": {
+      "blockGap": "var(--wp--preset--spacing--x-small)",
+      "padding": {
+        "top": "0",
+        "bottom": "0"
+      }
+    },
+    "typography": {
+      "fontSize": "var(--wp--preset--font-size--s)",
+      "textTransform": "uppercase",
+      "letterSpacing": "0.08em"
+    },
+    "color": {
+      "text": "var(--wp--preset--color--text-2)"
+    }
+  }
+}

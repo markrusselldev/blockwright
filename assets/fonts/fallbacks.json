@@ -1,0 +1,65 @@
+{
+  "IBM Plex Sans": {
+    "local": "Arial",
+    "ascentOverride": "101.35%",
+    "descentOverride": "27.19%",
+    "lineGapOverride": "0.00%",
+    "sizeAdjust": "101.13%"
+  },
+  "IBM Plex Mono": {
+    "local": "Courier New",
+    "ascentOverride": "77.95%",
+    "descentOverride": "20.91%",
+    "lineGapOverride": "0.00%",
+    "sizeAdjust": "131.49%"
+  },
+  "Gabarito": {
+    "local": "Arial",
+    "ascentOverride": "94.90%",
+    "descentOverride": "26.25%",
+    "lineGapOverride": "0.00%",
+    "sizeAdjust": "99.05%"
+  },
+  "Instrument Sans": {
+    "local": "Arial",
+    "ascentOverride": "93.97%",
+    "descentOverride": "24.22%",
+    "lineGapOverride": "0.00%",
+    "sizeAdjust": "103.22%"
+  },
+  "JetBrains Mono": {
+    "local": "Courier New",
+    "ascentOverride": "77.57%",
+    "descentOverride": "22.82%",
+    "lineGapOverride": "0.00%",
+    "sizeAdjust": "131.49%"
+  },
+  "Fraunces": {
+    "local": "Times New Roman",
+    "ascentOverride": "84.05%",
+    "descentOverride": "21.91%",
+    "lineGapOverride": "0.00%",
+    "sizeAdjust": "116.36%"
+  },
+  "Source Serif 4": {
+    "local": "Times New Roman",
+    "ascentOverride": "102.41%",
+    "descentOverride": "33.12%",
+    "lineGapOverride": "0.00%",
+    "sizeAdjust": "101.16%"
+  },
+  "Outfit": {
+    "local": "Arial",
+    "ascentOverride": "100.84%",
+    "descentOverride": "26.22%",
+    "lineGapOverride": "0.00%",
+    "sizeAdjust": "99.17%"
+  },
+  "Inter": {
+    "local": "Arial",
+    "ascentOverride": "89.79%",
+    "descentOverride": "22.36%",
+    "lineGapOverride": "0.00%",
+    "sizeAdjust": "107.89%"
+  }
+}

@@ -1,0 +1,13 @@
+{
+	"styles": {
+		"blocks": {
+			"core/post-excerpt": {
+				"spacing": {
+					"margin": {
+						"top": "var:preset|spacing|small"
+					}
+				}
+			}
+		}
+	}
+}

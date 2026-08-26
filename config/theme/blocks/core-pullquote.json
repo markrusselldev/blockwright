@@ -1,0 +1,18 @@
+{
+	"styles": {
+		"blocks": {
+			"core/pullquote": {
+				"spacing": {
+					"padding": {
+						"top": "var:preset|spacing|medium",
+						"bottom": "var:preset|spacing|medium"
+					},
+					"margin": {
+						"left": "var:preset|spacing|medium",
+						"right": "var:preset|spacing|medium"
+					}
+				}
+			}
+		}
+	}
+}

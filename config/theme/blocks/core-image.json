@@ -1,0 +1,19 @@
+{
+	"styles": {
+		"blocks": {
+			"core/image": {
+				"border": {
+					"radius": "var:preset|border-radius|l"
+				},
+				"elements": {
+					"caption": {
+						"typography": {
+							"fontSize": "var:preset|font-size|s",
+							"fontFamily": "var:preset|font-family|body"
+						}
+					}
+				}
+			}
+		}
+	}
+}

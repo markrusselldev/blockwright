@@ -1,0 +1,15 @@
+{
+	"styles": {
+		"blocks": {
+			"core/list": {
+				"spacing": {
+					"blockGap": "var:preset|spacing|small",
+					"margin": {
+						"top": "var:preset|spacing|small",
+						"bottom": "var:preset|spacing|small"
+					}
+				}
+			}
+		}
+	}
+}

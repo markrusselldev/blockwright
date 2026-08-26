@@ -1,0 +1,94 @@
+
+/* Panel style */
+.wp-block-group.is-style-panel {
+	border: var(--wp--custom--panel--border-width) solid
+		var(--wp--custom--panel--border-color);
+}
+
+/* Surface swatch style */
+.wp-block-group.is-style-surface-swatch {
+	border: var(--wp--custom--panel--border-width) solid
+		var(--wp--custom--surface--border);
+}
+
+/* Card styles (surface-3 background) */
+.wp-block-group.is-style-card,
+.wp-block-group.is-style-card-divided {
+	background-color: var(--wp--preset--color--surface-3);
+	color: var(--wp--preset--color--text-1);
+	border: var(--wp--custom--border--width--thin) solid
+		var(--wp--preset--color--divider);
+	border-radius: var(--wp--preset--border-radius--m);
+	padding: var(--wp--preset--spacing--medium);
+	overflow: hidden;
+	background-clip: padding-box;
+}
+
+/* Card divided header styling */
+.wp-block-group.is-style-card-divided
+	> :is(h1, h2, h3, h4, h5, h6, .wp-block-heading):first-child,
+.wp-block-group.is-style-card-divided
+	> .wp-block-group:first-child
+	> :is(h1, h2, h3, h4, h5, h6, .wp-block-heading):first-child,
+.wp-block-group.is-style-card-divided
+	> .wp-block-group:first-child
+	> .wp-block-group:first-child
+	> :is(h1, h2, h3, h4, h5, h6, .wp-block-heading):first-child {
+	border-bottom: var(--wp--custom--border--width--thin) solid
+		var(--wp--preset--color--divider);
+	padding-bottom: var(--wp--preset--spacing--small);
+	margin-bottom: var(--wp--preset--spacing--small);
+}
+
+/* Resolved-card "Fixed" stamp. Lives here (a core/group style loaded via
+   wp_enqueue_block_style) so it renders in BOTH the front end and the editor
+   iframe - editor-canvas.css / enqueue_block_assets does not reach the post
+   editor's iframe. The card group holding the stamp is the position context. */
+.wp-block-group:has(> .bw-scorecard-stamp) {
+	position: relative;
+}
+.bw-scorecard-stamp {
+	position: absolute;
+	/* Shifted right (over the right edge) so it clears the footer text in both the
+	   editor and front end, where the footer wraps differently. Vertical position
+	   unchanged. Nothing in the ancestry clips it. */
+	right: calc(-1 * var(--wp--preset--spacing--xx-small));
+	bottom: var(--wp--preset--spacing--x-small);
+	margin: 0;
+	transform: rotate(-18deg);
+	/* Adaptive success tokens (same family the chips use), which DO resolve in the
+	   editor canvas (verified 1.0.43 - the earlier "editor can't do mid-scale"
+	   note was stale). Text is success-800 for weight; the frame is success-700,
+	   one step softer so it is not too heavy on light / too bright on dark. Both
+	   flip per mode via light-dark(). */
+	color: var(--wp--preset--color--success-800);
+	background: var(--wp--preset--color--success-100);
+	border: var(--wp--custom--border--width--medium) solid var(--wp--preset--color--success-700);
+	border-radius: var(--wp--preset--border-radius--m);
+	padding: var(--wp--preset--spacing--xx-small) var(--wp--preset--spacing--small);
+	font-weight: 800;
+	font-size: var(--wp--preset--font-size--l);
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	line-height: 1.1;
+	opacity: 0.92;
+	pointer-events: none;
+}
+.bw-scorecard-stamp::before {
+	content: "";
+	position: absolute;
+	inset: var(--wp--preset--spacing--xxx-small);
+	border: var(--wp--custom--border--width--thin) solid var(--wp--preset--color--success-700);
+	border-radius: var(--wp--preset--border-radius--s);
+}
+
+/* Editor canvas only: WP core forces
+   `.block-editor-block-list__layout .block-editor-block-list__block { position: relative }`
+   (0,2,0) on every block, which cancels the stamp's absolute positioning in the
+   editor (it renders full-width in-flow). Re-assert it at higher specificity
+   (0,2,1). Matches only in the editor - the front end has no block-editor
+   wrapper classes. The block's own `.block-editor-block-list__layout` (also
+   position:relative in core) is the positioning context. */
+.block-editor-block-list__layout p.bw-scorecard-stamp {
+	position: absolute;
+}

@@ -1,0 +1,95 @@
+/* Safety: ensure WP core button always shows pointer (in case missing elsewhere) */
+.wp-block-button__link {
+	cursor: pointer;
+}
+
+/* Scorecard header (flex, single row): reuse-safe for any title/ref length.
+   The ref stays clean on one line and never shrinks; the TITLE
+   COLUMN is the one that gives - min-width:0 lets it shrink below its content so
+   the title wraps and yields space to the ref, which keeps its place at top-right
+   instead of spilling. space-between holds title-left / ref-right; the header
+   just grows taller when the title wraps. Was: both sides nowrap + ref no-shrink,
+   which fit exactly one string length and overflowed on anything longer.
+   The title column is the header's only child group (the ref is a <p>). */
+.bw-scorecard-head > .wp-block-group {
+	min-width: 0;
+}
+.bw-scorecard-ref {
+	flex-shrink: 0;
+	white-space: nowrap;
+}
+.bw-scorecard-title {
+	min-width: 0;
+	white-space: normal;
+	overflow-wrap: break-word;
+}
+/* Status chip never breaks mid-word or shrinks - the row label wraps instead
+   (matters at narrow/mobile widths). */
+.bw-scorecard-chip {
+	white-space: nowrap;
+	flex-shrink: 0;
+	/* Uniform-width status column: all chips share a min-width so their left edges
+	   line up into a clean status column (designer call). ch scales with the chip
+	   font across breakpoints; longer statuses grow past it. text-align centers the
+	   shorter labels within the shared width. */
+	min-width: 8ch;
+	text-align: center;
+}
+/* ...and the row LABEL is what gives: flex/min-width:0 lets it absorb the row's
+   width and wrap its own text, so the chip stays on the row pinned right. Without
+   it the label's content width + chip exceeds a narrow mobile column and the row
+   (flex-wrap:wrap) drops the chip to its own line, where space-between left-aligns
+   it - the mobile misalignment. Rows carry no class, so target the chip's sibling
+   (the theme already uses :has() for the sticky header and stamp). */
+.wp-block-group:has(> .bw-scorecard-chip) > p:not(.bw-scorecard-chip) {
+	flex: 1 1 0;
+	min-width: 0;
+}
+/* The scorecard reads as a printed "readout" - a sample of the client report -
+   so it stays a fixed LIGHT document in BOTH OS modes: color-scheme:light makes
+   every light-dark() token inside (surface, text, chips, borders) resolve to its
+   light value, even on a dark-mode site, so it pops like a sheet of paper.
+   Targets the card via its header child so already-placed instances need no
+   extra class (the theme already uses :has() for the sticky header and stamp). */
+.wp-block-group:has(> .bw-scorecard-head) {
+	color-scheme: light;
+	/* Fixed-light "paper" card. color-scheme:light makes every light-dark() token
+	   inside (surface, text-1, chips, borders) resolve to its LIGHT value here,
+	   regardless of the visitor's OS - so text-1 becomes true dark (neutral-900) and
+	   the card reads like a sheet of paper even on a dark-mode site. Re-declaring
+	   `color: text-1` on the card re-resolves that token under THIS element's
+	   color-scheme:light (an inherited color is an already-resolved absolute value,
+	   which color-scheme cannot retroactively flip), so the uncoloured title + row
+	   labels inherit true dark text. Chips and the text-2 ref set their own colour.
+	   (No text-1 pin needed: since the dark softening now lives in the text-1
+	   light-dark() token itself, not a prefers-color-scheme override, color-scheme
+	   resolves it correctly on its own.) */
+	color: var(--wp--preset--color--text-1);
+	/* Clean, professional report card - credibility comes from restraint + the specific content,
+	   not decorative realism. Rounded to the theme's standard
+	   radius (matches the chips, buttons, panels). A restrained shadow gives light-mode polish;
+	   dark-mode elevation comes from the lighter surface behind it (the showcase demos it on a
+	   surface-2 band), not a shadow, which can't read on a dark section. */
+	border-radius: var(--wp--preset--border-radius--m);
+	box-shadow: var(--wp--custom--shadow--m);
+}
+
+/* Scorecard footer note: a soft accent-tinted callout instead of a flat grey, so the theme's
+   COLOUR SYSTEM reads in the block itself (it re-hues with colour variations - a light champagne on
+   the Gold look, pale blue on Blue, etc.). Mixed OVER surface-1 (the near-white card surface), NOT
+   the grey surface-2: at a subtle accent share the grey base muddied the warm accent into a flat
+   tan/brown; mixing into the lighter surface keeps the result high in lightness so the tint reads
+   as a clean light gold rather than mud. The share stays low so it is an informational note, never
+   a button; still clearly darker than the surface-1 card, so it reads as a distinct footer. */
+.bw-scorecard-foot {
+	background-color: color-mix(
+		in oklab,
+		var(--wp--preset--color--surface-1),
+		var(--wp--preset--color--accent) 22%
+	);
+}
+
+/* The resolved-card "Fixed" stamp lives in assets/blocks/group.css (loaded via
+   wp_enqueue_block_style on core/group) so it renders in BOTH the front end and
+   the editor iframe - enqueue_block_assets / a front-end-only bundle does not
+   reach the post editor canvas. */

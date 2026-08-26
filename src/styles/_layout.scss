@@ -1,0 +1,24 @@
+// _layout.scss - Layout & Structure
+// Note: html { color-scheme: light dark } is in index.scss, not duplicated here
+
+// Text alignment inheritance
+body,
+.wp-site-blocks {
+	text-align: start;
+}
+
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, figure) {
+	text-align: inherit;
+}
+
+// ============================================
+// Footer Chrome
+// ============================================
+// Footer row layout (justification, gap, wrap, alignment) is declared per-group
+// in the footer PATTERNS and emitted natively by WordPress's flex layout. Do NOT
+// re-assert it here: a blanket `> footer > … > .is-layout-flex { justify-content:
+// space-between; gap: block-gap }` forces every direct-child flex row to
+// space-between and overrides each row's own blockGap - which split the branding
+// lockup (logo/title to opposite ends) and lost the x-small logo↔title gap on
+// Footer: Columns. Let the pattern own it. (Header chrome, which needs a
+// token-driven min-height/nav treatment, stays in theme-base.css.)

@@ -1,0 +1,32 @@
+{
+	"settings": {
+		"border": {
+			"color": true,
+			"style": true,
+			"width": true,
+			"radius": true,
+			"radiusSizes": [
+				{
+					"name": "Small",
+					"slug": "s",
+					"size": "0.1875rem"
+				},
+				{
+					"name": "Medium",
+					"slug": "m",
+					"size": "0.25rem"
+				},
+				{
+					"name": "Large",
+					"slug": "l",
+					"size": "0.5rem"
+				},
+				{
+					"name": "XL",
+					"slug": "xl",
+					"size": "1rem"
+				}
+			]
+		}
+	}
+}

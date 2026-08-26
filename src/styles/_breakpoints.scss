@@ -1,0 +1,31 @@
+// Breakpoint mixins. The VALUES live in a single source - the JSON config
+// (config/theme/settings/custom.json -> settings.custom.layout.breakpoints),
+// emitted to _breakpoints.generated.scss by `npm run compose`. This file owns only
+// the query LOGIC, so no width is ever hardcoded in a media query again.
+//
+// Usage:  @use "breakpoints" as bp;  ... @include bp.below(lg) { ... }
+@use "sass:map";
+@use "breakpoints.generated" as gen;
+
+// Resolve a named breakpoint to its length; fail loudly on a typo.
+@function bp($name) {
+	@if not map.has-key(gen.$breakpoints, $name) {
+		@error "Unknown breakpoint `#{$name}`. Known: #{map.keys(gen.$breakpoints)}.";
+	}
+	@return map.get(gen.$breakpoints, $name);
+}
+
+// Below a named breakpoint (exclusive). `not all and (min-width: X)` matches every
+// width < X, so we need no sub-pixel epsilon and no literal length in source.
+@mixin below($name) {
+	@media not all and (min-width: bp($name)) {
+		@content;
+	}
+}
+
+// At a named breakpoint and up (inclusive).
+@mixin above($name) {
+	@media (min-width: bp($name)) {
+		@content;
+	}
+}

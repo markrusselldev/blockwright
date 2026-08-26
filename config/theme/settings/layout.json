@@ -1,0 +1,9 @@
+{
+	"settings": {
+		"layout": {
+			"contentSize": "45rem",
+			"wideSize": "1280px"
+		},
+		"useRootPaddingAwareAlignments": true
+	}
+}

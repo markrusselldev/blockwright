@@ -1,0 +1,61 @@
+
+/* Base table styling */
+.wp-block-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.wp-block-table table {
+	width: 100%;
+	border: var(--wp--custom--border--width--thin) solid
+		var(--wp--preset--color--border-subtle);
+	border-radius: var(--wp--preset--border-radius--m);
+	overflow: hidden;
+}
+
+/* Table cells: consistent padding and borders */
+.wp-block-table th,
+.wp-block-table td {
+	padding-block: var(
+		--wp--custom--table--cell-pad-block,
+		var(--wp--preset--spacing--small)
+	);
+	padding-inline: var(
+		--wp--custom--table--cell-pad-inline,
+		var(--wp--preset--spacing--medium)
+	);
+	border-bottom: var(--wp--custom--border--width--thin) solid
+		var(--wp--preset--color--border-subtle);
+	text-align: start;
+	vertical-align: middle;
+}
+
+/* Header row: stronger visual differentiation */
+.wp-block-table thead th {
+	background-color: var(--wp--preset--color--surface-2);
+	font-weight: var(--wp--custom--table--header-weight, 600);
+	color: var(--wp--preset--color--text-1);
+	border-bottom: var(--wp--custom--border--width--medium) solid
+		var(--wp--preset--color--border-default);
+}
+
+/* Remove bottom border from last row */
+.wp-block-table tbody tr:last-child td,
+.wp-block-table tbody tr:last-child th {
+	border-bottom: none;
+}
+
+/* Striped table variant */
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) td,
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) th {
+	background-color: var(
+		--wp--custom--table--striped-bg,
+		var(--wp--preset--color--surface-2)
+	);
+}
+
+/* Hover state for table rows */
+.wp-block-table tbody tr:hover td,
+.wp-block-table tbody tr:hover th {
+	background-color: var(--wp--preset--color--surface-2);
+}

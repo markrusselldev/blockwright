@@ -1,0 +1,53 @@
+.wp-block-quote {
+	border-inline-start: var(--wp--custom--border--width--medium) solid
+		var(--wp--preset--color--divider);
+	border-radius: var(--wp--custom--panel--radius);
+	padding-inline-start: var(--wp--preset--spacing--large);
+	padding-inline-end: var(--wp--preset--spacing--medium);
+	padding-block: var(--wp--preset--spacing--medium);
+	gap: var(--wp--preset--spacing--small);
+	background-color: var(--wp--preset--color--surface-2);
+	color: var(--wp--preset--color--text-1);
+}
+
+/* Quote text: italic with slightly larger size for emphasis */
+.wp-block-quote p {
+	font-style: italic;
+	font-size: var(--wp--preset--font-size--l);
+	line-height: var(--wp--custom--typography--line-height-body);
+}
+
+.wp-block-quote cite,
+.wp-block-quote footer {
+	display: block;
+	margin-block-start: var(--wp--preset--spacing--small);
+	font-size: var(--wp--preset--font-size--s);
+	font-style: normal;
+	color: var(--wp--preset--color--text-2);
+}
+
+/* Pullquote: larger, centered, more prominent */
+.wp-block-pullquote {
+	border-block: var(--wp--custom--border--width--medium) solid
+		var(--wp--preset--color--divider);
+	padding-block: var(--wp--preset--spacing--x-large);
+	text-align: center;
+}
+
+.wp-block-pullquote blockquote {
+	margin: 0;
+}
+
+.wp-block-pullquote p {
+	font-size: var(--wp--preset--font-size--xl);
+	font-style: italic;
+	line-height: var(--wp--custom--typography--line-height-body);
+}
+
+.wp-block-pullquote cite {
+	display: block;
+	margin-block-start: var(--wp--preset--spacing--medium);
+	font-size: var(--wp--preset--font-size--s);
+	font-style: normal;
+	color: var(--wp--preset--color--text-2);
+}

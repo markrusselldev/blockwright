@@ -1,0 +1,9 @@
+# Generated / build output
+dist
+theme.json
+
+# WordPress block-serialized markup - prettier expands the compact single-line
+# form WP's serializer produces, which can trigger block-validation warnings in
+# the Site Editor. Leave these in canonical WP form.
+templates
+parts
