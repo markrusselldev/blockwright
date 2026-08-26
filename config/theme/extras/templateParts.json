@@ -1,0 +1,39 @@
+{
+	"templateParts": [
+		{
+			"name": "header",
+			"title": "Header",
+			"area": "header"
+		},
+		{
+			"name": "header-centered",
+			"title": "Header: Centered",
+			"area": "header"
+		},
+		{
+			"name": "header-contact",
+			"title": "Header: Contact",
+			"area": "header"
+		},
+		{
+			"name": "footer",
+			"title": "Footer",
+			"area": "footer"
+		},
+		{
+			"name": "footer-centered",
+			"title": "Footer: Centered",
+			"area": "footer"
+		},
+		{
+			"name": "footer-columns",
+			"title": "Footer: Columns",
+			"area": "footer"
+		},
+		{
+			"name": "sidebar",
+			"title": "Sidebar",
+			"area": "uncategorized"
+		}
+	]
+}

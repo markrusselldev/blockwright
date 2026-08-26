@@ -1,0 +1,34 @@
+{
+	"styles": {
+		"blocks": {
+			"core/code": {
+				"color": {
+					"background": "var:preset|color|surface-3",
+					"text": "var:preset|color|text-1"
+				},
+				"typography": {
+					"fontFamily": "var:preset|font-family|mono",
+					"fontSize": "var:preset|font-size|s"
+				},
+				"spacing": {
+					"padding": {
+						"top": "var:preset|spacing|small",
+						"right": "var:preset|spacing|small",
+						"bottom": "var:preset|spacing|small",
+						"left": "var:preset|spacing|small"
+					},
+					"margin": {
+						"left": "var:preset|spacing|small",
+						"right": "var:preset|spacing|small"
+					}
+				},
+				"border": {
+					"color": "var:preset|color|divider",
+					"radius": "var:preset|border-radius|m",
+					"style": "solid",
+					"width": "var:custom|border|width|thin"
+				}
+			}
+		}
+	}
+}

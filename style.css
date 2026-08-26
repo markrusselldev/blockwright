@@ -1,0 +1,24 @@
+/*
+Theme Name: Blockwright
+Author: Mark Russell
+Author URI: https://markrussell.io
+Description: Blockwright is a lightweight, adaptive block theme for full-site editing. It is token-driven through theme.json, follows the visitor's light or dark system preference automatically, ships curated color and typography style variations, and includes block patterns for portfolios, businesses, and blogs.
+Requires at least: 7.0
+Tested up to: 7.1
+Requires PHP: 7.4
+Version: 1.1.2
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: blockwright
+Tags: full-site-editing, block-patterns, block-styles, style-variations, editor-style, custom-colors, featured-images, threaded-comments, wide-blocks, full-width-template, template-editing, grid-layout, two-columns, portfolio, blog, translation-ready, rtl-language-support
+*/
+
+/*
+Blockwright WordPress Theme, (C) 2026 Mark Russell
+Blockwright is distributed under the terms of the GNU GPL version 2 or later.
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, either version 2 of the License, or (at your option) any later
+version.
+*/

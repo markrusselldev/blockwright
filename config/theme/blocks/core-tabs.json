@@ -1,0 +1,16 @@
+{
+	"styles": {
+		"blocks": {
+			"core/tabs": {
+				"spacing": {
+					"blockGap": "var:preset|spacing|small"
+				}
+			},
+			"core/tab-list": {
+				"spacing": {
+					"blockGap": "var:preset|spacing|small"
+				}
+			}
+		}
+	}
+}

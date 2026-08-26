@@ -1,0 +1,162 @@
+{
+	"settings": {
+		"appearanceTools": true,
+		"custom": {
+			"button": {
+				"fontSize": "0.9375rem",
+				"gap": "var:preset|spacing|x-small",
+				"textGap": "0.5ch",
+				"radius": "var:preset|border-radius|m",
+				"px": "var:preset|spacing|x-small",
+				"py": "0",
+				"height": "var:custom|form|control-height",
+				"weight": "500",
+				"default": {
+					"bg": "var(--wp--preset--color--btn-default-bg)",
+					"bgHover": "var(--wp--preset--color--btn-default-bg-hover)",
+					"bgActive": "var(--wp--preset--color--btn-default-bg-active)",
+					"text": "var(--wp--preset--color--text-1)"
+				},
+				"cta": {
+					"px": "var:preset|spacing|medium",
+					"py": "var:preset|spacing|x-small",
+					"radius": "var:preset|border-radius|m",
+					"weight": "600",
+					"fontSize": "1rem"
+				},
+				"primary": {
+					"bg": "var(--wp--preset--color--btn-primary-bg)",
+					"bgHover": "var(--wp--preset--color--btn-primary-bg-hover)",
+					"bgActive": "var(--wp--preset--color--btn-primary-bg-active)",
+					"text": "var(--wp--preset--color--btn-primary-text)"
+				},
+				"accent": {
+					"bg": "color-mix(in oklab, var(--wp--preset--color--accent) 18%, transparent)",
+					"bgHover": "color-mix(in oklab, var(--wp--preset--color--accent) 28%, transparent)",
+					"bgActive": "color-mix(in oklab, var(--wp--preset--color--accent) 36%, transparent)",
+					"text": "var(--wp--preset--color--text-1)",
+					"border": "transparent"
+				},
+				"outline": {
+					"bg": "transparent",
+					"bgHover": "var(--wp--preset--color--btn-subtle-bg-hover)",
+					"bgActive": "var(--wp--preset--color--btn-subtle-bg-active)",
+					"text": "var(--wp--preset--color--link)",
+					"border": "currentColor"
+				},
+				"subtle": {
+					"bg": "transparent",
+					"bgHover": "var(--wp--preset--color--btn-subtle-bg-hover)",
+					"bgActive": "var(--wp--preset--color--btn-subtle-bg-active)",
+					"text": "var(--wp--preset--color--link)",
+					"border": "transparent"
+				}
+			},
+			"form": {
+				"control-height": "2.5rem",
+				"pad-inline": "var:preset|spacing|x-small",
+				"border-radius": "var:preset|border-radius|m",
+				"border-width": "var:custom|border|width|thin",
+				"bg": "var:preset|color|surface-1",
+				"text": "var:preset|color|text-1",
+				"placeholder": "var:preset|color|text-2",
+				"focus-ring": "var:preset|color|link",
+				"focus-width": "3px",
+				"maxWidth": "75ch",
+				"field-min": "14rem",
+				"field-max": "22rem"
+			},
+			"panel": {
+				"radius": "var:preset|border-radius|m",
+				"borderWidth": "var:custom|border|width|thin",
+				"borderColor": "var(--wp--custom--divider--color)"
+			},
+			"divider": {
+				"color": "var:preset|color|divider",
+				"width": "var:custom|border|width|thin"
+			},
+			"border": {
+				"width": {
+					"thin": "1px",
+					"medium": "2px"
+				}
+			},
+			"surface": {
+				"border": "var:preset|color|border-subtle"
+			},
+			"layout": {
+				"gutter-min": "var:preset|spacing|small",
+				"gutter-max": "var:preset|spacing|medium",
+				"breakpoints": {
+					"sm": "480px",
+					"md": "768px",
+					"lg": "1024px",
+					"xl": "1280px"
+				},
+				"rail": {
+					"content-md": "80ch",
+					"content-lg": "86ch",
+					"wide-md": "1120px",
+					"wide-lg": "1280px"
+				},
+				"adminbar": {
+					"desktop": "32px",
+					"mobile": "46px"
+				}
+			},
+			"typography": {
+				"lineHeightControl": "1.35",
+				"lineHeightBody": "1.6",
+				"letterSpacingTight": "-0.01em",
+				"letterSpacingTighter": "-0.02em",
+				"body-base": "1.125rem"
+			},
+			"overlay": {
+				"scrim": "color-mix(in oklab, var:preset|color|text-strong 50%, transparent)"
+			},
+			"shadow": {
+				"xs": "0 1px 2px color-mix(in oklab, var(--wp--preset--color--neutral-1000) 10%, transparent)",
+				"m": "0 1px 2px color-mix(in oklab, var(--wp--preset--color--neutral-1000) 6%, transparent), 0 4px 10px color-mix(in oklab, var(--wp--preset--color--neutral-1000) 9%, transparent)"
+			},
+			"motion": {
+				"duration": {
+					"x-fast": "50ms",
+					"fast": "150ms"
+				},
+				"easing": {
+					"standard": "cubic-bezier(.25,0,.5,1)"
+				}
+			},
+			"nav": {
+				"bar-height": "3.5rem",
+				"link": {
+					"pad-inline": "var:preset|spacing|x-small",
+					"pad-block": "var:preset|spacing|x-small",
+					"radius": "var:preset|border-radius|s",
+					"current": {
+						"bg": "var:preset|color|surface-3",
+						"text": "var:preset|color|text-1"
+					},
+					"hover": {
+						"bg": "color-mix(in oklab, var(--wp--preset--color--surface-3) 90%, var:preset|color|text-strong 10%)",
+						"text": "var:preset|color|text-1"
+					}
+				},
+				"focus-ring": {
+					"color": "var:preset|color|link",
+					"width": "var:custom|border|width|medium"
+				}
+			},
+			"table": {
+				"cell-pad-inline": "var:preset|spacing|x-small",
+				"cell-pad-block": "var:preset|spacing|x-small",
+				"header-weight": "600",
+				"striped-bg": "var:preset|color|surface-2"
+			},
+			"avatar": {
+				"sm": "2.5rem",
+				"md": "3rem"
+			}
+		}
+	}
+}

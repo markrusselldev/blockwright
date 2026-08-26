@@ -1,0 +1,11 @@
+{
+	"styles": {
+		"blocks": {
+			"core/heading": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|headings"
+				}
+			}
+		}
+	}
+}

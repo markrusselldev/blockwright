@@ -1,0 +1,9 @@
+/* ============================================
+ * Custom CSS injected into theme.json styles
+ * ============================================
+ * For front-end styling that theme.json's schema cannot express. Design VALUES do not
+ * belong here - they are tokens in config/theme/settings/* (single source of truth). The
+ * former dark-mode text-1 softening moved into the text-1 token itself (settings/color.json)
+ * as a light-dark() value, so it follows color-scheme instead of a prefers-color-scheme
+ * media query. Intentionally empty for now.
+ */

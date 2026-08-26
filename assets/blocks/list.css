@@ -1,0 +1,15 @@
+.wp-block-list,
+.wp-block-list ul,
+.wp-block-list ol {
+	margin-block: 0;
+	padding-inline-start: var(--wp--preset--spacing--large);
+	gap: var(--wp--preset--spacing--small);
+}
+
+.wp-block-list li::marker {
+	color: var(--wp--preset--color--outline-1);
+}
+
+.wp-block-list li + li {
+	margin-block-start: var(--wp--preset--spacing--small);
+}

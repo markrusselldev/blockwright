@@ -1,0 +1,127 @@
+@use "./_blocks";
+@use "./_buttons";
+@use "./_layout"; /* Layout & structure */
+@use "./_forms"; /* Native form elements */
+@use "./_interactive"; /* Focus/link styles */
+@use "./_navigation"; /* Navigation - global (nav is on every page) */
+
+/* src/styles/index.scss - Blockwright */
+
+/* -------------------------------------------------------------------------- */
+/* Vendor CSS includes                                                         */
+/* -------------------------------------------------------------------------- */
+/* Open Props runtime removed: values copied into Blockwright tokens. No runtime import. */
+
+/* -------------------------------------------------------------------------- */
+/* Root & base                                                                 */
+/* -------------------------------------------------------------------------- */
+:root {
+	color-scheme: light dark;
+}
+
+html {
+	/* scrollbar-gutter removed - was causing edge-to-edge layout issues */
+}
+body {
+	margin: 0;
+	background: var(--wp--preset--color--surface-1);
+	color: var(--wp--preset--color--text-1, canvasText);
+	/* Body font-family is owned by WordPress global styles (theme.json +
+     style variations). Hardcoding it here would out-specify variations and
+     stop them from changing the font - so it is intentionally omitted. */
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-x: clip; /* avoid subpixel horizontal jiggle */
+}
+
+/* Layout tokens derived from WP globals (with safe fallbacks) */
+:root {
+	--bw-gutter: clamp(
+		var(--wp--custom--layout--gutter-min),
+		3vw,
+		var(--wp--custom--layout--gutter-max)
+	);
+	--bw-adminbar: 0;
+
+	/* Keep these defined so patterns/blocks using the WP vars remain predictable */
+	--wp--style--root--padding-left: var(--bw-gutter);
+	--wp--style--root--padding-right: var(--bw-gutter);
+
+	/* Featured image aspect can be adjusted project-wide if desired */
+	--bw-fi-aspect: 16 / 9;
+}
+
+body.admin-bar {
+	--bw-adminbar: var(--wp--custom--layout--adminbar--desktop);
+}
+
+@media (max-width: 48.875rem) { /* token-exempt: fixed WP admin-bar breakpoint (782px), not a design token - media queries aren't expressible in theme.json */
+	/* WP admin-bar mobile breakpoint (782px) */
+	body.admin-bar {
+		--bw-adminbar: var(--wp--custom--layout--adminbar--mobile);
+	}
+}
+
+/* -------------------------------------------------------------------------- */
+/* Page shell                                                                  */
+/* -------------------------------------------------------------------------- */
+
+/* IMPORTANT: Core already applies global padding to .wp-site-blocks when
+   useRootPaddingAwareAlignments = true. Do NOT add our own side padding here
+   or we get double gutters. */
+/* (Removed the old padding-inline on .wp-site-blocks) */
+
+/* Sticky footer: push footer to bottom on short pages */
+.wp-site-blocks {
+	min-height: calc(100svh - var(--bw-adminbar));
+	display: flex;
+	flex-direction: column;
+}
+
+/* Grow main to fill available space */
+.wp-site-blocks > main,
+.wp-site-blocks > main.wp-block-group {
+	flex: 1 1 auto;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Header / Footer rows = clamp to content width                               */
+/* -------------------------------------------------------------------------- */
+
+/* Remove list padding blowout for post templates when global padding is active */
+.wp-site-blocks > main.has-global-padding > ul.wp-block-post-template,
+.wp-site-blocks > main.has-global-padding > ol.wp-block-post-template {
+	list-style: none;
+	padding-inline-start: 0;
+	margin-left: calc(var(--wp--style--root--padding-left, 0) * -1);
+	margin-right: calc(var(--wp--style--root--padding-right, 0) * -1);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Featured image (FI) polish                                                  */
+/* -------------------------------------------------------------------------- */
+
+/* If a FI block renders without an <img> (e.g., no thumbnail), collapse it */
+.wp-block-post-featured-image:not(:has(img)) {
+	display: none;
+}
+
+/* For real thumbnails: keep them tidy and modern by default */
+.wp-block-post-featured-image img {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: var(--bw-fi-aspect);
+	object-fit: cover;
+	border-radius: var(--wp--preset--border-radius--m, 0.5rem);
+}
+
+/* Button appearance lives in _buttons.scss (the single source); native form
+   submit/reset buttons live in _forms.scss. A duplicate base-button block that
+   re-declared the same button tokens used to sit here - removed in the button
+   consolidation so there is one owner per button type. */
+
+button {
+	border: 0;
+}

@@ -1,0 +1,93 @@
+@use "breakpoints" as bp;
+
+/* Navigation - kept in the GLOBAL bundle (nav is on every page, so lazy-loading buys nothing). */
+
+/* Container gap for nav items */
+.wp-block-navigation .wp-block-navigation__container {
+	gap: var(--wp--preset--spacing--small);
+}
+
+.wp-block-navigation .wp-block-navigation-link,
+.wp-block-navigation .wp-block-navigation-item__content,
+.wp-block-navigation .wp-block-navigation__submenu-icon {
+	border-radius: var(--wp--custom--nav--link--radius);
+}
+
+.wp-block-navigation .wp-block-navigation__container a:focus-visible,
+.wp-block-navigation .wp-block-navigation__container button:focus-visible,
+.wp-block-navigation
+	.wp-block-navigation__container
+	.wp-block-navigation-item__content:focus-visible {
+	outline: var(--wp--custom--nav--focus-ring--width) solid
+		var(--wp--custom--nav--focus-ring--color);
+	outline-offset: var(--wp--preset--spacing--xx-small);
+}
+
+.wp-block-navigation .current-menu-item > .wp-block-navigation-link,
+.wp-block-navigation .current-menu-item > .wp-block-navigation-item__content,
+.wp-block-navigation .current-menu-item > .wp-block-navigation-submenu__toggle,
+.wp-block-navigation .current-menu-ancestor > .wp-block-navigation-link,
+.wp-block-navigation
+	.current-menu-ancestor
+	> .wp-block-navigation-item__content,
+.wp-block-navigation
+	.current-menu-ancestor
+	> .wp-block-navigation-submenu__toggle,
+.wp-block-navigation .wp-block-navigation-link[aria-current] {
+	background-color: var(--wp--custom--nav--link--current--bg);
+	color: var(--wp--custom--nav--link--current--text);
+}
+
+.wp-block-navigation .wp-block-navigation__container button:hover,
+.wp-block-navigation .wp-block-navigation__container button:focus-visible {
+	background-color: var(--wp--custom--nav--link--hover--bg);
+	color: var(--wp--custom--nav--link--hover--text);
+}
+
+/* === Header nav: custom collapse breakpoint ===
+   Core flips the nav from hamburger to the inline horizontal menu at a fixed min-width
+   of 600 (wp-includes/blocks/navigation/style.css) and there is NO editor/theme.json
+   setting for it - the documented way to change it is a CSS media-query override. The
+   "Header: Contact" part packs branding + phone + CTA + nav on one nowrap row, so the
+   inline menu overflows the tablet band (roughly 600 to 1000 wide). Keep it
+   collapsed to the overlay hamburger until `lg`
+   (1024), where the full header fits, then let core's horizontal menu
+   take over.
+   These rules live in the UNLAYERED global bundle (not theme-base.css's @layer, which
+   would lose to core's unlayered display rules) and are header-scoped, so they beat core
+   by specificity + source order - no !important. The `:not(.is-menu-open)` gate mirrors
+   core's own and is REQUIRED: without it, hiding the container also blocks the overlay
+   from opening. */
+@include bp.below(lg) {
+	.wp-site-blocks
+		> header
+		.wp-block-navigation__responsive-container-open:not(.always-shown) {
+		display: flex;
+	}
+	.wp-site-blocks
+		> header
+		.wp-block-navigation__responsive-container:not(.hidden-by-default):not(
+			.is-menu-open
+		) {
+		display: none;
+	}
+}
+
+/* The hamburger toggle uses the gold accent whenever it shows (every collapsed width,
+   not just the deep-mobile band), matching the header's other foreground icons (phone
+   glyph, wp:icon blocks). Core hides this button at `lg` and up, so it is a no-op on
+   desktop. */
+.wp-site-blocks > header .wp-block-navigation__responsive-container-open {
+	color: var(--wp--preset--color--primary);
+}
+
+/* Submenu dropdown container - must match core specificity (.has-child) */
+.wp-block-navigation .has-child .wp-block-navigation__submenu-container {
+	gap: var(--wp--preset--spacing--small);
+	background-color: var(--wp--preset--color--surface-2);
+	color: var(--wp--preset--color--text-1);
+	border: var(--wp--custom--border--width--thin) solid
+		var(--wp--preset--color--border-subtle);
+	border-radius: var(--wp--preset--border-radius--m);
+	box-shadow: var(--wp--custom--shadow--m);
+}

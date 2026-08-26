@@ -1,0 +1,267 @@
+@use "breakpoints" as bp;
+
+@layer theme-base {
+	:root {
+		/* breakpoints & rails are aliases; values defined in settings.custom */
+		--bp-sm: var(--wp--custom--layout--breakpoints--sm);
+		--bp-md: var(--wp--custom--layout--breakpoints--md);
+		--bp-lg: var(--wp--custom--layout--breakpoints--lg);
+		--bp-xl: var(--wp--custom--layout--breakpoints--xl);
+
+		--rail-content-md: var(--wp--custom--layout--rail--content-md);
+		--rail-content-lg: var(--wp--custom--layout--rail--content-lg);
+		--rail-wide-md: var(--wp--custom--layout--rail--wide-md);
+		--rail-wide-lg: var(--wp--custom--layout--rail--wide-lg);
+	}
+
+	/* Site chrome: neutralize any legacy inset shadows (borders now in template parts) */
+	.wp-site-blocks > header,
+	.wp-site-blocks > footer {
+		box-shadow: none !important;
+	}
+}
+
+/* === Header/Footer edge-to-edge override ===
+   WordPress Core applies `margin-left: auto !important; margin-right: auto !important`
+   to children of .is-layout-constrained that aren't .alignfull/.alignleft/.alignright.
+
+   This override ensures alignfull outer groups in headers/footers stay edge-to-edge,
+   whether their layout is flow (is-layout-flow) or constrained (is-layout-constrained) -
+   e.g. header-standard/footer-simple use a constrained alignfull outer group, and a
+   builder can switch any part's inner group to Full width.
+
+   Both need the override because the page's own constrained layout applies margins.
+*/
+.wp-site-blocks > header > .wp-block-group.alignfull.is-layout-flow,
+.wp-site-blocks > footer > .wp-block-group.alignfull.is-layout-flow,
+.wp-site-blocks > header > .wp-block-group.alignfull.is-layout-constrained,
+.wp-site-blocks > footer > .wp-block-group.alignfull.is-layout-constrained {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	margin-inline-start: 0 !important;
+	margin-inline-end: 0 !important;
+	max-width: none !important;
+}
+
+/* Inner alignfull children of full-width headers/footers also need the override */
+.wp-site-blocks
+	> header
+	> .wp-block-group.alignfull.is-layout-flow
+	.wp-block-group.alignfull,
+.wp-site-blocks
+	> footer
+	> .wp-block-group.alignfull.is-layout-flow
+	.wp-block-group.alignfull {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	margin-inline-start: 0 !important;
+	margin-inline-end: 0 !important;
+	max-width: none !important;
+}
+
+/* === Sticky header enablement ===
+   WordPress's Position: Sticky control lands on the GROUP inside the header
+   template part, not on the <header> wrapper. That group's containing block is
+   then the <header>, which is the same height as the group - so the sticky has
+   zero room to travel and unsticks the instant the page scrolls (it looks like
+   sticky "isn't working"). Collapsing the wrapper's box with display:contents
+   re-homes the sticky group's containing block to the page (.wp-site-blocks),
+   so it stays pinned through the full scroll. Scoped with :has() so it only
+   applies when a sticky child is actually present; ordinary headers are
+   untouched. The <header> wrapper carries no box of its own (background and
+   padding live on the inner group), so removing its box is visually inert, and
+   display:contents does not change selector matching, so the header rules below
+   and the edge-to-edge overrides above still apply. */
+.wp-site-blocks > header:has(> .is-position-sticky) {
+	display: contents;
+}
+
+/* === Header layout row (token-driven) ===
+   Structural only: give the header row a token-driven nav-bar min-height.
+   Do NOT set justify-content / gap / flex-wrap here - each header pattern
+   declares its own (Header + Header: Contact use space-between; Header:
+   Centered uses a vertical, centered stack), and WordPress emits it natively.
+   A blanket space-between + global block-gap here would override those, e.g.
+   forcing Header: Centered off-center - the same trap that split the footer
+   brand lockup (see _layout.scss note). Scoped narrowly to the header
+   structure Gutenberg emits. */
+.wp-site-blocks
+	> header
+	> .wp-block-group.alignfull.is-layout-constrained
+	> .wp-block-group.is-layout-flex,
+.wp-site-blocks
+	> header
+	> .wp-block-group.alignfull
+	> .wp-block-group.is-layout-flex {
+	min-height: var(
+		--wp--custom--nav--bar-height,
+		calc(var(--wp--custom--button--py, 0.75rem) * 2 + 1rem)
+	);
+}
+
+/* alignwide header rows: constrain to wideSize, centered (WP's constrained
+   layout does this, but restate it so it wins against the flex-row rule). */
+.wp-site-blocks
+	> header
+	> .wp-block-group.alignfull.is-layout-constrained
+	> .wp-block-group.alignwide.is-layout-flex {
+	max-inline-size: var(--wp--style--global--wide-size);
+	margin-inline: auto;
+}
+
+.wp-site-blocks
+	> header
+	> .wp-block-group.alignfull.is-layout-constrained
+	> .wp-block-group.is-layout-flex
+	> .wp-block-group,
+.wp-site-blocks
+	> header
+	> .wp-block-group.alignfull
+	> .wp-block-group.is-layout-flex
+	> .wp-block-group {
+	flex: 0 0 auto;
+}
+
+.wp-site-blocks
+	> header
+	.wp-block-navigation
+	.wp-block-navigation-item
+	.wp-block-navigation-item__content,
+.wp-site-blocks > header .wp-block-navigation .wp-block-navigation-link {
+	padding-inline: var(--wp--custom--nav--link--pad-inline, 0.75rem);
+	padding-block: var(--wp--custom--nav--link--pad-block, 0.125rem);
+	/* border-radius comes from assets/blocks/navigation.css (site-wide) */
+}
+
+/* Primary content wrappers take the token-driven root padding (the site gutter).
+   Applies to main, constrained groups, and template parts. */
+.wp-site-blocks > main,
+.wp-site-blocks main,
+.wp-site-blocks .wp-block-group.is-layout-constrained,
+.wp-site-blocks div.wp-block-template-part {
+	padding-inline-start: var(--wp--style--root--padding-left);
+	padding-inline-end: var(--wp--style--root--padding-right);
+}
+
+div.wp-block-template-part,
+.wp-site-blocks div.wp-block-template-part {
+	box-sizing: border-box;
+}
+
+/* === Block overrides (production-facing blocks) ===
+   Token-driven styling for code blocks and pullquotes, so site-wide instances
+   match the style-guide specimens. Separators are governed entirely by
+   theme.json (config/theme/blocks/core-separator.json) + WP's auto-generated
+   color classes - no override needed here. */
+
+/* Code blocks: lateral spacing. */
+.wp-site-blocks pre.wp-block-code {
+	margin-inline: var(--wp--preset--spacing--medium);
+}
+
+/* Pullquotes: block padding. */
+figure.wp-block-pullquote {
+	padding-top: var(--wp--preset--spacing--x-large);
+	padding-bottom: var(--wp--preset--spacing--x-large);
+}
+
+/* Flex space-between groups in content: constrain to the reading width and
+   centre (core otherwise leaves them at their alignment width). Scoped to main
+   so header/footer rows keep their own full-width layout. */
+.wp-site-blocks
+	main
+	.wp-block-group.is-content-justification-space-between.is-layout-flex {
+	max-inline-size: var(--wp--style--global--content-size);
+	margin-inline: auto;
+	box-sizing: border-box;
+}
+
+/* Header/footer wide inner groups (layout:default outer, not constrained) use
+   wideSize. !important overrides core's higher-specificity layout rule. */
+.wp-site-blocks
+	> header
+	> .wp-block-group.alignfull.is-layout-flow
+	.wp-block-group.alignwide,
+.wp-site-blocks
+	> footer
+	> .wp-block-group.alignfull.is-layout-flow
+	.wp-block-group.alignwide {
+	max-inline-size: var(--wp--style--global--wide-size) !important;
+	margin-inline-start: auto !important;
+	margin-inline-end: auto !important;
+}
+
+/* tidy the title block inside the row */
+.wp-site-blocks > header .wp-block-site-title {
+	margin: 0;
+	line-height: 1.2;
+}
+
+/* Header, page content, and footer sit flush. WordPress puts its root block-gap (medium)
+   between the three top-level blocks via `:where(.wp-site-blocks) > *`; our full-bleed
+   section bands carry their own top/bottom padding, so that gap only ever shows a strip of
+   page background between colored bands (most visibly a dark CTA above the footer). Zero it
+   at the two root seams only - block spacing INSIDE <main> is untouched. */
+.wp-site-blocks > main,
+.wp-site-blocks > footer {
+	margin-block-start: 0;
+}
+
+/* Compact mobile header: below the sm breakpoint the one-line row (logo + hamburger +
+   phone + CTA) overflows, so we shrink two things to keep it a single slim sticky row
+   without burying the phone/CTA in the menu:
+   1. Hide the site-title wordmark (the site-logo carries the name via alt text; the
+      title is level:0, a <p>, so nothing is lost to assistive tech or heading structure).
+   2. Turn the phone NUMBER (.bw-call, a tel: link) into the Dashicons handset glyph -
+      the same tap-to-call link, just the number collapsed and the icon shown via ::before.
+      The full number stays on desktop. Dashicons is core (enqueued front-end in inc/assets.php).
+   Responsive show/hide is a theme CSS media query on purpose - WP 6.9 has no block-level
+   device visibility. */
+/* The header phone link (number on desktop, handset on mobile) is an action, not body
+   copy - no underline, matching the theme's nav links (textDecoration:none). */
+.wp-site-blocks > header .bw-call a {
+	text-decoration: none;
+}
+@include bp.below(sm) {
+	.wp-site-blocks > header .wp-block-site-title {
+		display: none;
+	}
+	/* collapse the number text, keep the link tappable, show the handset glyph */
+	.wp-site-blocks > header .bw-call a {
+		font-size: 0;
+		display: inline-flex;
+		padding: var(--wp--preset--spacing--xx-small);
+	}
+	.wp-site-blocks > header .bw-call a::before {
+		font-family: dashicons; /* token-exempt: core Dashicons font family name */
+		content: "\f525"; /* token-exempt: Dashicons "phone" (handset) glyph */
+		font-size: var(--wp--preset--font-size--xxl); /* ~22-24px at mobile widths (icon is hidden on desktop) */
+		line-height: 1;
+	}
+}
+
+/* === Typography Rhythm: Section Spacing ===
+   Give major section headings (H2) breathing room when they follow content.
+   Subsection headings (H3/H4) get moderate spacing for clear hierarchy. */
+
+/* H2 section headings: generous top margin for visual separation */
+.wp-site-blocks :where(h2):not(:first-child),
+.wp-site-blocks :where(.wp-block-heading[class*="h2"]):not(:first-child) {
+	margin-block-start: var(--wp--preset--spacing--x-large);
+}
+
+/* H3/H4 subsection headings: moderate spacing when following paragraphs/content */
+.wp-site-blocks :where(h3, h4):not(:first-child),
+.wp-site-blocks
+	:where(.wp-block-heading[class*="h3"], .wp-block-heading[class*="h4"]):not(
+		:first-child
+	) {
+	margin-block-start: var(--wp--preset--spacing--large);
+}
+
+/* Tighten spacing when headings directly follow other headings (ladder effect) */
+.wp-site-blocks
+	:where(h1, h2, h3, h4, h5, h6)
+	+ :where(h1, h2, h3, h4, h5, h6) {
+	margin-block-start: var(--wp--preset--spacing--medium);
+}

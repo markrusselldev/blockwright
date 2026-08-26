@@ -1,0 +1,5 @@
+/* Keep wp-admin using a stable light UA scheme; themes do not style admin UI */
+html,
+body {
+	color-scheme: light;
+}

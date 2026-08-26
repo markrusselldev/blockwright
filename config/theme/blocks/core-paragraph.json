@@ -1,0 +1,16 @@
+{
+	"styles": {
+		"blocks": {
+			"core/paragraph": {
+				"color": {
+					"text": "var:preset|color|text-1"
+				},
+				"typography": {
+					"fontFamily": "var:preset|font-family|body",
+					"fontSize": "var:preset|font-size|base",
+					"lineHeight": "var:custom|typography|line-height-body"
+				}
+			}
+		}
+	}
+}

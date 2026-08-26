@@ -1,0 +1,291 @@
+// _interactive.scss - Interactive element styling
+// Note: Code padding removed (handled by assets/blocks/code.css)
+
+:where(
+	a,
+	button,
+	[role="button"],
+	.wp-element-button,
+	input,
+	select,
+	textarea
+):focus-visible {
+	outline: var(--wp--custom--form--focus-width) solid
+		var(--wp--custom--form--focus-ring);
+	outline-offset: var(--wp--preset--spacing--xx-small);
+}
+
+a {
+	text-decoration-thickness: var(--wp--custom--border--width--thin);
+	text-underline-offset: 0.15em;
+	transition:
+		color 0.15s ease,
+		text-decoration-color 0.15s ease;
+}
+
+// ── Finishing polish ────────────────────────────────────────────────
+// Small, modern typographic touches that read as "considered" without
+// changing layout. All degrade gracefully on older browsers.
+
+// Even, intentional heading wraps (no lonely last word).
+:where(h1, h2, h3, h4, h5, h6) {
+	text-wrap: balance;
+}
+
+// text-wrap: pretty avoids orphan single-word last lines. overflow-wrap stays
+// normal: break-word was splitting ordinary short words (e.g. "it") mid-word at
+// the wrap inside constrained columns. Genuinely overlong tokens (raw URLs) are
+// rare in body copy and, if they ever appear, get a targeted break-word there.
+:where(p, li, dd, figcaption, blockquote) {
+	text-wrap: pretty;
+	overflow-wrap: normal;
+}
+
+// Anchored headings clear a sticky header when jumped to (TOC / showcase nav).
+:where(h1, h2, h3, h4, h5, h6)[id] {
+	/* Clear the sticky header: its bar height plus a little breathing room, both tokens. */
+	scroll-margin-top: calc(
+		var(--wp--custom--nav--bar-height) + var(--wp--preset--spacing--medium)
+	);
+}
+
+// Smooth hover on interactive controls (neutralized under prefers-reduced-motion).
+:where(
+	.wp-element-button,
+	.wp-block-button__link,
+	button,
+	input[type="submit"],
+	input[type="button"]
+) {
+	transition:
+		background-color 0.15s ease,
+		color 0.15s ease,
+		border-color 0.15s ease;
+}
+
+// A considered text selection instead of the browser default.
+::selection {
+	background-color: color-mix(
+		in oklab,
+		var(--wp--preset--color--text-1) 16%,
+		transparent
+	);
+}
+
+// Page header - the post-title on a page reads as a proper page title
+// (calmer than a hero headline, with an underline) instead of a shouty H1.
+// Applied via the bw-page-header wrapper in the page templates.
+.bw-page-header {
+	margin-bottom: var(--wp--preset--spacing--large);
+	padding-bottom: var(--wp--preset--spacing--small);
+	border-bottom: var(--wp--custom--border--width--thin, 1px) solid
+		var(--wp--preset--color--divider);
+}
+.bw-page-header .wp-block-post-title {
+	margin: 0;
+	font-size: var(--wp--preset--font-size--xxl);
+}
+
+// Linked post titles (archives, query loops, related lists) read as ink, with
+// the accent held back for hover. Without this they inherit the global link
+// color, washing whole title lists in the accent hue.
+.wp-block-post-title a {
+	color: var(--wp--preset--color--text-1);
+	text-decoration: none;
+}
+.wp-block-post-title a:hover,
+.wp-block-post-title a:focus {
+	color: var(--wp--preset--color--link);
+	text-decoration: underline;
+}
+
+// Small-caps labels (section eyebrows / kickers) render in the mono preset -
+// Plex Mono under Technical (its engineered character), system monospace
+// elsewhere. Scoped to text-2 uppercase paragraphs, so it never touches body
+// copy, headings, or the accent chip (which is on-accent, not text-2). Kept
+// restrained: labels only, mono's other job is code blocks.
+p.has-text-2-color[style*="text-transform:uppercase"] {
+	font-family: var(--wp--preset--font-family--mono);
+}
+
+// Stats band: keep the big figures on one line, and let labels wrap only at
+// spaces (never mid-word) even in tight columns - overriding the global
+// break-word so "2,500+" and "RECOMMEND" don't split.
+.bw-stats .has-xxl-font-size {
+	white-space: nowrap;
+}
+.bw-stats p {
+	overflow-wrap: normal;
+}
+
+// Classic / floated content alignment. Block themes don't ship these, so
+// classic-editor and pasted content (img.alignleft, .wp-caption, etc.) won't
+// wrap text around left/right-aligned images without them. Block images with
+// these classes get the same treatment, consistently.
+.alignleft {
+	float: left;
+	margin-inline-end: 1.5em;
+	margin-block-end: 1em;
+}
+.alignright {
+	float: right;
+	margin-inline-start: 1.5em;
+	margin-block-end: 1em;
+}
+.aligncenter {
+	display: block;
+	margin-inline: auto;
+	margin-block-end: 1em;
+}
+
+// Reconcile floats with full-width breakout. post-content is align:full +
+// constrained so align:full sections can escape to the viewport edge (needed
+// for full-width patterns). But constrained layout excludes .alignleft/right
+// from centering so they can float - which means they float to the FULL-WIDTH
+// (viewport) edge, not the content column. Push them back in by the same offset
+// WP uses to centre the content column: (container − contentSize) / 2, clamped
+// at 0 so narrow viewports still float to the padding edge. Self-neutralises in
+// normal-width containers where 100% ≈ contentSize.
+.is-layout-constrained.alignfull > .alignleft {
+	margin-inline-start: max(
+		0px,
+		calc((100% - var(--wp--style--global--content-size)) / 2)
+	);
+}
+.is-layout-constrained.alignfull > .alignright {
+	margin-inline-end: max(
+		0px,
+		calc((100% - var(--wp--style--global--content-size)) / 2)
+	);
+}
+
+// ── WordPress support styles ────────────────────────────────────────
+// Standard classes core expects a theme to provide. Block themes routinely
+// omit them, which breaks accessibility (visible hidden text) and classic /
+// pasted content (unstyled captions, galleries, sticky posts).
+
+// Raw/classic <pre> (pasted or classic-editor preformatted/code) ships no
+// overflow containment, so a long line overflows the content column - the
+// body's overflow-x guard then clips it, leaving it unreadable (and it can
+// push page width when the guard isn't in force). Scroll long lines WITHIN the
+// block instead. Block variants (.wp-block-code / .wp-block-preformatted) keep
+// their own rules via higher specificity.
+pre {
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+// Visually-hidden text (skip links, hidden labels, screen-reader context).
+.screen-reader-text {
+	border: 0;
+	clip-path: inset(50%);
+	height: 1px; /* token-exempt: screen-reader-text clip idiom - a fixed a11y hiding technique, not a design value */
+	width: 1px; /* token-exempt: screen-reader-text clip idiom */
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	position: absolute !important;
+	white-space: nowrap;
+	word-wrap: normal !important;
+}
+.screen-reader-text:focus {
+	clip-path: none;
+	height: auto;
+	width: auto;
+	margin: 0;
+	padding: var(--wp--preset--spacing--x-small) var(--wp--preset--spacing--small);
+	z-index: 100000;
+	background-color: var(--wp--preset--color--surface-1);
+	color: var(--wp--preset--color--text-1);
+}
+
+// Image captions (classic .wp-caption and block figcaption).
+// Classic captions carry a fixed pixel width (style="width:580px") from the
+// [caption] shortcode. In a constrained layout WP caps their max-width at
+// contentSize (720px), which the fixed width sits under - so on a narrow
+// (mobile) column the caption overflows the screen. WP's rule outranks a plain
+// override, so force it: never exceed the container, but keep WP's readable
+// contentSize cap on wide screens. !important is needed to beat core's layout
+// rule. Keep the image aspect-correct.
+.wp-caption {
+	max-width: min(100%, var(--wp--style--global--content-size)) !important;
+}
+.wp-caption img {
+	height: auto;
+}
+
+// Mobile nav overlay polish. Scoped to the open overlay, so the desktop header
+// nav is untouched.
+.wp-block-navigation__responsive-container.is-menu-open {
+	// Panel breathing room + inset the close button out of the corner.
+	.wp-block-navigation__responsive-container-content {
+		padding-inline: var(--wp--preset--spacing--medium);
+	}
+	.wp-block-navigation__responsive-container-close {
+		top: var(--wp--preset--spacing--small);
+		inset-inline-end: var(--wp--preset--spacing--small);
+	}
+	// Left-align the labels. The header nav is justified right (correct for
+	// desktop); in the overlay that sets WP's alignment vars to flex-end, which
+	// cascade to the Page List <ul>/<li>. Re-point those same vars on the list -
+	// core reads them to align every level, so no !important is needed.
+	.wp-block-navigation__container {
+		--navigation-layout-align: flex-start;
+		--navigation-layout-justification-setting: flex-start;
+	}
+}
+.wp-caption-text,
+.wp-element-caption,
+figure.wp-block-image figcaption {
+	font-size: var(--wp--preset--font-size--s);
+	color: var(--wp--preset--color--text-2);
+	text-align: center;
+	margin-block-start: 0.5em;
+}
+
+// Classic [gallery] shortcode grids.
+.gallery {
+	display: grid;
+	gap: var(--wp--preset--spacing--small);
+	margin-block: var(--wp--preset--spacing--medium);
+	grid-template-columns: repeat(3, 1fr);
+}
+.gallery-columns-2 {
+	grid-template-columns: repeat(2, 1fr);
+}
+.gallery-columns-4 {
+	grid-template-columns: repeat(4, 1fr);
+}
+.gallery-columns-5 {
+	grid-template-columns: repeat(5, 1fr);
+}
+.gallery-item {
+	margin: 0;
+}
+.gallery img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+// Sticky posts - a subtle pinned emphasis so they read as distinct.
+.sticky {
+	outline: var(--wp--custom--border--width--thin, 1px) solid
+		var(--wp--preset--color--border-subtle);
+	outline-offset: var(--wp--preset--spacing--x-small, 0.5rem);
+	border-radius: var(--wp--preset--border-radius--m, 0.25rem);
+}
+
+// Respect a reduced-motion preference: neutralize transitions/animations and
+// smooth-scroll. The theme ships minimal motion by default; this guarantees it
+// stays out of the way for users who ask the OS to reduce it.
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

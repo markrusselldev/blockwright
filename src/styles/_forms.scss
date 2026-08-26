@@ -1,0 +1,120 @@
+// _forms.scss - Native form element styling
+//
+// Native form controls were falling
+// back to the UA system font (font-family was never set) and native submit/reset
+// buttons were unstyled (only WP block buttons - .wp-element-button - were).
+//
+// Specificity policy (resolved): plain element / type selectors at NORMAL
+// specificity - no :where() zero-specificity wrapper, and no escalation to beat
+// plugin classes. A form plugin that ships its own design should win over theme
+// defaults. The theme's job is bare form markup and core blocks. (For reference,
+// Fluent Forms scopes its controls under `.fluentform .ff-el-form-control` = two
+// classes (0,2,0), which outranks these element/type selectors - so its forms keep
+// their own look, by design. Skinning a specific plugin is site work, not theme.)
+//
+// Token policy: every colour, font, font-size and spacing value is a
+// var(--wp--preset--*) reference, so a palette or type change in theme.json
+// restyles forms automatically. A few structural values with no preset scale
+// (control height, border width, control line-height, button weight, focus-ring
+// width) use theme.json --wp--custom--* tokens - still no literals.
+
+// ── Text-entry controls ───────────────────────────────────────────────────
+// Enumerated by type so checkbox/radio (styled separately, below) are excluded
+// without inflating specificity.
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+select,
+textarea {
+	min-height: var(--wp--custom--form--control-height);
+	padding-inline: var(--wp--preset--spacing--x-small);
+	border-radius: var(--wp--preset--border-radius--m);
+	border-width: var(--wp--custom--border--width--thin);
+	border-style: solid;
+	border-color: var(--wp--preset--color--outline-1);
+	background-color: var(--wp--preset--color--surface-1);
+	color: var(--wp--preset--color--text-1);
+	font-family: var(--wp--preset--font-family--body);
+	font-size: var(--wp--preset--font-size--base);
+	line-height: var(--wp--custom--typography--line-height-control);
+}
+
+input::placeholder,
+textarea::placeholder {
+	color: var(--wp--preset--color--text-2);
+	opacity: 1;
+}
+
+// Focus - every control; :focus (any focus, so the active field is always obvious)
+// and :focus-visible (keyboard). Aligns with the global ring in _interactive.scss.
+input:focus,
+select:focus,
+textarea:focus,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+	border-color: var(--wp--preset--color--focus);
+	outline: var(--wp--custom--form--focus-width) solid
+		var(--wp--preset--color--focus);
+	outline-offset: var(--wp--custom--border--width--medium);
+}
+
+// ── Choice controls ───────────────────────────────────────────────────────
+input[type="checkbox"],
+input[type="radio"] {
+	accent-color: var(--wp--preset--color--link);
+}
+
+// ── Form action buttons: submit / reset ───────────────────────────────────
+// The single owner of native <input>/<button> submit & reset controls (Gutenberg
+// block buttons live in _buttons.scss). Mirrored on the theme's primary
+// button (amber = --link) so form submits match site CTAs. Deliberately NOT
+// targeting generic <button type="button"> - that type is used for UI toggles
+// (e.g. the navigation opener), which must not become amber CTAs.
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button[type="submit"],
+button[type="reset"] {
+	min-height: var(--wp--custom--form--control-height);
+	padding-block: var(--wp--preset--spacing--x-small);
+	padding-inline: var(--wp--preset--spacing--small);
+	border: var(--wp--custom--border--width--thin) solid transparent;
+	border-radius: var(--wp--preset--border-radius--m);
+	background-color: var(--wp--preset--color--link);
+	color: var(--wp--preset--color--on-primary);
+	font-family: var(--wp--preset--font-family--body);
+	font-size: var(--wp--preset--font-size--base);
+	font-weight: var(--wp--custom--button--weight);
+	line-height: var(--wp--custom--typography--line-height-control);
+	cursor: pointer;
+
+	&:hover {
+		background-color: var(--wp--preset--color--link-hover);
+	}
+
+	&:active {
+		background-color: var(--wp--preset--color--link-active);
+	}
+
+	&:focus-visible {
+		outline: var(--wp--custom--form--focus-width) solid
+			var(--wp--preset--color--focus);
+		outline-offset: var(--wp--custom--border--width--medium);
+	}
+
+	&[disabled],
+	&[aria-disabled="true"] {
+		opacity: 0.6;
+		cursor: not-allowed;
+	}
+}

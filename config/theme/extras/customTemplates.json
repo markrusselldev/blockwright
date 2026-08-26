@@ -1,0 +1,39 @@
+{
+	"customTemplates": [
+		{
+			"name": "page-wide",
+			"title": "Wide",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "page-full-width",
+			"title": "Full Width",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "page-no-title",
+			"title": "No Title",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "page-landing",
+			"title": "Landing Page",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "page-sidebar",
+			"title": "Sidebar",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "page-centered",
+			"title": "Centered",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "page-style-guide",
+			"title": "Style Guide",
+			"postTypes": ["page"]
+		}
+	]
+}

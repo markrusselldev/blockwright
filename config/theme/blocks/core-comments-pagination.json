@@ -1,0 +1,21 @@
+{
+	"styles": {
+		"blocks": {
+			"core/comments-pagination": {
+				"border": {
+					"top": {
+						"color": "var:preset|color|divider",
+						"style": "solid",
+						"width": "var:custom|border|width|thin"
+					}
+				},
+				"spacing": {
+					"blockGap": "var:preset|spacing|small",
+					"padding": {
+						"top": "var:preset|spacing|small"
+					}
+				}
+			}
+		}
+	}
+}

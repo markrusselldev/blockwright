@@ -1,0 +1,51 @@
+/**
+ * Pattern-specific CSS
+ *
+ * Styles for patterns that can't be expressed via WordPress block attributes.
+ * All values use design tokens.
+ *
+ * @package Blockwright
+ */
+
+/* Newsletter form layout */
+.blockwright-newsletter-form {
+	display: flex;
+	gap: var(--wp--preset--spacing--small);
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.blockwright-newsletter-form--boxed {
+	max-width: var(--wp--custom--form--max-width);
+	margin-inline: auto;
+	margin-top: var(--wp--preset--spacing--large);
+}
+
+.blockwright-newsletter-form--minimal {
+	max-width: var(--wp--custom--form--max-width);
+	margin-inline: auto;
+	margin-top: var(--wp--preset--spacing--small);
+}
+
+/* Newsletter success alert positioning */
+.blockwright-newsletter-success {
+	display: none;
+	margin-top: var(--wp--preset--spacing--medium);
+	max-width: var(--wp--custom--form--max-width);
+	margin-inline: auto;
+}
+
+/* Avatar sizes for testimonial patterns */
+.blockwright-avatar-sm img {
+	width: var(--wp--custom--avatar--sm);
+	height: var(--wp--custom--avatar--sm);
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.blockwright-avatar-md img {
+	width: var(--wp--custom--avatar--md);
+	height: var(--wp--custom--avatar--md);
+	border-radius: 50%;
+	object-fit: cover;
+}

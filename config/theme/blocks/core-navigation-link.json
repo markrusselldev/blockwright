@@ -1,0 +1,57 @@
+{
+	"styles": {
+		"blocks": {
+			"core/navigation-link": {
+				"border": {
+					"radius": "var:preset|border-radius|s"
+				},
+				"color": {
+					"background": "transparent",
+					"text": "var:preset|color|text-1"
+				},
+				"spacing": {
+					"padding": {
+						"top": "var:preset|spacing|small",
+						"right": "var:preset|spacing|small",
+						"bottom": "var:preset|spacing|small",
+						"left": "var:preset|spacing|small"
+					}
+				},
+				"typography": {
+					"textDecoration": "none"
+				},
+				"elements": {
+					"link": {
+						"color": {
+							"background": "transparent",
+							"text": "var:preset|color|text-1"
+						},
+						":hover": {
+							"color": {
+								"background": "var:preset|color|surface-3",
+								"text": "var:preset|color|text-1"
+							}
+						},
+						":focus": {
+							"color": {
+								"background": "var:preset|color|surface-3",
+								"text": "var:preset|color|text-1"
+							}
+						},
+						":active": {
+							"color": {
+								"background": "var:preset|color|surface-3",
+								"text": "var:preset|color|text-1"
+							}
+						},
+						":visited": {
+							"color": {
+								"text": "var:preset|color|text-1"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

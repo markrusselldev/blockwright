@@ -1,0 +1,24 @@
+.wp-block-social-links {
+	gap: var(--wp--preset--spacing--small);
+}
+
+.wp-block-social-links .wp-block-social-link {
+	background-color: var(--wp--preset--color--surface-3);
+	color: var(--wp--preset--color--text-1);
+	transition:
+		background-color var(--wp--custom--motion--duration--fast)
+			var(--wp--custom--motion--easing--standard),
+		color var(--wp--custom--motion--duration--fast)
+			var(--wp--custom--motion--easing--standard);
+}
+
+.wp-block-social-links .wp-block-social-link:hover {
+	background-color: var(--wp--preset--color--surface-4);
+	color: var(--wp--preset--color--text-1);
+}
+
+.wp-block-social-links .wp-block-social-link:focus-visible {
+	outline: var(--wp--custom--button--focus-ring-width) solid
+		var(--wp--custom--button--focus-ring-color);
+	outline-offset: var(--wp--preset--spacing--xx-small);
+}

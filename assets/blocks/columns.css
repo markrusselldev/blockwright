@@ -1,0 +1,14 @@
+/**
+ * Equal-height pricing cards: make each column a flex column so the button pins
+ * to the BOTTOM of the card regardless of how long the feature list is, keeping
+ * all the CTAs on one line. Opt in with `bw-price-cards` on the core/columns
+ * block. Columns are already equal height (core lays them out as flex items with
+ * align-items:stretch), so this only controls the vertical distribution inside.
+ */
+.wp-block-columns.bw-price-cards > .wp-block-column {
+	display: flex;
+	flex-direction: column;
+}
+.wp-block-columns.bw-price-cards > .wp-block-column > .wp-block-buttons {
+	margin-block-start: auto;
+}

@@ -1,0 +1,32 @@
+{
+	"settings": {
+		"blocks": {
+			"core/separator": {
+				"border": {
+					"color": true,
+					"width": true
+				}
+			}
+		}
+	},
+	"styles": {
+		"blocks": {
+			"core/separator": {
+				"border": {
+					"top": {
+						"color": "var:preset|color|divider",
+						"style": "solid",
+						"width": "var:custom|border|width|thin"
+					}
+				},
+
+				"spacing": {
+					"margin": {
+						"bottom": "var:preset|spacing|small",
+						"top": "var:preset|spacing|small"
+					}
+				}
+			}
+		}
+	}
+}

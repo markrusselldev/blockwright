@@ -1,0 +1,61 @@
+/* Per-block shim: inline <code> styling (theme.json schema gap) */
+:where(code:not(pre code)) {
+	background-color: var(--wp--preset--color--surface-2);
+	color: inherit;
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 0.9em;
+	border-radius: var(--wp--preset--border-radius--s);
+	padding-inline: 0.25em;
+}
+
+/* Code blocks: generous padding and polished appearance */
+.wp-block-code {
+	background-color: var(--wp--preset--color--surface-2);
+	background-clip: padding-box;
+	border: var(--wp--custom--border--width--thin) solid
+		var(--wp--preset--color--border-subtle);
+	border-radius: var(--wp--preset--border-radius--m);
+	padding: var(--wp--preset--spacing--medium);
+	/* Scroll long code lines within the block; `hidden` clipped them unreadable. */
+	overflow-x: auto;
+}
+
+.wp-block-code > pre {
+	border-radius: inherit;
+	margin: 0;
+}
+
+.wp-block-code code {
+	display: block;
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: var(--wp--preset--font-size--s);
+	line-height: 1.6;
+	color: var(--wp--preset--color--text-1);
+	background: none;
+	padding: 0;
+	white-space: pre;
+}
+
+/* Preformatted text block */
+.wp-block-preformatted {
+	background-color: var(--wp--preset--color--surface-2);
+	border: var(--wp--custom--border--width--thin) solid
+		var(--wp--preset--color--border-subtle);
+	border-radius: var(--wp--preset--border-radius--m);
+	padding: var(--wp--preset--spacing--medium);
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: var(--wp--preset--font-size--s);
+	line-height: 1.6;
+	overflow-x: auto;
+	white-space: pre-wrap;
+}
+
+/* Verse block: poetic formatting */
+.wp-block-verse {
+	font-family: var(--wp--preset--font-family--body);
+	font-style: italic;
+	padding-inline-start: var(--wp--preset--spacing--large);
+	border-inline-start: var(--wp--custom--border--width--medium) solid
+		var(--wp--preset--color--divider);
+	white-space: pre-wrap;
+}

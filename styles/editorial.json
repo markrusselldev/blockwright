@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.9/theme.json",
+  "version": 3,
+  "title": "Editorial",
+  "slug": "editorial",
+  "settings": {
+    "typography": {
+      "fontFamilies": [
+        {
+          "fontFamily": "\"Source Serif 4\", \"Source Serif 4 Fallback\", Georgia, serif",
+          "name": "Body",
+          "slug": "body",
+          "fontFace": [
+            {
+              "fontFamily": "Source Serif 4",
+              "fontStyle": "normal",
+              "fontWeight": "400 700",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/source-serif-4-latin-wght.woff2"
+              ]
+            }
+          ]
+        },
+        {
+          "fontFamily": "\"Fraunces\", \"Fraunces Fallback\", Georgia, serif",
+          "name": "Headings",
+          "slug": "headings",
+          "fontFace": [
+            {
+              "fontFamily": "Fraunces",
+              "fontStyle": "normal",
+              "fontWeight": "400 700",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/fraunces-latin-wght.woff2"
+              ]
+            }
+          ]
+        },
+        {
+          "fontFamily": "\"IBM Plex Mono\", \"IBM Plex Mono Fallback\", ui-monospace, monospace",
+          "name": "Mono",
+          "slug": "mono",
+          "fontFace": [
+            {
+              "fontFamily": "IBM Plex Mono",
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/ibm-plex-mono-latin-400.woff2"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
