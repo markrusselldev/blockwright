@@ -10,8 +10,8 @@
  */
 
 ?>
-<!-- wp:group {"metadata":{"name":"Hero Basic"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"surface-1","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-surface-1-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large)">
+<!-- wp:group {"metadata":{"name":"Hero Basic"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"surface-2","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull has-surface-2-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large)">
 
 	<!-- wp:heading {"level":1} -->
 	<h1 class="wp-block-heading"><?php esc_html_e( 'Your headline here', 'blockwright' ); ?></h1>
@@ -21,14 +21,14 @@
 	<p><?php esc_html_e( 'A short intro paragraph clarifying the value.', 'blockwright' ); ?></p>
 	<!-- /wp:paragraph -->
 
-	<!-- wp:buttons {"layout":{"type":"flex","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
+	<!-- wp:buttons {"layout":{"type":"flex","flexWrap":"wrap"}} -->
 	<div class="wp-block-buttons">
 		<!-- wp:button {"className":"is-style-fill"} -->
 		<div class="wp-block-button is-style-fill"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Get Started', 'blockwright' ); ?></a></div>
 		<!-- /wp:button -->
 
-		<!-- wp:button {"className":"is-style-accent"} -->
-		<div class="wp-block-button is-style-accent"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'See Features', 'blockwright' ); ?></a></div>
+		<!-- wp:button {"className":"is-style-soft"} -->
+		<div class="wp-block-button is-style-soft"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'See Features', 'blockwright' ); ?></a></div>
 		<!-- /wp:button -->
 	</div>
 	<!-- /wp:buttons -->

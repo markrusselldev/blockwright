@@ -18,7 +18,7 @@
 
 <!-- wp:site-logo {"width":48,"align":"center"} /-->
 
-<!-- wp:site-title {"level":0,"isLink":true,"textAlign":"center","style":{"typography":{"fontSize":"var:preset|font-size|m","fontWeight":"600"}},"textColor":"text-2"} /-->
+<!-- wp:site-title {"level":0,"isLink":true,"textAlign":"center","style":{"typography":{"fontSize":"var:preset|font-size|m"}}} /-->
 
 <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"var:preset|font-size|s"}},"textColor":"text-2"} -->
 <p class="has-text-align-center has-text-2-color has-text-color" style="font-size:var(--wp--preset--font-size--s)"><a href="/privacy-policy/"><?php esc_html_e( 'Privacy', 'blockwright' ); ?></a> · <a href="/terms/"><?php esc_html_e( 'Terms', 'blockwright' ); ?></a> · <a href="/contact/"><?php esc_html_e( 'Contact', 'blockwright' ); ?></a></p>

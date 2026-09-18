@@ -16,8 +16,8 @@
 
 	<!-- wp:group {"align":"wide","layout":{"type":"constrained"}} -->
 	<div class="wp-block-group alignwide">
-		<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.08em","fontWeight":"600"}},"textColor":"text-2","fontSize":"s"} -->
-		<p class="has-text-2-color has-text-color has-s-font-size" style="letter-spacing:0.08em;text-transform:uppercase;font-weight:600"><?php esc_html_e( 'Visit', 'blockwright' ); ?></p>
+		<!-- wp:paragraph {"className":"is-style-eyebrow","fontSize":"s"} -->
+		<p class="is-style-eyebrow has-s-font-size"><?php esc_html_e( 'Visit', 'blockwright' ); ?></p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:heading {"level":2,"fontSize":"xl"} -->
@@ -60,7 +60,7 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"style":{"typography":{"lineHeight":"2"}},"fontSize":"l"} -->
-			<p class="has-l-font-size" style="line-height:2"><?php esc_html_e( 'Monday–Thursday · 9:00–5:00', 'blockwright' ); ?><br><?php esc_html_e( 'Friday · 9:00–4:00', 'blockwright' ); ?><br><?php esc_html_e( 'Saturday · By appointment', 'blockwright' ); ?><br><?php esc_html_e( 'Sunday · Closed', 'blockwright' ); ?></p>
+			<p class="has-l-font-size" style="line-height:2"><?php esc_html_e( 'Monday-Thursday · 9:00-5:00', 'blockwright' ); ?><br><?php esc_html_e( 'Friday · 9:00-4:00', 'blockwright' ); ?><br><?php esc_html_e( 'Saturday · By appointment', 'blockwright' ); ?><br><?php esc_html_e( 'Sunday · Closed', 'blockwright' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->

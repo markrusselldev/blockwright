@@ -1,0 +1,10 @@
+/* Per-block shim: Circle image style (is-style-circle on core/image) - crops the image
+   to a perfect circle, the social-avatar look. Forces a 1:1 box and object-fit:cover so
+   any source ratio becomes a circle; pair with the block's focal-point picker to center a
+   face. Radius/aspect/object-fit can't come from theme.json (no image aspect/object-fit
+   preset), so this is a token-free geometric shim. */
+.wp-block-image.is-style-circle img {
+	border-radius: 50%;
+	aspect-ratio: 1;
+	object-fit: cover;
+}

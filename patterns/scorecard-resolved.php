@@ -40,13 +40,13 @@
 	<div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
 <?php
 $rows = array(
-	array( __( 'A finding that failed', 'blockwright' ), __( 'Passed', 'blockwright' ) ),
-	array( __( 'Another problem found', 'blockwright' ), __( 'Fixed', 'blockwright' ) ),
-	array( __( 'Something needing attention', 'blockwright' ), __( 'Current', 'blockwright' ) ),
-	array( __( 'A status still in progress', 'blockwright' ), __( 'Done', 'blockwright' ) ),
-	array( __( 'Another item to review', 'blockwright' ), __( 'Cleared', 'blockwright' ) ),
-	array( __( 'A check that passed', 'blockwright' ), __( 'Passed', 'blockwright' ) ),
-	array( __( 'Confirmed and verified', 'blockwright' ), __( 'Verified', 'blockwright' ) ),
+	array( __( 'Website', 'blockwright' ), __( 'Live', 'blockwright' ) ),
+	array( __( 'Online booking', 'blockwright' ), __( 'Live', 'blockwright' ) ),
+	array( __( 'Customer records', 'blockwright' ), __( 'Clean', 'blockwright' ) ),
+	array( __( 'Lead follow-up', 'blockwright' ), __( 'Automated', 'blockwright' ) ),
+	array( __( 'Integrations', 'blockwright' ), __( 'Connected', 'blockwright' ) ),
+	array( __( 'Data & backups', 'blockwright' ), __( 'Verified', 'blockwright' ) ),
+	array( __( 'Account ownership', 'blockwright' ), __( 'Yours', 'blockwright' ) ),
 );
 $last = count( $rows ) - 1;
 foreach ( $rows as $i => $row ) {

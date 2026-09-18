@@ -151,7 +151,7 @@ div.wp-block-template-part,
 /* === Block overrides (production-facing blocks) ===
    Token-driven styling for code blocks and pullquotes, so site-wide instances
    match the style-guide specimens. Separators are governed entirely by
-   theme.json (config/theme/blocks/core-separator.json) + WP's auto-generated
+   theme.json + WP's auto-generated
    color classes - no override needed here. */
 
 /* Code blocks: lateral spacing. */
@@ -166,7 +166,7 @@ figure.wp-block-pullquote {
 }
 
 /* Flex space-between groups in content: constrain to the reading width and
-   centre (core otherwise leaves them at their alignment width). Scoped to main
+   center (core otherwise leaves them at their alignment width). Scoped to main
    so header/footer rows keep their own full-width layout. */
 .wp-site-blocks
 	main
@@ -195,6 +195,19 @@ figure.wp-block-pullquote {
 .wp-site-blocks > header .wp-block-site-title {
 	margin: 0;
 	line-height: 1.2;
+}
+
+/* Opt-in "Brand color" site title (is-style-brand, registered in
+   assets/js/editor-block-styles.js). Default stays the neutral wordmark (brand on
+   hover); this switches the whole title link to the brand link tone. The
+   `.is-style-brand` class is (0,2,1), above the global theme.json site-title link
+   color (`:root :where(...)`, 0,1,0). The header/footer patterns no longer pin the
+   link color per-instance, so the global control and this style both apply cleanly. */
+.wp-block-site-title.is-style-brand a {
+	color: var(--wp--preset--color--primary);
+}
+.wp-block-site-title.is-style-brand a:hover {
+	color: var(--wp--preset--color--primary-600);
 }
 
 /* Header, page content, and footer sit flush. WordPress puts its root block-gap (medium)
@@ -235,7 +248,9 @@ figure.wp-block-pullquote {
 	.wp-site-blocks > header .bw-call a::before {
 		font-family: dashicons; /* token-exempt: core Dashicons font family name */
 		content: "\f525"; /* token-exempt: Dashicons "phone" (handset) glyph */
-		font-size: var(--wp--preset--font-size--xxl); /* ~22-24px at mobile widths (icon is hidden on desktop) */
+		font-size: var(
+			--wp--preset--font-size--xxl
+		); /* ~22-24px at mobile widths (icon is hidden on desktop) */
 		line-height: 1;
 	}
 }

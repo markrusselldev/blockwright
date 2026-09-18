@@ -25,7 +25,7 @@ $avatar_url = get_theme_file_uri( 'assets/images/placeholder-avatar.svg' );
 
 		<!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 		<div class="wp-block-group">
-			<!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"fontSize":"base"} -->
+			<!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}}} -->
 			<p class="has-base-font-size" style="font-weight:600"><?php esc_html_e( 'Jane Doe', 'blockwright' ); ?></p>
 			<!-- /wp:paragraph -->
 

@@ -8,8 +8,8 @@
 				"border": {
 					"radius": "var:preset|border-radius|s",
 					"left": {
-						"color": "var:preset|color|divider",
-						"width": "var:custom|border|width|thin",
+						"color": "var:preset|color|link",
+						"width": "var:custom|border|width|thick",
 						"style": "solid"
 					}
 				},

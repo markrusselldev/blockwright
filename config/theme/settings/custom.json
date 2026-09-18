@@ -21,20 +21,20 @@
 					"px": "var:preset|spacing|medium",
 					"py": "var:preset|spacing|x-small",
 					"radius": "var:preset|border-radius|m",
-					"weight": "600",
-					"fontSize": "1rem"
+					"weight": "700",
+					"fontSize": "1.1875rem"
 				},
-				"primary": {
-					"bg": "var(--wp--preset--color--btn-primary-bg)",
-					"bgHover": "var(--wp--preset--color--btn-primary-bg-hover)",
-					"bgActive": "var(--wp--preset--color--btn-primary-bg-active)",
-					"text": "var(--wp--preset--color--btn-primary-text)"
+				"fill": {
+					"bg": "var(--wp--preset--color--btn-fill-bg)",
+					"bgHover": "var(--wp--preset--color--btn-fill-bg-hover)",
+					"bgActive": "var(--wp--preset--color--btn-fill-bg-active)",
+					"text": "var(--wp--preset--color--btn-fill-text)"
 				},
-				"accent": {
-					"bg": "color-mix(in oklab, var(--wp--preset--color--accent) 18%, transparent)",
-					"bgHover": "color-mix(in oklab, var(--wp--preset--color--accent) 28%, transparent)",
-					"bgActive": "color-mix(in oklab, var(--wp--preset--color--accent) 36%, transparent)",
-					"text": "var(--wp--preset--color--text-1)",
+				"soft": {
+					"bg": "var(--wp--preset--color--btn-soft-bg)",
+					"bgHover": "var(--wp--preset--color--btn-soft-bg-hover)",
+					"bgActive": "var(--wp--preset--color--btn-soft-bg-active)",
+					"text": "var(--wp--preset--color--btn-soft-text)",
 					"border": "transparent"
 				},
 				"outline": {
@@ -51,6 +51,19 @@
 					"text": "var(--wp--preset--color--link)",
 					"border": "transparent"
 				}
+			},
+			"eyebrow": {
+				"tracking": "0.08em",
+				"weight": "600"
+			},
+			"badge": {
+				"bg": "var(--wp--preset--color--btn-soft-bg)",
+				"text": "var(--wp--preset--color--btn-soft-text)",
+				"radius": "9999px",
+				"px": "var:preset|spacing|x-small",
+				"py": "0.3rem",
+				"fontSize": "var:preset|font-size|xs",
+				"weight": "600"
 			},
 			"form": {
 				"control-height": "2.5rem",
@@ -78,7 +91,8 @@
 			"border": {
 				"width": {
 					"thin": "1px",
-					"medium": "2px"
+					"medium": "2px",
+					"thick": "4px"
 				}
 			},
 			"surface": {

@@ -40,13 +40,13 @@
 	<div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
 <?php
 $rows = array(
-	array( __( 'A finding that failed', 'blockwright' ), __( 'Failed', 'blockwright' ), 'danger' ),
-	array( __( 'Another problem found', 'blockwright' ), __( 'Found', 'blockwright' ), 'danger' ),
-	array( __( 'Something needing attention', 'blockwright' ), __( 'Review', 'blockwright' ), 'warning' ),
-	array( __( 'A status still in progress', 'blockwright' ), __( 'Pending', 'blockwright' ), 'warning' ),
-	array( __( 'Another item to review', 'blockwright' ), __( 'Manual', 'blockwright' ), 'warning' ),
-	array( __( 'A check that passed', 'blockwright' ), __( 'Passed', 'blockwright' ), 'success' ),
-	array( __( 'Confirmed and verified', 'blockwright' ), __( 'Verified', 'blockwright' ), 'success' ),
+	array( __( 'Website', 'blockwright' ), __( 'Review', 'blockwright' ), 'warning' ),
+	array( __( 'Online booking', 'blockwright' ), __( 'Missing', 'blockwright' ), 'danger' ),
+	array( __( 'Customer records', 'blockwright' ), __( 'Duplicates', 'blockwright' ), 'warning' ),
+	array( __( 'Lead follow-up', 'blockwright' ), __( 'Manual', 'blockwright' ), 'danger' ),
+	array( __( 'Integrations', 'blockwright' ), __( 'Broken', 'blockwright' ), 'danger' ),
+	array( __( 'Data & backups', 'blockwright' ), __( 'Unverified', 'blockwright' ), 'warning' ),
+	array( __( 'Account ownership', 'blockwright' ), __( 'Review', 'blockwright' ), 'warning' ),
 );
 $last = count( $rows ) - 1;
 foreach ( $rows as $i => $row ) {
@@ -58,8 +58,8 @@ foreach ( $rows as $i => $row ) {
 		? 'border-bottom-color:var(--wp--preset--color--border-subtle);border-bottom-width:var(--wp--custom--border--width--thin);'
 		: '';
 	?>
-		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small"}}<?php echo $border; // phpcs:ignore ?>},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
-		<div class="wp-block-group" style="<?php echo esc_attr( $border_css ); ?>padding-top:var(--wp--preset--spacing--x-small);padding-bottom:var(--wp--preset--spacing--x-small)"><!-- wp:paragraph {"fontSize":"s"} -->
+		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|xx-small","bottom":"var:preset|spacing|xx-small"}}<?php echo $border; // phpcs:ignore ?>},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+		<div class="wp-block-group" style="<?php echo esc_attr( $border_css ); ?>padding-top:var(--wp--preset--spacing--xx-small);padding-bottom:var(--wp--preset--spacing--xx-small)"><!-- wp:paragraph {"fontSize":"s"} -->
 		<p class="has-s-font-size"><?php echo esc_html( $label ); ?></p>
 		<!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-scorecard-chip","backgroundColor":"<?php echo esc_attr( $tone ); ?>-100","textColor":"<?php echo esc_attr( $tone ); ?>-800","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-small","bottom":"var:preset|spacing|xxx-small","left":"var:preset|spacing|x-small","right":"var:preset|spacing|x-small"}},"border":{"radius":"var:preset|border-radius|m"},"typography":{"fontWeight":"600"}},"fontSize":"s"} -->
 		<p class="bw-scorecard-chip has-<?php echo esc_attr( $tone ); ?>-800-color has-<?php echo esc_attr( $tone ); ?>-100-background-color has-text-color has-background has-s-font-size" style="border-radius:var(--wp--preset--border-radius--m);padding-top:var(--wp--preset--spacing--xxx-small);padding-bottom:var(--wp--preset--spacing--xxx-small);padding-left:var(--wp--preset--spacing--x-small);padding-right:var(--wp--preset--spacing--x-small);font-weight:600"><?php echo esc_html( $row_status ); ?></p>

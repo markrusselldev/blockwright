@@ -7,129 +7,149 @@
     "color": {
       "palette": [
         {
+          "slug": "primary",
+          "name": "Primary (brand color)",
+          "color": "light-dark(oklch(0.6055 0.1607 292.8), oklch(0.6055 0.1607 292.8))"
+        },
+        {
           "slug": "primary-600",
           "name": "Primary 600",
-          "color": "light-dark(oklch(0.59 0.17 295), oklch(0.75 0.1363 287.9))"
+          "color": "light-dark(oklch(0.55 0.16 292.8), oklch(0.8 0.1107 292.8))"
         },
         {
           "slug": "primary-500",
           "name": "Primary 500",
-          "color": "light-dark(oklch(0.66 0.17 290.3), oklch(0.66 0.17 291.9))"
-        },
-        {
-          "slug": "accent",
-          "name": "Accent",
-          "color": "light-dark(oklch(0.68 0.17 293), oklch(0.55 0.17 289))"
-        },
-        {
-          "slug": "accent-hover",
-          "name": "Accent Hover",
-          "color": "light-dark(oklch(0.62 0.17 291), oklch(0.62 0.17 289))"
-        },
-        {
-          "slug": "accent-active",
-          "name": "Accent Active",
-          "color": "light-dark(oklch(0.56 0.17 290), oklch(0.5 0.17 289))"
-        },
-        {
-          "slug": "link",
-          "name": "Link",
-          "color": "light-dark(oklch(0.42 0.17 295), oklch(0.72 0.1547 288))"
-        },
-        {
-          "slug": "link-hover",
-          "name": "Link Hover",
-          "color": "light-dark(oklch(0.5 0.17 295), oklch(0.78 0.1186 288))"
-        },
-        {
-          "slug": "link-active",
-          "name": "Link Active",
-          "color": "light-dark(oklch(0.35 0.17 295), oklch(0.65 0.17 288))"
-        },
-        {
-          "slug": "link-visited",
-          "name": "Link Visited",
-          "color": "light-dark(oklch(0.42 0.17 333), oklch(0.68 0.17 333))"
-        },
-        {
-          "slug": "btn-subtle-bg-hover",
-          "name": "Button Subtle BG Hover",
-          "color": "light-dark(oklch(0.94 0.0314 293), oklch(0.24 0.1333 293))"
-        },
-        {
-          "slug": "btn-subtle-bg-active",
-          "name": "Button Subtle BG Active",
-          "color": "light-dark(oklch(0.9 0.0532 293), oklch(0.28 0.1556 293))"
+          "color": "light-dark(oklch(0.68 0.16 292.8), oklch(0.66 0.16 292.8))"
         },
         {
           "slug": "primary-50",
           "name": "Primary 50",
-          "color": "light-dark(oklch(0.98 0.01 289.8), oklch(0.35 0.17 293))"
+          "color": "light-dark(oklch(0.97 0.0155 292.8), oklch(0.3 0.0482 292.8))"
         },
         {
           "slug": "primary-100",
           "name": "Primary 100",
-          "color": "light-dark(oklch(0.95 0.0254 289.9), oklch(0.42 0.17 295.1))"
+          "color": "light-dark(oklch(0.93 0.0367 292.8), oklch(0.35 0.0723 292.8))"
         },
         {
           "slug": "primary-200",
           "name": "Primary 200",
-          "color": "light-dark(oklch(0.9 0.0501 284), oklch(0.46 0.17 294.9))"
+          "color": "light-dark(oklch(0.88 0.0643 292.8), oklch(0.4 0.1045 292.8))"
         },
         {
           "slug": "primary-300",
           "name": "Primary 300",
-          "color": "light-dark(oklch(0.83 0.0874 283.4), oklch(0.51 0.17 296.6))"
+          "color": "light-dark(oklch(0.82 0.0989 292.8), oklch(0.46 0.1366 292.8))"
         },
         {
           "slug": "primary-400",
           "name": "Primary 400",
-          "color": "light-dark(oklch(0.75 0.1344 285.6), oklch(0.6 0.17 295.2))"
+          "color": "light-dark(oklch(0.75 0.1414 292.8), oklch(0.55 0.1527 292.8))"
         },
         {
           "slug": "primary-700",
           "name": "Primary 700",
-          "color": "light-dark(oklch(0.5 0.17 295.8), oklch(0.81 0.0983 283.1))"
+          "color": "light-dark(oklch(0.48 0.16 292.8), oklch(0.85 0.0813 292.8))"
         },
         {
           "slug": "primary-800",
           "name": "Primary 800",
-          "color": "light-dark(oklch(0.44 0.17 293.9), oklch(0.88 0.0598 281))"
+          "color": "light-dark(oklch(0.4 0.1527 292.8), oklch(0.89 0.0587 292.8))"
         },
         {
           "slug": "primary-900",
           "name": "Primary 900",
-          "color": "light-dark(oklch(0.39 0.17 293.8), oklch(0.93 0.034 279.6))"
+          "color": "light-dark(oklch(0.34 0.1446 292.8), oklch(0.93 0.0367 292.8))"
         },
         {
           "slug": "primary-950",
           "name": "Primary 950",
-          "color": "light-dark(oklch(0.3 0.1672 292.5), oklch(0.98 0.0094 258))"
+          "color": "light-dark(oklch(0.28 0.1366 292.8), oklch(0.96 0.0207 292.8))"
         },
         {
-          "slug": "on-accent",
-          "name": "On Accent",
-          "color": "light-dark(oklch(0.22 0 0), oklch(0.98 0 0))"
+          "slug": "on-primary",
+          "name": "On Primary",
+          "color": "light-dark(oklch(1 0 0), oklch(1 0 0))"
         },
         {
-          "slug": "btn-primary-bg",
-          "name": "Button Primary BG",
-          "color": "light-dark(oklch(0.66 0.17 290.3), oklch(0.66 0.17 291.9))"
+          "slug": "btn-fill-bg",
+          "name": "Button Fill BG",
+          "color": "light-dark(oklch(0.6055 0.1607 292.8), oklch(0.6055 0.1607 292.8))"
         },
         {
-          "slug": "btn-primary-bg-hover",
-          "name": "Button Primary BG Hover",
-          "color": "light-dark(oklch(0.59 0.17 295), oklch(0.75 0.1363 287.9))"
+          "slug": "btn-fill-bg-hover",
+          "name": "Button Fill BG Hover",
+          "color": "light-dark(oklch(0.5455 0.1607 292.8), oklch(0.5455 0.1607 292.8))"
         },
         {
-          "slug": "btn-primary-bg-active",
-          "name": "Button Primary BG Active",
-          "color": "light-dark(oklch(0.5 0.17 295.8), oklch(0.81 0.0983 283.1))"
+          "slug": "btn-fill-bg-active",
+          "name": "Button Fill BG Active",
+          "color": "light-dark(oklch(0.4855 0.1607 292.8), oklch(0.4855 0.1607 292.8))"
         },
         {
-          "slug": "btn-primary-text",
-          "name": "Button Primary Text",
-          "color": "light-dark(oklch(0.22 0 0), oklch(0.22 0 0))"
+          "slug": "btn-fill-text",
+          "name": "Button Fill Text",
+          "color": "light-dark(oklch(1 0 0), oklch(1 0 0))"
+        },
+        {
+          "slug": "brand-fill",
+          "name": "Brand Fill",
+          "color": "light-dark(oklch(0.5575 0.1607 292.8), oklch(0.5575 0.1607 292.8))"
+        },
+        {
+          "slug": "link-visited",
+          "name": "Link Visited",
+          "color": "light-dark(oklch(0.44 0.072 292.8), oklch(0.8 0.072 292.8))"
+        },
+        {
+          "slug": "link",
+          "name": "Link",
+          "color": "light-dark(oklch(0.57 0.16 292.8), oklch(0.63 0.16 292.8))"
+        },
+        {
+          "slug": "link-hover",
+          "name": "Link Hover",
+          "color": "light-dark(oklch(0.5 0.16 292.8), oklch(0.7 0.16 292.8))"
+        },
+        {
+          "slug": "link-active",
+          "name": "Link Active",
+          "color": "light-dark(oklch(0.43 0.16 292.8), oklch(0.77 0.129 292.8))"
+        },
+        {
+          "slug": "focus",
+          "name": "Focus",
+          "color": "light-dark(oklch(0.66 0.16 292.8), oklch(0.54 0.16 292.8))"
+        },
+        {
+          "slug": "btn-soft-bg",
+          "name": "Button Soft BG",
+          "color": "var:preset|color|primary-100"
+        },
+        {
+          "slug": "btn-soft-bg-hover",
+          "name": "Button Soft BG Hover",
+          "color": "var:preset|color|primary-200"
+        },
+        {
+          "slug": "btn-soft-bg-active",
+          "name": "Button Soft BG Active",
+          "color": "var:preset|color|primary-300"
+        },
+        {
+          "slug": "btn-soft-text",
+          "name": "Button Soft Text",
+          "color": "var:preset|color|primary-800"
+        },
+        {
+          "slug": "btn-subtle-bg-hover",
+          "name": "Button Subtle BG Hover",
+          "color": "var:preset|color|primary-100"
+        },
+        {
+          "slug": "btn-subtle-bg-active",
+          "name": "Button Subtle BG Active",
+          "color": "var:preset|color|primary-200"
         },
         {
           "slug": "surface-1",
@@ -154,17 +174,12 @@
         {
           "slug": "text-1",
           "name": "Text 1",
-          "color": "var:preset|color|neutral-900"
+          "color": "light-dark(var(--wp--preset--color--neutral-900), color-mix(in oklab, white 92%, var(--wp--preset--color--surface-1) 8%))"
         },
         {
           "slug": "text-2",
           "name": "Text 2",
           "color": "var:preset|color|neutral-600"
-        },
-        {
-          "slug": "focus",
-          "name": "Focus",
-          "color": "var:preset|color|link"
         },
         {
           "slug": "danger-50",
@@ -332,74 +347,69 @@
           "color": "light-dark(oklch(0.31 0.069 49.2), oklch(0.99 0.036 107.1))"
         },
         {
-          "slug": "on-primary",
-          "name": "On Primary",
-          "color": "light-dark(oklch(0.98 0 0), oklch(0.22 0 0))"
-        },
-        {
           "slug": "neutral-0",
           "name": "Neutral 0",
-          "color": "light-dark(oklch(0.99 0.0008 295), oklch(0.22 0.0047 295))"
+          "color": "light-dark(oklch(0.99 0.0008 292.8), oklch(0.22 0.0047 292.8))"
         },
         {
           "slug": "neutral-50",
           "name": "Neutral 50",
-          "color": "light-dark(oklch(0.95 0.0016 295), oklch(0.28 0.0057 295))"
+          "color": "light-dark(oklch(0.95 0.0016 292.8), oklch(0.28 0.0057 292.8))"
         },
         {
           "slug": "neutral-100",
           "name": "Neutral 100",
-          "color": "light-dark(oklch(0.90 0.003 295), oklch(0.34 0.007 295))"
+          "color": "light-dark(oklch(0.90 0.003 292.8), oklch(0.34 0.007 292.8))"
         },
         {
           "slug": "neutral-200",
           "name": "Neutral 200",
-          "color": "light-dark(oklch(0.85 0.0044 295), oklch(0.40 0.008 295))"
+          "color": "light-dark(oklch(0.85 0.0044 292.8), oklch(0.40 0.008 292.8))"
         },
         {
           "slug": "neutral-300",
           "name": "Neutral 300",
-          "color": "light-dark(oklch(0.87 0.0039 295), oklch(0.38 0.0078 295))"
+          "color": "light-dark(oklch(0.87 0.0039 292.8), oklch(0.38 0.0078 292.8))"
         },
         {
           "slug": "neutral-400",
           "name": "Neutral 400",
-          "color": "light-dark(oklch(0.71 0.0077 295), oklch(0.46 0.0087 295))"
+          "color": "light-dark(oklch(0.71 0.0077 292.8), oklch(0.46 0.0087 292.8))"
         },
         {
           "slug": "neutral-500",
           "name": "Neutral 500",
-          "color": "light-dark(oklch(0.55 0.01 295), oklch(0.53 0.0097 295))"
+          "color": "light-dark(oklch(0.55 0.01 292.8), oklch(0.53 0.0097 292.8))"
         },
         {
           "slug": "neutral-600",
           "name": "Neutral 600",
-          "color": "light-dark(oklch(0.44 0.0085 295), oklch(0.78 0.006 295))"
+          "color": "light-dark(oklch(0.44 0.0085 292.8), oklch(0.78 0.006 292.8))"
         },
         {
           "slug": "neutral-700",
           "name": "Neutral 700",
-          "color": "light-dark(oklch(0.37 0.0076 295), oklch(0.78 0.006 295))"
+          "color": "light-dark(oklch(0.37 0.0076 292.8), oklch(0.78 0.006 292.8))"
         },
         {
           "slug": "neutral-800",
           "name": "Neutral 800",
-          "color": "light-dark(oklch(0.27 0.0054 295), oklch(0.87 0.0039 295))"
+          "color": "light-dark(oklch(0.27 0.0054 292.8), oklch(0.87 0.0039 292.8))"
         },
         {
           "slug": "neutral-900",
           "name": "Neutral 900",
-          "color": "light-dark(oklch(0.21 0.0045 295), oklch(0.93 0.0021 295))"
+          "color": "light-dark(oklch(0.21 0.0045 292.8), oklch(0.93 0.0021 292.8))"
         },
         {
           "slug": "neutral-950",
           "name": "Neutral 950",
-          "color": "light-dark(oklch(0.19 0.004 295), oklch(0.96 0.0014 295))"
+          "color": "light-dark(oklch(0.19 0.004 292.8), oklch(0.96 0.0014 292.8))"
         },
         {
           "slug": "neutral-1000",
           "name": "Neutral 1000",
-          "color": "light-dark(oklch(0.00 0 295), oklch(1.00 0 295))"
+          "color": "light-dark(oklch(0.00 0 292.8), oklch(1.00 0 292.8))"
         },
         {
           "slug": "media-scrim",
@@ -410,6 +420,11 @@
           "slug": "on-media",
           "name": "On Media",
           "color": "light-dark(oklch(1 0 0), oklch(1 0 0))"
+        },
+        {
+          "slug": "on-brand-fill",
+          "name": "On Brand Fill",
+          "color": "light-dark(oklch(0.97 0 0), oklch(0.97 0 0))"
         },
         {
           "slug": "btn-default-bg",
@@ -427,29 +442,34 @@
           "color": "var:preset|color|neutral-300"
         },
         {
+          "slug": "accent",
+          "name": "Accent (deprecated)",
+          "color": "var:preset|color|primary"
+        },
+        {
           "slug": "divider",
           "name": "Divider",
-          "color": "light-dark(oklch(0.92 0.0024 295), oklch(0.33 0.0067 295))"
+          "color": "light-dark(oklch(0.92 0.0024 292.8), oklch(0.33 0.0067 292.8))"
         },
         {
           "slug": "outline-1",
           "name": "Outline 1",
-          "color": "light-dark(oklch(0.68 0.0081 295 / 0.72), oklch(0.50 0.0093 295 / 0.62))"
+          "color": "light-dark(oklch(0.68 0.0081 292.8 / 0.72), oklch(0.50 0.0093 292.8 / 0.62))"
         },
         {
           "slug": "border-subtle",
           "name": "Border Subtle",
-          "color": "light-dark(oklch(0.80 0.0055 295), oklch(0.44 0.0085 295))"
+          "color": "light-dark(oklch(0.80 0.0055 292.8), oklch(0.44 0.0085 292.8))"
         },
         {
           "slug": "border-default",
           "name": "Border Default",
-          "color": "light-dark(oklch(0.71 0.0077 295), oklch(0.51 0.0094 295))"
+          "color": "light-dark(oklch(0.71 0.0077 292.8), oklch(0.51 0.0094 292.8))"
         },
         {
           "slug": "border-strong",
           "name": "Border Strong",
-          "color": "light-dark(oklch(0.55 0.01 295), oklch(0.67 0.0083 295))"
+          "color": "light-dark(oklch(0.55 0.01 292.8), oklch(0.67 0.0083 292.8))"
         },
         {
           "slug": "text-strong",
@@ -470,11 +490,6 @@
           "slug": "red",
           "name": "Red",
           "color": "var:preset|color|danger-600"
-        },
-        {
-          "slug": "primary",
-          "name": "Primary",
-          "color": "var:preset|color|primary-600"
         }
       ]
     }

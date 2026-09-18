@@ -15,7 +15,7 @@
 	     lint what actually ships. -->
 	<exclude-pattern>inc/dev*.php</exclude-pattern>
 
-	<!-- Default CLI behaviour. -->
+	<!-- Default CLI behavior. -->
 	<arg name="colors"/>
 	<arg name="report" value="full"/>
 	<arg name="report-width" value="120"/>

@@ -21,16 +21,16 @@ $placeholder_image = get_template_directory_uri() . '/assets/images/placeholder-
 
 		<!-- wp:column {"verticalAlignment":"center"} -->
 		<div class="wp-block-column is-vertically-aligned-center">
-			<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"border":{"width":"var:custom|border|width|thin","color":"var:preset|color|border-subtle","radius":"var:preset|border-radius|l"}}} -->
-			<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="Image placeholder" class="has-border-color" style="border-color:var(--wp--preset--color--border-subtle);border-width:var(--wp--custom--border--width--thin);border-radius:var(--wp--preset--border-radius--l);aspect-ratio:4/3;object-fit:cover"/></figure>
+			<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"border":{"width":"var:custom|border|width|thin","color":"var:preset|color|border-subtle"}}} -->
+			<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="Image placeholder" class="has-border-color" style="border-color:var(--wp--preset--color--border-subtle);border-width:var(--wp--custom--border--width--thin);aspect-ratio:4/3;object-fit:cover"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->
 
 		<!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"padding":{"left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}}}} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="padding-left:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium)">
-			<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.08em","fontWeight":"600"}},"textColor":"text-2","fontSize":"s"} -->
-			<p class="has-text-2-color has-text-color has-s-font-size" style="letter-spacing:0.08em;text-transform:uppercase;font-weight:600"><?php esc_html_e( 'What we do', 'blockwright' ); ?></p>
+			<!-- wp:paragraph {"className":"is-style-eyebrow","fontSize":"s"} -->
+			<p class="is-style-eyebrow has-s-font-size"><?php esc_html_e( 'What we do', 'blockwright' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"level":2,"fontSize":"xl"} -->
@@ -55,8 +55,8 @@ $placeholder_image = get_template_directory_uri() . '/assets/images/placeholder-
 
 		<!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"padding":{"left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}}}} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="padding-left:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium)">
-			<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.08em","fontWeight":"600"}},"textColor":"text-2","fontSize":"s"} -->
-			<p class="has-text-2-color has-text-color has-s-font-size" style="letter-spacing:0.08em;text-transform:uppercase;font-weight:600"><?php esc_html_e( 'How it works', 'blockwright' ); ?></p>
+			<!-- wp:paragraph {"className":"is-style-eyebrow","fontSize":"s"} -->
+			<p class="is-style-eyebrow has-s-font-size"><?php esc_html_e( 'How it works', 'blockwright' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"level":2,"fontSize":"xl"} -->
@@ -75,8 +75,8 @@ $placeholder_image = get_template_directory_uri() . '/assets/images/placeholder-
 
 		<!-- wp:column {"verticalAlignment":"center"} -->
 		<div class="wp-block-column is-vertically-aligned-center">
-			<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"border":{"width":"var:custom|border|width|thin","color":"var:preset|color|border-subtle","radius":"var:preset|border-radius|l"}}} -->
-			<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="Image placeholder" class="has-border-color" style="border-color:var(--wp--preset--color--border-subtle);border-width:var(--wp--custom--border--width--thin);border-radius:var(--wp--preset--border-radius--l);aspect-ratio:4/3;object-fit:cover"/></figure>
+			<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"border":{"width":"var:custom|border|width|thin","color":"var:preset|color|border-subtle"}}} -->
+			<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="Image placeholder" class="has-border-color" style="border-color:var(--wp--preset--color--border-subtle);border-width:var(--wp--custom--border--width--thin);aspect-ratio:4/3;object-fit:cover"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->

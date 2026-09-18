@@ -1,0 +1,9 @@
+/* Per-block shim: brand divider (opt-in is-style-brand on core/separator) - the line
+   drawn in the brand tone instead of the neutral divider. A choice, not a default; core
+   owns the default look (token-driven via theme.json). Colors ALL edges so the actually-
+   drawn line is brand regardless of which border core/the theme paints (core draws the
+   line as border-bottom; our theme.json draws border-top) - coloring only one left the
+   visible edge pale. */
+hr.wp-block-separator.is-style-brand {
+	border-color: var(--wp--preset--color--link);
+}

@@ -2,27 +2,27 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Blockwright 1.1.2\n"
+"Project-Id-Version: Blockwright 1.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/blockwright\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-02T01:04:34+00:00\n"
+"POT-Creation-Date: 2026-09-18T03:37:23+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: blockwright\n"
 
 #. Theme Name of the theme
 #: style.css
-#: inc/setup.php:39
+#: inc/setup.php:41
 msgid "Blockwright"
 msgstr ""
 
 #. Description of the theme
 #: style.css
-msgid "Blockwright is a lightweight, adaptive block theme for full-site editing. It is token-driven through theme.json, follows the visitor's light or dark system preference automatically, ships curated color and typography style variations, and includes block patterns for portfolios, businesses, and blogs."
+msgid "Blockwright is an adaptive block theme for full-site editing, made for the developers and agencies who build client sites. It looks finished the moment you activate it, and it follows each visitor's light or dark system setting on its own, with WCAG AA contrast in both. Choose from sixteen accessible color schemes and four type sets, then build with over fifty patterns: section blocks for heroes, services, pricing, testimonials and FAQs, plus ready-made page layouts for business, portfolio, blog, landing, pricing and contact. It is all core WordPress blocks, so there is no page builder to learn. Pairs with the free Blockwright Blocks plugin, which adds a visual color designer and adaptive blocks."
 msgstr ""
 
 #. Author of the theme
@@ -33,6 +33,18 @@ msgstr ""
 #. Author URI of the theme
 #: style.css
 msgid "https://markrussell.io"
+msgstr ""
+
+#: inc/setup.php:42
+msgid "Hero"
+msgstr ""
+
+#: inc/setup.php:43
+msgid "Layout"
+msgstr ""
+
+#: inc/setup.php:44
+msgid "Theme"
 msgstr ""
 
 #: patterns/404.php
@@ -88,6 +100,27 @@ msgstr ""
 msgid "Learn more"
 msgstr ""
 
+#: patterns/announcement-bar.php
+msgctxt "Pattern title"
+msgid "Announcement Bar"
+msgstr ""
+
+#: patterns/announcement-bar.php
+msgctxt "Pattern description"
+msgid "A slim full-width bar for the top of the page - a short announcement or promotion with a link. Drop it above the header to run site-wide."
+msgstr ""
+
+#: patterns/announcement-bar.php:18
+msgid "Now booking new projects for next quarter."
+msgstr ""
+
+#: patterns/announcement-bar.php:18
+#: patterns/faq.php:23
+#: patterns/header-contact.php:38
+#: patterns/steps-process.php:42
+msgid "Get in touch"
+msgstr ""
+
 #: patterns/archive-feature-grid.php
 msgctxt "Pattern title"
 msgid "Archive • Feature Grid"
@@ -96,6 +129,16 @@ msgstr ""
 #: patterns/archive-feature-grid.php
 msgctxt "Pattern description"
 msgid "Blog or archive layout - a query loop showing recent posts in a feature grid."
+msgstr ""
+
+#: patterns/author-bio.php
+msgctxt "Pattern title"
+msgid "Author Bio"
+msgstr ""
+
+#: patterns/author-bio.php
+msgctxt "Pattern description"
+msgid "An end-of-post author box - avatar, linked name, and bio, filled automatically from the post author's profile. Drop it at the bottom of the single-post template."
 msgstr ""
 
 #: patterns/case-study.php
@@ -215,6 +258,36 @@ msgstr ""
 #: patterns/comments.php
 msgctxt "Pattern description"
 msgid "Comments section with title, threaded list, pagination, and form. Use on posts where discussion is enabled."
+msgstr ""
+
+#: patterns/comparison-cards.php
+msgctxt "Pattern title"
+msgid "Comparison Cards"
+msgstr ""
+
+#: patterns/comparison-cards.php
+msgctxt "Pattern description"
+msgid "A two-card \"the usual way vs working with us\" comparison - the honest contrast that turns a hesitant reader into an enquiry."
+msgstr ""
+
+#: patterns/comparison-cards.php:29
+msgid "See the difference"
+msgstr ""
+
+#: patterns/comparison-cards.php:38
+msgid "The usual way"
+msgstr ""
+
+#: patterns/comparison-cards.php:55
+msgid "Recommended"
+msgstr ""
+
+#: patterns/comparison-cards.php:58
+msgid "Working with us"
+msgstr ""
+
+#: patterns/comparison-cards.php:72
+msgid "Get a quote"
 msgstr ""
 
 #: patterns/contact-simple.php
@@ -379,6 +452,16 @@ msgstr ""
 msgid "Learn More"
 msgstr ""
 
+#: patterns/divider-icon.php
+msgctxt "Pattern title"
+msgid "Divider • Icon"
+msgstr ""
+
+#: patterns/divider-icon.php
+msgctxt "Pattern description"
+msgid "A brand-colored divider line with a small centered icon. Swap the icon for your logo, an image, or any icon from the picker; drop several down a page, each with a different icon."
+msgstr ""
+
 #: patterns/faq.php
 msgctxt "Pattern title"
 msgid "FAQ"
@@ -395,12 +478,6 @@ msgstr ""
 
 #: patterns/faq.php:23
 msgid "Still have a question?"
-msgstr ""
-
-#: patterns/faq.php:23
-#: patterns/header-contact.php:38
-#: patterns/steps-process.php:42
-msgid "Get in touch"
 msgstr ""
 
 #: patterns/faq.php:31
@@ -590,6 +667,34 @@ msgstr ""
 msgid "Subscribe"
 msgstr ""
 
+#: patterns/gallery.php
+msgctxt "Pattern title"
+msgid "Gallery • Image Grid"
+msgstr ""
+
+#: patterns/gallery.php
+msgctxt "Pattern description"
+msgid "A static three-column image gallery for showing work, photos, or a portfolio sample - a heading, a short intro, and a cropped image grid."
+msgstr ""
+
+#: patterns/gallery.php:20
+msgid "Selected work"
+msgstr ""
+
+#: patterns/gallery.php:24
+msgid "A visual sample of recent projects."
+msgstr ""
+
+#: patterns/guarantee-badges.php
+msgctxt "Pattern title"
+msgid "Guarantee Badges"
+msgstr ""
+
+#: patterns/guarantee-badges.php
+msgctxt "Pattern description"
+msgid "A row of trust signals - money-back guarantee, secure checkout, support, rating. Reassurance near a price or a form to lift conversion."
+msgstr ""
+
 #: patterns/header-centered.php
 msgctxt "Pattern title"
 msgid "Header: Centered"
@@ -661,6 +766,33 @@ msgstr ""
 #: patterns/hero-centered.php:26
 #: patterns/hero-split.php:30
 msgid "A short sentence about what you offer and who it is for."
+msgstr ""
+
+#: patterns/hero-image.php
+msgctxt "Pattern title"
+msgid "Hero • Image Background"
+msgstr ""
+
+#: patterns/hero-image.php
+msgctxt "Pattern description"
+msgid "A full-width hero with an image background, a legible dark scrim, and a centered headline, subhead, and call to action. The boldest way to open a page."
+msgstr ""
+
+#: patterns/hero-image.php:19
+msgid "Build something worth visiting"
+msgstr ""
+
+#: patterns/hero-image.php:23
+msgid "A short, confident line about what you make and who it is for - enough to earn the next scroll."
+msgstr ""
+
+#: patterns/hero-image.php:28
+#: patterns/steps-process.php:70
+msgid "Get started"
+msgstr ""
+
+#: patterns/hero-image.php:32
+msgid "See our work"
 msgstr ""
 
 #: patterns/hero-split.php
@@ -752,11 +884,11 @@ msgid "Get directions →"
 msgstr ""
 
 #: patterns/location-hours.php:63
-msgid "Monday–Thursday · 9:00–5:00"
+msgid "Monday-Thursday · 9:00-5:00"
 msgstr ""
 
 #: patterns/location-hours.php:63
-msgid "Friday · 9:00–4:00"
+msgid "Friday · 9:00-4:00"
 msgstr ""
 
 #: patterns/location-hours.php:63
@@ -782,7 +914,65 @@ msgid "Trusted By"
 msgstr ""
 
 #: patterns/logos-cloud.php:24
-msgid "Join hundreds of companies building with Blockwright"
+msgid "A short line introducing the companies or clients you work with."
+msgstr ""
+
+#: patterns/offer-callout.php
+msgctxt "Pattern title"
+msgid "Offer Callout"
+msgstr ""
+
+#: patterns/offer-callout.php
+msgctxt "Pattern description"
+msgid "A bold promotional callout - an eyebrow, a headline offer, the terms, and one button. Built to sell a limited-time deal."
+msgstr ""
+
+#: patterns/offer-callout.php:19
+msgid "Limited time"
+msgstr ""
+
+#: patterns/offer-callout.php:23
+msgid "Save 20% on your first project"
+msgstr ""
+
+#: patterns/offer-callout.php:27
+msgid "New clients only. Offer ends at the end of the month."
+msgstr ""
+
+#: patterns/offer-callout.php:33
+msgid "Claim the offer"
+msgstr ""
+
+#: patterns/page-about.php
+msgctxt "Pattern title"
+msgid "Page: About"
+msgstr ""
+
+#: patterns/page-about.php
+msgctxt "Pattern description"
+msgid "A complete about page - who you are, how you work, the team, a word from a client, and a call to action."
+msgstr ""
+
+#: patterns/page-blog-home.php
+msgctxt "Pattern title"
+msgid "Page: Blog Home"
+msgstr ""
+
+#: patterns/page-blog-home.php
+msgctxt "Pattern description"
+msgid "A blog home page - a short introduction, the latest posts in a feature grid, and an email signup so readers can follow along."
+msgstr ""
+
+#: patterns/page-blog-home.php:19
+msgid "The blog"
+msgstr ""
+
+#: patterns/page-blog-home.php:23
+msgid "Notes, ideas, and lessons from the work"
+msgstr ""
+
+#: patterns/page-blog-home.php:27
+msgid "One or two lines on what you write about and who it helps. Set the expectation, then let the posts speak."
 msgstr ""
 
 #: patterns/page-business.php
@@ -793,6 +983,34 @@ msgstr ""
 #: patterns/page-business.php
 msgctxt "Pattern description"
 msgid "A full business or services page - hero, what you do, services, stats, process, testimonials, a call to action, and location. A starting point any local or professional site can adapt."
+msgstr ""
+
+#: patterns/page-coming-soon.php
+msgctxt "Pattern title"
+msgid "Page: Coming Soon"
+msgstr ""
+
+#: patterns/page-coming-soon.php
+msgctxt "Pattern description"
+msgid "A minimal holding page for a site that has not launched - one headline, one line, and an email signup so visitors can hear when it does. Pairs well with a blank or landing template (no nav)."
+msgstr ""
+
+#: patterns/page-coming-soon.php:19
+msgid "Something new is on the way"
+msgstr ""
+
+#: patterns/page-coming-soon.php:23
+msgid "One line on what is coming and roughly when. Leave an email below and you will be the first to know."
+msgstr ""
+
+#: patterns/page-contact.php
+msgctxt "Pattern title"
+msgid "Page: Contact"
+msgstr ""
+
+#: patterns/page-contact.php
+msgctxt "Pattern description"
+msgid "A complete contact page - your details, a contact form, and answers to the questions people ask before reaching out."
 msgstr ""
 
 #: patterns/page-landing.php
@@ -815,6 +1033,16 @@ msgctxt "Pattern description"
 msgid "A full portfolio page - hero, a short intro, selected work, skills, testimonials, and a call to action."
 msgstr ""
 
+#: patterns/page-pricing.php
+msgctxt "Pattern title"
+msgid "Page: Pricing"
+msgstr ""
+
+#: patterns/page-pricing.php
+msgctxt "Pattern description"
+msgid "A complete pricing page - the three-tier table, social proof, objection-handling FAQ, and a closing call to action."
+msgstr ""
+
 #: patterns/page-sales.php
 msgctxt "Pattern title"
 msgid "Page: Sales"
@@ -822,23 +1050,23 @@ msgstr ""
 
 #: patterns/page-sales.php
 msgctxt "Pattern description"
-msgid "A long-form sales page in the classic Problem–Agitate–Solution order - hero, the problem, agitation, your solution, benefits, social proof, the offer, a guarantee, objections (FAQ), and the close. Replace each section's placeholder with your own copy."
+msgid "A long-form sales page in the classic Problem-Agitate-Solution order - hero, the problem, agitation, your solution, benefits, social proof, the offer, a guarantee, objections (FAQ), and the close. Replace each section's placeholder with your own copy."
 msgstr ""
 
 #: patterns/page-sales.php:19
-msgid "Name the problem your reader is living with"
+msgid "The problem"
 msgstr ""
 
 #: patterns/page-sales.php:22
-msgid "Describe the pain in concrete, specific terms, so the reader thinks \"that is exactly my situation.\" Stick to one clear problem, not five."
+msgid "You put in the work, but the results keep falling short of what you know is possible."
 msgstr ""
 
 #: patterns/page-sales.php:30
-msgid "What it is costing them"
+msgid "What it is costing you"
 msgstr ""
 
 #: patterns/page-sales.php:33
-msgid "Agitate: make the cost of leaving it unsolved vivid, the time, money, stress, or missed opportunity it keeps creating. Do not offer the solution yet."
+msgid "Every month it goes unsolved is time, money, and momentum you do not get back, and the gap only widens."
 msgstr ""
 
 #: patterns/page-sales.php:46
@@ -846,7 +1074,7 @@ msgid "Your risk-free guarantee"
 msgstr ""
 
 #: patterns/page-sales.php:49
-msgid "State exactly what you promise and what happens if you do not deliver. Removing the reader's risk here is often what tips the decision."
+msgid "Try it for 30 days. If it is not the right fit, we will refund you in full, with no forms and no hassle."
 msgstr ""
 
 #: patterns/post-meta.php
@@ -1021,6 +1249,20 @@ msgstr ""
 msgid "Complete brand refresh including logo, color system, typography, and brand guidelines."
 msgstr ""
 
+#: patterns/related-posts.php
+msgctxt "Pattern title"
+msgid "Related Posts"
+msgstr ""
+
+#: patterns/related-posts.php
+msgctxt "Pattern description"
+msgid "A compact \"Keep reading\" band of three recent posts for the end of a single post - keeps readers on the site when the article ends."
+msgstr ""
+
+#: patterns/related-posts.php:18
+msgid "Keep reading"
+msgstr ""
+
 #: patterns/scorecard-resolved.php
 msgctxt "Pattern title"
 msgid "Scorecard • Resolved"
@@ -1043,69 +1285,70 @@ msgstr ""
 
 #: patterns/scorecard-resolved.php:43
 #: patterns/scorecard.php:43
-msgid "A finding that failed"
+msgid "Website"
 msgstr ""
 
 #: patterns/scorecard-resolved.php:43
-#: patterns/scorecard-resolved.php:48
-#: patterns/scorecard.php:48
-msgid "Passed"
+#: patterns/scorecard-resolved.php:44
+msgid "Live"
 msgstr ""
 
 #: patterns/scorecard-resolved.php:44
 #: patterns/scorecard.php:44
-msgid "Another problem found"
-msgstr ""
-
-#: patterns/scorecard-resolved.php:44
-#: patterns/scorecard-resolved.php:82
-msgid "Fixed"
+msgid "Online booking"
 msgstr ""
 
 #: patterns/scorecard-resolved.php:45
 #: patterns/scorecard.php:45
-msgid "Something needing attention"
+msgid "Customer records"
 msgstr ""
 
 #: patterns/scorecard-resolved.php:45
-msgid "Current"
+msgid "Clean"
 msgstr ""
 
 #: patterns/scorecard-resolved.php:46
 #: patterns/scorecard.php:46
-msgid "A status still in progress"
+msgid "Lead follow-up"
 msgstr ""
 
 #: patterns/scorecard-resolved.php:46
-msgid "Done"
+msgid "Automated"
 msgstr ""
 
 #: patterns/scorecard-resolved.php:47
 #: patterns/scorecard.php:47
-msgid "Another item to review"
+msgid "Integrations"
 msgstr ""
 
 #: patterns/scorecard-resolved.php:47
-msgid "Cleared"
+msgid "Connected"
 msgstr ""
 
 #: patterns/scorecard-resolved.php:48
 #: patterns/scorecard.php:48
-msgid "A check that passed"
+msgid "Data & backups"
 msgstr ""
 
-#: patterns/scorecard-resolved.php:49
-#: patterns/scorecard.php:49
-msgid "Confirmed and verified"
-msgstr ""
-
-#: patterns/scorecard-resolved.php:49
-#: patterns/scorecard.php:49
+#: patterns/scorecard-resolved.php:48
 msgid "Verified"
+msgstr ""
+
+#: patterns/scorecard-resolved.php:49
+#: patterns/scorecard.php:49
+msgid "Account ownership"
+msgstr ""
+
+#: patterns/scorecard-resolved.php:49
+msgid "Yours"
 msgstr ""
 
 #: patterns/scorecard-resolved.php:76
 msgid "What the same record looks like once the work is done."
+msgstr ""
+
+#: patterns/scorecard-resolved.php:82
+msgid "Fixed"
 msgstr ""
 
 #: patterns/scorecard-resolved.php:89
@@ -1124,23 +1367,28 @@ msgid "A compact inspection record - a titled header with a reference, rows of l
 msgstr ""
 
 #: patterns/scorecard.php:43
-msgid "Failed"
-msgstr ""
-
-#: patterns/scorecard.php:44
-msgid "Found"
-msgstr ""
-
-#: patterns/scorecard.php:45
+#: patterns/scorecard.php:49
 msgid "Review"
 msgstr ""
 
+#: patterns/scorecard.php:44
+msgid "Missing"
+msgstr ""
+
+#: patterns/scorecard.php:45
+msgid "Duplicates"
+msgstr ""
+
 #: patterns/scorecard.php:46
-msgid "Pending"
+msgid "Manual"
 msgstr ""
 
 #: patterns/scorecard.php:47
-msgid "Manual"
+msgid "Broken"
+msgstr ""
+
+#: patterns/scorecard.php:48
+msgid "Unverified"
 msgstr ""
 
 #: patterns/scorecard.php:76
@@ -1322,6 +1570,16 @@ msgstr ""
 msgid "Would recommend"
 msgstr ""
 
+#: patterns/stats-grid.php
+msgctxt "Pattern title"
+msgid "Stats • Icon Grid"
+msgstr ""
+
+#: patterns/stats-grid.php
+msgctxt "Pattern description"
+msgid "A grid of headline numbers, each led by an icon - years, projects, rating, response. An icon-led alternative to the stats band, pairs with the Stat Counter block."
+msgstr ""
+
 #: patterns/steps-process.php
 msgctxt "Pattern title"
 msgid "Steps • Process"
@@ -1350,10 +1608,6 @@ msgstr ""
 
 #: patterns/steps-process.php:59
 msgid "Describe the second step. Keep each one parallel in length so the row reads evenly."
-msgstr ""
-
-#: patterns/steps-process.php:70
-msgid "Get started"
 msgstr ""
 
 #: patterns/steps-process.php:73
@@ -1493,16 +1747,39 @@ msgid "Founder, Creative Studio"
 msgstr ""
 
 #: assets/js/editor-block-styles.js:23
-msgid "Accent"
+msgid "Soft"
 msgstr ""
 
 #: assets/js/editor-block-styles.js:28
 msgid "Subtle"
 msgstr ""
 
-#: theme.json
-msgctxt "Border radius size name"
-msgid "None"
+#: assets/js/editor-block-styles.js:37
+msgid "Eyebrow"
+msgstr ""
+
+#: assets/js/editor-block-styles.js:42
+msgid "Badge"
+msgstr ""
+
+#: assets/js/editor-block-styles.js:51
+msgid "Callout"
+msgstr ""
+
+#: assets/js/editor-block-styles.js:60
+msgid "Brand color"
+msgstr ""
+
+#: assets/js/editor-block-styles.js:67
+msgid "Brand"
+msgstr ""
+
+#: assets/js/editor-block-styles.js:75
+msgid "Icon divider"
+msgstr ""
+
+#: assets/js/editor-block-styles.js:83
+msgid "Circle"
 msgstr ""
 
 #: theme.json
@@ -1521,836 +1798,2045 @@ msgid "Large"
 msgstr ""
 
 #: theme.json
+msgctxt "Border radius size name"
+msgid "XL"
+msgstr ""
+
+#: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Surface 1"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Surface 2"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Surface 3"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Surface 4"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Text 1"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Text 2"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Link"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Link Hover"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Link Active"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Link Visited"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Focus"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Primary 50"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Primary 100"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Primary 300"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Primary 400"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Primary 200"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Primary 900"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Primary 950"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Danger 50"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Danger 100"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Danger 200"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Danger 300"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Danger 400"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Danger 500"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Danger 600"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Danger 700"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Danger 800"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Danger 900"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Danger 950"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Success 50"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Success 100"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Success 200"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Success 300"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Success 400"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Success 500"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Success 600"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Success 700"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Success 800"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Success 900"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Success 950"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Warning 50"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Warning 100"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Warning 200"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Warning 300"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Warning 400"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Warning 500"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Warning 600"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Warning 700"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Warning 800"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Warning 900"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Warning 950"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "On Primary"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Primary 500"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Primary 600"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Primary 700"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Primary 800"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Neutral 0"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Neutral 50"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Neutral 100"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Neutral 200"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Neutral 300"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Neutral 400"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Neutral 500"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Neutral 600"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Neutral 700"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Neutral 800"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Neutral 900"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Neutral 950"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Neutral 1000"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
-msgid "On Accent"
+msgid "Media Scrim"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
+msgctxt "Color name"
+msgid "On Media"
+msgstr ""
+
+#: theme.json
+#: styles/amber.json
+#: styles/blue.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
+#: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
+#: styles/violet.json
+#: styles/yellow.json
+msgctxt "Color name"
+msgid "Brand Fill"
+msgstr ""
+
+#: theme.json
+#: styles/amber.json
+#: styles/blue.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
+#: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
+#: styles/violet.json
+#: styles/yellow.json
+msgctxt "Color name"
+msgid "On Brand Fill"
+msgstr ""
+
+#: theme.json
+#: styles/amber.json
+#: styles/blue.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
+#: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
+#: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Button Default BG"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Button Default BG Hover"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Button Default BG Active"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
-msgid "Button Primary BG"
+msgid "Button Fill BG"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
-msgid "Button Primary BG Hover"
+msgid "Button Fill BG Hover"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
-msgid "Button Primary BG Active"
+msgid "Button Fill BG Active"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
-msgid "Button Primary Text"
+msgid "Button Fill Text"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Button Subtle BG Hover"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Button Subtle BG Active"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
-msgid "Accent"
+msgid "Accent (deprecated)"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
-msgid "Accent Hover"
+msgid "Button Soft BG"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
-msgid "Accent Active"
+msgid "Button Soft BG Hover"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
+msgctxt "Color name"
+msgid "Button Soft BG Active"
+msgstr ""
+
+#: theme.json
+#: styles/amber.json
+#: styles/blue.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
+#: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
+#: styles/violet.json
+#: styles/yellow.json
+msgctxt "Color name"
+msgid "Button Soft Text"
+msgstr ""
+
+#: theme.json
+#: styles/amber.json
+#: styles/blue.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
+#: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
+#: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Divider"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Outline 1"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Border Subtle"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Border Default"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Border Strong"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Text Strong"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Green"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Yellow"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
 msgid "Red"
 msgstr ""
 
 #: theme.json
+#: styles/amber.json
 #: styles/blue.json
-#: styles/gold.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
 #: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
 #: styles/violet.json
+#: styles/yellow.json
 msgctxt "Color name"
-msgid "Primary"
-msgstr ""
-
-#: theme.json
-msgctxt "Space size name"
-msgid "None"
+msgid "Primary (brand color)"
 msgstr ""
 
 #: theme.json
@@ -2516,6 +4002,11 @@ msgid "Style Guide"
 msgstr ""
 
 #: theme.json
+msgctxt "Custom template name"
+msgid "Dev Preview (all patterns)"
+msgstr ""
+
+#: theme.json
 msgctxt "Template part name"
 msgid "Header"
 msgstr ""
@@ -2550,6 +4041,11 @@ msgctxt "Template part name"
 msgid "Sidebar"
 msgstr ""
 
+#: styles/amber.json
+msgctxt "Style variation name"
+msgid "Amber"
+msgstr ""
+
 #: styles/block/post-meta-row.json
 msgctxt "Style variation name"
 msgid "Post Meta (row)"
@@ -2570,9 +4066,19 @@ msgctxt "Style variation name"
 msgid "Card"
 msgstr ""
 
+#: styles/cyan.json
+msgctxt "Style variation name"
+msgid "Cyan"
+msgstr ""
+
 #: styles/editorial.json
 msgctxt "Style variation name"
 msgid "Editorial"
+msgstr ""
+
+#: styles/fuchsia.json
+msgctxt "Style variation name"
+msgid "Fuchsia"
 msgstr ""
 
 #: styles/geometric.json
@@ -2580,9 +4086,9 @@ msgctxt "Style variation name"
 msgid "Geometric"
 msgstr ""
 
-#: styles/gold.json
+#: styles/grayscale.json
 msgctxt "Style variation name"
-msgid "Gold"
+msgid "Grayscale"
 msgstr ""
 
 #: styles/green.json
@@ -2590,14 +4096,54 @@ msgctxt "Style variation name"
 msgid "Green"
 msgstr ""
 
+#: styles/indigo.json
+msgctxt "Style variation name"
+msgid "Indigo"
+msgstr ""
+
+#: styles/lime.json
+msgctxt "Style variation name"
+msgid "Lime"
+msgstr ""
+
 #: styles/modern.json
 msgctxt "Style variation name"
 msgid "Modern"
 msgstr ""
 
+#: styles/orange.json
+msgctxt "Style variation name"
+msgid "Orange"
+msgstr ""
+
 #: styles/panel.json
 msgctxt "Style variation name"
 msgid "Panel"
+msgstr ""
+
+#: styles/pink.json
+msgctxt "Style variation name"
+msgid "Pink"
+msgstr ""
+
+#: styles/red.json
+msgctxt "Style variation name"
+msgid "Red"
+msgstr ""
+
+#: styles/sky.json
+msgctxt "Style variation name"
+msgid "Sky"
+msgstr ""
+
+#: styles/slate.json
+msgctxt "Style variation name"
+msgid "Slate"
+msgstr ""
+
+#: styles/teal.json
+msgctxt "Style variation name"
+msgid "Teal"
 msgstr ""
 
 #: styles/technical.json
@@ -2608,4 +4154,9 @@ msgstr ""
 #: styles/violet.json
 msgctxt "Style variation name"
 msgid "Violet"
+msgstr ""
+
+#: styles/yellow.json
+msgctxt "Style variation name"
+msgid "Yellow"
 msgstr ""

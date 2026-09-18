@@ -51,8 +51,8 @@ $items = array(
 foreach ( $items as $item ) {
 	list( $q, $a ) = $item;
 	?>
-		<!-- wp:details {"style":{"spacing":{"padding":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small"}},"border":{"bottom":{"color":"var:preset|color|border-subtle","width":"var:custom|border|width|thin"}}}} -->
-		<details class="wp-block-details" style="border-bottom-color:var(--wp--preset--color--border-subtle);border-bottom-width:var(--wp--custom--border--width--thin);padding-top:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--small)"><summary><?php echo esc_html( $q ); ?></summary>
+		<!-- wp:details -->
+		<details class="wp-block-details"><summary><?php echo esc_html( $q ); ?></summary>
 		<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"var:preset|spacing|x-small"}}},"textColor":"text-2"} -->
 		<p class="has-text-2-color has-text-color" style="margin-top:var(--wp--preset--spacing--x-small)"><?php echo esc_html( $a ); ?></p>
 		<!-- /wp:paragraph -->

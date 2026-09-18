@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! defined( 'BLOCKWRIGHT_VERSION' ) ) {
-	define( 'BLOCKWRIGHT_VERSION', '1.1.2' );
+	define( 'BLOCKWRIGHT_VERSION', '1.2.0' );
 }
 
 // Theme path/URI constants (safe for parent/child).

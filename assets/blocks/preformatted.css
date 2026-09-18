@@ -1,0 +1,16 @@
+/* Per-block shim: preformatted block (theme.json schema gap). Enqueued on
+   core/preformatted so it loads with the block. Previously lived in code.css (enqueued
+   on core/code and core/paragraph), so a page with a preformatted block but no code
+   block relied on a paragraph being present to pull the styling in. */
+.wp-block-preformatted {
+	background-color: var(--wp--preset--color--surface-2);
+	border: var(--wp--custom--border--width--thin) solid
+		var(--wp--preset--color--border-subtle);
+	border-radius: var(--wp--preset--border-radius--m);
+	padding: var(--wp--preset--spacing--medium);
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: var(--wp--preset--font-size--s);
+	line-height: 1.6;
+	overflow-x: auto;
+	white-space: pre-wrap;
+}

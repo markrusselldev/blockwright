@@ -33,7 +33,7 @@ $placeholder_image = get_theme_file_uri( 'assets/images/placeholder-image.svg' )
 	<p class="has-text-2-color has-text-color has-l-font-size"><?php esc_html_e( 'A complete UX overhaul that increased conversions by 40% and reduced cart abandonment.', 'blockwright' ); ?></p>
 	<!-- /wp:paragraph -->
 
-	<!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
+	<!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|medium"}}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
 	<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--medium)">
 
 		<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","orientation":"vertical"}} -->

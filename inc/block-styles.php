@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Register block style variations via JS (editor runtime).
  *
  * Button accent/subtle are name-only variations (styling lives in
- * src/styles/_buttons.scss). registerBlockStyle in JS is used instead of
+ * the button styles). registerBlockStyle in JS is used instead of
  * PHP register_block_style so all name registration goes through one path;
  * group variations are registered declaratively in /styles/*.json.
  */

@@ -2,12 +2,12 @@
    theme.json can't express the [aria-selected] state, the ::before indicator,
    or the hover transition, and core routes
    tab-list border to the buttons, so the strip baseline lives here too. Resting
-   spacing (gaps) is token-driven in config/theme/blocks/core-tabs.json.
+   spacing (gaps) is token-driven via theme.json.
 
-   Colour model: the base look is monochrome by design, so the active state reads
+   Color model: the base look is monochrome by design, so the active state reads
    by VALUE - muted inactive labels, strong active label - not hue. The indicator
-   uses the `link` token, which is a visible mid-grey in the base look and re-hues
-   to the brand colour in every colour variation, so the underline gains the brand
+   uses the `link` token, which is a visible mid-gray in the base look and re-hues
+   to the brand color in every color variation, so the underline gains the brand
    pop automatically without this file knowing which variation is active. */
 
 /* The tab strip sits on a divider baseline; the active indicator connects to it. */
@@ -34,7 +34,7 @@
 }
 
 /* Active indicator: overrides core's 2px currentColor bar with the `link` token
-   (visible in the base look, brand-hued in colour variations). Fully declared so
+   (visible in the base look, brand-hued in color variations). Fully declared so
    it survives a core markup change, and pulled onto the strip baseline so the two
    read as one system. */
 .wp-block-tab-list button[aria-selected="true"]::before {

@@ -25,11 +25,15 @@ export default defineConfig(({ mode }) => ({
 				chunkFileNames: 'chunks/[name]-[hash].js',
 				assetFileNames: (assetInfo) => {
 					const name = (assetInfo.name || '').toLowerCase();
-					if (/\.(woff2?|ttf|otf)$/.test(name))
+					if (/\.(woff2?|ttf|otf)$/.test(name)) {
 						return 'fonts/[name][extname]';
-					if (name.endsWith('.css')) return '[name][extname]';
-					if (/\.(svg|png|jpe?g|gif|webp)$/.test(name))
+					}
+					if (name.endsWith('.css')) {
+						return '[name][extname]';
+					}
+					if (/\.(svg|png|jpe?g|gif|webp)$/.test(name)) {
 						return 'images/[name][extname]';
+					}
 					return 'assets/[name][extname]';
 				},
 			},
