@@ -30,7 +30,7 @@ $placeholder_image = get_template_directory_uri() . '/assets/images/placeholder-
 			<p class="has-l-font-size"><?php esc_html_e( 'A short sentence about what you offer and who it is for.', 'blockwright' ); ?></p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
+			<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left","flexWrap":"wrap"}} -->
 			<div class="wp-block-buttons">
 				<!-- wp:button {"className":"is-style-fill"} -->
 				<div class="wp-block-button is-style-fill"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Get Started', 'blockwright' ); ?></a></div>
@@ -48,8 +48,8 @@ $placeholder_image = get_template_directory_uri() . '/assets/images/placeholder-
 		<!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"padding":{"left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}}}} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="padding-left:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium)">
 
-			<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"border":{"width":"var:custom|border|width|thin","color":"var:preset|color|border-subtle","radius":"var:preset|border-radius|l"}}} -->
-			<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="Featured image placeholder" class="has-border-color" style="border-color:var(--wp--preset--color--border-subtle);border-width:var(--wp--custom--border--width--thin);border-radius:var(--wp--preset--border-radius--l);aspect-ratio:4/3;object-fit:cover"/></figure>
+			<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"border":{"width":"var:custom|border|width|thin","color":"var:preset|color|border-subtle"}}} -->
+			<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="Featured image placeholder" class="has-border-color" style="border-color:var(--wp--preset--color--border-subtle);border-width:var(--wp--custom--border--width--thin);aspect-ratio:4/3;object-fit:cover"/></figure>
 			<!-- /wp:image -->
 
 		</div>

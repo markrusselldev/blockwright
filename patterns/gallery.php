@@ -25,28 +25,28 @@ $placeholder_image = get_template_directory_uri() . '/assets/images/placeholder-
 	<!-- /wp:paragraph -->
 
 	<!-- wp:gallery {"columns":3,"linkTo":"none","align":"wide"} -->
-	<figure class="wp-block-gallery alignwide has-nested-images columns-3 is-cropped"><!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"border":{"radius":"var:preset|border-radius|l"}}} -->
-	<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="Image placeholder" style="border-radius:var(--wp--preset--border-radius--l);aspect-ratio:4/3;object-fit:cover"/></figure>
+	<figure class="wp-block-gallery alignwide has-nested-images columns-3 is-cropped"><!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none"} -->
+	<figure class="wp-block-image size-large"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="Image placeholder" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 	<!-- /wp:image -->
 
-	<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"border":{"radius":"var:preset|border-radius|l"}}} -->
-	<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="Image placeholder" style="border-radius:var(--wp--preset--border-radius--l);aspect-ratio:4/3;object-fit:cover"/></figure>
+	<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none"} -->
+	<figure class="wp-block-image size-large"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="Image placeholder" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 	<!-- /wp:image -->
 
-	<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"border":{"radius":"var:preset|border-radius|l"}}} -->
-	<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="Image placeholder" style="border-radius:var(--wp--preset--border-radius--l);aspect-ratio:4/3;object-fit:cover"/></figure>
+	<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none"} -->
+	<figure class="wp-block-image size-large"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="Image placeholder" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 	<!-- /wp:image -->
 
-	<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"border":{"radius":"var:preset|border-radius|l"}}} -->
-	<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="Image placeholder" style="border-radius:var(--wp--preset--border-radius--l);aspect-ratio:4/3;object-fit:cover"/></figure>
+	<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none"} -->
+	<figure class="wp-block-image size-large"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="Image placeholder" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 	<!-- /wp:image -->
 
-	<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"border":{"radius":"var:preset|border-radius|l"}}} -->
-	<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="Image placeholder" style="border-radius:var(--wp--preset--border-radius--l);aspect-ratio:4/3;object-fit:cover"/></figure>
+	<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none"} -->
+	<figure class="wp-block-image size-large"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="Image placeholder" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 	<!-- /wp:image -->
 
-	<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"border":{"radius":"var:preset|border-radius|l"}}} -->
-	<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="Image placeholder" style="border-radius:var(--wp--preset--border-radius--l);aspect-ratio:4/3;object-fit:cover"/></figure>
+	<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none"} -->
+	<figure class="wp-block-image size-large"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="Image placeholder" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 	<!-- /wp:image --></figure>
 	<!-- /wp:gallery -->
 

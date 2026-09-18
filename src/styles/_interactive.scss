@@ -32,6 +32,15 @@ a {
 	text-wrap: balance;
 }
 
+// The post/page TITLE fills its content column (the standard article-headline look): it stays
+// at the reading measure like the body, left-aligned, and uses `text-wrap: pretty` so the lines
+// run out to the column width while avoiding a stranded last word - NOT `balance` (which shrinks
+// the block narrower than the column) and NOT a full-page-wide title (which sprawls past the
+// article).
+.wp-block-post-title {
+	text-wrap: pretty;
+}
+
 // text-wrap: pretty avoids orphan single-word last lines. overflow-wrap stays
 // normal: break-word was splitting ordinary short words (e.g. "it") mid-word at
 // the wrap inside constrained columns. Genuinely overlong tokens (raw URLs) are
@@ -102,7 +111,7 @@ a {
 // Small-caps labels (section eyebrows / kickers) render in the mono preset -
 // Plex Mono under Technical (its engineered character), system monospace
 // elsewhere. Scoped to text-2 uppercase paragraphs, so it never touches body
-// copy, headings, or the accent chip (which is on-accent, not text-2). Kept
+// copy or headings (which use text-1/text-strong, not text-2). Kept
 // restrained: labels only, mono's other job is code blocks.
 p.has-text-2-color[style*="text-transform:uppercase"] {
 	font-family: var(--wp--preset--font-family--mono);
@@ -143,7 +152,7 @@ p.has-text-2-color[style*="text-transform:uppercase"] {
 // for full-width patterns). But constrained layout excludes .alignleft/right
 // from centering so they can float - which means they float to the FULL-WIDTH
 // (viewport) edge, not the content column. Push them back in by the same offset
-// WP uses to centre the content column: (container − contentSize) / 2, clamped
+// WP uses to center the content column: (container − contentSize) / 2, clamped
 // at 0 so narrow viewports still float to the padding edge. Self-neutralises in
 // normal-width containers where 100% ≈ contentSize.
 .is-layout-constrained.alignfull > .alignleft {
@@ -193,7 +202,8 @@ pre {
 	height: auto;
 	width: auto;
 	margin: 0;
-	padding: var(--wp--preset--spacing--x-small) var(--wp--preset--spacing--small);
+	padding: var(--wp--preset--spacing--x-small)
+		var(--wp--preset--spacing--small);
 	z-index: 100000;
 	background-color: var(--wp--preset--color--surface-1);
 	color: var(--wp--preset--color--text-1);

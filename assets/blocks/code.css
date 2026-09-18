@@ -36,26 +36,6 @@
 	white-space: pre;
 }
 
-/* Preformatted text block */
-.wp-block-preformatted {
-	background-color: var(--wp--preset--color--surface-2);
-	border: var(--wp--custom--border--width--thin) solid
-		var(--wp--preset--color--border-subtle);
-	border-radius: var(--wp--preset--border-radius--m);
-	padding: var(--wp--preset--spacing--medium);
-	font-family: var(--wp--preset--font-family--mono);
-	font-size: var(--wp--preset--font-size--s);
-	line-height: 1.6;
-	overflow-x: auto;
-	white-space: pre-wrap;
-}
-
-/* Verse block: poetic formatting */
-.wp-block-verse {
-	font-family: var(--wp--preset--font-family--body);
-	font-style: italic;
-	padding-inline-start: var(--wp--preset--spacing--large);
-	border-inline-start: var(--wp--custom--border--width--medium) solid
-		var(--wp--preset--color--divider);
-	white-space: pre-wrap;
-}
+/* Preformatted (assets/blocks/preformatted.css) and verse (assets/blocks/verse.css)
+   moved to their own shims, enqueued on core/preformatted and core/verse, so each loads
+   on its own block instead of riding on core/code / core/paragraph. */

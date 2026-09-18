@@ -26,7 +26,7 @@
 		<p class="has-text-align-center has-l-font-size"><?php esc_html_e( 'A short sentence about what you offer and who it is for.', 'blockwright' ); ?></p>
 		<!-- /wp:paragraph -->
 
-		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
+		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center","flexWrap":"wrap"}} -->
 		<div class="wp-block-buttons">
 			<!-- wp:button {"className":"is-style-fill"} -->
 			<div class="wp-block-button is-style-fill"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Get Started', 'blockwright' ); ?></a></div>

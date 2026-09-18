@@ -17,11 +17,16 @@ add_action(
 			'code'         => 'assets/blocks/code.css',
 			'columns'      => 'assets/blocks/columns.css',
 			'group'        => 'assets/blocks/group.css',
+			'image'        => 'assets/blocks/image.css',
 			'list'         => 'assets/blocks/list.css',
+			'preformatted' => 'assets/blocks/preformatted.css',
 			'quote'        => 'assets/blocks/quote.css',
+			'pullquote'    => 'assets/blocks/pullquote.css',
+			'separator'    => 'assets/blocks/separator.css',
 			'social-links' => 'assets/blocks/social-links.css',
 			'table'        => 'assets/blocks/table.css',
 			'tabs'         => 'assets/blocks/tabs.css',
+			'verse'        => 'assets/blocks/verse.css',
 		);
 
 		// Pattern-specific CSS (newsletter forms, avatars) - loads with core/html blocks.
@@ -59,5 +64,5 @@ add_action(
 // register_block_type() in a theme is a Theme Check failure. The theme ships
 // patterns and styles only.
 
-// Separators use core styles only (default / wide / dots); the default look is
-// token-driven via theme.json (config/theme/blocks/core-separator.json).
+// Separator default look (default / wide / dots) is token-driven via theme.json;
+// the opt-in is-style-brand line is the only shim (assets/blocks/separator.css).

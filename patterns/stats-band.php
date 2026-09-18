@@ -19,44 +19,44 @@
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontWeight":"700","lineHeight":"1.1"}},"fontSize":"xxl"} -->
-			<p class="has-text-align-center has-xxl-font-size" style="font-weight:700;line-height:1.1">20+</p>
+			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontWeight":"700","lineHeight":"1.1"}},"textColor":"link","fontSize":"xxl"} -->
+			<p class="has-text-align-center has-link-color has-text-color has-xxl-font-size" style="font-weight:700;line-height:1.1">20+</p>
 			<!-- /wp:paragraph -->
-			<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.08em"}},"textColor":"text-2","fontSize":"s"} -->
-			<p class="has-text-align-center has-text-2-color has-text-color has-s-font-size" style="letter-spacing:0.08em;text-transform:uppercase"><?php esc_html_e( 'Years of practice', 'blockwright' ); ?></p>
-			<!-- /wp:paragraph -->
-		</div>
-		<!-- /wp:column -->
-
-		<!-- wp:column -->
-		<div class="wp-block-column">
-			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontWeight":"700","lineHeight":"1.1"}},"fontSize":"xxl"} -->
-			<p class="has-text-align-center has-xxl-font-size" style="font-weight:700;line-height:1.1">2,500+</p>
-			<!-- /wp:paragraph -->
-			<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.08em"}},"textColor":"text-2","fontSize":"s"} -->
-			<p class="has-text-align-center has-text-2-color has-text-color has-s-font-size" style="letter-spacing:0.08em;text-transform:uppercase"><?php esc_html_e( 'Clients served', 'blockwright' ); ?></p>
+			<!-- wp:paragraph {"align":"center","className":"is-style-eyebrow","fontSize":"s"} -->
+			<p class="has-text-align-center is-style-eyebrow has-s-font-size"><?php esc_html_e( 'Years of practice', 'blockwright' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontWeight":"700","lineHeight":"1.1"}},"fontSize":"xxl"} -->
-			<p class="has-text-align-center has-xxl-font-size" style="font-weight:700;line-height:1.1">4.9★</p>
+			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontWeight":"700","lineHeight":"1.1"}},"textColor":"link","fontSize":"xxl"} -->
+			<p class="has-text-align-center has-link-color has-text-color has-xxl-font-size" style="font-weight:700;line-height:1.1">2,500+</p>
 			<!-- /wp:paragraph -->
-			<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.08em"}},"textColor":"text-2","fontSize":"s"} -->
-			<p class="has-text-align-center has-text-2-color has-text-color has-s-font-size" style="letter-spacing:0.08em;text-transform:uppercase"><?php esc_html_e( 'Average rating', 'blockwright' ); ?></p>
+			<!-- wp:paragraph {"align":"center","className":"is-style-eyebrow","fontSize":"s"} -->
+			<p class="has-text-align-center is-style-eyebrow has-s-font-size"><?php esc_html_e( 'Clients served', 'blockwright' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontWeight":"700","lineHeight":"1.1"}},"fontSize":"xxl"} -->
-			<p class="has-text-align-center has-xxl-font-size" style="font-weight:700;line-height:1.1">98%</p>
+			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontWeight":"700","lineHeight":"1.1"}},"textColor":"link","fontSize":"xxl"} -->
+			<p class="has-text-align-center has-link-color has-text-color has-xxl-font-size" style="font-weight:700;line-height:1.1">4.9★</p>
 			<!-- /wp:paragraph -->
-			<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.08em"}},"textColor":"text-2","fontSize":"s"} -->
-			<p class="has-text-align-center has-text-2-color has-text-color has-s-font-size" style="letter-spacing:0.08em;text-transform:uppercase"><?php esc_html_e( 'Would recommend', 'blockwright' ); ?></p>
+			<!-- wp:paragraph {"align":"center","className":"is-style-eyebrow","fontSize":"s"} -->
+			<p class="has-text-align-center is-style-eyebrow has-s-font-size"><?php esc_html_e( 'Average rating', 'blockwright' ); ?></p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column -->
+		<div class="wp-block-column">
+			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontWeight":"700","lineHeight":"1.1"}},"textColor":"link","fontSize":"xxl"} -->
+			<p class="has-text-align-center has-link-color has-text-color has-xxl-font-size" style="font-weight:700;line-height:1.1">98%</p>
+			<!-- /wp:paragraph -->
+			<!-- wp:paragraph {"align":"center","className":"is-style-eyebrow","fontSize":"s"} -->
+			<p class="has-text-align-center is-style-eyebrow has-s-font-size"><?php esc_html_e( 'Would recommend', 'blockwright' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->

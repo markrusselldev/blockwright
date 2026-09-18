@@ -23,7 +23,7 @@
 			return (
 				select('core/editor').getEditedPostAttribute('template') || ''
 			);
-		} catch (e) {
+		} catch {
 			return '';
 		}
 	}
@@ -69,7 +69,7 @@
 				if (doc) {
 					raf2(() => applyToDoc(doc, hide));
 				}
-			} catch (e) {
+			} catch {
 				// cross-origin or unavailable
 			}
 		};
@@ -84,7 +84,7 @@
 				});
 				iframe.dataset.atnNoTitleLoad = '1';
 			}
-		} catch (e) {
+		} catch {
 			// ignore
 		}
 	}

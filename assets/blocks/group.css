@@ -1,4 +1,3 @@
-
 /* Panel style */
 .wp-block-group.is-style-panel {
 	border: var(--wp--custom--panel--border-width) solid
@@ -11,10 +10,13 @@
 		var(--wp--custom--surface--border);
 }
 
-/* Card styles (surface-3 background) */
+/* Card styles (surface-2 background). One elevation step from the surface-1 page - the
+   thin divider border does the separating, so a single-step fill (~4-6 lightness pts, in
+   line with the ~3-4 pts/layer elevation guidance) is enough; surface-3 (two steps) read
+   heavy. Mirrors per scheme, so cards elevate in light AND dark. */
 .wp-block-group.is-style-card,
 .wp-block-group.is-style-card-divided {
-	background-color: var(--wp--preset--color--surface-3);
+	background-color: var(--wp--preset--color--surface-2);
 	color: var(--wp--preset--color--text-1);
 	border: var(--wp--custom--border--width--thin) solid
 		var(--wp--preset--color--divider);
@@ -40,6 +42,40 @@
 	margin-bottom: var(--wp--preset--spacing--small);
 }
 
+/* Icon divider (opt-in is-style-icon-divider): a centered mark flanked by two brand
+   hairlines. The "Divider Icon" pattern makes the group a flex ROW, so the ::before /
+   ::after boxes become flex items that draw the lines; any centered child (the site
+   logo, a small image, or an icon) sits in the gap. Line color is the brand tone; the
+   space around the mark is the row's blockGap. */
+.wp-block-group.is-style-icon-divider {
+	align-items: center;
+}
+.wp-block-group.is-style-icon-divider::before,
+.wp-block-group.is-style-icon-divider::after {
+	content: "";
+	flex: 1 1 0;
+	border-top: var(--wp--custom--border--width--thin, 1px) solid
+		var(--wp--preset--color--link);
+}
+
+/* Callout band (is-style-callout): a SUBTLE brand-tinted aside, fainter than the
+   scorecard footer. A low share of the brand color mixed into surface-1 (both operands
+   light-dark(), so the tint stays constant light/dark and re-hues per scheme); a brand
+   left-bar marks it, text stays the neutral token. Moved here from _blocks.scss so it
+   lazy-loads with the group block alongside panel / card / icon-divider (2026-09-16). */
+.wp-block-group.is-style-callout {
+	background-color: color-mix(
+		in oklab,
+		var(--wp--preset--color--surface-1),
+		var(--wp--preset--color--primary) 12%
+	);
+	color: var(--wp--preset--color--text-1);
+	border-inline-start: var(--wp--custom--border--width--medium) solid
+		var(--wp--preset--color--link);
+	border-radius: var(--wp--preset--border-radius--m);
+	padding: var(--wp--preset--spacing--medium);
+}
+
 /* Resolved-card "Fixed" stamp. Lives here (a core/group style loaded via
    wp_enqueue_block_style) so it renders in BOTH the front end and the editor
    iframe - editor-canvas.css / enqueue_block_assets does not reach the post
@@ -63,9 +99,11 @@
 	   flip per mode via light-dark(). */
 	color: var(--wp--preset--color--success-800);
 	background: var(--wp--preset--color--success-100);
-	border: var(--wp--custom--border--width--medium) solid var(--wp--preset--color--success-700);
+	border: var(--wp--custom--border--width--medium) solid
+		var(--wp--preset--color--success-700);
 	border-radius: var(--wp--preset--border-radius--m);
-	padding: var(--wp--preset--spacing--xx-small) var(--wp--preset--spacing--small);
+	padding: var(--wp--preset--spacing--xx-small)
+		var(--wp--preset--spacing--small);
 	font-weight: 800;
 	font-size: var(--wp--preset--font-size--l);
 	letter-spacing: 0.16em;
@@ -78,7 +116,8 @@
 	content: "";
 	position: absolute;
 	inset: var(--wp--preset--spacing--xxx-small);
-	border: var(--wp--custom--border--width--thin) solid var(--wp--preset--color--success-700);
+	border: var(--wp--custom--border--width--thin) solid
+		var(--wp--preset--color--success-700);
 	border-radius: var(--wp--preset--border-radius--s);
 }
 

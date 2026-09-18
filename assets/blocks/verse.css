@@ -1,0 +1,11 @@
+/* Per-block shim: verse block (theme.json schema gap). Enqueued on core/verse so it
+   loads with the block. Previously lived in code.css (enqueued on core/code and
+   core/paragraph), so a standalone verse relied on a paragraph being present. */
+.wp-block-verse {
+	font-family: var(--wp--preset--font-family--body);
+	font-style: italic;
+	padding-inline-start: var(--wp--preset--spacing--large);
+	border-inline-start: var(--wp--custom--border--width--medium) solid
+		var(--wp--preset--color--divider);
+	white-space: pre-wrap;
+}

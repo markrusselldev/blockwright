@@ -73,20 +73,20 @@
 				{
 					"slug": "xxl",
 					"name": "2XL",
-					"size": "2.25rem",
-					"fluid": true
+					"size": "clamp(1.5rem, 1.3333rem + 0.8333vw, 2rem)",
+					"fluid": false
 				},
 				{
 					"slug": "display",
 					"name": "Display",
-					"size": "3.5rem",
-					"fluid": true
+					"size": "clamp(2.3438rem, 2.0833rem + 1.3021vw, 3.125rem)",
+					"fluid": false
 				},
 				{
 					"slug": "xxxl",
 					"name": "3XL",
-					"size": "3rem",
-					"fluid": true
+					"size": "clamp(1.875rem, 1.6667rem + 1.0417vw, 2.5rem)",
+					"fluid": false
 				}
 			]
 		}

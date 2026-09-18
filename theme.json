@@ -77,62 +77,62 @@
           "slug": "text-2"
         },
         {
-          "color": "light-dark(oklch(0.42 0 0), oklch(0.72 0 0))",
+          "color": "light-dark(oklch(0.56 0.16 260), oklch(0.62 0.16 260))",
           "name": "Link",
           "slug": "link"
         },
         {
-          "color": "light-dark(oklch(0.5 0 0), oklch(0.78 0 0))",
+          "color": "light-dark(oklch(0.49 0.16 260), oklch(0.69 0.16 260))",
           "name": "Link Hover",
           "slug": "link-hover"
         },
         {
-          "color": "light-dark(oklch(0.35 0 0), oklch(0.65 0 0))",
+          "color": "light-dark(oklch(0.42 0.16 260), oklch(0.76 0.123 260))",
           "name": "Link Active",
           "slug": "link-active"
         },
         {
-          "color": "light-dark(oklch(0.42 0 0), oklch(0.68 0 0))",
+          "color": "light-dark(oklch(0.44 0.072 260), oklch(0.8 0.072 260))",
           "name": "Link Visited",
           "slug": "link-visited"
         },
         {
-          "color": "var:preset|color|link",
+          "color": "light-dark(oklch(0.65 0.16 260), oklch(0.53 0.16 260))",
           "name": "Focus",
           "slug": "focus"
         },
         {
-          "color": "light-dark(oklch(0.98 0 0), oklch(0.35 0 0))",
+          "color": "light-dark(oklch(0.97 0.0142 260), oklch(0.3 0.0482 260))",
           "name": "Primary 50",
           "slug": "primary-50"
         },
         {
-          "color": "light-dark(oklch(0.95 0 0), oklch(0.42 0 0))",
+          "color": "light-dark(oklch(0.93 0.0335 260), oklch(0.35 0.0723 260))",
           "name": "Primary 100",
           "slug": "primary-100"
         },
         {
-          "color": "light-dark(oklch(0.83 0 0), oklch(0.51 0 0))",
+          "color": "light-dark(oklch(0.82 0.0901 260), oklch(0.46 0.1365 260))",
           "name": "Primary 300",
           "slug": "primary-300"
         },
         {
-          "color": "light-dark(oklch(0.75 0 0), oklch(0.6 0 0))",
+          "color": "light-dark(oklch(0.75 0.1287 260), oklch(0.55 0.1526 260))",
           "name": "Primary 400",
           "slug": "primary-400"
         },
         {
-          "color": "light-dark(oklch(0.9 0 0), oklch(0.46 0 0))",
+          "color": "light-dark(oklch(0.88 0.0587 260), oklch(0.4 0.1044 260))",
           "name": "Primary 200",
           "slug": "primary-200"
         },
         {
-          "color": "light-dark(oklch(0.39 0 0), oklch(0.93 0 0))",
+          "color": "light-dark(oklch(0.34 0.1385 260), oklch(0.93 0.0335 260))",
           "name": "Primary 900",
           "slug": "primary-900"
         },
         {
-          "color": "light-dark(oklch(0.3 0 0), oklch(0.98 0 0))",
+          "color": "light-dark(oklch(0.28 0.1141 260), oklch(0.96 0.0189 260))",
           "name": "Primary 950",
           "slug": "primary-950"
         },
@@ -302,99 +302,94 @@
           "slug": "warning-950"
         },
         {
-          "color": "light-dark(oklch(0.98 0 0), oklch(0.22 0 0))",
+          "color": "light-dark(oklch(0.24 0.05 260), oklch(0.24 0.05 260))",
           "name": "On Primary",
           "slug": "on-primary"
         },
         {
-          "color": "light-dark(oklch(0.68 0 0), oklch(0.66 0 0))",
+          "color": "light-dark(oklch(0.68 0.16 260), oklch(0.66 0.16 260))",
           "name": "Primary 500",
           "slug": "primary-500"
         },
         {
-          "color": "light-dark(oklch(0.59 0 0), oklch(0.75 0 0))",
+          "color": "light-dark(oklch(0.55 0.16 260), oklch(0.8 0.1009 260))",
           "name": "Primary 600",
           "slug": "primary-600"
         },
         {
-          "color": "light-dark(oklch(0.5 0 0), oklch(0.81 0 0))",
+          "color": "light-dark(oklch(0.48 0.16 260), oklch(0.85 0.0742 260))",
           "name": "Primary 700",
           "slug": "primary-700"
         },
         {
-          "color": "light-dark(oklch(0.44 0 0), oklch(0.88 0 0))",
+          "color": "light-dark(oklch(0.4 0.1526 260), oklch(0.89 0.0536 260))",
           "name": "Primary 800",
           "slug": "primary-800"
         },
         {
-          "color": "light-dark(oklch(0.99 0.000 0), oklch(0.22 0.006 285.8))",
+          "color": "light-dark(oklch(0.99 0.0008 258), oklch(0.22 0.0047 258))",
           "name": "Neutral 0",
           "slug": "neutral-0"
         },
         {
-          "color": "light-dark(oklch(0.95 0.000 0), oklch(0.28 0.007 285.8))",
+          "color": "light-dark(oklch(0.95 0.0016 258), oklch(0.28 0.0057 258))",
           "name": "Neutral 50",
           "slug": "neutral-50"
         },
         {
-          "color": "light-dark(oklch(0.90 0.001 285.0), oklch(0.34 0.010 285.7))",
+          "color": "light-dark(oklch(0.90 0.003 258), oklch(0.34 0.007 258))",
           "name": "Neutral 100",
           "slug": "neutral-100"
         },
         {
-          "color": "light-dark(oklch(0.85 0.004 285.9), oklch(0.40 0.009 285.8))",
+          "color": "light-dark(oklch(0.85 0.0044 258), oklch(0.40 0.008 258))",
           "name": "Neutral 200",
           "slug": "neutral-200"
         },
         {
-          "color": "light-dark(oklch(0.87 0.006 286.0), oklch(0.38 0.012 285.8))",
+          "color": "light-dark(oklch(0.87 0.0039 258), oklch(0.38 0.0078 258))",
           "name": "Neutral 300",
           "slug": "neutral-300"
         },
         {
-          "color": "light-dark(oklch(0.71 0.013 286.0), oklch(0.46 0.015 285.8))",
+          "color": "light-dark(oklch(0.71 0.0077 258), oklch(0.46 0.0087 258))",
           "name": "Neutral 400",
           "slug": "neutral-400"
         },
         {
-          "color": "light-dark(oklch(0.55 0.014 285.9), oklch(0.53 0.013 285.9))",
+          "color": "light-dark(oklch(0.55 0.01 258), oklch(0.53 0.0097 258))",
           "name": "Neutral 500",
           "slug": "neutral-500"
         },
         {
-          "color": "light-dark(oklch(0.44 0.015 285.7), oklch(0.78 0.017 285.9))",
+          "color": "light-dark(oklch(0.44 0.0085 258), oklch(0.78 0.006 258))",
           "name": "Neutral 600",
           "slug": "neutral-600"
         },
         {
-          "color": "light-dark(oklch(0.37 0.012 285.7), oklch(0.78 0.011 286.0))",
+          "color": "light-dark(oklch(0.37 0.0076 258), oklch(0.78 0.006 258))",
           "name": "Neutral 700",
           "slug": "neutral-700"
         },
         {
-          "color": "light-dark(oklch(0.27 0.005 285.9), oklch(0.87 0.008 286.0))",
+          "color": "light-dark(oklch(0.27 0.0054 258), oklch(0.87 0.0039 258))",
           "name": "Neutral 800",
           "slug": "neutral-800"
         },
         {
-          "color": "light-dark(oklch(0.21 0.006 285.8), oklch(0.93 0.005 286.0))",
+          "color": "light-dark(oklch(0.21 0.0045 258), oklch(0.93 0.0021 258))",
           "name": "Neutral 900",
           "slug": "neutral-900"
         },
         {
-          "color": "light-dark(oklch(0.19 0.006 285.8), oklch(0.96 0.000 0))",
+          "color": "light-dark(oklch(0.19 0.004 258), oklch(0.96 0.0014 258))",
           "name": "Neutral 950",
           "slug": "neutral-950"
         },
         {
-          "color": "light-dark(oklch(0.00 0.000 0), oklch(1.00 0.000 0))",
+          "color": "light-dark(oklch(0.00 0 258), oklch(1.00 0 258))",
           "name": "Neutral 1000",
           "slug": "neutral-1000"
-        },
-        {
-          "color": "light-dark(oklch(0.22 0 0), oklch(0.98 0 0))",
-          "name": "On Accent",
-          "slug": "on-accent"
         },
         {
           "color": "light-dark(oklch(0.15 0 0), oklch(0.15 0 0))",
@@ -405,6 +400,16 @@
           "color": "light-dark(oklch(1 0 0), oklch(1 0 0))",
           "name": "On Media",
           "slug": "on-media"
+        },
+        {
+          "color": "light-dark(oklch(0.546 0.1606 260), oklch(0.546 0.1606 260))",
+          "name": "Brand Fill",
+          "slug": "brand-fill"
+        },
+        {
+          "color": "light-dark(oklch(0.97 0 0), oklch(0.97 0 0))",
+          "name": "On Brand Fill",
+          "slug": "on-brand-fill"
         },
         {
           "color": "var:preset|color|neutral-100",
@@ -422,72 +427,82 @@
           "slug": "btn-default-bg-active"
         },
         {
-          "color": "var:preset|color|link",
-          "name": "Button Primary BG",
-          "slug": "btn-primary-bg"
+          "color": "light-dark(oklch(0.622 0.1606 260), oklch(0.622 0.1606 260))",
+          "name": "Button Fill BG",
+          "slug": "btn-fill-bg"
         },
         {
-          "color": "var:preset|color|link-hover",
-          "name": "Button Primary BG Hover",
-          "slug": "btn-primary-bg-hover"
+          "color": "light-dark(oklch(0.562 0.1606 260), oklch(0.562 0.1606 260))",
+          "name": "Button Fill BG Hover",
+          "slug": "btn-fill-bg-hover"
         },
         {
-          "color": "var:preset|color|link-active",
-          "name": "Button Primary BG Active",
-          "slug": "btn-primary-bg-active"
+          "color": "light-dark(oklch(0.502 0.1606 260), oklch(0.502 0.1606 260))",
+          "name": "Button Fill BG Active",
+          "slug": "btn-fill-bg-active"
         },
         {
-          "color": "var:preset|color|on-primary",
-          "name": "Button Primary Text",
-          "slug": "btn-primary-text"
+          "color": "light-dark(oklch(1 0 0), oklch(1 0 0))",
+          "name": "Button Fill Text",
+          "slug": "btn-fill-text"
         },
         {
-          "color": "light-dark(oklch(0.94 0 0), oklch(0.24 0 0))",
+          "color": "var:preset|color|primary-100",
           "name": "Button Subtle BG Hover",
           "slug": "btn-subtle-bg-hover"
         },
         {
-          "color": "light-dark(oklch(0.9 0 0), oklch(0.28 0 0))",
+          "color": "var:preset|color|primary-200",
           "name": "Button Subtle BG Active",
           "slug": "btn-subtle-bg-active"
         },
         {
-          "color": "light-dark(oklch(0.9 0 0), oklch(0.55 0 0))",
-          "name": "Accent",
+          "color": "var:preset|color|primary",
+          "name": "Accent (deprecated)",
           "slug": "accent"
         },
         {
-          "color": "light-dark(oklch(0.84 0 0), oklch(0.62 0 0))",
-          "name": "Accent Hover",
-          "slug": "accent-hover"
+          "color": "var:preset|color|primary-100",
+          "name": "Button Soft BG",
+          "slug": "btn-soft-bg"
         },
         {
-          "color": "light-dark(oklch(0.78 0 0), oklch(0.5 0 0))",
-          "name": "Accent Active",
-          "slug": "accent-active"
+          "color": "var:preset|color|primary-200",
+          "name": "Button Soft BG Hover",
+          "slug": "btn-soft-bg-hover"
         },
         {
-          "color": "light-dark(oklch(0.92 0.007 286), oklch(0.33 0.007 286))",
+          "color": "var:preset|color|primary-300",
+          "name": "Button Soft BG Active",
+          "slug": "btn-soft-bg-active"
+        },
+        {
+          "color": "var:preset|color|primary-800",
+          "name": "Button Soft Text",
+          "slug": "btn-soft-text"
+        },
+        {
+          "color": "light-dark(oklch(0.92 0.0024 258), oklch(0.33 0.0067 258))",
           "name": "Divider",
           "slug": "divider"
         },
         {
-          "color": "light-dark(oklch(0.68 0 0 / 0.72), oklch(0.50 0 0 / 0.62))",
+          "color": "light-dark(oklch(0.68 0.0081 258 / 0.72), oklch(0.50 0.0093 258 / 0.62))",
           "name": "Outline 1",
           "slug": "outline-1"
         },
         {
-          "color": "light-dark(oklch(0.80 0.006 286), oklch(0.44 0.017 286))",
+          "color": "light-dark(oklch(0.80 0.0055 258), oklch(0.44 0.0085 258))",
           "name": "Border Subtle",
           "slug": "border-subtle"
         },
         {
-          "color": "light-dark(oklch(0.71 0.013 286), oklch(0.51 0.013 286))",
+          "color": "light-dark(oklch(0.71 0.0077 258), oklch(0.51 0.0094 258))",
           "name": "Border Default",
           "slug": "border-default"
         },
         {
-          "color": "light-dark(oklch(0.55 0.014 286), oklch(0.67 0.013 286))",
+          "color": "light-dark(oklch(0.55 0.01 258), oklch(0.67 0.0083 258))",
           "name": "Border Strong",
           "slug": "border-strong"
         },
@@ -512,8 +527,8 @@
           "slug": "red"
         },
         {
-          "color": "var:preset|color|primary-600",
-          "name": "Primary",
+          "color": "light-dark(oklch(0.622 0.1606 260), oklch(0.622 0.1606 260))",
+          "name": "Primary (brand color)",
           "slug": "primary"
         }
       ]
@@ -523,32 +538,41 @@
         "md": "3rem",
         "sm": "2.5rem"
       },
+      "badge": {
+        "bg": "var(--wp--preset--color--btn-soft-bg)",
+        "fontSize": "var:preset|font-size|xs",
+        "px": "var:preset|spacing|x-small",
+        "py": "0.3rem",
+        "radius": "9999px",
+        "text": "var(--wp--preset--color--btn-soft-text)",
+        "weight": "600"
+      },
       "border": {
         "width": {
           "medium": "2px",
+          "thick": "4px",
           "thin": "1px"
         }
       },
       "button": {
-        "accent": {
-          "bg": "color-mix(in oklab, var(--wp--preset--color--accent) 18%, transparent)",
-          "bgActive": "color-mix(in oklab, var(--wp--preset--color--accent) 36%, transparent)",
-          "bgHover": "color-mix(in oklab, var(--wp--preset--color--accent) 28%, transparent)",
-          "border": "transparent",
-          "text": "var(--wp--preset--color--text-1)"
-        },
         "cta": {
-          "fontSize": "1rem",
+          "fontSize": "1.1875rem",
           "px": "var:preset|spacing|medium",
           "py": "var:preset|spacing|x-small",
           "radius": "var:preset|border-radius|m",
-          "weight": "600"
+          "weight": "700"
         },
         "default": {
           "bg": "var(--wp--preset--color--btn-default-bg)",
           "bgActive": "var(--wp--preset--color--btn-default-bg-active)",
           "bgHover": "var(--wp--preset--color--btn-default-bg-hover)",
           "text": "var(--wp--preset--color--text-1)"
+        },
+        "fill": {
+          "bg": "var(--wp--preset--color--btn-fill-bg)",
+          "bgActive": "var(--wp--preset--color--btn-fill-bg-active)",
+          "bgHover": "var(--wp--preset--color--btn-fill-bg-hover)",
+          "text": "var(--wp--preset--color--btn-fill-text)"
         },
         "fontSize": "0.9375rem",
         "gap": "var:preset|spacing|x-small",
@@ -560,15 +584,16 @@
           "border": "currentColor",
           "text": "var(--wp--preset--color--link)"
         },
-        "primary": {
-          "bg": "var(--wp--preset--color--btn-primary-bg)",
-          "bgActive": "var(--wp--preset--color--btn-primary-bg-active)",
-          "bgHover": "var(--wp--preset--color--btn-primary-bg-hover)",
-          "text": "var(--wp--preset--color--btn-primary-text)"
-        },
         "px": "var:preset|spacing|x-small",
         "py": "0",
         "radius": "var:preset|border-radius|m",
+        "soft": {
+          "bg": "var(--wp--preset--color--btn-soft-bg)",
+          "bgActive": "var(--wp--preset--color--btn-soft-bg-active)",
+          "bgHover": "var(--wp--preset--color--btn-soft-bg-hover)",
+          "border": "transparent",
+          "text": "var(--wp--preset--color--btn-soft-text)"
+        },
         "subtle": {
           "bg": "transparent",
           "bgActive": "var(--wp--preset--color--btn-subtle-bg-active)",
@@ -582,6 +607,10 @@
       "divider": {
         "color": "var:preset|color|divider",
         "width": "var:custom|border|width|thin"
+      },
+      "eyebrow": {
+        "tracking": "0.08em",
+        "weight": "600"
       },
       "form": {
         "bg": "var:preset|color|surface-1",
@@ -677,7 +706,7 @@
     },
     "layout": {
       "contentSize": "45rem",
-      "wideSize": "1280px"
+      "wideSize": "80rem"
     },
     "spacing": {
       "blockGap": true,
@@ -811,21 +840,21 @@
           "slug": "xl"
         },
         {
-          "fluid": true,
+          "fluid": false,
           "name": "2XL",
-          "size": "2.25rem",
+          "size": "clamp(1.5rem, 1.3333rem + 0.8333vw, 2rem)",
           "slug": "xxl"
         },
         {
-          "fluid": true,
+          "fluid": false,
           "name": "Display",
-          "size": "3.5rem",
+          "size": "clamp(2.3438rem, 2.0833rem + 1.3021vw, 3.125rem)",
           "slug": "display"
         },
         {
-          "fluid": true,
+          "fluid": false,
           "name": "3XL",
-          "size": "3rem",
+          "size": "clamp(1.875rem, 1.6667rem + 1.0417vw, 2.5rem)",
           "slug": "xxxl"
         }
       ]
@@ -1113,9 +1142,9 @@
       "core/quote": {
         "border": {
           "left": {
-            "color": "var:preset|color|divider",
+            "color": "var:preset|color|link",
             "style": "solid",
-            "width": "var:custom|border|width|thin"
+            "width": "var:custom|border|width|thick"
           },
           "radius": "var:preset|border-radius|s"
         },
@@ -1182,10 +1211,16 @@
             ":hover": {
               "color": {
                 "text": "var:preset|color|primary"
+              },
+              "typography": {
+                "textDecoration": "none"
               }
             },
             "color": {
               "text": "var:preset|color|text-1"
+            },
+            "typography": {
+              "textDecoration": "none"
             }
           }
         },
@@ -1232,7 +1267,7 @@
       "background": "var(--wp--preset--color--surface-1)",
       "text": "var(--wp--preset--color--text-1)"
     },
-    "css": "/* ============================================\n * Custom CSS injected into theme.json styles\n * ============================================\n * For front-end styling that theme.json's schema cannot express. Design VALUES do not\n * belong here - they are tokens in config/theme/settings/* (single source of truth). The\n * former dark-mode text-1 softening moved into the text-1 token itself (settings/color.json)\n * as a light-dark() value, so it follows color-scheme instead of a prefers-color-scheme\n * media query. Intentionally empty for now.\n */",
+    "css": "/* ============================================\n * Custom CSS injected into theme.json styles\n * ============================================\n * For front-end styling that theme.json's schema cannot express. Design VALUES do not\n * belong here - they are theme.json tokens (single source of truth). The former dark-mode\n * text-1 softening moved into the text-1 token itself as a light-dark() value, so it follows\n * color-scheme instead of a prefers-color-scheme media query. Intentionally empty for now.\n */",
     "elements": {
       "button": {
         "border": {
@@ -1433,6 +1468,13 @@
         "page"
       ],
       "title": "Style Guide"
+    },
+    {
+      "name": "page-dev-preview",
+      "postTypes": [
+        "page"
+      ],
+      "title": "Dev Preview (all patterns)"
     }
   ],
   "templateParts": [

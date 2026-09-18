@@ -35,62 +35,62 @@
 				{
 					"slug": "link",
 					"name": "Link",
-					"color": "light-dark(oklch(0.42 0 0), oklch(0.72 0 0))"
+					"color": "light-dark(oklch(0.56 0.16 260), oklch(0.62 0.16 260))"
 				},
 				{
 					"slug": "link-hover",
 					"name": "Link Hover",
-					"color": "light-dark(oklch(0.5 0 0), oklch(0.78 0 0))"
+					"color": "light-dark(oklch(0.49 0.16 260), oklch(0.69 0.16 260))"
 				},
 				{
 					"slug": "link-active",
 					"name": "Link Active",
-					"color": "light-dark(oklch(0.35 0 0), oklch(0.65 0 0))"
+					"color": "light-dark(oklch(0.42 0.16 260), oklch(0.76 0.123 260))"
 				},
 				{
 					"slug": "link-visited",
 					"name": "Link Visited",
-					"color": "light-dark(oklch(0.42 0 0), oklch(0.68 0 0))"
+					"color": "light-dark(oklch(0.44 0.072 260), oklch(0.8 0.072 260))"
 				},
 				{
 					"slug": "focus",
 					"name": "Focus",
-					"color": "var:preset|color|link"
+					"color": "light-dark(oklch(0.65 0.16 260), oklch(0.53 0.16 260))"
 				},
 				{
 					"slug": "primary-50",
 					"name": "Primary 50",
-					"color": "light-dark(oklch(0.98 0 0), oklch(0.35 0 0))"
+					"color": "light-dark(oklch(0.97 0.0142 260), oklch(0.3 0.0482 260))"
 				},
 				{
 					"slug": "primary-100",
 					"name": "Primary 100",
-					"color": "light-dark(oklch(0.95 0 0), oklch(0.42 0 0))"
+					"color": "light-dark(oklch(0.93 0.0335 260), oklch(0.35 0.0723 260))"
 				},
 				{
 					"slug": "primary-300",
 					"name": "Primary 300",
-					"color": "light-dark(oklch(0.83 0 0), oklch(0.51 0 0))"
+					"color": "light-dark(oklch(0.82 0.0901 260), oklch(0.46 0.1365 260))"
 				},
 				{
 					"slug": "primary-400",
 					"name": "Primary 400",
-					"color": "light-dark(oklch(0.75 0 0), oklch(0.6 0 0))"
+					"color": "light-dark(oklch(0.75 0.1287 260), oklch(0.55 0.1526 260))"
 				},
 				{
 					"slug": "primary-200",
 					"name": "Primary 200",
-					"color": "light-dark(oklch(0.9 0 0), oklch(0.46 0 0))"
+					"color": "light-dark(oklch(0.88 0.0587 260), oklch(0.4 0.1044 260))"
 				},
 				{
 					"slug": "primary-900",
 					"name": "Primary 900",
-					"color": "light-dark(oklch(0.39 0 0), oklch(0.93 0 0))"
+					"color": "light-dark(oklch(0.34 0.1385 260), oklch(0.93 0.0335 260))"
 				},
 				{
 					"slug": "primary-950",
 					"name": "Primary 950",
-					"color": "light-dark(oklch(0.3 0 0), oklch(0.98 0 0))"
+					"color": "light-dark(oklch(0.28 0.1141 260), oklch(0.96 0.0189 260))"
 				},
 				{
 					"slug": "danger-50",
@@ -260,97 +260,92 @@
 				{
 					"slug": "on-primary",
 					"name": "On Primary",
-					"color": "light-dark(oklch(0.98 0 0), oklch(0.22 0 0))"
+					"color": "light-dark(oklch(0.24 0.05 260), oklch(0.24 0.05 260))"
 				},
 				{
 					"slug": "primary-500",
 					"name": "Primary 500",
-					"color": "light-dark(oklch(0.68 0 0), oklch(0.66 0 0))"
+					"color": "light-dark(oklch(0.68 0.16 260), oklch(0.66 0.16 260))"
 				},
 				{
 					"slug": "primary-600",
 					"name": "Primary 600",
-					"color": "light-dark(oklch(0.59 0 0), oklch(0.75 0 0))"
+					"color": "light-dark(oklch(0.55 0.16 260), oklch(0.8 0.1009 260))"
 				},
 				{
 					"slug": "primary-700",
 					"name": "Primary 700",
-					"color": "light-dark(oklch(0.5 0 0), oklch(0.81 0 0))"
+					"color": "light-dark(oklch(0.48 0.16 260), oklch(0.85 0.0742 260))"
 				},
 				{
 					"slug": "primary-800",
 					"name": "Primary 800",
-					"color": "light-dark(oklch(0.44 0 0), oklch(0.88 0 0))"
+					"color": "light-dark(oklch(0.4 0.1526 260), oklch(0.89 0.0536 260))"
 				},
 				{
 					"slug": "neutral-0",
 					"name": "Neutral 0",
-					"color": "light-dark(oklch(0.99 0.000 0), oklch(0.22 0.006 285.8))"
+					"color": "light-dark(oklch(0.99 0.0008 258), oklch(0.22 0.0047 258))"
 				},
 				{
 					"slug": "neutral-50",
 					"name": "Neutral 50",
-					"color": "light-dark(oklch(0.95 0.000 0), oklch(0.28 0.007 285.8))"
+					"color": "light-dark(oklch(0.95 0.0016 258), oklch(0.28 0.0057 258))"
 				},
 				{
 					"slug": "neutral-100",
 					"name": "Neutral 100",
-					"color": "light-dark(oklch(0.90 0.001 285.0), oklch(0.34 0.010 285.7))"
+					"color": "light-dark(oklch(0.90 0.003 258), oklch(0.34 0.007 258))"
 				},
 				{
 					"slug": "neutral-200",
 					"name": "Neutral 200",
-					"color": "light-dark(oklch(0.85 0.004 285.9), oklch(0.40 0.009 285.8))"
+					"color": "light-dark(oklch(0.85 0.0044 258), oklch(0.40 0.008 258))"
 				},
 				{
 					"slug": "neutral-300",
 					"name": "Neutral 300",
-					"color": "light-dark(oklch(0.87 0.006 286.0), oklch(0.38 0.012 285.8))"
+					"color": "light-dark(oklch(0.87 0.0039 258), oklch(0.38 0.0078 258))"
 				},
 				{
 					"slug": "neutral-400",
 					"name": "Neutral 400",
-					"color": "light-dark(oklch(0.71 0.013 286.0), oklch(0.46 0.015 285.8))"
+					"color": "light-dark(oklch(0.71 0.0077 258), oklch(0.46 0.0087 258))"
 				},
 				{
 					"slug": "neutral-500",
 					"name": "Neutral 500",
-					"color": "light-dark(oklch(0.55 0.014 285.9), oklch(0.53 0.013 285.9))"
+					"color": "light-dark(oklch(0.55 0.01 258), oklch(0.53 0.0097 258))"
 				},
 				{
 					"slug": "neutral-600",
 					"name": "Neutral 600",
-					"color": "light-dark(oklch(0.44 0.015 285.7), oklch(0.78 0.017 285.9))"
+					"color": "light-dark(oklch(0.44 0.0085 258), oklch(0.78 0.006 258))"
 				},
 				{
 					"slug": "neutral-700",
 					"name": "Neutral 700",
-					"color": "light-dark(oklch(0.37 0.012 285.7), oklch(0.78 0.011 286.0))"
+					"color": "light-dark(oklch(0.37 0.0076 258), oklch(0.78 0.006 258))"
 				},
 				{
 					"slug": "neutral-800",
 					"name": "Neutral 800",
-					"color": "light-dark(oklch(0.27 0.005 285.9), oklch(0.87 0.008 286.0))"
+					"color": "light-dark(oklch(0.27 0.0054 258), oklch(0.87 0.0039 258))"
 				},
 				{
 					"slug": "neutral-900",
 					"name": "Neutral 900",
-					"color": "light-dark(oklch(0.21 0.006 285.8), oklch(0.93 0.005 286.0))"
+					"color": "light-dark(oklch(0.21 0.0045 258), oklch(0.93 0.0021 258))"
 				},
 				{
 					"slug": "neutral-950",
 					"name": "Neutral 950",
-					"color": "light-dark(oklch(0.19 0.006 285.8), oklch(0.96 0.000 0))"
+					"color": "light-dark(oklch(0.19 0.004 258), oklch(0.96 0.0014 258))"
 				},
 				{
 					"slug": "neutral-1000",
 					"name": "Neutral 1000",
-					"color": "light-dark(oklch(0.00 0.000 0), oklch(1.00 0.000 0))"
-				},
-				{
-					"slug": "on-accent",
-					"name": "On Accent",
-					"color": "light-dark(oklch(0.22 0 0), oklch(0.98 0 0))"
+					"color": "light-dark(oklch(0.00 0 258), oklch(1.00 0 258))"
 				},
 				{
 					"slug": "media-scrim",
@@ -361,6 +356,16 @@
 					"slug": "on-media",
 					"name": "On Media",
 					"color": "light-dark(oklch(1 0 0), oklch(1 0 0))"
+				},
+				{
+					"slug": "brand-fill",
+					"name": "Brand Fill",
+					"color": "light-dark(oklch(0.546 0.1606 260), oklch(0.546 0.1606 260))"
+				},
+				{
+					"slug": "on-brand-fill",
+					"name": "On Brand Fill",
+					"color": "light-dark(oklch(0.97 0 0), oklch(0.97 0 0))"
 				},
 				{
 					"slug": "btn-default-bg",
@@ -378,74 +383,84 @@
 					"color": "var:preset|color|neutral-300"
 				},
 				{
-					"slug": "btn-primary-bg",
-					"name": "Button Primary BG",
-					"color": "var:preset|color|link"
+					"slug": "btn-fill-bg",
+					"name": "Button Fill BG",
+					"color": "light-dark(oklch(0.622 0.1606 260), oklch(0.622 0.1606 260))"
 				},
 				{
-					"slug": "btn-primary-bg-hover",
-					"name": "Button Primary BG Hover",
-					"color": "var:preset|color|link-hover"
+					"slug": "btn-fill-bg-hover",
+					"name": "Button Fill BG Hover",
+					"color": "light-dark(oklch(0.562 0.1606 260), oklch(0.562 0.1606 260))"
 				},
 				{
-					"slug": "btn-primary-bg-active",
-					"name": "Button Primary BG Active",
-					"color": "var:preset|color|link-active"
+					"slug": "btn-fill-bg-active",
+					"name": "Button Fill BG Active",
+					"color": "light-dark(oklch(0.502 0.1606 260), oklch(0.502 0.1606 260))"
 				},
 				{
-					"slug": "btn-primary-text",
-					"name": "Button Primary Text",
-					"color": "var:preset|color|on-primary"
+					"slug": "btn-fill-text",
+					"name": "Button Fill Text",
+					"color": "light-dark(oklch(1 0 0), oklch(1 0 0))"
 				},
 				{
 					"slug": "btn-subtle-bg-hover",
 					"name": "Button Subtle BG Hover",
-					"color": "light-dark(oklch(0.94 0 0), oklch(0.24 0 0))"
+					"color": "var:preset|color|primary-100"
 				},
 				{
 					"slug": "btn-subtle-bg-active",
 					"name": "Button Subtle BG Active",
-					"color": "light-dark(oklch(0.9 0 0), oklch(0.28 0 0))"
+					"color": "var:preset|color|primary-200"
 				},
 				{
 					"slug": "accent",
-					"name": "Accent",
-					"color": "light-dark(oklch(0.9 0 0), oklch(0.55 0 0))"
+					"name": "Accent (deprecated)",
+					"color": "var:preset|color|primary"
 				},
 				{
-					"slug": "accent-hover",
-					"name": "Accent Hover",
-					"color": "light-dark(oklch(0.84 0 0), oklch(0.62 0 0))"
+					"slug": "btn-soft-bg",
+					"name": "Button Soft BG",
+					"color": "var:preset|color|primary-100"
 				},
 				{
-					"slug": "accent-active",
-					"name": "Accent Active",
-					"color": "light-dark(oklch(0.78 0 0), oklch(0.5 0 0))"
+					"slug": "btn-soft-bg-hover",
+					"name": "Button Soft BG Hover",
+					"color": "var:preset|color|primary-200"
+				},
+				{
+					"slug": "btn-soft-bg-active",
+					"name": "Button Soft BG Active",
+					"color": "var:preset|color|primary-300"
+				},
+				{
+					"slug": "btn-soft-text",
+					"name": "Button Soft Text",
+					"color": "var:preset|color|primary-800"
 				},
 				{
 					"slug": "divider",
 					"name": "Divider",
-					"color": "light-dark(oklch(0.92 0.007 286), oklch(0.33 0.007 286))"
+					"color": "light-dark(oklch(0.92 0.0024 258), oklch(0.33 0.0067 258))"
 				},
 				{
 					"slug": "outline-1",
 					"name": "Outline 1",
-					"color": "light-dark(oklch(0.68 0 0 / 0.72), oklch(0.50 0 0 / 0.62))"
+					"color": "light-dark(oklch(0.68 0.0081 258 / 0.72), oklch(0.50 0.0093 258 / 0.62))"
 				},
 				{
 					"slug": "border-subtle",
 					"name": "Border Subtle",
-					"color": "light-dark(oklch(0.80 0.006 286), oklch(0.44 0.017 286))"
+					"color": "light-dark(oklch(0.80 0.0055 258), oklch(0.44 0.0085 258))"
 				},
 				{
 					"slug": "border-default",
 					"name": "Border Default",
-					"color": "light-dark(oklch(0.71 0.013 286), oklch(0.51 0.013 286))"
+					"color": "light-dark(oklch(0.71 0.0077 258), oklch(0.51 0.0094 258))"
 				},
 				{
 					"slug": "border-strong",
 					"name": "Border Strong",
-					"color": "light-dark(oklch(0.55 0.014 286), oklch(0.67 0.013 286))"
+					"color": "light-dark(oklch(0.55 0.01 258), oklch(0.67 0.0083 258))"
 				},
 				{
 					"slug": "text-strong",
@@ -469,8 +484,8 @@
 				},
 				{
 					"slug": "primary",
-					"name": "Primary",
-					"color": "var:preset|color|primary-600"
+					"name": "Primary (brand color)",
+					"color": "light-dark(oklch(0.622 0.1606 260), oklch(0.622 0.1606 260))"
 				}
 			],
 			"gradients": []

@@ -15,8 +15,8 @@
 <!-- wp:group {"metadata":{"name":"Blog Intro"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|large"}}},"backgroundColor":"surface-1","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-surface-1-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--large)">
 
-	<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.06em"}},"textColor":"text-2","fontSize":"xs"} -->
-	<p class="has-text-2-color has-text-color has-xs-font-size" style="letter-spacing:0.06em;text-transform:uppercase"><?php esc_html_e( 'The blog', 'blockwright' ); ?></p>
+	<!-- wp:paragraph {"className":"is-style-eyebrow","fontSize":"xs"} -->
+	<p class="is-style-eyebrow has-xs-font-size"><?php esc_html_e( 'The blog', 'blockwright' ); ?></p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:heading {"level":1} -->

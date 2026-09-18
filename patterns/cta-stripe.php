@@ -17,7 +17,7 @@
 	<p class="has-l-font-size"><?php esc_html_e( 'Ready to ship your site?', 'blockwright' ); ?></p>
 	<!-- /wp:paragraph -->
 
-	<!-- wp:buttons {"layout":{"type":"flex","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
+	<!-- wp:buttons {"layout":{"type":"flex","flexWrap":"wrap"}} -->
 	<div class="wp-block-buttons">
 		<!-- wp:button {"className":"is-style-fill"} -->
 		<div class="wp-block-button is-style-fill"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Contact', 'blockwright' ); ?></a></div>

@@ -9,7 +9,12 @@ const __dirname = path.dirname(__filename);
 const ROOT = path.resolve(__dirname, '..');
 const SRC_DIR = path.join(ROOT, 'config', 'theme');
 const OUT = path.join(ROOT, 'theme.json');
-const SCSS_BP_OUT = path.join(ROOT, 'src', 'styles', '_breakpoints.generated.scss');
+const SCSS_BP_OUT = path.join(
+	ROOT,
+	'src',
+	'styles',
+	'_breakpoints.generated.scss'
+);
 const WATCH = process.argv.includes('--watch');
 
 const TOP_LEVEL_ORDER = [
@@ -24,7 +29,9 @@ const TOP_LEVEL_ORDER = [
 function safeReadJSON(file) {
 	try {
 		const txt = fs.readFileSync(file, 'utf8');
-		if (!txt.trim()) throw new Error('Empty JSON');
+		if (!txt.trim()) {
+			throw new Error('Empty JSON');
+		}
 		return JSON.parse(txt);
 	} catch (e) {
 		console.error(`[compose-theme] Failed to read ${file}: ${e.message}`);
@@ -46,12 +53,15 @@ function deepMerge(a, b) {
 			keyFor(b[0]) !== null
 		) {
 			const map = new Map();
-			for (const i of a) map.set(keyFor(i), i);
-			for (const i of b)
+			for (const i of a) {
+				map.set(keyFor(i), i);
+			}
+			for (const i of b) {
 				map.set(
 					keyFor(i),
 					map.has(keyFor(i)) ? deepMerge(map.get(keyFor(i)), i) : i
 				);
+			}
 			return Array.from(map.values());
 		}
 		return b.slice();
@@ -65,26 +75,36 @@ function deepMerge(a, b) {
 		!Array.isArray(b)
 	) {
 		const out = { ...a };
-		for (const [k, v] of Object.entries(b))
+		for (const [k, v] of Object.entries(b)) {
 			out[k] = k in out ? deepMerge(out[k], v) : v;
+		}
 		return out;
 	}
 	return b;
 }
 
 function sortKeys(obj, isTop = false) {
-	if (Array.isArray(obj)) return obj.map((x) => sortKeys(x, false));
+	if (Array.isArray(obj)) {
+		return obj.map((x) => sortKeys(x, false));
+	}
 	if (obj && typeof obj === 'object') {
 		const keys = Object.keys(obj);
 		const out = {};
 		if (isTop) {
-			for (const k of TOP_LEVEL_ORDER)
-				if (k in obj) out[k] = sortKeys(obj[k], false);
-			for (const k of keys.sort())
-				if (!TOP_LEVEL_ORDER.includes(k))
+			for (const k of TOP_LEVEL_ORDER) {
+				if (k in obj) {
 					out[k] = sortKeys(obj[k], false);
+				}
+			}
+			for (const k of keys.sort()) {
+				if (!TOP_LEVEL_ORDER.includes(k)) {
+					out[k] = sortKeys(obj[k], false);
+				}
+			}
 		} else {
-			for (const k of keys.sort()) out[k] = sortKeys(obj[k], false);
+			for (const k of keys.sort()) {
+				out[k] = sortKeys(obj[k], false);
+			}
 		}
 		return out;
 	}
@@ -130,7 +150,9 @@ function gatherFragments() {
 	const files = [];
 	for (const dir of order) {
 		const abs = path.join(SRC_DIR, dir);
-		if (!fs.existsSync(abs)) continue;
+		if (!fs.existsSync(abs)) {
+			continue;
+		}
 		const list = fs
 			.readdirSync(abs)
 			.filter((f) => f.endsWith('.json'))
@@ -139,7 +161,9 @@ function gatherFragments() {
 		files.push(...list);
 	}
 	const basePath = path.join(SRC_DIR, 'base.json');
-	if (fs.existsSync(basePath)) files.unshift(basePath);
+	if (fs.existsSync(basePath)) {
+		files.unshift(basePath);
+	}
 	return files;
 }
 
@@ -149,16 +173,22 @@ function gatherFragments() {
  */
 function readCustomCss() {
 	const cssPath = path.join(SRC_DIR, 'styles', 'custom.css');
-	if (!fs.existsSync(cssPath)) return null;
+	if (!fs.existsSync(cssPath)) {
+		return null;
+	}
 	return fs.readFileSync(cssPath, 'utf8').trim();
 }
 
 function composeOnce() {
 	const fragments = gatherFragments();
 	let composed = {};
-	for (const f of fragments) composed = deepMerge(composed, safeReadJSON(f));
-	if (!('version' in composed)) composed.version = 3;
-	composed['$schema'] = 'https://schemas.wp.org/wp/6.9/theme.json';
+	for (const f of fragments) {
+		composed = deepMerge(composed, safeReadJSON(f));
+	}
+	if (!('version' in composed)) {
+		composed.version = 3;
+	}
+	composed.$schema = 'https://schemas.wp.org/wp/6.9/theme.json';
 
 	// Inject custom.css into styles.css (prepend so it comes before any JSON-embedded CSS)
 	const customCss = readCustomCss();
@@ -214,11 +244,15 @@ function writeBreakpointsScss(composed) {
 
 function main() {
 	composeOnce();
-	if (!WATCH) return;
+	if (!WATCH) {
+		return;
+	}
 	console.log('[compose-theme] Watching for changes...');
 	for (const d of ['settings', 'styles', 'blocks', 'extras']) {
 		const abs = path.join(SRC_DIR, d);
-		if (!fs.existsSync(abs)) continue;
+		if (!fs.existsSync(abs)) {
+			continue;
+		}
 		fs.watch(abs, { recursive: false }, () => {
 			try {
 				composeOnce();

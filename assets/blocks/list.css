@@ -6,8 +6,10 @@
 	gap: var(--wp--preset--spacing--small);
 }
 
+/* Brand list markers: the bullet / number glyph in the brand tone (item text stays
+   ink). A quiet, always-on brand touch in body content (role map §3a #4, default-on). */
 .wp-block-list li::marker {
-	color: var(--wp--preset--color--outline-1);
+	color: var(--wp--preset--color--link);
 }
 
 .wp-block-list li + li {

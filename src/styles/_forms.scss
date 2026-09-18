@@ -12,7 +12,7 @@
 // classes (0,2,0), which outranks these element/type selectors - so its forms keep
 // their own look, by design. Skinning a specific plugin is site work, not theme.)
 //
-// Token policy: every colour, font, font-size and spacing value is a
+// Token policy: every color, font, font-size and spacing value is a
 // var(--wp--preset--*) reference, so a palette or type change in theme.json
 // restyles forms automatically. A few structural values with no preset scale
 // (control height, border width, control line-height, button weight, focus-ring
@@ -71,7 +71,10 @@ textarea:focus-visible {
 // ── Choice controls ───────────────────────────────────────────────────────
 input[type="checkbox"],
 input[type="radio"] {
-	accent-color: var(--wp--preset--color--link);
+	// The solid brand FILL (not the link text color): it is deep in both modes, so the browser's
+	// auto-picked check mark stays legible - a light-in-dark-mode accent left the check low-contrast.
+	// Matches the Design tool's drawn preview (btn-fill-bg + btn-fill-text).
+	accent-color: var(--wp--preset--color--btn-fill-bg);
 }
 
 // ── Form action buttons: submit / reset ───────────────────────────────────
@@ -90,8 +93,8 @@ button[type="reset"] {
 	padding-inline: var(--wp--preset--spacing--small);
 	border: var(--wp--custom--border--width--thin) solid transparent;
 	border-radius: var(--wp--preset--border-radius--m);
-	background-color: var(--wp--preset--color--link);
-	color: var(--wp--preset--color--on-primary);
+	background-color: var(--wp--preset--color--btn-fill-bg);
+	color: var(--wp--preset--color--btn-fill-text);
 	font-family: var(--wp--preset--font-family--body);
 	font-size: var(--wp--preset--font-size--base);
 	font-weight: var(--wp--custom--button--weight);

@@ -16,8 +16,8 @@
 
 	<!-- wp:group {"align":"wide","layout":{"type":"constrained"}} -->
 	<div class="wp-block-group alignwide">
-		<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.08em","fontWeight":"600"}},"textColor":"text-2","fontSize":"s"} -->
-		<p class="has-text-2-color has-text-color has-s-font-size" style="letter-spacing:0.08em;text-transform:uppercase;font-weight:600"><?php esc_html_e( 'Our process', 'blockwright' ); ?></p>
+		<!-- wp:paragraph {"className":"is-style-eyebrow","fontSize":"s"} -->
+		<p class="is-style-eyebrow has-s-font-size"><?php esc_html_e( 'Our process', 'blockwright' ); ?></p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:heading {"level":2,"fontSize":"xl"} -->
@@ -35,8 +35,8 @@
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:paragraph {"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"text-2","fontSize":"xxl"} -->
-			<p class="has-text-2-color has-text-color has-xxl-font-size" style="font-weight:700;line-height:1">01</p>
+			<!-- wp:paragraph {"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"link","fontSize":"xxl"} -->
+			<p class="has-link-color has-text-color has-xxl-font-size" style="font-weight:700;line-height:1">01</p>
 			<!-- /wp:paragraph -->
 			<!-- wp:heading {"level":3,"fontSize":"l"} -->
 			<h3 class="wp-block-heading has-l-font-size"><?php esc_html_e( 'Get in touch', 'blockwright' ); ?></h3>
@@ -49,8 +49,8 @@
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:paragraph {"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"text-2","fontSize":"xxl"} -->
-			<p class="has-text-2-color has-text-color has-xxl-font-size" style="font-weight:700;line-height:1">02</p>
+			<!-- wp:paragraph {"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"link","fontSize":"xxl"} -->
+			<p class="has-link-color has-text-color has-xxl-font-size" style="font-weight:700;line-height:1">02</p>
 			<!-- /wp:paragraph -->
 			<!-- wp:heading {"level":3,"fontSize":"l"} -->
 			<h3 class="wp-block-heading has-l-font-size"><?php esc_html_e( 'We make a plan', 'blockwright' ); ?></h3>
@@ -63,8 +63,8 @@
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:paragraph {"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"text-2","fontSize":"xxl"} -->
-			<p class="has-text-2-color has-text-color has-xxl-font-size" style="font-weight:700;line-height:1">03</p>
+			<!-- wp:paragraph {"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"link","fontSize":"xxl"} -->
+			<p class="has-link-color has-text-color has-xxl-font-size" style="font-weight:700;line-height:1">03</p>
 			<!-- /wp:paragraph -->
 			<!-- wp:heading {"level":3,"fontSize":"l"} -->
 			<h3 class="wp-block-heading has-l-font-size"><?php esc_html_e( 'Get started', 'blockwright' ); ?></h3>
@@ -77,8 +77,8 @@
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:paragraph {"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"text-2","fontSize":"xxl"} -->
-			<p class="has-text-2-color has-text-color has-xxl-font-size" style="font-weight:700;line-height:1">04</p>
+			<!-- wp:paragraph {"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"link","fontSize":"xxl"} -->
+			<p class="has-link-color has-text-color has-xxl-font-size" style="font-weight:700;line-height:1">04</p>
 			<!-- /wp:paragraph -->
 			<!-- wp:heading {"level":3,"fontSize":"l"} -->
 			<h3 class="wp-block-heading has-l-font-size"><?php esc_html_e( 'And you\'re set', 'blockwright' ); ?></h3>

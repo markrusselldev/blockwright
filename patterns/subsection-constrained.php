@@ -10,7 +10,7 @@
  */
 
 ?>
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"constrained"}} -->
+<!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group">
 	<!-- wp:heading {"level":3} -->
 	<h3 class="wp-block-heading"><?php esc_html_e( 'Subsection heading', 'blockwright' ); ?></h3>

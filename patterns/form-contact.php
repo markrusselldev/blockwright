@@ -16,8 +16,8 @@
 
 	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained","contentSize":"600px"}} -->
 	<div class="wp-block-group">
-		<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.08em","fontWeight":"600"}},"textColor":"text-2","fontSize":"s"} -->
-		<p class="has-text-2-color has-text-color has-s-font-size" style="letter-spacing:0.08em;text-transform:uppercase;font-weight:600"><?php esc_html_e( 'Contact', 'blockwright' ); ?></p>
+		<!-- wp:paragraph {"className":"is-style-eyebrow","fontSize":"s"} -->
+		<p class="is-style-eyebrow has-s-font-size"><?php esc_html_e( 'Contact', 'blockwright' ); ?></p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:heading {"level":2,"fontSize":"xl"} -->

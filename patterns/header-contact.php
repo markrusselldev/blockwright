@@ -22,11 +22,11 @@
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group">
 <!-- wp:site-logo {"width":60} /-->
-<!-- wp:site-title {"level":0,"isLink":true,"style":{"typography":{"fontSize":"var:preset|font-size|l","fontWeight":"600"},"elements":{"link":{"color":{"text":"var:preset|color|text-1"}}}}} /-->
+<!-- wp:site-title {"level":0,"isLink":true} /-->
 </div>
 <!-- /wp:group -->
 
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center","justifyContent":"right"}} -->
+<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center","justifyContent":"right"}} -->
 <div class="wp-block-group">
 <!-- wp:paragraph {"className":"bw-call","fontSize":"m","style":{"typography":{"fontWeight":"600"}}} -->
 <p class="bw-call has-m-font-size" style="font-weight:600"><a href="tel:+15555550100"><?php esc_html_e( '(555) 555-0100', 'blockwright' ); ?></a></p>

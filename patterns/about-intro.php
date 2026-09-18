@@ -16,8 +16,8 @@
 
 	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained","contentSize":"680px"}} -->
 	<div class="wp-block-group">
-		<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.08em","fontWeight":"600"}},"textColor":"text-2","fontSize":"s"} -->
-		<p class="has-text-align-center has-text-2-color has-text-color has-s-font-size" style="letter-spacing:0.08em;text-transform:uppercase;font-weight:600"><?php esc_html_e( 'Who we are', 'blockwright' ); ?></p>
+		<!-- wp:paragraph {"align":"center","className":"is-style-eyebrow","fontSize":"s"} -->
+		<p class="has-text-align-center is-style-eyebrow has-s-font-size"><?php esc_html_e( 'Who we are', 'blockwright' ); ?></p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:heading {"textAlign":"center","level":2,"fontSize":"xxl"} -->

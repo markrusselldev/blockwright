@@ -59,8 +59,8 @@
 	   the card reads like a sheet of paper even on a dark-mode site. Re-declaring
 	   `color: text-1` on the card re-resolves that token under THIS element's
 	   color-scheme:light (an inherited color is an already-resolved absolute value,
-	   which color-scheme cannot retroactively flip), so the uncoloured title + row
-	   labels inherit true dark text. Chips and the text-2 ref set their own colour.
+	   which color-scheme cannot retroactively flip), so the uncolored title + row
+	   labels inherit true dark text. Chips and the text-2 ref set their own color.
 	   (No text-1 pin needed: since the dark softening now lives in the text-1
 	   light-dark() token itself, not a prefers-color-scheme override, color-scheme
 	   resolves it correctly on its own.) */
@@ -74,19 +74,67 @@
 	box-shadow: var(--wp--custom--shadow--m);
 }
 
-/* Scorecard footer note: a soft accent-tinted callout instead of a flat grey, so the theme's
-   COLOUR SYSTEM reads in the block itself (it re-hues with colour variations - a light champagne on
+/* Scorecard footer note: a soft accent-tinted callout instead of a flat gray, so the theme's
+   COLOR SYSTEM reads in the block itself (it re-hues with color variations - a light champagne on
    the Gold look, pale blue on Blue, etc.). Mixed OVER surface-1 (the near-white card surface), NOT
-   the grey surface-2: at a subtle accent share the grey base muddied the warm accent into a flat
+   the gray surface-2: at a subtle accent share the gray base muddied the warm accent into a flat
    tan/brown; mixing into the lighter surface keeps the result high in lightness so the tint reads
    as a clean light gold rather than mud. The share stays low so it is an informational note, never
    a button; still clearly darker than the surface-1 card, so it reads as a distinct footer. */
 .bw-scorecard-foot {
+	/* A subtle brand tint of the CARD SURFACE, not an absolute ramp step: mix a low share of
+	   `primary` (the brand color) into surface-1. Both operands are light-dark(), so the mix resolves per mode and
+	   the tint keeps a CONSTANT relationship to the surface in light AND dark (an absolute ramp
+	   step can't - it sits ~1% off a near-white surface in light but ~13% and saturated off a
+	   near-black surface in dark). Re-hues per scheme; the 22% share reads as a distinct footer
+	   while staying quiet. */
 	background-color: color-mix(
 		in oklab,
 		var(--wp--preset--color--surface-1),
-		var(--wp--preset--color--accent) 22%
+		var(--wp--preset--color--primary) 22%
 	);
+}
+
+/* Editorial-layer brand roles (registered in assets/js/editor-block-styles.js). Both
+   carry the brand hue via tokens, so they re-hue with every color scheme and stay
+   WCAG AA in light AND dark. `p.is-style-*` = specificity (0,1,1), which beats the
+   theme's `:root :where(p)` (0,1,0) color rule so the brand color actually lands. */
+
+/* Eyebrow / kicker: the small uppercase label above a heading, in the brand link
+   tone. Mono preset matches the existing section-label treatment (see the
+   transitional rule in _interactive.scss for un-migrated eyebrows). */
+p.is-style-eyebrow {
+	color: var(--wp--preset--color--link);
+	font-family: var(--wp--preset--font-family--mono);
+	font-weight: var(--wp--custom--eyebrow--weight);
+	letter-spacing: var(--wp--custom--eyebrow--tracking);
+	text-transform: uppercase;
+	margin-bottom: var(--wp--preset--spacing--x-small);
+	/* font-size + alignment stay per-instance (has-{size}-font-size /
+	   has-text-align-*), so the class doesn't pin them. */
+}
+
+/* (Callout band, a core/group style, moved to assets/blocks/group.css so it lazy-loads
+   with the group block alongside is-style-panel / card / icon-divider. 2026-09-16.) */
+
+/* Badge / pill: a small solid brand-tint chip (the Soft button's tonal pair - btn-soft-bg
+   container + btn-soft-text ink at >=4.5:1, via the badge custom tokens). fit-content so a
+   block-level paragraph hugs its text instead of stretching full width. */
+p.is-style-badge {
+	/* inline-flex + centered so the short label sits optically centered in the pill; a
+	   line-height:1.3 inline-block left capless labels ("New") reading high. */
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+	background-color: var(--wp--custom--badge--bg);
+	color: var(--wp--custom--badge--text);
+	border-radius: var(--wp--custom--badge--radius);
+	padding-block: var(--wp--custom--badge--py);
+	padding-inline: var(--wp--custom--badge--px);
+	font-size: var(--wp--custom--badge--font-size);
+	font-weight: var(--wp--custom--badge--weight);
+	line-height: 1;
 }
 
 /* The resolved-card "Fixed" stamp lives in assets/blocks/group.css (loaded via

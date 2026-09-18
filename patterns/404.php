@@ -12,8 +12,8 @@
 ?>
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small","padding":{"top":"var:preset|spacing|xx-large","bottom":"var:preset|spacing|xx-large"}}},"layout":{"type":"constrained","justifyContent":"center","contentSize":"40rem"}} -->
 <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--xx-large);padding-bottom:var(--wp--preset--spacing--xx-large)">
-	<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"textColor":"text-2","fontSize":"xs"} -->
-	<p class="has-text-align-center has-text-2-color has-text-color has-xs-font-size" style="letter-spacing:0.12em;text-transform:uppercase"><?php esc_html_e( 'Error 404', 'blockwright' ); ?></p>
+	<!-- wp:paragraph {"align":"center","className":"is-style-eyebrow","fontSize":"xs"} -->
+	<p class="has-text-align-center is-style-eyebrow has-xs-font-size"><?php esc_html_e( 'Error 404', 'blockwright' ); ?></p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:heading {"textAlign":"center","level":1} -->
