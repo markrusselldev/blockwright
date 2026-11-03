@@ -1,0 +1,11 @@
+{
+	"styles": {
+		"blocks": {
+			"core/read-more": {
+				"typography": {
+					"textDecoration": "underline"
+				}
+			}
+		}
+	}
+}

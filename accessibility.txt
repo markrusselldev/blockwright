@@ -1,0 +1,35 @@
+=== Accessibility Statement ===
+
+Blockwright is built toward WCAG 2.2 level AA. Every template and pattern is tested for contrast, headings and landmarks, each color scheme on a sample of pages, and the menus, skip link and focus outlines by keyboard. If something in the theme stops you from using a site, please report it using the link below.
+
+== Quick Information ==
+
+Accessibility audit completed: No
+
+== Testing Tools and Methodology ==
+
+Automated: axe-core (WCAG 2.0 to 2.2 A and AA, plus best-practice rules) on every template and pattern, at 320 and 1280 pixels wide, in light and dark.
+
+Scripted browser checks: keyboard walks of the desktop and phone menus, the skip link and focus outlines; a heading and landmark outline of each page; browser text at 200 percent at 768, 1024 and 1280 pixels wide; the WCAG text spacing values; right-to-left layout.
+
+== Screen Reader Text Class ==
+
+.screen-reader-text
+
+== Accessibility Features ==
+
+Colors follow each visitor's light or dark setting, and every color scheme is generated against a contrast check.
+
+Layouts change at widths measured in em, so a visitor who sets larger browser text gets the narrower layout that text needs.
+
+A submenu opened by hover closes with the Esc key while the pointer stays on it.
+
+Animation and transitions respect the visitor's reduced motion setting.
+
+== Accessibility Help Contact ==
+
+[Blockwright support forum](https://wordpress.org/support/theme/blockwright/)
+
+== Where to Report Issues ==
+
+[Blockwright support forum](https://wordpress.org/support/theme/blockwright/)

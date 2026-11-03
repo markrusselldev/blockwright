@@ -2,7 +2,7 @@
 /**
  * Theme Assets
  *
- * Dev: load ESM from Vite (https://<host>:5173) using Script Modules.
+ * Dev: load ESM from Vite (port 5173).
  * Prod: load built assets from /dist as ESM.
  *
  * @package Blockwright
@@ -44,7 +44,7 @@ function blockwright_is_dev_env(): bool {
 /**
  * Build the Vite dev server origin (scheme + host + port).
  *
- * @return string Dev server origin, e.g. "https://localhost:5173".
+ * @return string Dev server origin, e.g. "http://localhost:5173".
  */
 function blockwright_vite_origin(): string {
 	$scheme = ( getenv( 'DEV_HTTPS' ) === '1' ) ? 'https' : 'http';
@@ -58,6 +58,9 @@ function blockwright_vite_origin(): string {
  * Shared enqueue for front end + block editor.
  */
 function blockwright_enqueue_shared_assets(): void {
+	// enqueue_block_editor_assets prints into the editor's outer page, not the canvas iframe.
+	// The canvas gets the theme stylesheet from add_editor_style(), so it is not enqueued here:
+	// core would copy it into the iframe a second time and log a console warning.
 	$current_filter   = current_filter();
 	$is_editor_iframe = ( 'enqueue_block_editor_assets' === $current_filter );
 	$in_footer        = $is_editor_iframe ? false : true;
@@ -65,16 +68,11 @@ function blockwright_enqueue_shared_assets(): void {
 	// The theme stylesheet depends on core's `global-styles` only where that handle
 	// is registered (the front end), to preserve cascade order. In the block editor
 	// it is not registered, so listing it unconditionally triggers a "dependencies
-	// that are not registered" notice (WP 6.9.1+). Add it only when present.
+	// that are not registered" notice. Add it only when present.
 	$theme_style_deps = array( 'wp-block-library' );
 	if ( wp_style_is( 'global-styles', 'registered' ) ) {
 		$theme_style_deps[] = 'global-styles';
 	}
-
-	// Common version value: cache-bust in dev; use theme version otherwise.
-	$common_ver = ( defined( 'WP_DEBUG' ) && WP_DEBUG )
-		? (string) time()
-		: ( defined( 'BLOCKWRIGHT_VERSION' ) ? BLOCKWRIGHT_VERSION : null );
 
 	// Decide whether to actually place scripts in the footer. Some template
 	// setups (especially FSE/block themes or incomplete templates) don't
@@ -85,11 +83,6 @@ function blockwright_enqueue_shared_assets(): void {
 	if ( false === has_action( 'wp_footer' ) ) {
 		$print_in_footer = false;
 	}
-
-	// Core Dashicons font, used by the compact mobile header's tap-to-call handset
-	// glyph (theme-base.css, .bw-call). Registered by core; enqueue by handle so the
-	// @font-face is available on the front end (it already loads in the editor).
-	wp_enqueue_style( 'dashicons' );
 
 	if ( blockwright_is_dev_env() ) {
 		// Pure dev mode: load only from Vite dev server. Do not enqueue built
@@ -114,12 +107,10 @@ function blockwright_enqueue_shared_assets(): void {
 		wp_enqueue_script( 'blockwright-dev-entry', $origin . '/src/index.js', array( 'blockwright-vite-client' ), $dev_ver, $print_in_footer );
 		wp_script_add_data( 'blockwright-dev-entry', 'type', 'module' );
 
-		// Enqueue the built theme stylesheet in dev so audit/dev snapshots and
-		// runtime readiness checks can observe the generated tokens (eg
-		// --bw-theme-ready). Only enqueue the CSS (not the built JS); keep the
-		// same handle as production so the link id/href matches audit expectations.
+		// Enqueue the built theme stylesheet in dev: only the CSS (not the built JS), with
+		// the same handle as production.
 		$dev_css_path = get_theme_file_path( 'dist/theme.css' );
-		if ( file_exists( $dev_css_path ) ) {
+		if ( ! $is_editor_iframe && file_exists( $dev_css_path ) ) {
 			$dev_css_ver = ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? (string) time() : (int) filemtime( $dev_css_path );
 			// Use same dependencies as production to preserve cascade ordering.
 			wp_enqueue_style(
@@ -130,11 +121,10 @@ function blockwright_enqueue_shared_assets(): void {
 			);
 		}
 	} else {
-		$template_uri = get_template_directory_uri();
 		$css_path     = get_theme_file_path( 'dist/theme.css' );
 		$js_path      = get_theme_file_path( 'dist/theme.js' );
 
-		if ( file_exists( $css_path ) ) {
+		if ( ! $is_editor_iframe && file_exists( $css_path ) ) {
 			$version = (int) filemtime( $css_path );
 			wp_enqueue_style(
 				'blockwright-theme-style',
@@ -143,9 +133,6 @@ function blockwright_enqueue_shared_assets(): void {
 				$version
 			);
 		}
-
-			$boot = 'window.blockwright = Object.assign(window.blockwright || {}, { assetsBase: ' .
-				wp_json_encode( $template_uri ) . ' });';
 
 			// Decide whether to actually place scripts in the footer. Some template
 			// setups (especially FSE/block themes or incomplete templates) don't
@@ -156,11 +143,6 @@ function blockwright_enqueue_shared_assets(): void {
 		if ( false === has_action( 'wp_footer' ) ) {
 			$print_in_footer = false;
 		}
-
-			// NOTE: the production boot handle is registered/enqueued later,
-			// immediately before we enqueue the built `blockwright-theme` module.
-			// Removing the early placeholder registration prevents bogus
-			// placeholder script tags (about:blank) from being printed.
 
 		// Robust theme.js detection for child/parent themes.
 		$js_path = get_theme_file_path( 'dist/theme.js' );
@@ -182,18 +164,6 @@ function blockwright_enqueue_shared_assets(): void {
 		if ( file_exists( $js_path ) ) {
 			$version = (int) filemtime( $js_path );
 
-			// Ensure the boot handle is registered/enqueued so inline boot attaches
-			// and appears before the theme module.
-			if ( ! wp_script_is( 'blockwright-prod-boot', 'registered' ) ) {
-				wp_register_script( 'blockwright-prod-boot', '', array(), $common_ver, $print_in_footer );
-			}
-
-			if ( ! wp_script_is( 'blockwright-prod-boot', 'enqueued' ) ) {
-				wp_enqueue_script( 'blockwright-prod-boot' );
-			}
-
-			wp_add_inline_script( 'blockwright-prod-boot', $boot, 'before' );
-
 			wp_enqueue_script( 'blockwright-theme', $js_uri, array(), $version, $print_in_footer );
 			wp_script_add_data( 'blockwright-theme', 'type', 'module' );
 		}
@@ -202,8 +172,6 @@ function blockwright_enqueue_shared_assets(): void {
 
 add_action( 'wp_enqueue_scripts', 'blockwright_enqueue_shared_assets', 100 );
 add_action( 'enqueue_block_editor_assets', 'blockwright_enqueue_shared_assets', 100 );
-// Note: Removed admin_enqueue_scripts hook - theme styles should not load in wp-admin UI.
-// The enqueue_block_editor_assets hook covers the site/block editor canvas.
 
 /**
  * Ensure our module handles are output as proper module script tags.

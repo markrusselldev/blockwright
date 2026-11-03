@@ -8,8 +8,7 @@
    COLUMN is the one that gives - min-width:0 lets it shrink below its content so
    the title wraps and yields space to the ref, which keeps its place at top-right
    instead of spilling. space-between holds title-left / ref-right; the header
-   just grows taller when the title wraps. Was: both sides nowrap + ref no-shrink,
-   which fit exactly one string length and overflowed on anything longer.
+   just grows taller when the title wraps.
    The title column is the header's only child group (the ref is a <p>). */
 .bw-scorecard-head > .wp-block-group {
 	min-width: 0;
@@ -29,7 +28,7 @@
 	white-space: nowrap;
 	flex-shrink: 0;
 	/* Uniform-width status column: all chips share a min-width so their left edges
-	   line up into a clean status column (designer call). ch scales with the chip
+	   line up into a clean status column. ch scales with the chip
 	   font across breakpoints; longer statuses grow past it. text-align centers the
 	   shorter labels within the shared width. */
 	min-width: 8ch;
@@ -39,16 +38,16 @@
    width and wrap its own text, so the chip stays on the row pinned right. Without
    it the label's content width + chip exceeds a narrow mobile column and the row
    (flex-wrap:wrap) drops the chip to its own line, where space-between left-aligns
-   it - the mobile misalignment. Rows carry no class, so target the chip's sibling
+   it. Rows carry no class, so target the chip's sibling
    (the theme already uses :has() for the sticky header and stamp). */
 .wp-block-group:has(> .bw-scorecard-chip) > p:not(.bw-scorecard-chip) {
 	flex: 1 1 0;
 	min-width: 0;
 }
-/* The scorecard reads as a printed "readout" - a sample of the client report -
+/* The scorecard reads as a printed "readout",
    so it stays a fixed LIGHT document in BOTH OS modes: color-scheme:light makes
    every light-dark() token inside (surface, text, chips, borders) resolve to its
-   light value, even on a dark-mode site, so it pops like a sheet of paper.
+   light value, even on a dark-mode site, like a sheet of paper.
    Targets the card via its header child so already-placed instances need no
    extra class (the theme already uses :has() for the sticky header and stamp). */
 .wp-block-group:has(> .bw-scorecard-head) {
@@ -60,26 +59,19 @@
 	   `color: text-1` on the card re-resolves that token under THIS element's
 	   color-scheme:light (an inherited color is an already-resolved absolute value,
 	   which color-scheme cannot retroactively flip), so the uncolored title + row
-	   labels inherit true dark text. Chips and the text-2 ref set their own color.
-	   (No text-1 pin needed: since the dark softening now lives in the text-1
-	   light-dark() token itself, not a prefers-color-scheme override, color-scheme
-	   resolves it correctly on its own.) */
+	   labels inherit true dark text. Chips and the text-2 ref set their own color. */
 	color: var(--wp--preset--color--text-1);
-	/* Clean, professional report card - credibility comes from restraint + the specific content,
-	   not decorative realism. Rounded to the theme's standard
+	/* Rounded to the theme's standard
 	   radius (matches the chips, buttons, panels). A restrained shadow gives light-mode polish;
-	   dark-mode elevation comes from the lighter surface behind it (the showcase demos it on a
-	   surface-2 band), not a shadow, which can't read on a dark section. */
+	   dark-mode elevation comes from the lighter surface behind it, not a shadow, which can't read on a dark section. */
 	border-radius: var(--wp--preset--border-radius--m);
 	box-shadow: var(--wp--custom--shadow--m);
 }
 
-/* Scorecard footer note: a soft accent-tinted callout instead of a flat gray, so the theme's
-   COLOR SYSTEM reads in the block itself (it re-hues with color variations - a light champagne on
-   the Gold look, pale blue on Blue, etc.). Mixed OVER surface-1 (the near-white card surface), NOT
-   the gray surface-2: at a subtle accent share the gray base muddied the warm accent into a flat
-   tan/brown; mixing into the lighter surface keeps the result high in lightness so the tint reads
-   as a clean light gold rather than mud. The share stays low so it is an informational note, never
+/* Scorecard footer note: a soft brand-tinted callout instead of a flat gray, so the theme's
+   COLOR SYSTEM reads in the block itself (it re-hues with color variations). Mixed OVER surface-1 (the near-white card surface), NOT
+   the gray surface-2: at a low brand share the gray base muddies a warm brand color into a flat
+   tan; mixing into the lighter surface keeps the result high in lightness. The share stays low so it is an informational note, never
    a button; still clearly darker than the surface-1 card, so it reads as a distinct footer. */
 .bw-scorecard-foot {
 	/* A subtle brand tint of the CARD SURFACE, not an absolute ramp step: mix a low share of
@@ -95,14 +87,20 @@
 	);
 }
 
+/* The "Fixed" stamp sits over the card's bottom-right corner (group.css), on top of the footer
+   band, at every width. The note's last line must end above it whatever its length, font or
+   translation. The space kept below the note is the stamp's height. */
+.wp-block-group:has(> .bw-scorecard-stamp) > .bw-scorecard-foot > :last-child {
+	margin-block-end: var(--wp--preset--spacing--large);
+}
+
 /* Editorial-layer brand roles (registered in assets/js/editor-block-styles.js). Both
    carry the brand hue via tokens, so they re-hue with every color scheme and stay
    WCAG AA in light AND dark. `p.is-style-*` = specificity (0,1,1), which beats the
    theme's `:root :where(p)` (0,1,0) color rule so the brand color actually lands. */
 
 /* Eyebrow / kicker: the small uppercase label above a heading, in the brand link
-   tone. Mono preset matches the existing section-label treatment (see the
-   transitional rule in _interactive.scss for un-migrated eyebrows). */
+   tone. */
 p.is-style-eyebrow {
 	color: var(--wp--preset--color--link);
 	font-family: var(--wp--preset--font-family--mono);
@@ -113,9 +111,6 @@ p.is-style-eyebrow {
 	/* font-size + alignment stay per-instance (has-{size}-font-size /
 	   has-text-align-*), so the class doesn't pin them. */
 }
-
-/* (Callout band, a core/group style, moved to assets/blocks/group.css so it lazy-loads
-   with the group block alongside is-style-panel / card / icon-divider. 2026-09-16.) */
 
 /* Badge / pill: a small solid brand-tint chip (the Soft button's tonal pair - btn-soft-bg
    container + btn-soft-text ink at >=4.5:1, via the badge custom tokens). fit-content so a

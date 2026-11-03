@@ -13,7 +13,7 @@
 
 $placeholder_image = get_template_directory_uri() . '/assets/images/placeholder-image.svg';
 ?>
-<!-- wp:group {"metadata":{"name":"Content Media & Text"},"align":"full","style":{"spacing":{"blockGap":"var:preset|spacing|x-large","margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"surface-1","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Content Media & Text', 'blockwright' ); ?>"},"align":"full","style":{"spacing":{"blockGap":"var:preset|spacing|x-large","margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"surface-1","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-surface-1-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large)">
 
 	<!-- wp:columns {"align":"wide","verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|medium","left":"var:preset|spacing|large"}}}} -->
@@ -22,7 +22,7 @@ $placeholder_image = get_template_directory_uri() . '/assets/images/placeholder-
 		<!-- wp:column {"verticalAlignment":"center"} -->
 		<div class="wp-block-column is-vertically-aligned-center">
 			<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"border":{"width":"var:custom|border|width|thin","color":"var:preset|color|border-subtle"}}} -->
-			<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="Image placeholder" class="has-border-color" style="border-color:var(--wp--preset--color--border-subtle);border-width:var(--wp--custom--border--width--thin);aspect-ratio:4/3;object-fit:cover"/></figure>
+			<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="<?php esc_attr_e( 'Image placeholder', 'blockwright' ); ?>" class="has-border-color" style="border-color:var(--wp--preset--color--border-subtle);border-width:var(--wp--custom--border--width--thin);aspect-ratio:4/3;object-fit:cover"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->
@@ -64,7 +64,7 @@ $placeholder_image = get_template_directory_uri() . '/assets/images/placeholder-
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"fontSize":"l"} -->
-			<p class="has-l-font-size"><?php esc_html_e( 'The image sits on the opposite side to create rhythm down the page. Duplicate either row and edit the copy to build out the section.', 'blockwright' ); ?></p>
+			<p class="has-l-font-size"><?php esc_html_e( 'The image sits on the opposite side. Duplicate either row and edit the copy to build out the section.', 'blockwright' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph -->
@@ -76,7 +76,7 @@ $placeholder_image = get_template_directory_uri() . '/assets/images/placeholder-
 		<!-- wp:column {"verticalAlignment":"center"} -->
 		<div class="wp-block-column is-vertically-aligned-center">
 			<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"border":{"width":"var:custom|border|width|thin","color":"var:preset|color|border-subtle"}}} -->
-			<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="Image placeholder" class="has-border-color" style="border-color:var(--wp--preset--color--border-subtle);border-width:var(--wp--custom--border--width--thin);aspect-ratio:4/3;object-fit:cover"/></figure>
+			<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="<?php esc_attr_e( 'Image placeholder', 'blockwright' ); ?>" class="has-border-color" style="border-color:var(--wp--preset--color--border-subtle);border-width:var(--wp--custom--border--width--thin);aspect-ratio:4/3;object-fit:cover"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->

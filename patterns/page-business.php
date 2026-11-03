@@ -6,7 +6,7 @@
  * Block Types: core/post-content
  * Post Types: page
  * Inserter: true
- * Description: A full business or services page - hero, what you do, services, stats, process, testimonials, a call to action, and location. A starting point any local or professional site can adapt.
+ * Description: A full business or services page - hero, what you do, services, stats, process, testimonials, a call to action, and location. A starting point any local or professional site can adapt. Use the No Title or Landing Page template so the page title does not show above it.
  *
  * @package Blockwright
  */

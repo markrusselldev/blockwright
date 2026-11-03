@@ -12,15 +12,15 @@
  */
 
 ?>
-<!-- wp:group {"metadata":{"name":"Skills Grid"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"surface-2","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Skills Grid', 'blockwright' ); ?>"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"surface-2","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-surface-2-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large)">
 
-	<!-- wp:heading {"textAlign":"center","level":2,"fontSize":"2xl"} -->
-	<h2 class="wp-block-heading has-text-align-center has-2-xl-font-size"><?php esc_html_e( 'Skills & Expertise', 'blockwright' ); ?></h2>
+	<!-- wp:heading {"textAlign":"center","level":2} -->
+	<h2 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'Skills & Expertise', 'blockwright' ); ?></h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph {"align":"center","textColor":"text-2","fontSize":"l"} -->
-	<p class="has-text-align-center has-text-2-color has-text-color has-l-font-size"><?php esc_html_e( 'What I bring to every project.', 'blockwright' ); ?></p>
+	<p class="has-text-align-center has-text-2-color has-text-color has-l-font-size"><?php esc_html_e( 'What you bring to every project.', 'blockwright' ); ?></p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:columns {"align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|medium"},"blockGap":{"left":"var:preset|spacing|medium","top":"var:preset|spacing|medium"}}}} -->
@@ -36,7 +36,7 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center","textColor":"text-2","fontSize":"s"} -->
-			<p class="has-text-align-center has-text-2-color has-text-color has-s-font-size"><?php esc_html_e( 'User-centered design with a focus on usability, accessibility, and delightful experiences.', 'blockwright' ); ?></p>
+			<p class="has-text-align-center has-text-2-color has-text-color has-s-font-size"><?php esc_html_e( 'How you design for the people using the work.', 'blockwright' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -52,7 +52,7 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center","textColor":"text-2","fontSize":"s"} -->
-			<p class="has-text-align-center has-text-2-color has-text-color has-s-font-size"><?php esc_html_e( 'Modern, responsive websites built with WordPress, React, and clean, maintainable code.', 'blockwright' ); ?></p>
+			<p class="has-text-align-center has-text-2-color has-text-color has-s-font-size"><?php esc_html_e( 'What you build and the tools you build it with.', 'blockwright' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -68,7 +68,7 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center","textColor":"text-2","fontSize":"s"} -->
-			<p class="has-text-align-center has-text-2-color has-text-color has-s-font-size"><?php esc_html_e( 'Fast-loading, optimized experiences that score well on Core Web Vitals and keep users engaged.', 'blockwright' ); ?></p>
+			<p class="has-text-align-center has-text-2-color has-text-color has-s-font-size"><?php esc_html_e( 'How you keep your work fast.', 'blockwright' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -84,7 +84,7 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center","textColor":"text-2","fontSize":"s"} -->
-			<p class="has-text-align-center has-text-2-color has-text-color has-s-font-size"><?php esc_html_e( 'WCAG-compliant designs that ensure everyone can use your product, regardless of ability.', 'blockwright' ); ?></p>
+			<p class="has-text-align-center has-text-2-color has-text-color has-s-font-size"><?php esc_html_e( 'How you make your work usable for everyone.', 'blockwright' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -106,7 +106,7 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center","textColor":"text-2","fontSize":"s"} -->
-			<p class="has-text-align-center has-text-2-color has-text-color has-s-font-size"><?php esc_html_e( 'Data-driven decisions through user interviews, usability testing, and behavior analytics.', 'blockwright' ); ?></p>
+			<p class="has-text-align-center has-text-2-color has-text-color has-s-font-size"><?php esc_html_e( 'How you learn what users need.', 'blockwright' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -122,7 +122,7 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center","textColor":"text-2","fontSize":"s"} -->
-			<p class="has-text-align-center has-text-2-color has-text-color has-s-font-size"><?php esc_html_e( 'Reusable systems and components that keep the work consistent across a project.', 'blockwright' ); ?></p>
+			<p class="has-text-align-center has-text-2-color has-text-color has-s-font-size"><?php esc_html_e( 'How you keep the work consistent across a project.', 'blockwright' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -138,7 +138,7 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center","textColor":"text-2","fontSize":"s"} -->
-			<p class="has-text-align-center has-text-2-color has-text-color has-s-font-size"><?php esc_html_e( 'Product strategy and roadmapping that aligns business goals with user needs.', 'blockwright' ); ?></p>
+			<p class="has-text-align-center has-text-2-color has-text-color has-s-font-size"><?php esc_html_e( 'How you connect the work to business goals.', 'blockwright' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
@@ -154,7 +154,7 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center","textColor":"text-2","fontSize":"s"} -->
-			<p class="has-text-align-center has-text-2-color has-text-color has-s-font-size"><?php esc_html_e( 'Clear documentation, presentations, and stakeholder communication throughout the project.', 'blockwright' ); ?></p>
+			<p class="has-text-align-center has-text-2-color has-text-color has-s-font-size"><?php esc_html_e( 'How you keep clients informed during a project.', 'blockwright' ); ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>

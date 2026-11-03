@@ -2,27 +2,27 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Blockwright 1.2.0\n"
+"Project-Id-Version: Blockwright 1.3.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/blockwright\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-18T03:37:23+00:00\n"
+"POT-Creation-Date: 2026-11-02T07:04:57+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: blockwright\n"
 
 #. Theme Name of the theme
 #: style.css
-#: inc/setup.php:41
+#: inc/setup.php:45
 msgid "Blockwright"
 msgstr ""
 
 #. Description of the theme
 #: style.css
-msgid "Blockwright is an adaptive block theme for full-site editing, made for the developers and agencies who build client sites. It looks finished the moment you activate it, and it follows each visitor's light or dark system setting on its own, with WCAG AA contrast in both. Choose from sixteen accessible color schemes and four type sets, then build with over fifty patterns: section blocks for heroes, services, pricing, testimonials and FAQs, plus ready-made page layouts for business, portfolio, blog, landing, pricing and contact. It is all core WordPress blocks, so there is no page builder to learn. Pairs with the free Blockwright Blocks plugin, which adds a visual color designer and adaptive blocks."
+msgid "Blockwright is an adaptive block theme for full-site editing, made for the developers and agencies who build client sites. It looks finished the moment you activate it, and it follows each visitor's light or dark system setting on its own, with WCAG AA contrast in both. Choose from sixteen accessible color schemes and four type sets, then build with over fifty patterns: section blocks for heroes, services, pricing, testimonials and FAQs, plus nine ready-made page layouts, from About and Contact to Pricing and Sales. It is all core WordPress blocks, so there is no page builder to learn. Pairs with the free Blockwright Blocks plugin, which adds a visual color designer and adaptive blocks."
 msgstr ""
 
 #. Author of the theme
@@ -35,24 +35,45 @@ msgstr ""
 msgid "https://markrussell.io"
 msgstr ""
 
-#: inc/setup.php:42
+#: inc/blocks.php:77
+msgctxt "Label for the block binding placeholder in the editor"
+msgid "Copyright year"
+msgstr ""
+
+#. translators: %s: the current year.
+#: inc/blocks.php:80
+#, php-format
+msgid "© %s"
+msgstr ""
+
+#: inc/companion.php:47
+msgid "Blockwright pairs with the free Blockwright Blocks plugin: its Design tool sets your site's colors, and its blocks follow the theme's light and dark modes."
+msgstr ""
+
+#: inc/companion.php:49
+msgid "Activate Blockwright Blocks"
+msgstr ""
+
+#: inc/companion.php:49
+msgid "Get Blockwright Blocks"
+msgstr ""
+
+#: inc/setup.php:46
 msgid "Hero"
 msgstr ""
 
-#: inc/setup.php:43
+#: inc/setup.php:47
 msgid "Layout"
 msgstr ""
 
-#: inc/setup.php:44
-msgid "Theme"
-msgstr ""
-
 #: patterns/404.php
+#: patterns/style-guide-content.php:662
 msgctxt "Pattern title"
 msgid "404"
 msgstr ""
 
 #: patterns/404.php
+#: patterns/style-guide-content.php:663
 msgctxt "Pattern description"
 msgid "Page not found layout with a clear message, search, and a way back home."
 msgstr ""
@@ -66,7 +87,20 @@ msgid "Page not found"
 msgstr ""
 
 #: patterns/404.php:24
-msgid "The page you're looking for can't be found - it may have moved or never existed. Try a search, or head back home."
+msgid "The page you're looking for can't be found. It may have moved or never existed. Try a search, or head back home."
+msgstr ""
+
+#: patterns/404.php:27
+#: patterns/search-form.php:13
+#: patterns/sidebar-content.php:15
+msgctxt "search form label"
+msgid "Search"
+msgstr ""
+
+#: patterns/404.php:27
+#: patterns/search-form.php:13
+msgctxt "search input placeholder"
+msgid "Search this site"
 msgstr ""
 
 #: patterns/404.php:32
@@ -74,13 +108,19 @@ msgid "Back to home"
 msgstr ""
 
 #: patterns/about-intro.php
+#: patterns/style-guide-content.php:291
 msgctxt "Pattern title"
 msgid "About Intro"
 msgstr ""
 
 #: patterns/about-intro.php
+#: patterns/style-guide-content.php:292
 msgctxt "Pattern description"
 msgid "A centered intro block - eyebrow, headline, and a lead paragraph. Works as an about, mission, or section opener."
+msgstr ""
+
+#: patterns/about-intro.php:14
+msgid "About Intro"
 msgstr ""
 
 #: patterns/about-intro.php:20
@@ -92,71 +132,125 @@ msgid "A short statement of what you do and who it's for"
 msgstr ""
 
 #: patterns/about-intro.php:28
-msgid "Give the reader the essentials in two or three sentences - what you offer, who it's for, and why it matters. Keep it plain and warm; this is the block people read to decide whether to keep going."
+msgid "Give the reader the essentials in two or three sentences - what you offer, who it's for, and why it matters. Keep it plain."
 msgstr ""
 
 #: patterns/about-intro.php:34
+#: patterns/cta-stripe.php:27
+#: patterns/hero-centered.php:36
+#: patterns/hero-split.php:40
 #: patterns/section-constrained.php:26
 msgid "Learn more"
 msgstr ""
 
 #: patterns/announcement-bar.php
+#: patterns/style-guide-content.php:548
 msgctxt "Pattern title"
 msgid "Announcement Bar"
 msgstr ""
 
 #: patterns/announcement-bar.php
+#: patterns/style-guide-content.php:549
 msgctxt "Pattern description"
 msgid "A slim full-width bar for the top of the page - a short announcement or promotion with a link. Drop it above the header to run site-wide."
 msgstr ""
 
-#: patterns/announcement-bar.php:18
-msgid "Now booking new projects for next quarter."
+#: patterns/announcement-bar.php:14
+msgid "Announcement Bar"
 msgstr ""
 
 #: patterns/announcement-bar.php:18
+msgid "Your announcement in one short line."
+msgstr ""
+
+#: patterns/announcement-bar.php:18
+#: patterns/contact-simple.php:22
 #: patterns/faq.php:23
-#: patterns/header-contact.php:38
+#: patterns/header-contact.php:42
+#: patterns/navigation-overlay-contact.php:33
 #: patterns/steps-process.php:42
 msgid "Get in touch"
 msgstr ""
 
 #: patterns/archive-feature-grid.php
+#: patterns/style-guide-content.php:624
 msgctxt "Pattern title"
 msgid "Archive • Feature Grid"
 msgstr ""
 
 #: patterns/archive-feature-grid.php
+#: patterns/style-guide-content.php:625
 msgctxt "Pattern description"
 msgid "Blog or archive layout - a query loop showing recent posts in a feature grid."
 msgstr ""
 
 #: patterns/author-bio.php
+#: patterns/style-guide-content.php:642
 msgctxt "Pattern title"
 msgid "Author Bio"
 msgstr ""
 
 #: patterns/author-bio.php
+#: patterns/style-guide-content.php:643
 msgctxt "Pattern description"
 msgid "An end-of-post author box - avatar, linked name, and bio, filled automatically from the post author's profile. Drop it at the bottom of the single-post template."
 msgstr ""
 
+#: patterns/author-bio.php:14
+msgid "Author Bio"
+msgstr ""
+
+#: patterns/blog-heading.php
+msgctxt "Pattern title"
+msgid "Blog heading"
+msgstr ""
+
+#: patterns/blog-heading.php
+msgctxt "Pattern description"
+msgid "The page heading of the blog home, used by the home and index templates."
+msgstr ""
+
+#: patterns/blog-heading.php:14
+#: patterns/footer-columns.php:52
+msgid "Blog"
+msgstr ""
+
 #: patterns/case-study.php
+#: patterns/style-guide-content.php:501
 msgctxt "Pattern title"
 msgid "Case Study"
 msgstr ""
 
 #: patterns/case-study.php
+#: patterns/style-guide-content.php:502
 msgctxt "Pattern description"
-msgid "Detailed project case study layout with challenge, solution, and results sections. Perfect for showcasing individual portfolio pieces."
+msgid "Detailed project case study layout with challenge, solution, and results sections. Use the No Title or Landing Page template so the page title does not show above it."
+msgstr ""
+
+#: patterns/case-study.php:15
+msgid "Case Study Hero"
+msgstr ""
+
+#: patterns/case-study.php:19
+msgid "Project hero image"
+msgstr ""
+
+#: patterns/case-study.php:25
+msgid "Case Study Content"
 msgstr ""
 
 #: patterns/case-study.php:29
-msgid "E-Commerce Platform Redesign"
+#: patterns/project-grid.php:44
+#: patterns/project-grid.php:78
+#: patterns/project-grid.php:112
+msgid "Project name"
 msgstr ""
 
 #: patterns/case-study.php:33
-msgid "A complete UX overhaul that increased conversions by 40% and reduced cart abandonment."
+#: patterns/project-grid.php:48
+#: patterns/project-grid.php:82
+#: patterns/project-grid.php:116
+msgid "One sentence on what you did and the result it had."
 msgstr ""
 
 #: patterns/case-study.php:42
@@ -164,7 +258,7 @@ msgid "CLIENT"
 msgstr ""
 
 #: patterns/case-study.php:46
-msgid "Fashion Retailer Co."
+msgid "Client name"
 msgstr ""
 
 #: patterns/case-study.php:54
@@ -172,12 +266,15 @@ msgid "ROLE"
 msgstr ""
 
 #: patterns/case-study.php:58
-#: patterns/team-grid.php:38
-msgid "Lead Designer"
+msgid "Your role"
 msgstr ""
 
 #: patterns/case-study.php:66
 msgid "YEAR"
+msgstr ""
+
+#: patterns/case-study.php:70
+msgid "Year"
 msgstr ""
 
 #: patterns/case-study.php:78
@@ -185,7 +282,7 @@ msgid "SERVICES"
 msgstr ""
 
 #: patterns/case-study.php:82
-msgid "UX Design, UI Design, Research"
+msgid "Services you provided"
 msgstr ""
 
 #: patterns/case-study.php:97
@@ -193,11 +290,11 @@ msgid "The Challenge"
 msgstr ""
 
 #: patterns/case-study.php:101
-msgid "The client's existing e-commerce platform suffered from poor mobile experience, confusing navigation, and a checkout process that caused 70% of users to abandon their carts."
+msgid "Describe the problem the client came to you with, and what it was costing them."
 msgstr ""
 
 #: patterns/case-study.php:105
-msgid "User research revealed that customers found it difficult to filter products, compare options, and understand shipping costs until the final checkout step. The mobile experience was particularly problematic, with tiny tap targets and horizontal scrolling issues."
+msgid "Add what you learned when you looked into it."
 msgstr ""
 
 #: patterns/case-study.php:115
@@ -205,11 +302,19 @@ msgid "The Solution"
 msgstr ""
 
 #: patterns/case-study.php:119
-msgid "We redesigned the entire shopping experience with a mobile-first approach, focusing on intuitive navigation and transparent pricing."
+msgid "Describe what you did and why you chose that approach."
 msgstr ""
 
 #: patterns/case-study.php:123
-msgid "Key improvements included a redesigned product filtering system with visual previews, a sticky cart summary showing running totals, and a streamlined three-step checkout with guest checkout option. We also implemented a \"quick view\" feature for faster product comparison without leaving the category page."
+msgid "List the changes that made the biggest difference."
+msgstr ""
+
+#: patterns/case-study.php:132
+msgid "Solution screenshot 1"
+msgstr ""
+
+#: patterns/case-study.php:140
+msgid "Solution screenshot 2"
 msgstr ""
 
 #: patterns/case-study.php:155
@@ -217,19 +322,22 @@ msgid "The Results"
 msgstr ""
 
 #: patterns/case-study.php:159
-msgid "The redesigned platform launched to immediate positive feedback and measurable business impact."
+msgid "Report only results you can prove. Name what you measured and over what period."
+msgstr ""
+
+#: patterns/case-study.php:168
+#: patterns/case-study.php:192
+msgid "+00%"
 msgstr ""
 
 #: patterns/case-study.php:172
-msgid "Conversion Rate"
-msgstr ""
-
 #: patterns/case-study.php:184
-msgid "Cart Abandonment"
+#: patterns/case-study.php:196
+msgid "What you measured"
 msgstr ""
 
-#: patterns/case-study.php:196
-msgid "Mobile Revenue"
+#: patterns/case-study.php:180
+msgid "-00%"
 msgstr ""
 
 #: patterns/case-study.php:220
@@ -237,8 +345,7 @@ msgid "← Previous Project"
 msgstr ""
 
 #: patterns/case-study.php:224
-#: patterns/project-grid.php:112
-msgid "Brand Identity System"
+msgid "Previous project name"
 msgstr ""
 
 #: patterns/case-study.php:232
@@ -246,28 +353,59 @@ msgid "Next Project →"
 msgstr ""
 
 #: patterns/case-study.php:236
-#: patterns/project-grid.php:78
-msgid "SaaS Dashboard"
+msgid "Next project name"
 msgstr ""
 
 #: patterns/comments.php
+#: patterns/style-guide-content.php:651
 msgctxt "Pattern title"
 msgid "Comments"
 msgstr ""
 
 #: patterns/comments.php
+#: patterns/style-guide-content.php:652
 msgctxt "Pattern description"
 msgid "Comments section with title, threaded list, pagination, and form. Use on posts where discussion is enabled."
 msgstr ""
 
 #: patterns/comparison-cards.php
+#: patterns/style-guide-content.php:383
 msgctxt "Pattern title"
 msgid "Comparison Cards"
 msgstr ""
 
 #: patterns/comparison-cards.php
+#: patterns/style-guide-content.php:384
 msgctxt "Pattern description"
-msgid "A two-card \"the usual way vs working with us\" comparison - the honest contrast that turns a hesitant reader into an enquiry."
+msgid "A two-card \"the usual way vs working with us\" comparison."
+msgstr ""
+
+#: patterns/comparison-cards.php:15
+msgid "A frustration with the usual way"
+msgstr ""
+
+#: patterns/comparison-cards.php:16
+msgid "A second frustration"
+msgstr ""
+
+#: patterns/comparison-cards.php:17
+msgid "A third frustration"
+msgstr ""
+
+#: patterns/comparison-cards.php:20
+msgid "What you do differently"
+msgstr ""
+
+#: patterns/comparison-cards.php:21
+msgid "A second thing you do differently"
+msgstr ""
+
+#: patterns/comparison-cards.php:22
+msgid "What happens after the work is done"
+msgstr ""
+
+#: patterns/comparison-cards.php:25
+msgid "Comparison Cards"
 msgstr ""
 
 #: patterns/comparison-cards.php:29
@@ -291,76 +429,104 @@ msgid "Get a quote"
 msgstr ""
 
 #: patterns/contact-simple.php
+#: patterns/style-guide-content.php:559
 msgctxt "Pattern title"
 msgid "Contact • Simple"
 msgstr ""
 
 #: patterns/contact-simple.php
+#: patterns/style-guide-content.php:560
 msgctxt "Pattern description"
 msgid "A simple contact section - a heading, short intro, and your contact details."
 msgstr ""
 
-#: patterns/contact-simple.php:22
-msgid "Get in Touch"
+#: patterns/contact-simple.php:15
+msgid "Contact Simple"
 msgstr ""
 
 #: patterns/contact-simple.php:26
 msgid "We'd love to hear from you. Reach out using any of the methods below."
 msgstr ""
 
-#: patterns/contact-simple.php:33
+#: patterns/contact-simple.php:37
 msgid "Address"
 msgstr ""
 
-#: patterns/contact-simple.php:33
+#: patterns/contact-simple.php:37
 msgid "123 Main Street"
 msgstr ""
 
-#: patterns/contact-simple.php:33
-msgid "San Francisco, CA 94102"
+#: patterns/contact-simple.php:37
+#: patterns/location-hours.php:39
+msgid "Your City, ST 00000"
 msgstr ""
 
-#: patterns/contact-simple.php:42
+#: patterns/contact-simple.php:46
 msgid "Phone"
 msgstr ""
 
-#: patterns/contact-simple.php:51
+#: patterns/contact-simple.php:46
+#: patterns/header-contact.php:36
+#: patterns/location-hours.php:43
+#: patterns/navigation-overlay-contact.php:27
+msgid "(555) 555-0100"
+msgstr ""
+
+#: patterns/contact-simple.php:55
 msgid "Email"
 msgstr ""
 
-#: patterns/contact-simple.php:51
+#: patterns/contact-simple.php:55
 #: patterns/location-hours.php:43
 msgid "hello@example.com"
 msgstr ""
 
-#: patterns/contact-simple.php:60
+#: patterns/contact-simple.php:64
 #: patterns/location-hours.php:59
 msgid "Hours"
 msgstr ""
 
-#: patterns/contact-simple.php:60
+#: patterns/contact-simple.php:64
 msgid "Monday–Friday: 9am–5pm"
 msgstr ""
 
-#: patterns/contact-simple.php:60
+#: patterns/contact-simple.php:64
 msgid "Saturday–Sunday: Closed"
 msgstr ""
 
-#: patterns/contact-simple.php:68
-msgid "Get Directions"
+#: patterns/contact-simple.php:77
+msgid "Get directions"
 msgstr ""
 
 #: patterns/content-media.php
+#: patterns/style-guide-content.php:282
 msgctxt "Pattern title"
 msgid "Content • Media & Text"
 msgstr ""
 
 #: patterns/content-media.php
+#: patterns/style-guide-content.php:283
 msgctxt "Pattern description"
 msgid "Alternating media-and-text rows for explaining a service, approach, mission, or about section. Image left/text right, then flipped."
 msgstr ""
 
+#: patterns/content-media.php:16
+msgid "Content Media & Text"
+msgstr ""
+
+#: patterns/content-media.php:25
+#: patterns/content-media.php:79
+#: patterns/gallery.php:29
+#: patterns/gallery.php:33
+#: patterns/gallery.php:37
+#: patterns/gallery.php:41
+#: patterns/gallery.php:45
+#: patterns/gallery.php:49
+msgid "Image placeholder"
+msgstr ""
+
 #: patterns/content-media.php:33
+#: patterns/style-guide-content.php:178
 msgid "What we do"
 msgstr ""
 
@@ -374,9 +540,9 @@ msgstr ""
 
 #: patterns/content-media.php:45
 #: patterns/content-media.php:71
-#: patterns/services-grid.php:43
-#: patterns/services-grid.php:63
-#: patterns/services-grid.php:83
+#: patterns/services-grid.php:49
+#: patterns/services-grid.php:75
+#: patterns/services-grid.php:101
 msgid "Learn more →"
 msgstr ""
 
@@ -390,21 +556,28 @@ msgid "A second, flipped row"
 msgstr ""
 
 #: patterns/content-media.php:67
-msgid "The image sits on the opposite side to create rhythm down the page. Duplicate either row and edit the copy to build out the section."
+msgid "The image sits on the opposite side. Duplicate either row and edit the copy to build out the section."
 msgstr ""
 
 #: patterns/cta-centered.php
+#: patterns/style-guide-content.php:521
 msgctxt "Pattern title"
 msgid "CTA • Centered"
 msgstr ""
 
 #: patterns/cta-centered.php
+#: patterns/style-guide-content.php:522
 msgctxt "Pattern description"
-msgid "A centered call-to-action band - a heading, one line, and a button. Use it to close a page."
+msgid "A centered call-to-action band - a heading, one line, and two buttons. Use it to close a page."
+msgstr ""
+
+#: patterns/cta-centered.php:15
+msgid "CTA Centered"
 msgstr ""
 
 #: patterns/cta-centered.php:22
-msgid "Ready to Get Started?"
+#: patterns/cta-stripe.php:17
+msgid "Ready to get started?"
 msgstr ""
 
 #: patterns/cta-centered.php:26
@@ -414,10 +587,16 @@ msgstr ""
 #: patterns/cta-centered.php:32
 #: patterns/hero-basic.php:27
 #: patterns/hero-centered.php:32
+#: patterns/hero-image.php:28
 #: patterns/hero-split.php:36
 #: patterns/pricing-table.php:56
 #: patterns/pricing-table.php:104
-msgid "Get Started"
+#: patterns/steps-process.php:70
+#: patterns/style-guide-content.php:121
+#: patterns/style-guide-content.php:136
+#: patterns/style-guide-content.php:151
+#: patterns/style-guide-content.php:166
+msgid "Get started"
 msgstr ""
 
 #: patterns/cta-centered.php:36
@@ -425,51 +604,55 @@ msgid "View Pricing"
 msgstr ""
 
 #: patterns/cta-stripe.php
+#: patterns/style-guide-content.php:530
 msgctxt "Pattern title"
 msgid "CTA • Stripe"
 msgstr ""
 
 #: patterns/cta-stripe.php
+#: patterns/style-guide-content.php:531
 msgctxt "Pattern description"
-msgid "A full-width accent call-to-action stripe - a bold, high-contrast band with a heading and button."
+msgid "A full-width call-to-action stripe - a shaded band with one line of text and buttons."
 msgstr ""
 
-#: patterns/cta-stripe.php:17
-msgid "Ready to ship your site?"
+#: patterns/cta-stripe.php:13
+msgid "CTA Stripe"
 msgstr ""
 
 #: patterns/cta-stripe.php:23
 #: patterns/footer-centered.php:24
 #: patterns/footer-columns.php:38
-#: patterns/footer.php:41
-#: patterns/form-contact.php:20
+#: patterns/footer.php:49
+#: patterns/form-contact.php:23
 msgid "Contact"
 msgstr ""
 
-#: patterns/cta-stripe.php:27
-#: patterns/hero-centered.php:36
-#: patterns/hero-split.php:40
-msgid "Learn More"
-msgstr ""
-
 #: patterns/divider-icon.php
+#: patterns/style-guide-content.php:354
 msgctxt "Pattern title"
 msgid "Divider • Icon"
 msgstr ""
 
 #: patterns/divider-icon.php
+#: patterns/style-guide-content.php:355
 msgctxt "Pattern description"
 msgid "A brand-colored divider line with a small centered icon. Swap the icon for your logo, an image, or any icon from the picker; drop several down a page, each with a different icon."
 msgstr ""
 
 #: patterns/faq.php
+#: patterns/style-guide-content.php:595
 msgctxt "Pattern title"
 msgid "FAQ"
 msgstr ""
 
 #: patterns/faq.php
+#: patterns/style-guide-content.php:596
 msgctxt "Pattern description"
-msgid "A frequently-asked-questions accordion - collapsible question-and-answer pairs (core Details block, no plugin) that handle objections before they stop the sale."
+msgid "A frequently-asked-questions accordion - collapsible question-and-answer pairs (core Details block, no plugin)."
+msgstr ""
+
+#: patterns/faq.php:15
+msgid "FAQ"
 msgstr ""
 
 #: patterns/faq.php:19
@@ -485,7 +668,7 @@ msgid "A question your customers actually ask"
 msgstr ""
 
 #: patterns/faq.php:32
-msgid "Answer it plainly in two or three sentences. Address the worry behind the question, not just the literal words."
+msgid "Answer it plainly in two or three sentences. Address the worry behind the question."
 msgstr ""
 
 #: patterns/faq.php:35
@@ -493,7 +676,7 @@ msgid "A common objection, phrased as a question"
 msgstr ""
 
 #: patterns/faq.php:36
-msgid "Keep the answer short and reassuring. This is where you remove doubt before it stops the sale."
+msgid "Keep the answer short and reassuring."
 msgstr ""
 
 #: patterns/faq.php:39
@@ -530,20 +713,26 @@ msgctxt "Pattern description"
 msgid "Centered footer with stacked site title, links, credits, and social icons."
 msgstr ""
 
+#: patterns/footer-centered.php:13
+msgid "Footer Centered"
+msgstr ""
+
 #: patterns/footer-centered.php:24
-#: patterns/footer.php:41
+#: patterns/footer.php:49
 msgid "Privacy"
 msgstr ""
 
 #: patterns/footer-centered.php:24
-#: patterns/footer.php:41
+#: patterns/footer.php:49
 msgid "Terms"
 msgstr ""
 
-#: patterns/footer-centered.php:28
-#: patterns/footer-columns.php:100
-#: patterns/footer.php:31
-msgid "Proudly powered by"
+#. translators: %s: a link to WordPress.org.
+#: patterns/footer-centered.php:34
+#: patterns/footer-columns.php:106
+#: patterns/footer.php:37
+#, php-format
+msgid "Proudly powered by %s"
 msgstr ""
 
 #: patterns/footer-columns.php
@@ -554,6 +743,10 @@ msgstr ""
 #: patterns/footer-columns.php
 msgctxt "Pattern description"
 msgid "Four-column footer with organized links and social icons."
+msgstr ""
+
+#: patterns/footer-columns.php:13
+msgid "Footer Columns"
 msgstr ""
 
 #: patterns/footer-columns.php:29
@@ -574,10 +767,6 @@ msgstr ""
 
 #: patterns/footer-columns.php:49
 msgid "Documentation"
-msgstr ""
-
-#: patterns/footer-columns.php:52
-msgid "Blog"
 msgstr ""
 
 #: patterns/footer-columns.php:55
@@ -627,57 +816,95 @@ msgctxt "Pattern description"
 msgid "Default footer - compact two-column row with site title, credits, links, and social icons."
 msgstr ""
 
+#: patterns/footer.php:14
+#: patterns/scorecard-resolved.php:73
+#: patterns/scorecard.php:73
+msgid "Footer"
+msgstr ""
+
 #: patterns/form-contact.php
+#: patterns/style-guide-content.php:568
 msgctxt "Pattern title"
 msgid "Form • Contact"
 msgstr ""
 
 #: patterns/form-contact.php
+#: patterns/style-guide-content.php:569
 msgctxt "Pattern description"
 msgid "A simple name / email / message contact form. Style-only: connect delivery with a form plugin (the bare form does not send on its own)."
 msgstr ""
 
-#: patterns/form-contact.php:24
+#: patterns/form-contact.php:17
+msgid "Contact Form"
+msgstr ""
+
+#: patterns/form-contact.php:27
 msgid "Send us a message"
 msgstr ""
 
-#: patterns/form-contact.php:32
+#: patterns/form-contact.php:33
+msgid "Your name"
+msgstr ""
+
+#: patterns/form-contact.php:37
+#: patterns/form-signup.php:31
+msgid "Email address"
+msgstr ""
+
+#: patterns/form-contact.php:41
+msgid "How can we help?"
+msgstr ""
+
+#: patterns/form-contact.php:44
 msgid "Send message"
 msgstr ""
 
 #: patterns/form-signup.php
+#: patterns/style-guide-content.php:577
 msgctxt "Pattern title"
 msgid "Form • Email Signup"
 msgstr ""
 
 #: patterns/form-signup.php
+#: patterns/style-guide-content.php:578
 msgctxt "Pattern description"
-msgid "A compact email-capture (squeeze) form - heading, one line, email field, submit. Style-only: connect delivery with a form/newsletter plugin (the bare form does not send on its own)."
+msgid "A compact email-capture form - heading, one line, email field, submit. Style-only: connect delivery with a form/newsletter plugin (the bare form does not send on its own)."
 msgstr ""
 
-#: patterns/form-signup.php:20
+#: patterns/form-signup.php:15
+msgid "Email Signup"
+msgstr ""
+
+#: patterns/form-signup.php:21
 msgid "Get updates in your inbox"
 msgstr ""
 
-#: patterns/form-signup.php:24
+#: patterns/form-signup.php:25
 msgid "One short line on what subscribers get and how often. No spam."
 msgstr ""
 
-#: patterns/form-signup.php:30
+#: patterns/form-signup.php:34
 msgid "Subscribe"
 msgstr ""
 
 #: patterns/gallery.php
+#: patterns/style-guide-content.php:510
 msgctxt "Pattern title"
 msgid "Gallery • Image Grid"
 msgstr ""
 
 #: patterns/gallery.php
+#: patterns/style-guide-content.php:511
 msgctxt "Pattern description"
 msgid "A static three-column image gallery for showing work, photos, or a portfolio sample - a heading, a short intro, and a cropped image grid."
 msgstr ""
 
+#: patterns/gallery.php:16
+msgid "Gallery"
+msgstr ""
+
 #: patterns/gallery.php:20
+#: patterns/project-grid.php:20
 msgid "Selected work"
 msgstr ""
 
@@ -686,13 +913,35 @@ msgid "A visual sample of recent projects."
 msgstr ""
 
 #: patterns/guarantee-badges.php
+#: patterns/style-guide-content.php:439
 msgctxt "Pattern title"
 msgid "Guarantee Badges"
 msgstr ""
 
 #: patterns/guarantee-badges.php
+#: patterns/style-guide-content.php:440
 msgctxt "Pattern description"
-msgid "A row of trust signals - money-back guarantee, secure checkout, support, rating. Reassurance near a price or a form to lift conversion."
+msgid "A row of trust signals - money-back guarantee, secure checkout, support, rating. Use near a price or a form."
+msgstr ""
+
+#: patterns/guarantee-badges.php:15
+msgid "A guarantee you offer"
+msgstr ""
+
+#: patterns/guarantee-badges.php:16
+msgid "How you protect customers"
+msgstr ""
+
+#: patterns/guarantee-badges.php:17
+msgid "The support you give"
+msgstr ""
+
+#: patterns/guarantee-badges.php:18
+msgid "A rating you can show"
+msgstr ""
+
+#: patterns/guarantee-badges.php:21
+msgid "Guarantee Badges"
 msgstr ""
 
 #: patterns/header-centered.php
@@ -702,7 +951,17 @@ msgstr ""
 
 #: patterns/header-centered.php
 msgctxt "Pattern description"
-msgid "Centered header with edge-to-edge background, content constrained to wideSize."
+msgid "Centered header with edge-to-edge background, content kept to the site's wide width."
+msgstr ""
+
+#: patterns/header-centered.php:16
+msgid "Header Centered"
+msgstr ""
+
+#: patterns/header-centered.php:29
+#: patterns/header-contact.php:47
+#: patterns/header.php:30
+msgid "Primary"
 msgstr ""
 
 #: patterns/header-contact.php
@@ -715,8 +974,8 @@ msgctxt "Pattern description"
 msgid "Header for service businesses - branding and navigation with a phone number and a call-to-action button. Replace the placeholder phone and button link with your own."
 msgstr ""
 
-#: patterns/header-contact.php:32
-msgid "(555) 555-0100"
+#: patterns/header-contact.php:20
+msgid "Header: Contact"
 msgstr ""
 
 #: patterns/header.php
@@ -726,17 +985,29 @@ msgstr ""
 
 #: patterns/header.php
 msgctxt "Pattern description"
-msgid "Default header - logo/title left, navigation right. Full-bleed background; content aligned to wideSize so it follows the site's content width."
+msgid "Default header - logo/title left, navigation right. Full-bleed background; content follows the site's wide width."
+msgstr ""
+
+#: patterns/header.php:17
+#: patterns/scorecard-resolved.php:20
+#: patterns/scorecard.php:20
+msgid "Header"
 msgstr ""
 
 #: patterns/hero-basic.php
+#: patterns/style-guide-content.php:262
 msgctxt "Pattern title"
 msgid "Hero • Basic"
 msgstr ""
 
 #: patterns/hero-basic.php
+#: patterns/style-guide-content.php:263
 msgctxt "Pattern description"
-msgid "A minimal hero - a headline, short intro, and buttons. The simplest page opener."
+msgid "A minimal hero - a headline, short intro, and buttons. The simplest page opener. Use the No Title or Landing Page template so the page title does not show above it."
+msgstr ""
+
+#: patterns/hero-basic.php:13
+msgid "Hero Basic"
 msgstr ""
 
 #: patterns/hero-basic.php:17
@@ -754,13 +1025,19 @@ msgid "See Features"
 msgstr ""
 
 #: patterns/hero-centered.php
+#: patterns/style-guide-content.php:244
 msgctxt "Pattern title"
 msgid "Hero • Centered"
 msgstr ""
 
 #: patterns/hero-centered.php
+#: patterns/style-guide-content.php:245
 msgctxt "Pattern description"
-msgid "A centered hero - a large headline, subhead, and buttons over a full-width band."
+msgid "A centered hero - a large headline, subhead, and buttons over a full-width band. Use the No Title or Landing Page template so the page title does not show above it."
+msgstr ""
+
+#: patterns/hero-centered.php:15
+msgid "Hero Centered"
 msgstr ""
 
 #: patterns/hero-centered.php:26
@@ -769,13 +1046,19 @@ msgid "A short sentence about what you offer and who it is for."
 msgstr ""
 
 #: patterns/hero-image.php
+#: patterns/style-guide-content.php:271
 msgctxt "Pattern title"
 msgid "Hero • Image Background"
 msgstr ""
 
 #: patterns/hero-image.php
+#: patterns/style-guide-content.php:272
 msgctxt "Pattern description"
-msgid "A full-width hero with an image background, a legible dark scrim, and a centered headline, subhead, and call to action. The boldest way to open a page."
+msgid "A full-width hero with an image background, a legible dark scrim, and a centered headline, subhead, and call to action. Use the No Title or Landing Page template so the page title does not show above it."
+msgstr ""
+
+#: patterns/hero-image.php:16
+msgid "Hero: Image Background"
 msgstr ""
 
 #: patterns/hero-image.php:19
@@ -783,12 +1066,7 @@ msgid "Build something worth visiting"
 msgstr ""
 
 #: patterns/hero-image.php:23
-msgid "A short, confident line about what you make and who it is for - enough to earn the next scroll."
-msgstr ""
-
-#: patterns/hero-image.php:28
-#: patterns/steps-process.php:70
-msgid "Get started"
+msgid "A short line about what you make and who it is for."
 msgstr ""
 
 #: patterns/hero-image.php:32
@@ -796,21 +1074,33 @@ msgid "See our work"
 msgstr ""
 
 #: patterns/hero-split.php
+#: patterns/style-guide-content.php:253
 msgctxt "Pattern title"
 msgid "Hero • Split"
 msgstr ""
 
 #: patterns/hero-split.php
+#: patterns/style-guide-content.php:254
 msgctxt "Pattern description"
-msgid "A two-column hero - a headline, intro, and buttons beside an image."
+msgid "A two-column hero - a headline, intro, and buttons beside an image. Use the No Title or Landing Page template so the page title does not show above it."
+msgstr ""
+
+#: patterns/hero-split.php:16
+msgid "Hero Split"
+msgstr ""
+
+#: patterns/hero-split.php:52
+msgid "Featured image placeholder"
 msgstr ""
 
 #: patterns/layout-cluster.php
+#: patterns/style-guide-content.php:345
 msgctxt "Pattern title"
 msgid "Layout • Cluster"
 msgstr ""
 
 #: patterns/layout-cluster.php
+#: patterns/style-guide-content.php:346
 msgctxt "Pattern description"
 msgid "Neutral horizontal cluster layout using flex with wrap and spacing for buttons, links, or meta."
 msgstr ""
@@ -828,11 +1118,13 @@ msgid "Cluster item three"
 msgstr ""
 
 #: patterns/layout-stack.php
+#: patterns/style-guide-content.php:336
 msgctxt "Pattern title"
 msgid "Layout • Stack"
 msgstr ""
 
 #: patterns/layout-stack.php
+#: patterns/style-guide-content.php:337
 msgctxt "Pattern description"
 msgid "Neutral vertical stack with consistent block gap. Use as a base wrapper for grouped content."
 msgstr ""
@@ -846,13 +1138,19 @@ msgid "Stack item two"
 msgstr ""
 
 #: patterns/location-hours.php
+#: patterns/style-guide-content.php:586
 msgctxt "Pattern title"
 msgid "Location & Hours"
 msgstr ""
 
 #: patterns/location-hours.php
+#: patterns/style-guide-content.php:587
 msgctxt "Pattern description"
 msgid "Address, opening hours, and a \"Get directions\" link. No embedded third-party map by default (privacy); add an embed block if you want one."
+msgstr ""
+
+#: patterns/location-hours.php:14
+msgid "Location & Hours"
 msgstr ""
 
 #: patterns/location-hours.php:20
@@ -875,20 +1173,16 @@ msgstr ""
 msgid "Suite 100"
 msgstr ""
 
-#: patterns/location-hours.php:39
-msgid "Your City, ST 00000"
-msgstr ""
-
 #: patterns/location-hours.php:49
 msgid "Get directions →"
 msgstr ""
 
 #: patterns/location-hours.php:63
-msgid "Monday-Thursday · 9:00-5:00"
+msgid "Monday–Thursday · 9:00–5:00"
 msgstr ""
 
 #: patterns/location-hours.php:63
-msgid "Friday · 9:00-4:00"
+msgid "Friday · 9:00–4:00"
 msgstr ""
 
 #: patterns/location-hours.php:63
@@ -900,43 +1194,126 @@ msgid "Sunday · Closed"
 msgstr ""
 
 #: patterns/logos-cloud.php
+#: patterns/style-guide-content.php:430
 msgctxt "Pattern title"
 msgid "Logos • Cloud"
 msgstr ""
 
 #: patterns/logos-cloud.php
+#: patterns/style-guide-content.php:431
 msgctxt "Pattern description"
-msgid "A row of client or partner logos - a quick trust signal near the top of a page."
+msgid "A grid of client or partner logos - a quick trust signal near the top of a page."
+msgstr ""
+
+#: patterns/logos-cloud.php:16
+msgid "Logos Cloud"
 msgstr ""
 
 #: patterns/logos-cloud.php:20
-msgid "Trusted By"
+msgid "Clients and partners"
 msgstr ""
 
 #: patterns/logos-cloud.php:24
 msgid "A short line introducing the companies or clients you work with."
 msgstr ""
 
+#: patterns/logos-cloud.php:31
+#: patterns/logos-cloud.php:35
+#: patterns/logos-cloud.php:39
+#: patterns/logos-cloud.php:43
+#: patterns/logos-cloud.php:47
+#: patterns/logos-cloud.php:51
+#: patterns/logos-cloud.php:55
+#: patterns/logos-cloud.php:59
+#: patterns/logos-cloud.php:63
+#: patterns/logos-cloud.php:67
+msgid "Partner logo"
+msgstr ""
+
+#: patterns/navigation-overlay-contact.php
+msgctxt "Pattern title"
+msgid "Navigation Overlay: Contact"
+msgstr ""
+
+#: patterns/navigation-overlay-contact.php
+msgctxt "Pattern description"
+msgid "Mobile menu with the site navigation, a tap-to-call phone link and a call-to-action button. Replace the placeholder phone and button link with your own."
+msgstr ""
+
+#: patterns/navigation-overlay-contact.php:16
+#: patterns/navigation-overlay.php:14
+msgid "Navigation Overlay"
+msgstr ""
+
+#: patterns/navigation-overlay-contact.php:38
+#: patterns/navigation-overlay.php:24
+msgid "Mobile"
+msgstr ""
+
+#: patterns/navigation-overlay.php
+msgctxt "Pattern title"
+msgid "Navigation Overlay"
+msgstr ""
+
+#: patterns/navigation-overlay.php
+msgctxt "Pattern description"
+msgid "Mobile menu with the site navigation, opened from the header's menu button."
+msgstr ""
+
+#: patterns/no-posts.php
+msgctxt "Pattern title"
+msgid "No Posts"
+msgstr ""
+
+#: patterns/no-posts.php
+msgctxt "Pattern description"
+msgid "The message the blog shows before anything is published."
+msgstr ""
+
+#: patterns/no-posts.php:14
+msgid "Nothing published yet. Check back soon."
+msgstr ""
+
+#: patterns/no-results.php
+msgctxt "Pattern title"
+msgid "No Results"
+msgstr ""
+
+#: patterns/no-results.php
+msgctxt "Pattern description"
+msgid "The message a search or archive page shows when it has no posts."
+msgstr ""
+
+#: patterns/no-results.php:14
+msgid "Nothing was found. Try a search with different words."
+msgstr ""
+
 #: patterns/offer-callout.php
+#: patterns/style-guide-content.php:539
 msgctxt "Pattern title"
 msgid "Offer Callout"
 msgstr ""
 
 #: patterns/offer-callout.php
+#: patterns/style-guide-content.php:540
 msgctxt "Pattern description"
-msgid "A bold promotional callout - an eyebrow, a headline offer, the terms, and one button. Built to sell a limited-time deal."
+msgid "A bold promotional callout - an eyebrow, a headline offer, the terms, and one button. For a limited-time deal."
+msgstr ""
+
+#: patterns/offer-callout.php:15
+msgid "Offer Callout"
 msgstr ""
 
 #: patterns/offer-callout.php:19
-msgid "Limited time"
+msgid "Offer"
 msgstr ""
 
 #: patterns/offer-callout.php:23
-msgid "Save 20% on your first project"
+msgid "Your offer in one line"
 msgstr ""
 
 #: patterns/offer-callout.php:27
-msgid "New clients only. Offer ends at the end of the month."
+msgid "The terms: who it is for and when it ends."
 msgstr ""
 
 #: patterns/offer-callout.php:33
@@ -960,7 +1337,11 @@ msgstr ""
 
 #: patterns/page-blog-home.php
 msgctxt "Pattern description"
-msgid "A blog home page - a short introduction, the latest posts in a feature grid, and an email signup so readers can follow along."
+msgid "A blog home page - a short introduction, the latest posts in a feature grid, and an email signup. Connect the form to a newsletter plugin; it does not send on its own. Use the No Title or Landing Page template so the page title does not show above it."
+msgstr ""
+
+#: patterns/page-blog-home.php:15
+msgid "Blog Intro"
 msgstr ""
 
 #: patterns/page-blog-home.php:19
@@ -968,11 +1349,11 @@ msgid "The blog"
 msgstr ""
 
 #: patterns/page-blog-home.php:23
-msgid "Notes, ideas, and lessons from the work"
+msgid "Notes from the work"
 msgstr ""
 
 #: patterns/page-blog-home.php:27
-msgid "One or two lines on what you write about and who it helps. Set the expectation, then let the posts speak."
+msgid "One or two lines on what you write about and who it helps."
 msgstr ""
 
 #: patterns/page-business.php
@@ -982,7 +1363,7 @@ msgstr ""
 
 #: patterns/page-business.php
 msgctxt "Pattern description"
-msgid "A full business or services page - hero, what you do, services, stats, process, testimonials, a call to action, and location. A starting point any local or professional site can adapt."
+msgid "A full business or services page - hero, what you do, services, stats, process, testimonials, a call to action, and location. A starting point any local or professional site can adapt. Use the No Title or Landing Page template so the page title does not show above it."
 msgstr ""
 
 #: patterns/page-coming-soon.php
@@ -992,7 +1373,11 @@ msgstr ""
 
 #: patterns/page-coming-soon.php
 msgctxt "Pattern description"
-msgid "A minimal holding page for a site that has not launched - one headline, one line, and an email signup so visitors can hear when it does. Pairs well with a blank or landing template (no nav)."
+msgid "A minimal holding page for a site that has not launched - one headline, one line, and an email signup. Connect the form to a newsletter plugin; it does not send on its own. Use the No Title or Landing Page template so the page title does not show above it."
+msgstr ""
+
+#: patterns/page-coming-soon.php:15
+msgid "Coming Soon Intro"
 msgstr ""
 
 #: patterns/page-coming-soon.php:19
@@ -1010,7 +1395,7 @@ msgstr ""
 
 #: patterns/page-contact.php
 msgctxt "Pattern description"
-msgid "A complete contact page - your details, a contact form, and answers to the questions people ask before reaching out."
+msgid "A complete contact page - your details, a contact form, and answers to the questions people ask before reaching out. Connect the form to a form plugin; it does not send on its own."
 msgstr ""
 
 #: patterns/page-landing.php
@@ -1020,7 +1405,7 @@ msgstr ""
 
 #: patterns/page-landing.php
 msgctxt "Pattern description"
-msgid "A focused landing page built around one goal - hero, benefits, trust logos, social proof, a short FAQ, and a single sign-up. Keep it to one call to action and remove distractions (including the nav)."
+msgid "A focused landing page built around one goal - hero, benefits, trust logos, social proof, a short FAQ, and a single sign-up. Keep it to one call to action. Connect the form to a form plugin; it does not send on its own. Use the No Title or Landing Page template so the page title does not show above it."
 msgstr ""
 
 #: patterns/page-portfolio.php
@@ -1030,7 +1415,7 @@ msgstr ""
 
 #: patterns/page-portfolio.php
 msgctxt "Pattern description"
-msgid "A full portfolio page - hero, a short intro, selected work, skills, testimonials, and a call to action."
+msgid "A full portfolio page - hero, a short intro, selected work, skills, testimonials, and a call to action. Use the No Title or Landing Page template so the page title does not show above it."
 msgstr ""
 
 #: patterns/page-pricing.php
@@ -1050,7 +1435,11 @@ msgstr ""
 
 #: patterns/page-sales.php
 msgctxt "Pattern description"
-msgid "A long-form sales page in the classic Problem-Agitate-Solution order - hero, the problem, agitation, your solution, benefits, social proof, the offer, a guarantee, objections (FAQ), and the close. Replace each section's placeholder with your own copy."
+msgid "A long-form sales page in the classic Problem-Agitate-Solution order - hero, the problem, agitation, your solution, benefits, social proof, the offer, a guarantee, objections (FAQ), and the close. Replace each section's placeholder with your own copy. Use the No Title or Landing Page template so the page title does not show above it."
+msgstr ""
+
+#: patterns/page-sales.php:16
+msgid "Problem"
 msgstr ""
 
 #: patterns/page-sales.php:19
@@ -1058,7 +1447,11 @@ msgid "The problem"
 msgstr ""
 
 #: patterns/page-sales.php:22
-msgid "You put in the work, but the results keep falling short of what you know is possible."
+msgid "Describe the problem your reader has, in their words."
+msgstr ""
+
+#: patterns/page-sales.php:27
+msgid "Agitation"
 msgstr ""
 
 #: patterns/page-sales.php:30
@@ -1066,49 +1459,69 @@ msgid "What it is costing you"
 msgstr ""
 
 #: patterns/page-sales.php:33
-msgid "Every month it goes unsolved is time, money, and momentum you do not get back, and the gap only widens."
+msgid "Describe what the problem costs them while it stays unsolved."
+msgstr ""
+
+#: patterns/page-sales.php:43
+msgid "Guarantee"
 msgstr ""
 
 #: patterns/page-sales.php:46
-msgid "Your risk-free guarantee"
+msgid "Your guarantee"
 msgstr ""
 
 #: patterns/page-sales.php:49
-msgid "Try it for 30 days. If it is not the right fit, we will refund you in full, with no forms and no hassle."
+msgid "State your real guarantee: how long it lasts and exactly what the customer gets back."
 msgstr ""
 
 #: patterns/post-meta.php
+#: patterns/style-guide-content.php:615
 msgctxt "Pattern title"
 msgid "Post Meta • Standard"
 msgstr ""
 
 #: patterns/post-meta.php
+#: patterns/style-guide-content.php:616
 msgctxt "Pattern description"
-msgid "Author, date, and categories below titles. Icon-styled variant available via block styles."
+msgid "Author, date, and categories below titles."
 msgstr ""
 
 #: patterns/post-summary.php
+#: patterns/style-guide-content.php:606
 msgctxt "Pattern title"
 msgid "Post Summary"
 msgstr ""
 
 #: patterns/post-summary.php
+#: patterns/style-guide-content.php:607
 msgctxt "Pattern description"
 msgid "Standard post summary for archives and query loops. Use inside a post-template block."
 msgstr ""
 
 #: patterns/pricing-table.php
+#: patterns/style-guide-content.php:374
 msgctxt "Pattern title"
 msgid "Pricing Table"
 msgstr ""
 
 #: patterns/pricing-table.php
+#: patterns/style-guide-content.php:375
 msgctxt "Pattern description"
 msgid "A three-tier pricing table - plan name, price, feature list, and a button per tier."
 msgstr ""
 
+#: patterns/pricing-table.php:13
+msgid "Pricing Table"
+msgstr ""
+
 #: patterns/pricing-table.php:21
 msgid "Starter"
+msgstr ""
+
+#: patterns/pricing-table.php:27
+#: patterns/pricing-table.php:72
+#: patterns/pricing-table.php:120
+msgid "$00"
 msgstr ""
 
 #: patterns/pricing-table.php:30
@@ -1118,65 +1531,44 @@ msgid "/month"
 msgstr ""
 
 #: patterns/pricing-table.php:36
-msgid "Perfect for side projects and personal sites."
+#: patterns/pricing-table.php:81
+#: patterns/pricing-table.php:129
+msgid "Who this plan is for."
 msgstr ""
 
 #: patterns/pricing-table.php:42
-msgid "1 site license"
+#: patterns/pricing-table.php:87
+#: patterns/pricing-table.php:135
+msgid "First feature"
 msgstr ""
 
 #: patterns/pricing-table.php:45
-msgid "Community support"
+#: patterns/pricing-table.php:90
+#: patterns/pricing-table.php:138
+msgid "Second feature"
 msgstr ""
 
 #: patterns/pricing-table.php:48
-msgid "Basic templates"
+#: patterns/pricing-table.php:93
+#: patterns/pricing-table.php:141
+msgid "Third feature"
 msgstr ""
 
 #: patterns/pricing-table.php:66
 msgid "Pro"
 msgstr ""
 
-#: patterns/pricing-table.php:81
-msgid "For freelancers and growing businesses."
-msgstr ""
-
-#: patterns/pricing-table.php:87
-msgid "5 site licenses"
-msgstr ""
-
-#: patterns/pricing-table.php:90
-msgid "Priority support"
-msgstr ""
-
-#: patterns/pricing-table.php:93
-#: patterns/pricing-table.php:141
-msgid "All templates"
-msgstr ""
-
 #: patterns/pricing-table.php:96
 #: patterns/pricing-table.php:144
-msgid "Pro patterns"
+msgid "Fourth feature"
 msgstr ""
 
 #: patterns/pricing-table.php:114
 msgid "Agency"
 msgstr ""
 
-#: patterns/pricing-table.php:129
-msgid "For teams and agencies building at scale."
-msgstr ""
-
-#: patterns/pricing-table.php:135
-msgid "Unlimited sites"
-msgstr ""
-
-#: patterns/pricing-table.php:138
-msgid "Dedicated support"
-msgstr ""
-
 #: patterns/pricing-table.php:147
-msgid "White-label option"
+msgid "Fifth feature"
 msgstr ""
 
 #: patterns/pricing-table.php:155
@@ -1184,16 +1576,29 @@ msgid "Contact Sales"
 msgstr ""
 
 #: patterns/profile-detail.php
+#: patterns/style-guide-content.php:472
 msgctxt "Pattern title"
 msgid "Profile Detail"
 msgstr ""
 
 #: patterns/profile-detail.php
+#: patterns/style-guide-content.php:473
 msgctxt "Pattern description"
 msgid "A single-person profile - portrait, name, title/credentials, and bio. For a provider, attorney, artist, or team member detail."
 msgstr ""
 
+#: patterns/profile-detail.php:16
+msgid "Profile Detail"
+msgstr ""
+
+#: patterns/profile-detail.php:25
+msgid "Portrait placeholder"
+msgstr ""
+
 #: patterns/profile-detail.php:33
+#: patterns/team-grid.php:34
+#: patterns/team-grid.php:56
+#: patterns/team-grid.php:78
 msgid "Full Name"
 msgstr ""
 
@@ -1210,29 +1615,29 @@ msgid "name@example.com"
 msgstr ""
 
 #: patterns/project-grid.php
+#: patterns/style-guide-content.php:492
 msgctxt "Pattern title"
 msgid "Project Grid"
 msgstr ""
 
 #: patterns/project-grid.php
+#: patterns/style-guide-content.php:493
 msgctxt "Pattern description"
-msgid "Display portfolio projects in a responsive grid layout. Shows featured image, title, excerpt, and link to full project."
+msgid "Portfolio projects in a responsive grid - an image, title, summary, and a link to the full project."
 msgstr ""
 
-#: patterns/project-grid.php:20
-msgid "Selected Work"
+#: patterns/project-grid.php:16
+msgid "Project Grid"
 msgstr ""
 
 #: patterns/project-grid.php:24
 msgid "A selection of recent projects and case studies."
 msgstr ""
 
-#: patterns/project-grid.php:44
-msgid "E-Commerce Redesign"
-msgstr ""
-
-#: patterns/project-grid.php:48
-msgid "Complete UX overhaul for a fashion retailer, resulting in 40% increase in conversions."
+#: patterns/project-grid.php:37
+#: patterns/project-grid.php:71
+#: patterns/project-grid.php:105
+msgid "Project thumbnail"
 msgstr ""
 
 #: patterns/project-grid.php:52
@@ -1241,22 +1646,20 @@ msgstr ""
 msgid "View Project →"
 msgstr ""
 
-#: patterns/project-grid.php:82
-msgid "Analytics dashboard design for a B2B software company with real-time data visualization."
-msgstr ""
-
-#: patterns/project-grid.php:116
-msgid "Complete brand refresh including logo, color system, typography, and brand guidelines."
-msgstr ""
-
 #: patterns/related-posts.php
+#: patterns/style-guide-content.php:633
 msgctxt "Pattern title"
-msgid "Related Posts"
+msgid "Keep Reading"
 msgstr ""
 
 #: patterns/related-posts.php
+#: patterns/style-guide-content.php:634
 msgctxt "Pattern description"
-msgid "A compact \"Keep reading\" band of three recent posts for the end of a single post - keeps readers on the site when the article ends."
+msgid "A compact \"Keep reading\" band of three recent posts for the end of a single post."
+msgstr ""
+
+#: patterns/related-posts.php:14
+msgid "Keep Reading"
 msgstr ""
 
 #: patterns/related-posts.php:18
@@ -1270,7 +1673,17 @@ msgstr ""
 
 #: patterns/scorecard-resolved.php
 msgctxt "Pattern description"
-msgid "The all-green \"after\" companion to Scorecard - every row resolved. Pairs with Scorecard for a before/after; here you fill the labels and statuses, the tones are already green."
+msgid "The all-green \"after\" companion to Scorecard - every row resolved. Pairs with Scorecard for a before/after. Fill in the labels and statuses; the tones are already green."
+msgstr ""
+
+#: patterns/scorecard-resolved.php:14
+#: patterns/scorecard.php:14
+msgid "Scorecard Wrap"
+msgstr ""
+
+#: patterns/scorecard-resolved.php:17
+#: patterns/scorecard.php:17
+msgid "Scorecard"
 msgstr ""
 
 #: patterns/scorecard-resolved.php:27
@@ -1281,6 +1694,11 @@ msgstr ""
 #: patterns/scorecard-resolved.php:33
 #: patterns/scorecard.php:33
 msgid "REF-0000"
+msgstr ""
+
+#: patterns/scorecard-resolved.php:39
+#: patterns/scorecard.php:39
+msgid "Rows"
 msgstr ""
 
 #: patterns/scorecard-resolved.php:43
@@ -1357,13 +1775,15 @@ msgid "Caption this graphic so it reads as a sample, not live data - say what it
 msgstr ""
 
 #: patterns/scorecard.php
+#: patterns/style-guide-content.php:448
 msgctxt "Pattern title"
 msgid "Scorecard"
 msgstr ""
 
 #: patterns/scorecard.php
+#: patterns/style-guide-content.php:449
 msgctxt "Pattern description"
-msgid "A compact inspection record - a titled header with a reference, rows of label-and-status chips (red / amber / green), and a footer note. Insert twice for a before/after. Good for an audit, checklist, or systems review."
+msgid "A compact inspection record - a titled header with a reference, rows of label-and-status chips, and a footer note. Pairs with Scorecard • Resolved for a before/after. Good for an audit, checklist, or systems review."
 msgstr ""
 
 #: patterns/scorecard.php:43
@@ -1395,14 +1815,32 @@ msgstr ""
 msgid "A short note about scope, terms, or what happens next."
 msgstr ""
 
+#: patterns/search-form.php
+msgctxt "Pattern title"
+msgid "Search Form"
+msgstr ""
+
+#: patterns/search-form.php
+msgctxt "Pattern description"
+msgid "A site search box, used by the search results and archive templates."
+msgstr ""
+
+#: patterns/search-form.php:13
+#: patterns/sidebar-content.php:15
+msgctxt "search button text"
+msgid "Search"
+msgstr ""
+
 #: patterns/section-constrained.php
+#: patterns/style-guide-content.php:318
 msgctxt "Pattern title"
 msgid "Section (Constrained)"
 msgstr ""
 
 #: patterns/section-constrained.php
+#: patterns/style-guide-content.php:319
 msgctxt "Pattern description"
-msgid "Canonical constrained section wrapper with consistent blockGap spacing for general page building."
+msgid "A section at the site's content width, for general page building."
 msgstr ""
 
 #: patterns/section-constrained.php:16
@@ -1414,23 +1852,59 @@ msgid "Section content goes here. Add paragraphs, lists, or other blocks as need
 msgstr ""
 
 #: patterns/section-feature-grid.php
+#: patterns/style-guide-content.php:309
 msgctxt "Pattern title"
 msgid "Section • Feature Grid"
 msgstr ""
 
 #: patterns/section-feature-grid.php
+#: patterns/style-guide-content.php:310
 msgctxt "Pattern description"
 msgid "A grid of features or benefits - an icon, title, and short line per item."
 msgstr ""
 
+#: patterns/section-feature-grid.php:16
+msgid "Feature one"
+msgstr ""
+
+#: patterns/section-feature-grid.php:16
+msgid "A short line on what this does and why the reader should care about it."
+msgstr ""
+
+#: patterns/section-feature-grid.php:17
+msgid "Feature two"
+msgstr ""
+
+#: patterns/section-feature-grid.php:17
+msgid "Keep each description parallel in length so the row reads evenly."
+msgstr ""
+
+#: patterns/section-feature-grid.php:18
+msgid "Feature three"
+msgstr ""
+
+#: patterns/section-feature-grid.php:18
+msgid "Swap the icons and copy to match your own product or service."
+msgstr ""
+
+#: patterns/section-feature-grid.php:21
+msgid "Feature Grid"
+msgstr ""
+
 #: patterns/services-grid.php
+#: patterns/style-guide-content.php:365
 msgctxt "Pattern title"
 msgid "Services • Grid"
 msgstr ""
 
 #: patterns/services-grid.php
+#: patterns/style-guide-content.php:366
 msgctxt "Pattern description"
 msgid "A grid of services - an icon, title, description, and a link per service."
+msgstr ""
+
+#: patterns/services-grid.php:15
+msgid "Services Grid"
 msgstr ""
 
 #: patterns/services-grid.php:19
@@ -1441,39 +1915,71 @@ msgstr ""
 msgid "A short line introducing what you offer."
 msgstr ""
 
-#: patterns/services-grid.php:35
-msgid "Brand Design"
+#: patterns/services-grid.php:38
+msgid "First service"
 msgstr ""
 
-#: patterns/services-grid.php:39
-msgid "Create a memorable brand identity with custom logos, color palettes, and design systems that resonate with your audience."
+#: patterns/services-grid.php:42
+msgid "Say what the client gets from this service and who it is for."
 msgstr ""
 
-#: patterns/services-grid.php:55
-#: patterns/skills-grid.php:51
-msgid "Web Development"
+#: patterns/services-grid.php:64
+msgid "Second service"
 msgstr ""
 
-#: patterns/services-grid.php:59
-msgid "Build fast, responsive websites with modern technologies. From WordPress to custom web applications."
+#: patterns/services-grid.php:68
+msgid "Describe the second service in a sentence or two."
 msgstr ""
 
-#: patterns/services-grid.php:75
-msgid "Marketing Strategy"
+#: patterns/services-grid.php:90
+msgid "Third service"
 msgstr ""
 
-#: patterns/services-grid.php:79
-msgid "Reach your target audience with data-driven marketing campaigns across digital channels."
+#: patterns/services-grid.php:94
+msgid "Describe the third service in a sentence or two."
+msgstr ""
+
+#: patterns/sidebar-content.php
+msgctxt "Pattern title"
+msgid "Sidebar Content"
+msgstr ""
+
+#: patterns/sidebar-content.php
+msgctxt "Pattern description"
+msgid "The search box, categories, recent posts and archives in the sidebar template part."
+msgstr ""
+
+#: patterns/sidebar-content.php:15
+msgctxt "sidebar search input placeholder"
+msgid "Search..."
+msgstr ""
+
+#: patterns/sidebar-content.php:20
+msgid "Categories"
+msgstr ""
+
+#: patterns/sidebar-content.php:29
+msgid "Recent Posts"
+msgstr ""
+
+#: patterns/sidebar-content.php:38
+msgid "Archives"
 msgstr ""
 
 #: patterns/skills-grid.php
+#: patterns/style-guide-content.php:481
 msgctxt "Pattern title"
 msgid "Skills Grid"
 msgstr ""
 
 #: patterns/skills-grid.php
+#: patterns/style-guide-content.php:482
 msgctxt "Pattern description"
 msgid "Showcase skills and expertise in a responsive grid. Includes icons, titles, and descriptions."
+msgstr ""
+
+#: patterns/skills-grid.php:15
+msgid "Skills Grid"
 msgstr ""
 
 #: patterns/skills-grid.php:19
@@ -1481,7 +1987,7 @@ msgid "Skills & Expertise"
 msgstr ""
 
 #: patterns/skills-grid.php:23
-msgid "What I bring to every project."
+msgid "What you bring to every project."
 msgstr ""
 
 #: patterns/skills-grid.php:35
@@ -1489,11 +1995,15 @@ msgid "UI/UX Design"
 msgstr ""
 
 #: patterns/skills-grid.php:39
-msgid "User-centered design with a focus on usability, accessibility, and delightful experiences."
+msgid "How you design for the people using the work."
+msgstr ""
+
+#: patterns/skills-grid.php:51
+msgid "Web Development"
 msgstr ""
 
 #: patterns/skills-grid.php:55
-msgid "Modern, responsive websites built with WordPress, React, and clean, maintainable code."
+msgid "What you build and the tools you build it with."
 msgstr ""
 
 #: patterns/skills-grid.php:67
@@ -1501,7 +2011,7 @@ msgid "Performance"
 msgstr ""
 
 #: patterns/skills-grid.php:71
-msgid "Fast-loading, optimized experiences that score well on Core Web Vitals and keep users engaged."
+msgid "How you keep your work fast."
 msgstr ""
 
 #: patterns/skills-grid.php:83
@@ -1509,7 +2019,7 @@ msgid "Accessibility"
 msgstr ""
 
 #: patterns/skills-grid.php:87
-msgid "WCAG-compliant designs that ensure everyone can use your product, regardless of ability."
+msgid "How you make your work usable for everyone."
 msgstr ""
 
 #: patterns/skills-grid.php:105
@@ -1517,7 +2027,7 @@ msgid "User Research"
 msgstr ""
 
 #: patterns/skills-grid.php:109
-msgid "Data-driven decisions through user interviews, usability testing, and behavior analytics."
+msgid "How you learn what users need."
 msgstr ""
 
 #: patterns/skills-grid.php:121
@@ -1525,7 +2035,7 @@ msgid "Design Systems"
 msgstr ""
 
 #: patterns/skills-grid.php:125
-msgid "Reusable systems and components that keep the work consistent across a project."
+msgid "How you keep the work consistent across a project."
 msgstr ""
 
 #: patterns/skills-grid.php:137
@@ -1533,7 +2043,7 @@ msgid "Strategy"
 msgstr ""
 
 #: patterns/skills-grid.php:141
-msgid "Product strategy and roadmapping that aligns business goals with user needs."
+msgid "How you connect the work to business goals."
 msgstr ""
 
 #: patterns/skills-grid.php:153
@@ -1541,29 +2051,54 @@ msgid "Communication"
 msgstr ""
 
 #: patterns/skills-grid.php:157
-msgid "Clear documentation, presentations, and stakeholder communication throughout the project."
+msgid "How you keep clients informed during a project."
 msgstr ""
 
 #: patterns/stats-band.php
+#: patterns/style-guide-content.php:394
 msgctxt "Pattern title"
 msgid "Stats Band"
 msgstr ""
 
 #: patterns/stats-band.php
+#: patterns/style-guide-content.php:395
 msgctxt "Pattern description"
 msgid "A row of headline numbers - years in practice, clients served, rating, impact. Trust signal for any site type."
 msgstr ""
 
+#: patterns/stats-band.php:14
+msgid "Stats Band"
+msgstr ""
+
+#: patterns/stats-band.php:23
+msgid "00+"
+msgstr ""
+
 #: patterns/stats-band.php:26
-msgid "Years of practice"
+#: patterns/stats-grid.php:16
+msgid "Years in practice"
+msgstr ""
+
+#: patterns/stats-band.php:34
+#: patterns/stats-grid.php:17
+msgid "000+"
 msgstr ""
 
 #: patterns/stats-band.php:37
 msgid "Clients served"
 msgstr ""
 
+#: patterns/stats-band.php:45
+msgid "0.0★"
+msgstr ""
+
 #: patterns/stats-band.php:48
+#: patterns/stats-grid.php:18
 msgid "Average rating"
+msgstr ""
+
+#: patterns/stats-band.php:56
+msgid "00%"
 msgstr ""
 
 #: patterns/stats-band.php:59
@@ -1571,23 +2106,55 @@ msgid "Would recommend"
 msgstr ""
 
 #: patterns/stats-grid.php
+#: patterns/style-guide-content.php:403
 msgctxt "Pattern title"
 msgid "Stats • Icon Grid"
 msgstr ""
 
 #: patterns/stats-grid.php
+#: patterns/style-guide-content.php:404
 msgctxt "Pattern description"
-msgid "A grid of headline numbers, each led by an icon - years, projects, rating, response. An icon-led alternative to the stats band, pairs with the Stat Counter block."
+msgid "A grid of headline numbers, each led by an icon - years, projects, rating, response. An icon-led alternative to the stats band. Pairs with the Stat Counter block from Blockwright Blocks."
+msgstr ""
+
+#: patterns/stats-grid.php:16
+msgid "00"
+msgstr ""
+
+#: patterns/stats-grid.php:17
+msgid "Projects delivered"
+msgstr ""
+
+#: patterns/stats-grid.php:18
+msgid "0.0"
+msgstr ""
+
+#: patterns/stats-grid.php:19
+msgid "0.0k"
+msgstr ""
+
+#: patterns/stats-grid.php:19
+msgid "Support replies a year"
+msgstr ""
+
+#: patterns/stats-grid.php:22
+msgid "Stats Icon Grid"
 msgstr ""
 
 #: patterns/steps-process.php
+#: patterns/style-guide-content.php:300
 msgctxt "Pattern title"
 msgid "Steps • Process"
 msgstr ""
 
 #: patterns/steps-process.php
+#: patterns/style-guide-content.php:301
 msgctxt "Pattern description"
 msgid "Numbered steps for a \"how it works\", \"your first visit\", or \"our process\" section."
+msgstr ""
+
+#: patterns/steps-process.php:14
+msgid "Steps Process"
 msgstr ""
 
 #: patterns/steps-process.php:20
@@ -1598,8 +2165,16 @@ msgstr ""
 msgid "A short line introducing your process."
 msgstr ""
 
+#: patterns/steps-process.php:39
+msgid "01"
+msgstr ""
+
 #: patterns/steps-process.php:45
 msgid "Describe the first step in a sentence or two. Say what the reader does and what happens next."
+msgstr ""
+
+#: patterns/steps-process.php:53
+msgid "02"
 msgstr ""
 
 #: patterns/steps-process.php:56
@@ -1610,8 +2185,16 @@ msgstr ""
 msgid "Describe the second step. Keep each one parallel in length so the row reads evenly."
 msgstr ""
 
+#: patterns/steps-process.php:67
+msgid "03"
+msgstr ""
+
 #: patterns/steps-process.php:73
-msgid "Describe the final step and the outcome the reader can expect once it's done."
+msgid "Describe the third step and the outcome the reader can expect once it's done."
+msgstr ""
+
+#: patterns/steps-process.php:81
+msgid "04"
 msgstr ""
 
 #: patterns/steps-process.php:84
@@ -1622,14 +2205,282 @@ msgstr ""
 msgid "Add a fourth step here, or delete this column if your process has three."
 msgstr ""
 
+#: patterns/style-guide-content.php
+msgctxt "Pattern title"
+msgid "Style Guide Content"
+msgstr ""
+
+#: patterns/style-guide-content.php
+msgctxt "Pattern description"
+msgid "The body of the Style Guide page template."
+msgstr ""
+
+#: patterns/style-guide-content.php:18
+msgid "Style guide"
+msgstr ""
+
+#: patterns/style-guide-content.php:19
+msgid "The theme&#8217;s foundations - color scales, type, spacing, buttons, editorial roles - and the pattern library grouped by purpose. Insert a pattern from the editor&#8217;s <strong>+ &rarr; Patterns</strong> panel and edit the placeholder copy. This is a reference page. Delete it before you launch."
+msgstr ""
+
+#: patterns/style-guide-content.php:20
+#: patterns/style-guide-content.php:28
+msgid "Elements"
+msgstr ""
+
+#: patterns/style-guide-content.php:20
+#: patterns/style-guide-content.php:240
+msgid "Heroes"
+msgstr ""
+
+#: patterns/style-guide-content.php:20
+#: patterns/style-guide-content.php:278
+msgid "Content sections"
+msgstr ""
+
+#: patterns/style-guide-content.php:20
+#: patterns/style-guide-content.php:361
+msgid "Services & pricing"
+msgstr ""
+
+#: patterns/style-guide-content.php:20
+#: patterns/style-guide-content.php:390
+msgid "Social proof"
+msgstr ""
+
+#: patterns/style-guide-content.php:20
+#: patterns/style-guide-content.php:459
+msgid "Team & people"
+msgstr ""
+
+#: patterns/style-guide-content.php:20
+#: patterns/style-guide-content.php:488
+msgid "Portfolio & work"
+msgstr ""
+
+#: patterns/style-guide-content.php:20
+#: patterns/style-guide-content.php:517
+msgid "Calls to action"
+msgstr ""
+
+#: patterns/style-guide-content.php:20
+#: patterns/style-guide-content.php:555
+msgid "Contact & location"
+msgstr ""
+
+#: patterns/style-guide-content.php:20
+#: patterns/style-guide-content.php:602
+msgid "Blog & posts"
+msgstr ""
+
+#: patterns/style-guide-content.php:20
+#: patterns/style-guide-content.php:658
+msgid "Utility"
+msgstr ""
+
+#: patterns/style-guide-content.php:20
+#: patterns/style-guide-content.php:670
+msgid "Content widths"
+msgstr ""
+
+#: patterns/style-guide-content.php:29
+msgid "The building blocks every pattern is made from. Each item is labeled with the class or token you type to use it."
+msgstr ""
+
+#: patterns/style-guide-content.php:30
+msgid "Colors"
+msgstr ""
+
+#: patterns/style-guide-content.php:30
+msgid "Role tokens, applied as <code>has-{slug}-color</code> for text or <code>has-{slug}-background-color</code> for a fill. Every value is adaptive - it follows the visitor&#8217;s light or dark setting."
+msgstr ""
+
+#: patterns/style-guide-content.php:90
+msgid "Brand ramp - the accessible tonal scale derived from your brand color (<code>primary-50</code> to <code>primary-950</code>). <code>primary</code> itself is the scheme&#8217;s brand color."
+msgstr ""
+
+#: patterns/style-guide-content.php:94
+msgid "Neutral ramp - surfaces, text, and borders derive from this scale."
+msgstr ""
+
+#: patterns/style-guide-content.php:98
+msgid "Semantic status colors - each has a full 50-950 ramp; the 500 is shown."
+msgstr ""
+
+#: patterns/style-guide-content.php:115
+msgid "Typography"
+msgstr ""
+
+#: patterns/style-guide-content.php:115
+msgid "Font sizes, applied as <code>has-{slug}-font-size</code>. Each line is set at the size it names."
+msgstr ""
+
+#: patterns/style-guide-content.php:115
+msgid "Font families, applied as <code>has-{slug}-font-family</code>."
+msgstr ""
+
+#: patterns/style-guide-content.php:116
+msgid "Buttons"
+msgstr ""
+
+#: patterns/style-guide-content.php:116
+msgid "Four emphasis tiers, strongest to quietest. Use one primary (Fill) per view and let the rest recede. All adapt to the color variation and to light/dark, and meet WCAG AA. The Styles panel labels these Fill / Soft / Outline / Subtle."
+msgstr ""
+
+#: patterns/style-guide-content.php:127
+msgid "Fill, the one main action"
+msgstr ""
+
+#: patterns/style-guide-content.php:142
+msgid "Soft, secondary emphasis"
+msgstr ""
+
+#: patterns/style-guide-content.php:157
+msgid "Outline, quiet secondary"
+msgstr ""
+
+#: patterns/style-guide-content.php:172
+msgid "Subtle, lowest emphasis"
+msgstr ""
+
+#: patterns/style-guide-content.php:177
+msgid "Links"
+msgstr ""
+
+#: patterns/style-guide-content.php:177
+msgid "The <code>a</code> element. Inline links use the link color with an underline."
+msgstr ""
+
+#: patterns/style-guide-content.php:177
+msgid "A paragraph with an <a href=\"#elements\">inline link</a> and following text, so it can be seen in running copy."
+msgstr ""
+
+#: patterns/style-guide-content.php:178
+msgid "Editorial roles"
+msgstr ""
+
+#: patterns/style-guide-content.php:178
+msgid "Brand-colored text styles for labels and notes. Each carries the scheme hue through tokens, so it re-hues with the color variation and meets WCAG AA in light and dark. The Styles panel labels these Eyebrow / Badge, plus a Callout group style."
+msgstr ""
+
+#: patterns/style-guide-content.php:179
+msgid "Eyebrow above a heading"
+msgstr ""
+
+#: patterns/style-guide-content.php:180
+msgid "New"
+msgstr ""
+
+#: patterns/style-guide-content.php:181
+msgid "Note"
+msgstr ""
+
+#: patterns/style-guide-content.php:181
+msgid "A subtle brand-tinted callout band for a highlighted note or aside. Body text stays the neutral text token, at least 4.5:1 on the tint in both modes."
+msgstr ""
+
+#: patterns/style-guide-content.php:182
+msgid "Forms"
+msgstr ""
+
+#: patterns/style-guide-content.php:182
+msgid "Native form controls, styled at the element level (no class needed). A form plugin that ships its own styling takes over when present."
+msgstr ""
+
+#: patterns/style-guide-content.php:185
+msgid "Text input"
+msgstr ""
+
+#: patterns/style-guide-content.php:186
+msgid "Placeholder text"
+msgstr ""
+
+#: patterns/style-guide-content.php:187
+msgid "Select"
+msgstr ""
+
+#: patterns/style-guide-content.php:188
+msgid "Select an option"
+msgstr ""
+
+#: patterns/style-guide-content.php:189
+msgid "Textarea"
+msgstr ""
+
+#: patterns/style-guide-content.php:191
+msgid "Submit"
+msgstr ""
+
+#: patterns/style-guide-content.php:194
+msgid "Spacing"
+msgstr ""
+
+#: patterns/style-guide-content.php:194
+msgid "The spacing scale, applied through block spacing controls (emitted as <code>var:preset|spacing|{slug}</code>). Bars are drawn to scale."
+msgstr ""
+
+#: patterns/style-guide-content.php:327
 #: patterns/subsection-constrained.php
 msgctxt "Pattern title"
 msgid "Subsection (H3 Constrained)"
 msgstr ""
 
+#: patterns/style-guide-content.php:328
 #: patterns/subsection-constrained.php
 msgctxt "Pattern description"
-msgid "Canonical H3 subsection wrapper for use inside a larger section. H3 is first child with blockGap-driven spacing."
+msgid "An H3 subsection for use inside a larger section."
+msgstr ""
+
+#: patterns/style-guide-content.php:412
+#: patterns/testimonials-grid.php
+msgctxt "Pattern title"
+msgid "Testimonials • Grid"
+msgstr ""
+
+#: patterns/style-guide-content.php:413
+#: patterns/testimonials-grid.php
+msgctxt "Pattern description"
+msgid "A grid of customer testimonials - a quote, name, and role per card. Social proof; use real names and outcomes."
+msgstr ""
+
+#: patterns/style-guide-content.php:421
+#: patterns/testimonial.php
+msgctxt "Pattern title"
+msgid "Testimonial"
+msgstr ""
+
+#: patterns/style-guide-content.php:422
+#: patterns/testimonial.php
+msgctxt "Pattern description"
+msgid "A single featured testimonial - one quote with attribution."
+msgstr ""
+
+#: patterns/style-guide-content.php:463
+#: patterns/team-grid.php
+msgctxt "Pattern title"
+msgid "Team • Grid"
+msgstr ""
+
+#: patterns/style-guide-content.php:464
+#: patterns/team-grid.php
+msgctxt "Pattern description"
+msgid "A team grid - a photo, name, and role per person."
+msgstr ""
+
+#: patterns/style-guide-content.php:671
+msgid "A page takes its content width from the editor&#8217;s <strong>Page &rarr; Template</strong> dropdown. These bands show the site&#8217;s standard and wide widths and full width."
+msgstr ""
+
+#: patterns/style-guide-content.php:673
+msgid "Standard, reading width"
+msgstr ""
+
+#: patterns/style-guide-content.php:676
+msgid "Wide"
+msgstr ""
+
+#: patterns/style-guide-content.php:679
+msgid "Full width, edge to edge"
 msgstr ""
 
 #: patterns/subsection-constrained.php:16
@@ -1637,113 +2488,97 @@ msgid "Subsection heading"
 msgstr ""
 
 #: patterns/subsection-constrained.php:20
-msgid "Subsection content goes here. This wrapper ensures consistent spacing via blockGap."
+msgid "Subsection content goes here."
 msgstr ""
 
-#: patterns/team-grid.php
-msgctxt "Pattern title"
-msgid "Team • Grid"
-msgstr ""
-
-#: patterns/team-grid.php
-msgctxt "Pattern description"
-msgid "A team grid - a photo, name, and role per person."
+#: patterns/team-grid.php:16
+msgid "Team Grid"
 msgstr ""
 
 #: patterns/team-grid.php:20
 msgid "Meet Our Team"
 msgstr ""
 
-#: patterns/team-grid.php:34
-#: patterns/testimonials-grid.php:42
-msgid "Sarah Chen"
+#: patterns/team-grid.php:30
+#: patterns/team-grid.php:52
+#: patterns/team-grid.php:74
+msgid "Team member photo"
+msgstr ""
+
+#: patterns/team-grid.php:38
+#: patterns/team-grid.php:60
+#: patterns/team-grid.php:82
+msgid "Job title"
 msgstr ""
 
 #: patterns/team-grid.php:42
-msgid "Creates beautiful, user-centered designs with a focus on accessibility and brand consistency."
-msgstr ""
-
-#: patterns/team-grid.php:56
-#: patterns/testimonials-grid.php:72
-msgid "Marcus Rodriguez"
-msgstr ""
-
-#: patterns/team-grid.php:60
-msgid "Operations Lead"
-msgstr ""
-
 #: patterns/team-grid.php:64
-msgid "Builds scalable, performant applications with expertise in modern web technologies and architecture."
-msgstr ""
-
-#: patterns/team-grid.php:78
-#: patterns/testimonials-grid.php:102
-msgid "Emily Foster"
-msgstr ""
-
-#: patterns/team-grid.php:82
-msgid "Project Manager"
-msgstr ""
-
 #: patterns/team-grid.php:86
-msgid "Orchestrates projects with precision, ensuring teams deliver exceptional results on time and on budget."
+msgid "One line on what this person does."
 msgstr ""
 
-#: patterns/testimonial.php
+#: patterns/template-archive-sidebar.php
 msgctxt "Pattern title"
+msgid "Archive with Sidebar"
+msgstr ""
+
+#: patterns/template-archive-sidebar.php
+msgctxt "Pattern description"
+msgid "A full archive layout: the archive title and its posts in a single column beside the sidebar."
+msgstr ""
+
+#: patterns/template-archive-sidebar.php:16
+#: patterns/template-home-sidebar.php:16
+msgid "Main"
+msgstr ""
+
+#: patterns/template-home-sidebar.php
+msgctxt "Pattern title"
+msgid "Blog with Sidebar"
+msgstr ""
+
+#: patterns/template-home-sidebar.php
+msgctxt "Pattern description"
+msgid "A full blog home layout: the latest posts in a single column beside the sidebar."
+msgstr ""
+
+#: patterns/testimonial.php:14
 msgid "Testimonial"
 msgstr ""
 
-#: patterns/testimonial.php
-msgctxt "Pattern description"
-msgid "A single featured testimonial - one quote with attribution."
-msgstr ""
-
 #: patterns/testimonial.php:17
-msgid "\"A specific, believable quote about the result you delivered for a real customer.\""
+#: patterns/testimonials-grid.php:30
+msgid "\"A specific quote from a real customer about the result you delivered.\""
 msgstr ""
 
 #: patterns/testimonial.php:29
-msgid "Jane Doe"
+#: patterns/testimonials-grid.php:42
+#: patterns/testimonials-grid.php:72
+#: patterns/testimonials-grid.php:102
+msgid "Customer name"
 msgstr ""
 
 #: patterns/testimonial.php:33
 #: patterns/testimonials-grid.php:46
-msgid "Owner, Example Co."
+#: patterns/testimonials-grid.php:76
+#: patterns/testimonials-grid.php:106
+msgid "Role, company"
 msgstr ""
 
-#: patterns/testimonials-grid.php
-msgctxt "Pattern title"
-msgid "Testimonials • Grid"
-msgstr ""
-
-#: patterns/testimonials-grid.php
-msgctxt "Pattern description"
-msgid "A grid of customer testimonials - a quote, name, and role per card. Social proof; use real names and outcomes."
+#: patterns/testimonials-grid.php:16
+msgid "Testimonials Grid"
 msgstr ""
 
 #: patterns/testimonials-grid.php:20
 msgid "What people say"
 msgstr ""
 
-#: patterns/testimonials-grid.php:30
-msgid "\"A specific, believable quote about the result you delivered. Real names and concrete outcomes beat vague praise.\""
-msgstr ""
-
 #: patterns/testimonials-grid.php:60
 msgid "\"A second quote. Pick ones that answer a doubt a new reader still has at this point on the page.\""
 msgstr ""
 
-#: patterns/testimonials-grid.php:76
-msgid "Director, Sample Group"
-msgstr ""
-
 #: patterns/testimonials-grid.php:90
 msgid "\"A third quote. If you can, include a measurable result, time saved, revenue, or a number they will recognize.\""
-msgstr ""
-
-#: patterns/testimonials-grid.php:106
-msgid "Founder, Creative Studio"
 msgstr ""
 
 #: assets/js/editor-block-styles.js:23
@@ -1762,23 +2597,19 @@ msgstr ""
 msgid "Badge"
 msgstr ""
 
-#: assets/js/editor-block-styles.js:51
+#: assets/js/editor-block-styles.js:49
 msgid "Callout"
 msgstr ""
 
-#: assets/js/editor-block-styles.js:60
-msgid "Brand color"
-msgstr ""
-
-#: assets/js/editor-block-styles.js:67
+#: assets/js/editor-block-styles.js:56
 msgid "Brand"
 msgstr ""
 
-#: assets/js/editor-block-styles.js:75
+#: assets/js/editor-block-styles.js:64
 msgid "Icon divider"
 msgstr ""
 
-#: assets/js/editor-block-styles.js:83
+#: assets/js/editor-block-styles.js:72
 msgid "Circle"
 msgstr ""
 
@@ -1800,6 +2631,69 @@ msgstr ""
 #: theme.json
 msgctxt "Border radius size name"
 msgid "XL"
+msgstr ""
+
+#: theme.json
+#: styles/amber.json
+#: styles/blue.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
+#: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
+#: styles/violet.json
+#: styles/yellow.json
+msgctxt "Color name"
+msgid "Primary (brand color)"
+msgstr ""
+
+#: theme.json
+#: styles/amber.json
+#: styles/blue.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
+#: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
+#: styles/violet.json
+#: styles/yellow.json
+msgctxt "Color name"
+msgid "Primary 600"
+msgstr ""
+
+#: theme.json
+#: styles/amber.json
+#: styles/blue.json
+#: styles/cyan.json
+#: styles/fuchsia.json
+#: styles/grayscale.json
+#: styles/green.json
+#: styles/indigo.json
+#: styles/lime.json
+#: styles/orange.json
+#: styles/pink.json
+#: styles/red.json
+#: styles/sky.json
+#: styles/slate.json
+#: styles/teal.json
+#: styles/violet.json
+#: styles/yellow.json
+msgctxt "Color name"
+msgid "Primary 500"
 msgstr ""
 
 #: theme.json
@@ -2912,48 +3806,6 @@ msgstr ""
 #: styles/violet.json
 #: styles/yellow.json
 msgctxt "Color name"
-msgid "Primary 500"
-msgstr ""
-
-#: theme.json
-#: styles/amber.json
-#: styles/blue.json
-#: styles/cyan.json
-#: styles/fuchsia.json
-#: styles/grayscale.json
-#: styles/green.json
-#: styles/indigo.json
-#: styles/lime.json
-#: styles/orange.json
-#: styles/pink.json
-#: styles/red.json
-#: styles/sky.json
-#: styles/slate.json
-#: styles/teal.json
-#: styles/violet.json
-#: styles/yellow.json
-msgctxt "Color name"
-msgid "Primary 600"
-msgstr ""
-
-#: theme.json
-#: styles/amber.json
-#: styles/blue.json
-#: styles/cyan.json
-#: styles/fuchsia.json
-#: styles/grayscale.json
-#: styles/green.json
-#: styles/indigo.json
-#: styles/lime.json
-#: styles/orange.json
-#: styles/pink.json
-#: styles/red.json
-#: styles/sky.json
-#: styles/slate.json
-#: styles/teal.json
-#: styles/violet.json
-#: styles/yellow.json
-msgctxt "Color name"
 msgid "Primary 700"
 msgstr ""
 
@@ -3819,27 +4671,6 @@ msgid "Red"
 msgstr ""
 
 #: theme.json
-#: styles/amber.json
-#: styles/blue.json
-#: styles/cyan.json
-#: styles/fuchsia.json
-#: styles/grayscale.json
-#: styles/green.json
-#: styles/indigo.json
-#: styles/lime.json
-#: styles/orange.json
-#: styles/pink.json
-#: styles/red.json
-#: styles/sky.json
-#: styles/slate.json
-#: styles/teal.json
-#: styles/violet.json
-#: styles/yellow.json
-msgctxt "Color name"
-msgid "Primary (brand color)"
-msgstr ""
-
-#: theme.json
 msgctxt "Space size name"
 msgid "3X Small"
 msgstr ""
@@ -3968,6 +4799,16 @@ msgstr ""
 
 #: theme.json
 msgctxt "Custom template name"
+msgid "Post with Sidebar"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Blog with Sidebar"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
 msgid "Wide"
 msgstr ""
 
@@ -4002,11 +4843,6 @@ msgid "Style Guide"
 msgstr ""
 
 #: theme.json
-msgctxt "Custom template name"
-msgid "Dev Preview (all patterns)"
-msgstr ""
-
-#: theme.json
 msgctxt "Template part name"
 msgid "Header"
 msgstr ""
@@ -4038,17 +4874,22 @@ msgstr ""
 
 #: theme.json
 msgctxt "Template part name"
+msgid "Navigation Overlay"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Navigation Overlay: Contact"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
 msgid "Sidebar"
 msgstr ""
 
 #: styles/amber.json
 msgctxt "Style variation name"
 msgid "Amber"
-msgstr ""
-
-#: styles/block/post-meta-row.json
-msgctxt "Style variation name"
-msgid "Post Meta (row)"
 msgstr ""
 
 #: styles/blue.json
@@ -4129,6 +4970,11 @@ msgstr ""
 #: styles/red.json
 msgctxt "Style variation name"
 msgid "Red"
+msgstr ""
+
+#: styles/site-title-brand.json
+msgctxt "Style variation name"
+msgid "Brand color"
 msgstr ""
 
 #: styles/sky.json

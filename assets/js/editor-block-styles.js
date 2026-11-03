@@ -1,10 +1,10 @@
 /**
  * Register Blockwright block style variations in the editor.
  *
- * Name-only registration; the actual styling lives in CSS
- * (in the button-variant styles). Group style
- * variations are registered declaratively via /styles/*.json instead -
- * that path can't target the button's inner <a>, so buttons use this.
+ * Name-only registration; the actual styling lives in CSS. These styles need what a
+ * /styles/*.json file cannot express (a button's inner <a>, pseudo-elements, color-mix());
+ * the Card, Card Divided and Panel group styles and the Brand color site title are
+ * registered by their /styles/*.json files instead.
  */
 (function (blocks, i18n) {
 	if (!blocks || !blocks.registerBlockStyle) {
@@ -42,22 +42,11 @@
 		label: __('Badge', 'blockwright'),
 	});
 
-	// Callout band (core/group): a SUBTLE brand-tinted aside, not the solid tonal
-	// container. Styling via color-mix over surface-1 (like
-	// .bw-scorecard-foot) so it stays a faint wash in light AND dark - accent-soft (M3
-	// tone 30 in dark) read as the straight brand color, which is wrong for a band.
+	// Callout band (core/group): a SUBTLE brand-tinted aside. Styling via color-mix over surface-1 (like
+	// .bw-scorecard-foot) so it stays a faint wash in light AND dark.
 	blocks.registerBlockStyle('core/group', {
 		name: 'callout',
 		label: __('Callout', 'blockwright'),
-	});
-
-	// Opt-in brand-colored site title (default stays the neutral wordmark, brand on
-	// hover). Prominent element -> a deliberate one-click choice, not a default. Styling
-	// in the theme base styles (targets the inner <a>, like the button styles - a
-	// styles/*.json variation partial does NOT emit CSS for elements.link on site-title).
-	blocks.registerBlockStyle('core/site-title', {
-		name: 'brand',
-		label: __('Brand color', 'blockwright'),
 	});
 
 	// Brand divider: a separator drawn in the brand tone instead of the neutral

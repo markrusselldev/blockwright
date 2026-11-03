@@ -104,22 +104,22 @@
         {
           "slug": "link",
           "name": "Link",
-          "color": "light-dark(oklch(0.56 0.16 260), oklch(0.62 0.16 260))"
+          "color": "light-dark(oklch(0.5 0.16 260), oklch(0.72 0.1458 260))"
         },
         {
           "slug": "link-hover",
           "name": "Link Hover",
-          "color": "light-dark(oklch(0.49 0.16 260), oklch(0.69 0.16 260))"
+          "color": "light-dark(oklch(0.43 0.16 260), oklch(0.79 0.1064 260))"
         },
         {
           "slug": "link-active",
           "name": "Link Active",
-          "color": "light-dark(oklch(0.42 0.16 260), oklch(0.76 0.123 260))"
+          "color": "light-dark(oklch(0.36 0.1466 260), oklch(0.86 0.069 260))"
         },
         {
           "slug": "focus",
           "name": "Focus",
-          "color": "light-dark(oklch(0.65 0.16 260), oklch(0.53 0.16 260))"
+          "color": "light-dark(oklch(0.59 0.16 260), oklch(0.62 0.16 260))"
         },
         {
           "slug": "btn-soft-bg",

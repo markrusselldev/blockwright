@@ -14,7 +14,7 @@ That is the single place support is handled, so nothing falls through the cracks
 
 ## Building
 
-Requires Node 18 or newer.
+Requires Node 20.19 or newer on the 20 line, or 22.12 or newer.
 
 ```
 npm install

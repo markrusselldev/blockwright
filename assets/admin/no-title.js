@@ -78,11 +78,11 @@
 			const doc = iframe.contentDocument;
 			if (doc && doc.readyState === 'complete') {
 				raf2(run);
-			} else if (!iframe.dataset.atnNoTitleLoad) {
+			} else if (!iframe.dataset.bwNoTitleLoad) {
 				iframe.addEventListener('load', () => raf2(run), {
 					once: true,
 				});
-				iframe.dataset.atnNoTitleLoad = '1';
+				iframe.dataset.bwNoTitleLoad = '1';
 			}
 		} catch {
 			// ignore

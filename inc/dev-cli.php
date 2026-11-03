@@ -288,7 +288,7 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 			$index      = $root . '/src/index.js';
 			$wp_global  = $root . '/src/styles/_wp-global.css';
 			$dist_css   = $root . '/dist/theme.css';
-			$theme_base = $root . '/src/styles/theme-base.css';
+			$theme_base = $root . '/src/styles/theme-base.scss';
 
 			$exists = static function ( $path ) {
 				return file_exists( $path ) ? 'yes' : 'no';
@@ -347,7 +347,7 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 					'src/index.js'              => $exists( $index ),
 					'src/styles/_wp-global.css' => $exists( $wp_global ),
 					'dist/theme.css'            => $exists( $dist_css ),
-					'src/styles/theme-base.css' => $exists( $theme_base ),
+					'src/styles/theme-base.scss' => $exists( $theme_base ),
 				),
 				'import_order'            => $imports,
 				'bad_overrides_imported'  => $bad_hits,
@@ -383,7 +383,7 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 					}
 				}
 			} else {
-				\WP_CLI::log( "\nOverride files imported: none ✅" );
+				\WP_CLI::log( "\nOverride files imported: none" );
 			}
 
 			\WP_CLI::log( "\nSelector presence (src/styles/_wp-global.css):" );
@@ -410,7 +410,7 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 				$hints[] = 'Local spacing overrides still imported; remove or migrate them so WP Global Styles win.';
 			}
 			if ( ! $dist_has_rules && $src_has_rules ) {
-				$hints[] = 'dist/theme.css intentionally omits WP Global Styles (injected at runtime). This is expected under Option 1.';
+				$hints[] = 'dist/theme.css intentionally omits WP Global Styles (injected at runtime). This is expected.';
 			}
 
 			\WP_CLI::log( "\nLikely causes:" );

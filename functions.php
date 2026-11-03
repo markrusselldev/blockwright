@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! defined( 'BLOCKWRIGHT_VERSION' ) ) {
-	define( 'BLOCKWRIGHT_VERSION', '1.2.0' );
+	define( 'BLOCKWRIGHT_VERSION', '1.3.0' );
 }
 
 // Theme path/URI constants (safe for parent/child).
@@ -21,7 +21,7 @@ if ( ! defined( 'BLOCKWRIGHT_THEME_URI' ) ) {
 	define( 'BLOCKWRIGHT_THEME_URI', get_template_directory_uri() );
 }
 
-// Ensure core block styles are available (enables block gap, etc.).
+// Load core's own block styles.
 add_theme_support( 'wp-block-styles' );
 
 
@@ -35,8 +35,7 @@ if ( file_exists( $blockwright_env_loader ) ) {
 
 /**
  * Load inc/*.php. Dev tooling (inc/dev*.php) loads only in a development
- * environment - it must never run on a distributed/production site (e.g.
- * inc/dev-pages.php creates pages on theme activation).
+ * environment.
  */
 $blockwright_is_dev = function_exists( 'wp_get_environment_type' )
 	&& in_array( wp_get_environment_type(), array( 'local', 'development' ), true );
@@ -57,5 +56,5 @@ foreach ( glob( __DIR__ . '/inc/*.php' ) as $blockwright_file ) {
 
 $blockwright_dev_cli = get_template_directory() . '/inc/dev-cli.php';
 if ( $blockwright_is_dev && defined( 'WP_CLI' ) && WP_CLI && file_exists( $blockwright_dev_cli ) ) {
-	require_once $blockwright_dev_cli; // stripped from distributed builds; guard so it never fatals.
+	require_once $blockwright_dev_cli;
 }

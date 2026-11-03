@@ -11,7 +11,7 @@
  * Full width for edge-to-edge content. Sibling variants: footer-columns, footer-centered.
  */
 ?>
-<!-- wp:group {"metadata":{"name":"Footer"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large"}},"border":{"top":{"color":"var:preset|color|divider","width":"var:custom|border|width|thin"}}},"backgroundColor":"surface-2","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Footer', 'blockwright' ); ?>"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large"}},"border":{"top":{"color":"var:preset|color|divider","width":"var:custom|border|width|thin"}}},"backgroundColor":"surface-2","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-surface-2-background-color has-background" style="border-top-color:var(--wp--preset--color--divider);border-top-width:var(--wp--custom--border--width--thin);padding-top:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large)">
 
 <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|medium"}}}} -->
@@ -27,9 +27,17 @@
 </div>
 <!-- /wp:group -->
 
-<!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|s"}},"textColor":"text-2"} -->
-<p class="has-text-2-color has-text-color" style="font-size:var(--wp--preset--font-size--s)">© <?php echo esc_html( date_i18n( 'Y' ) ); ?> · <?php esc_html_e( 'Proudly powered by', 'blockwright' ); ?> <a href="https://wordpress.org" rel="nofollow">WordPress</a></p>
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|xxx-small"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group">
+<!-- wp:paragraph {"metadata":{"bindings":{"content":{"source":"blockwright/copyright-year"}}},"style":{"typography":{"fontSize":"var:preset|font-size|s"}},"textColor":"text-2"} -->
+<p class="has-text-2-color has-text-color" style="font-size:var(--wp--preset--font-size--s)">© <?php echo esc_html( date_i18n( 'Y' ) ); ?></p>
 <!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|s"}},"textColor":"text-2"} -->
+<p class="has-text-2-color has-text-color" style="font-size:var(--wp--preset--font-size--s)">· <?php /* translators: %s: a link to WordPress.org. */ printf( esc_html__( 'Proudly powered by %s', 'blockwright' ), '<a href="https://wordpress.org" rel="nofollow">WordPress</a>' ); ?></p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
 
 </div>
 <!-- /wp:column -->
@@ -37,8 +45,8 @@
 <!-- wp:column {"width":"40%"} -->
 <div class="wp-block-column" style="flex-basis:40%">
 
-<!-- wp:paragraph {"align":"right","style":{"typography":{"fontSize":"var:preset|font-size|s"}},"textColor":"text-2"} -->
-<p class="has-text-align-right has-text-2-color has-text-color" style="font-size:var(--wp--preset--font-size--s)"><a href="/privacy-policy/"><?php esc_html_e( 'Privacy', 'blockwright' ); ?></a> · <a href="/terms/"><?php esc_html_e( 'Terms', 'blockwright' ); ?></a> · <a href="/contact/"><?php esc_html_e( 'Contact', 'blockwright' ); ?></a></p>
+<!-- wp:paragraph {"className":"bw-text-end","style":{"typography":{"fontSize":"var:preset|font-size|s"}},"textColor":"text-2"} -->
+<p class="bw-text-end has-text-2-color has-text-color" style="font-size:var(--wp--preset--font-size--s)"><a href="#"><?php esc_html_e( 'Privacy', 'blockwright' ); ?></a> · <a href="#"><?php esc_html_e( 'Terms', 'blockwright' ); ?></a> · <a href="#"><?php esc_html_e( 'Contact', 'blockwright' ); ?></a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:social-links {"iconColor":"text-2","iconColorValue":"var(--wp--preset--color--text-2)","size":"has-small-icon-size","className":"is-style-logos-only","layout":{"type":"flex","justifyContent":"right"}} -->

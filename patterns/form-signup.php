@@ -3,15 +3,16 @@
  * Title: Form • Email Signup
  * Slug: blockwright/form-signup
  * Categories: contact, call-to-action
- * Keywords: form, email, signup, subscribe, newsletter, squeeze, lead, capture
- * Block Types: core/columns
+ * Keywords: form, email, signup, subscribe, newsletter, lead, capture
  * Inserter: true
- * Description: A compact email-capture (squeeze) form - heading, one line, email field, submit. Style-only: connect delivery with a form/newsletter plugin (the bare form does not send on its own).
+ * Description: A compact email-capture form - heading, one line, email field, submit. Style-only: connect delivery with a form/newsletter plugin (the bare form does not send on its own).
  *
  * @package Blockwright
  */
+
+$email_id = wp_unique_id( 'bw-form-email-' );
 ?>
-<!-- wp:group {"metadata":{"name":"Email Signup"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"surface-2","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Email Signup', 'blockwright' ); ?>"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"surface-2","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-surface-2-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large)">
 
 	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained","contentSize":"560px"}} -->
@@ -25,8 +26,11 @@
 		<!-- /wp:paragraph -->
 
 		<!-- wp:html -->
-		<form method="post" action="" style="display:flex;gap:var(--wp--preset--spacing--x-small);flex-wrap:wrap;justify-content:center;margin-top:var(--wp--preset--spacing--x-small)">
-			<input type="email" name="email" required placeholder="you@example.com" aria-label="Email address" style="flex:1 1 var(--wp--custom--form--field-min);max-width:var(--wp--custom--form--field-max)">
+		<form method="post" action="" style="display:flex;gap:var(--wp--preset--spacing--x-small);flex-wrap:wrap;justify-content:center;align-items:flex-end;margin-top:var(--wp--preset--spacing--x-small)">
+			<div style="display:grid;gap:var(--wp--preset--spacing--xx-small);flex:1 1 var(--wp--custom--form--field-min);max-width:var(--wp--custom--form--field-max)">
+				<label for="<?php echo esc_attr( $email_id ); ?>" style="font-size:var(--wp--preset--font-size--s)"><?php esc_html_e( 'Email address', 'blockwright' ); ?></label>
+				<input id="<?php echo esc_attr( $email_id ); ?>" type="email" name="email" required>
+			</div>
 			<button type="submit" class="wp-element-button"><?php esc_html_e( 'Subscribe', 'blockwright' ); ?></button>
 		</form>
 		<!-- /wp:html -->

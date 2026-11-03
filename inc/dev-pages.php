@@ -103,8 +103,8 @@ function blockwright_devpages_remove() {
 		return;
 	}
 
-	$allowed_slugs     = array( 'style-guide', 'pattern-showcase', 'pattern-showcase-wide', 'pattern-showcase-full' );
-	$allowed_templates = array( 'page-style-guide', 'page-pattern-showcase', 'page-pattern-showcase-wide', 'page-pattern-showcase-full' );
+	$allowed_slugs     = array( 'style-guide' );
+	$allowed_templates = array( 'page-style-guide' );
 
 	foreach ( $ids as $page_id ) {
 		$slug     = get_post_field( 'post_name', $page_id );

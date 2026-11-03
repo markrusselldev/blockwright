@@ -2,7 +2,7 @@
 /**
  * Title: Section • Feature Grid
  * Slug: blockwright/section-feature-grid
- * Categories: theme, columns
+ * Categories: featured, columns
  * Keywords: features, grid, cards, benefits, icons
  * Inserter: true
  * Description: A grid of features or benefits - an icon, title, and short line per item.
@@ -10,19 +10,19 @@
  * @package Blockwright
  */
 
-// Native core/icon names (theme baseline - swap per your product). Idea / reliable / flexible.
+// Native core/icon names (swap per your product). Idea / reliable / flexible.
 $icons    = array( 'core/tip', 'core/shield', 'core/shuffle' );
 $features = array(
-	array( 'Feature one', 'A short line on what this does and why the reader should care about it.' ),
-	array( 'Feature two', 'Keep each description parallel in length so the row reads evenly.' ),
-	array( 'Feature three', 'Swap the icons and copy to match your own product or service.' ),
+	array( __( 'Feature one', 'blockwright' ), __( 'A short line on what this does and why the reader should care about it.', 'blockwright' ) ),
+	array( __( 'Feature two', 'blockwright' ), __( 'Keep each description parallel in length so the row reads evenly.', 'blockwright' ) ),
+	array( __( 'Feature three', 'blockwright' ), __( 'Swap the icons and copy to match your own product or service.', 'blockwright' ) ),
 );
 ?>
-<!-- wp:group {"metadata":{"name":"Feature Grid"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"surface-2","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Feature Grid', 'blockwright' ); ?>"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"surface-2","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-surface-2-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large)">
 
-	<!-- wp:heading {"textAlign":"center","level":2,"fontSize":"2xl","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|large"}}}} -->
-	<h2 class="wp-block-heading has-text-align-center has-2-xl-font-size" style="margin-bottom:var(--wp--preset--spacing--large)"><?php esc_html_e( 'Features', 'blockwright' ); ?></h2>
+	<!-- wp:heading {"textAlign":"center","level":2,"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|large"}}}} -->
+	<h2 class="wp-block-heading has-text-align-center" style="margin-bottom:var(--wp--preset--spacing--large)"><?php esc_html_e( 'Features', 'blockwright' ); ?></h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|medium","left":"var:preset|spacing|medium"}}}} -->

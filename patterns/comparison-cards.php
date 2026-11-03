@@ -6,27 +6,27 @@
  * Keywords: comparison, versus, us vs them, why us, before after, difference, sell
  * Block Types: core/columns
  * Inserter: true
- * Description: A two-card "the usual way vs working with us" comparison - the honest contrast that turns a hesitant reader into an enquiry.
+ * Description: A two-card "the usual way vs working with us" comparison.
  *
  * @package Blockwright
  */
 
 $usual = array(
-	'Weeks of back-and-forth with no clear plan',
-	'Surprise costs added at the end',
-	'You chase them for updates',
+	__( 'A frustration with the usual way', 'blockwright' ),
+	__( 'A second frustration', 'blockwright' ),
+	__( 'A third frustration', 'blockwright' ),
 );
-$ours = array(
-	'A clear, fixed quote before we start',
-	'Weekly progress you can actually see',
-	'Launched, then supported - we do not disappear',
+$ours  = array(
+	__( 'What you do differently', 'blockwright' ),
+	__( 'A second thing you do differently', 'blockwright' ),
+	__( 'What happens after the work is done', 'blockwright' ),
 );
 ?>
-<!-- wp:group {"metadata":{"name":"Comparison Cards"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"surface-2","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Comparison Cards', 'blockwright' ); ?>"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"surface-2","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-surface-2-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large)">
 
-	<!-- wp:heading {"textAlign":"center","level":2,"fontSize":"2xl","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|large"}}}} -->
-	<h2 class="wp-block-heading has-text-align-center has-2-xl-font-size" style="margin-bottom:var(--wp--preset--spacing--large)"><?php esc_html_e( 'See the difference', 'blockwright' ); ?></h2>
+	<!-- wp:heading {"textAlign":"center","level":2,"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|large"}}}} -->
+	<h2 class="wp-block-heading has-text-align-center" style="margin-bottom:var(--wp--preset--spacing--large)"><?php esc_html_e( 'See the difference', 'blockwright' ); ?></h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|medium","left":"var:preset|spacing|medium"}}}} -->
@@ -51,8 +51,8 @@ $ours = array(
 
 		<!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"border":{"radius":"var:preset|border-radius|m","width":"var:custom|border|width|medium"}},"borderColor":"primary","backgroundColor":"surface-1"} -->
 		<div class="wp-block-column has-border-color has-primary-border-color has-surface-1-background-color has-background" style="border-width:var(--wp--custom--border--width--medium);border-radius:var(--wp--preset--border-radius--m);padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--medium)">
-			<!-- wp:paragraph {"textColor":"primary","fontSize":"s","style":{"typography":{"textTransform":"uppercase","fontWeight":"600"},"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|x-small"}}}} -->
-			<p class="has-primary-color has-text-color has-s-font-size" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--x-small);font-weight:600;text-transform:uppercase"><?php esc_html_e( 'Recommended', 'blockwright' ); ?></p>
+			<!-- wp:paragraph {"textColor":"link","fontSize":"s","style":{"typography":{"textTransform":"uppercase","fontWeight":"600"},"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|x-small"}}}} -->
+			<p class="has-link-color has-text-color has-s-font-size" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--x-small);font-weight:600;text-transform:uppercase"><?php esc_html_e( 'Recommended', 'blockwright' ); ?></p>
 			<!-- /wp:paragraph -->
 			<!-- wp:heading {"level":3,"fontSize":"l"} -->
 			<h3 class="wp-block-heading has-l-font-size"><?php esc_html_e( 'Working with us', 'blockwright' ); ?></h3>
@@ -69,7 +69,7 @@ $ours = array(
 			<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|medium"}}}} -->
 			<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--medium)">
 				<!-- wp:button {"className":"is-style-fill"} -->
-				<div class="wp-block-button is-style-fill"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Get a quote', 'blockwright' ); ?></a></div>
+				<div class="wp-block-button is-style-fill"><a class="wp-block-button__link wp-element-button" href="#"><?php esc_html_e( 'Get a quote', 'blockwright' ); ?></a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->

@@ -1,0 +1,14 @@
+{
+  "version": 3,
+  "title": "Brand color",
+  "slug": "brand",
+  "blockTypes": [
+    "core/site-title"
+  ],
+  "styles": {
+    "typography": {
+      "fontSize": "var(--wp--preset--font-size--lead)",
+      "fontWeight": "700"
+    }
+  }
+}

@@ -6,18 +6,18 @@
  * Keywords: scorecard, inspection, report, record, audit, status, checklist
  * Block Types: core/group
  * Inserter: true
- * Description: A compact inspection record - a titled header with a reference, rows of label-and-status chips (red / amber / green), and a footer note. Insert twice for a before/after. Good for an audit, checklist, or systems review.
+ * Description: A compact inspection record - a titled header with a reference, rows of label-and-status chips, and a footer note. Pairs with Scorecard • Resolved for a before/after. Good for an audit, checklist, or systems review.
  *
  * @package Blockwright
  */
 ?>
-<!-- wp:group {"metadata":{"name":"Scorecard Wrap"},"style":{"spacing":{"blockGap":"var:preset|spacing|x-small","padding":{"right":"0","left":"0"}}},"layout":{"type":"constrained","contentSize":"460px"}} -->
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Scorecard Wrap', 'blockwright' ); ?>"},"style":{"spacing":{"blockGap":"var:preset|spacing|x-small","padding":{"right":"0","left":"0"}}},"layout":{"type":"constrained","contentSize":"460px"}} -->
 <div class="wp-block-group" style="padding-right:0;padding-left:0">
 
-<!-- wp:group {"metadata":{"name":"Scorecard"},"style":{"spacing":{"blockGap":"0px"}},"backgroundColor":"surface-1","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Scorecard', 'blockwright' ); ?>"},"style":{"spacing":{"blockGap":"0px"}},"backgroundColor":"surface-1","layout":{"type":"constrained"}} -->
 <div class="wp-block-group has-surface-1-background-color has-background">
 
-	<!-- wp:group {"metadata":{"name":"Header"},"className":"bw-scorecard-head","style":{"spacing":{"blockGap":"var:preset|spacing|small","padding":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"border":{"bottom":{"color":"var:preset|color|border-subtle","width":"var:custom|border|width|thin"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+	<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Header', 'blockwright' ); ?>"},"className":"bw-scorecard-head","style":{"spacing":{"blockGap":"var:preset|spacing|small","padding":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"border":{"bottom":{"color":"var:preset|color|border-subtle","width":"var:custom|border|width|thin"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
 	<div class="wp-block-group bw-scorecard-head" style="border-bottom-color:var(--wp--preset--color--border-subtle);border-bottom-width:var(--wp--custom--border--width--thin);padding-top:var(--wp--preset--spacing--small);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--small);padding-left:var(--wp--preset--spacing--medium)">
 
 		<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
@@ -36,7 +36,7 @@
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:group {"metadata":{"name":"Rows"},"style":{"spacing":{"blockGap":"0px","padding":{"left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}}},"layout":{"type":"default"}} -->
+	<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Rows', 'blockwright' ); ?>"},"style":{"spacing":{"blockGap":"0px","padding":{"left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}}},"layout":{"type":"default"}} -->
 	<div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
 <?php
 $rows = array(
@@ -58,7 +58,7 @@ foreach ( $rows as $i => $row ) {
 		? 'border-bottom-color:var(--wp--preset--color--border-subtle);border-bottom-width:var(--wp--custom--border--width--thin);'
 		: '';
 	?>
-		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|xx-small","bottom":"var:preset|spacing|xx-small"}}<?php echo $border; // phpcs:ignore ?>},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|xx-small","bottom":"var:preset|spacing|xx-small"}}<?php echo $border; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
 		<div class="wp-block-group" style="<?php echo esc_attr( $border_css ); ?>padding-top:var(--wp--preset--spacing--xx-small);padding-bottom:var(--wp--preset--spacing--xx-small)"><!-- wp:paragraph {"fontSize":"s"} -->
 		<p class="has-s-font-size"><?php echo esc_html( $label ); ?></p>
 		<!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-scorecard-chip","backgroundColor":"<?php echo esc_attr( $tone ); ?>-100","textColor":"<?php echo esc_attr( $tone ); ?>-800","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-small","bottom":"var:preset|spacing|xxx-small","left":"var:preset|spacing|x-small","right":"var:preset|spacing|x-small"}},"border":{"radius":"var:preset|border-radius|m"},"typography":{"fontWeight":"600"}},"fontSize":"s"} -->
@@ -70,7 +70,7 @@ foreach ( $rows as $i => $row ) {
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:group {"metadata":{"name":"Footer"},"className":"bw-scorecard-foot","style":{"spacing":{"padding":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"border":{"top":{"color":"var:preset|color|border-subtle","width":"var:custom|border|width|thin"}}},"layout":{"type":"constrained"}} -->
+	<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Footer', 'blockwright' ); ?>"},"className":"bw-scorecard-foot","style":{"spacing":{"padding":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"border":{"top":{"color":"var:preset|color|border-subtle","width":"var:custom|border|width|thin"}}},"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group bw-scorecard-foot" style="border-top-color:var(--wp--preset--color--border-subtle);border-top-width:var(--wp--custom--border--width--thin);padding-top:var(--wp--preset--spacing--small);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--small);padding-left:var(--wp--preset--spacing--medium)">
 		<!-- wp:paragraph {"textColor":"text-2","fontSize":"s"} -->
 		<p class="has-text-2-color has-text-color has-s-font-size"><?php esc_html_e( 'A short note about scope, terms, or what happens next.', 'blockwright' ); ?></p>

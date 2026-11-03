@@ -1,7 +1,7 @@
 /* Per-block shim: pullquote appearance (theme.json schema gap). Enqueued on
-   core/pullquote so it loads with the block itself. Previously these rules lived in
-   quote.css, which is enqueued on core/quote - so a standalone pullquote (no quote
-   block on the page) rendered without its border, centering, or larger italic. */
+   core/pullquote so it loads with the block itself. Keep these rules here, not in
+   quote.css: quote.css is enqueued on core/quote, so a standalone pullquote (no quote
+   block on the page) would render without its border, centering, or larger italic. */
 .wp-block-pullquote {
 	border-block: var(--wp--custom--border--width--medium) solid
 		var(--wp--preset--color--divider);

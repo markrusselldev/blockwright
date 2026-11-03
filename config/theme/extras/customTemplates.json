@@ -1,6 +1,16 @@
 {
 	"customTemplates": [
 		{
+			"name": "post-sidebar",
+			"title": "Post with Sidebar",
+			"postTypes": ["post"]
+		},
+		{
+			"name": "page-blog-sidebar",
+			"title": "Blog with Sidebar",
+			"postTypes": ["page"]
+		},
+		{
 			"name": "page-wide",
 			"title": "Wide",
 			"postTypes": ["page"]

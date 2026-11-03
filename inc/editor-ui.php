@@ -2,7 +2,7 @@
 /**
  * Editor UI controls for the block editor.
  *
- * Enqueues a small script to hide the title field on the Page post type,
+ * Enqueues a small script to hide the title field for the No Title template,
  * and an editor-only stylesheet injected into the editor iframe.
  *
  * @package Blockwright
@@ -66,6 +66,10 @@ add_action(
 add_action(
 	'enqueue_block_assets',
 	function (): void {
+		if ( ! is_admin() ) {
+			return;
+		}
+
 		$css_path = get_template_directory() . '/assets/admin/no-title.css';
 		$css_uri  = get_template_directory_uri() . '/assets/admin/no-title.css';
 
@@ -95,7 +99,7 @@ add_action(
 /**
  * Inject color-scheme into the editor iframe so light-dark() palette tokens
  * resolve to the OS preference in the canvas (the front end gets this from
- * dist/theme.css, which the editor doesn't load). Editor-only: the front end
+ * dist/theme.css, whose :root rule add_editor_style() scopes away). Editor-only: the front end
  * already declares it, so skip there to avoid a redundant request.
  */
 add_action(

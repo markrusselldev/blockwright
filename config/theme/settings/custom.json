@@ -3,14 +3,14 @@
 		"appearanceTools": true,
 		"custom": {
 			"button": {
-				"fontSize": "0.9375rem",
+				"fontSize": "1.1875rem",
 				"gap": "var:preset|spacing|x-small",
 				"textGap": "0.5ch",
 				"radius": "var:preset|border-radius|m",
 				"px": "var:preset|spacing|x-small",
 				"py": "0",
 				"height": "var:custom|form|control-height",
-				"weight": "500",
+				"weight": "700",
 				"default": {
 					"bg": "var(--wp--preset--color--btn-default-bg)",
 					"bgHover": "var(--wp--preset--color--btn-default-bg-hover)",
@@ -21,8 +21,8 @@
 					"px": "var:preset|spacing|medium",
 					"py": "var:preset|spacing|x-small",
 					"radius": "var:preset|border-radius|m",
-					"weight": "700",
-					"fontSize": "1.1875rem"
+					"weight": "var:custom|button|weight",
+					"fontSize": "var:custom|button|font-size"
 				},
 				"fill": {
 					"bg": "var(--wp--preset--color--btn-fill-bg)",
@@ -122,11 +122,10 @@
 				"lineHeightControl": "1.35",
 				"lineHeightBody": "1.6",
 				"letterSpacingTight": "-0.01em",
-				"letterSpacingTighter": "-0.02em",
-				"body-base": "1.125rem"
+				"letterSpacingTighter": "-0.02em"
 			},
 			"overlay": {
-				"scrim": "color-mix(in oklab, var:preset|color|text-strong 50%, transparent)"
+				"scrim": "color-mix(in oklab, var(--wp--preset--color--text-strong) 50%, transparent)"
 			},
 			"shadow": {
 				"xs": "0 1px 2px color-mix(in oklab, var(--wp--preset--color--neutral-1000) 10%, transparent)",
@@ -152,7 +151,7 @@
 						"text": "var:preset|color|text-1"
 					},
 					"hover": {
-						"bg": "color-mix(in oklab, var(--wp--preset--color--surface-3) 90%, var:preset|color|text-strong 10%)",
+						"bg": "color-mix(in oklab, var(--wp--preset--color--surface-3) 90%, var(--wp--preset--color--text-strong) 10%)",
 						"text": "var:preset|color|text-1"
 					}
 				},

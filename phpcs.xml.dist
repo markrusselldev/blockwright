@@ -11,7 +11,7 @@
 	<exclude-pattern>*/vendor/*</exclude-pattern>
 	<exclude-pattern>*/node_modules/*</exclude-pattern>
 	<exclude-pattern>*/dist/*</exclude-pattern>
-	<!-- Dev-only tooling, stripped from the release build (see scripts/release.js);
+	<!-- Dev-only tooling, stripped from the release build;
 	     lint what actually ships. -->
 	<exclude-pattern>inc/dev*.php</exclude-pattern>
 
@@ -33,7 +33,7 @@
 	<config name="testVersion" value="7.4-"/>
 	<rule ref="PHPCompatibilityWP"/>
 
-	<!-- WordPress target: match style.css "Requires at least: 6.9". -->
+	<!-- WordPress target: match style.css "Requires at least". -->
 	<config name="minimum_wp_version" value="7.0"/>
 
 	<!-- Pattern files use WordPress's pattern header (Title/Slug/Categories), not a

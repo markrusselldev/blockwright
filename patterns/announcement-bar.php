@@ -11,11 +11,11 @@
  */
 
 ?>
-<!-- wp:group {"metadata":{"name":"Announcement Bar"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small","left":"var:preset|spacing|small","right":"var:preset|spacing|small"}}},"backgroundColor":"surface-3","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Announcement Bar', 'blockwright' ); ?>"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small","left":"var:preset|spacing|small","right":"var:preset|spacing|small"}}},"backgroundColor":"surface-3","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-surface-3-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-small);padding-bottom:var(--wp--preset--spacing--x-small);padding-left:var(--wp--preset--spacing--small);padding-right:var(--wp--preset--spacing--small)">
 
 	<!-- wp:paragraph {"align":"center","fontSize":"s","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
-	<p class="has-text-align-center has-s-font-size" style="margin-top:0;margin-bottom:0"><?php esc_html_e( 'Now booking new projects for next quarter.', 'blockwright' ); ?> <a href="#"><?php esc_html_e( 'Get in touch', 'blockwright' ); ?></a></p>
+	<p class="has-text-align-center has-s-font-size" style="margin-top:0;margin-bottom:0"><?php esc_html_e( 'Your announcement in one short line.', 'blockwright' ); ?> <a href="#"><?php esc_html_e( 'Get in touch', 'blockwright' ); ?></a></p>
 	<!-- /wp:paragraph -->
 
 </div>

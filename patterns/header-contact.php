@@ -11,9 +11,13 @@
  * primary (is-style-fill) button on the right. Width follows the site layout (alignwide
  * inner); set Position -> Sticky on the outer group to pin it. The phone and button are
  * placeholders - edit them with your real number and link.
+ *
+ * On phones the button is hidden (the block's Hide on mobile setting) so the site name fits,
+ * and the menu button opens the "Navigation Overlay: Contact" template part, which carries the
+ * button and the full phone number. Edit the phone and button there too.
  */
 ?>
-<!-- wp:group {"metadata":{"name":"Header: Contact"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium"}},"border":{"bottom":{"color":"var:preset|color|divider","width":"var:custom|border|width|thin"}}},"backgroundColor":"surface-1","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Header: Contact', 'blockwright' ); ?>"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium"}},"border":{"bottom":{"color":"var:preset|color|divider","width":"var:custom|border|width|thin"}}},"backgroundColor":"surface-1","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-surface-1-background-color has-background" style="border-bottom-color:var(--wp--preset--color--divider);border-bottom-width:var(--wp--custom--border--width--thin);padding-top:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium)">
 
 <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","justifyContent":"space-between","flexWrap":"nowrap","verticalAlignment":"center"}} -->
@@ -32,7 +36,7 @@
 <p class="bw-call has-m-font-size" style="font-weight:600"><a href="tel:+15555550100"><?php esc_html_e( '(555) 555-0100', 'blockwright' ); ?></a></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:buttons -->
+<!-- wp:buttons {"metadata":{"blockVisibility":{"viewport":{"mobile":false}}}} -->
 <div class="wp-block-buttons">
 <!-- wp:button {"className":"is-style-fill"} -->
 <div class="wp-block-button is-style-fill"><a class="wp-block-button__link wp-element-button" href="#"><?php esc_html_e( 'Get in touch', 'blockwright' ); ?></a></div>
@@ -40,7 +44,7 @@
 </div>
 <!-- /wp:buttons -->
 
-<!-- wp:navigation {"overlayMenu":"mobile","overlayBackgroundColor":"surface-1","overlayTextColor":"text-1","fontSize":"m","layout":{"type":"flex","justifyContent":"right"}} /-->
+<!-- wp:navigation {"ariaLabel":"<?php esc_attr_e( 'Primary', 'blockwright' ); ?>","overlayMenu":"mobile","overlay":"navigation-overlay-contact","overlayBackgroundColor":"surface-1","overlayTextColor":"text-1","fontSize":"m","layout":{"type":"flex","justifyContent":"right"}} /-->
 </div>
 <!-- /wp:group -->
 

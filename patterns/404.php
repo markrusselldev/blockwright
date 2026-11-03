@@ -21,10 +21,10 @@
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph {"align":"center","textColor":"text-2"} -->
-	<p class="has-text-align-center has-text-2-color has-text-color"><?php esc_html_e( 'The page you\'re looking for can\'t be found - it may have moved or never existed. Try a search, or head back home.', 'blockwright' ); ?></p>
+	<p class="has-text-align-center has-text-2-color has-text-color"><?php esc_html_e( 'The page you\'re looking for can\'t be found. It may have moved or never existed. Try a search, or head back home.', 'blockwright' ); ?></p>
 	<!-- /wp:paragraph -->
 
-	<!-- wp:search {"label":"Search","showLabel":false,"placeholder":"Search this site","buttonUseIcon":true,"align":"center"} /-->
+	<!-- wp:search {"label":"<?php echo esc_attr_x( 'Search', 'search form label', 'blockwright' ); ?>","showLabel":false,"placeholder":"<?php echo esc_attr_x( 'Search this site', 'search input placeholder', 'blockwright' ); ?>","buttonUseIcon":true,"align":"center"} /-->
 
 	<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|x-small"}}},"layout":{"type":"flex","justifyContent":"center"}} -->
 	<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--x-small)">

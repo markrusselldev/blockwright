@@ -47,6 +47,21 @@
       "gradients": [],
       "palette": [
         {
+          "color": "light-dark(oklch(0.622 0.1606 260), oklch(0.622 0.1606 260))",
+          "name": "Primary (brand color)",
+          "slug": "primary"
+        },
+        {
+          "color": "light-dark(oklch(0.55 0.16 260), oklch(0.8 0.1009 260))",
+          "name": "Primary 600",
+          "slug": "primary-600"
+        },
+        {
+          "color": "light-dark(oklch(0.68 0.16 260), oklch(0.66 0.16 260))",
+          "name": "Primary 500",
+          "slug": "primary-500"
+        },
+        {
           "color": "var:preset|color|neutral-0",
           "name": "Surface 1",
           "slug": "surface-1"
@@ -77,17 +92,17 @@
           "slug": "text-2"
         },
         {
-          "color": "light-dark(oklch(0.56 0.16 260), oklch(0.62 0.16 260))",
+          "color": "light-dark(oklch(0.5 0.16 260), oklch(0.72 0.1458 260))",
           "name": "Link",
           "slug": "link"
         },
         {
-          "color": "light-dark(oklch(0.49 0.16 260), oklch(0.69 0.16 260))",
+          "color": "light-dark(oklch(0.43 0.16 260), oklch(0.79 0.1064 260))",
           "name": "Link Hover",
           "slug": "link-hover"
         },
         {
-          "color": "light-dark(oklch(0.42 0.16 260), oklch(0.76 0.123 260))",
+          "color": "light-dark(oklch(0.36 0.1466 260), oklch(0.86 0.069 260))",
           "name": "Link Active",
           "slug": "link-active"
         },
@@ -97,7 +112,7 @@
           "slug": "link-visited"
         },
         {
-          "color": "light-dark(oklch(0.65 0.16 260), oklch(0.53 0.16 260))",
+          "color": "light-dark(oklch(0.59 0.16 260), oklch(0.62 0.16 260))",
           "name": "Focus",
           "slug": "focus"
         },
@@ -305,16 +320,6 @@
           "color": "light-dark(oklch(0.24 0.05 260), oklch(0.24 0.05 260))",
           "name": "On Primary",
           "slug": "on-primary"
-        },
-        {
-          "color": "light-dark(oklch(0.68 0.16 260), oklch(0.66 0.16 260))",
-          "name": "Primary 500",
-          "slug": "primary-500"
-        },
-        {
-          "color": "light-dark(oklch(0.55 0.16 260), oklch(0.8 0.1009 260))",
-          "name": "Primary 600",
-          "slug": "primary-600"
         },
         {
           "color": "light-dark(oklch(0.48 0.16 260), oklch(0.85 0.0742 260))",
@@ -525,11 +530,6 @@
           "color": "var:preset|color|danger-600",
           "name": "Red",
           "slug": "red"
-        },
-        {
-          "color": "light-dark(oklch(0.622 0.1606 260), oklch(0.622 0.1606 260))",
-          "name": "Primary (brand color)",
-          "slug": "primary"
         }
       ]
     },
@@ -556,11 +556,11 @@
       },
       "button": {
         "cta": {
-          "fontSize": "1.1875rem",
+          "fontSize": "var:custom|button|font-size",
           "px": "var:preset|spacing|medium",
           "py": "var:preset|spacing|x-small",
           "radius": "var:preset|border-radius|m",
-          "weight": "700"
+          "weight": "var:custom|button|weight"
         },
         "default": {
           "bg": "var(--wp--preset--color--btn-default-bg)",
@@ -574,7 +574,7 @@
           "bgHover": "var(--wp--preset--color--btn-fill-bg-hover)",
           "text": "var(--wp--preset--color--btn-fill-text)"
         },
-        "fontSize": "0.9375rem",
+        "fontSize": "1.1875rem",
         "gap": "var:preset|spacing|x-small",
         "height": "var:custom|form|control-height",
         "outline": {
@@ -602,7 +602,7 @@
           "text": "var(--wp--preset--color--link)"
         },
         "textGap": "0.5ch",
-        "weight": "500"
+        "weight": "700"
       },
       "divider": {
         "color": "var:preset|color|divider",
@@ -667,7 +667,7 @@
             "text": "var:preset|color|text-1"
           },
           "hover": {
-            "bg": "color-mix(in oklab, var(--wp--preset--color--surface-3) 90%, var:preset|color|text-strong 10%)",
+            "bg": "color-mix(in oklab, var(--wp--preset--color--surface-3) 90%, var(--wp--preset--color--text-strong) 10%)",
             "text": "var:preset|color|text-1"
           },
           "pad-block": "var:preset|spacing|x-small",
@@ -676,7 +676,7 @@
         }
       },
       "overlay": {
-        "scrim": "color-mix(in oklab, var:preset|color|text-strong 50%, transparent)"
+        "scrim": "color-mix(in oklab, var(--wp--preset--color--text-strong) 50%, transparent)"
       },
       "panel": {
         "borderColor": "var(--wp--custom--divider--color)",
@@ -697,7 +697,6 @@
         "striped-bg": "var:preset|color|surface-2"
       },
       "typography": {
-        "body-base": "1.125rem",
         "letterSpacingTight": "-0.01em",
         "letterSpacingTighter": "-0.02em",
         "lineHeightBody": "1.6",
@@ -792,49 +791,61 @@
       ],
       "fontSizes": [
         {
-          "fluid": true,
+          "fluid": false,
           "name": "2XS",
           "size": "0.75rem",
           "slug": "xxs"
         },
         {
-          "fluid": true,
+          "fluid": false,
           "name": "XS",
           "size": "0.875rem",
           "slug": "xs"
         },
         {
-          "fluid": true,
+          "fluid": false,
           "name": "Small",
           "size": "0.9375rem",
           "slug": "s"
         },
         {
-          "fluid": true,
+          "fluid": false,
           "name": "Medium",
           "size": "1rem",
           "slug": "m"
         },
         {
-          "fluid": true,
+          "fluid": {
+            "max": "1.125rem",
+            "min": "1rem"
+          },
           "name": "Base",
           "size": "1.125rem",
           "slug": "base"
         },
         {
-          "fluid": true,
+          "fluid": {
+            "max": "1.25rem",
+            "min": "1.1111rem"
+          },
           "name": "Large",
           "size": "1.25rem",
           "slug": "l"
         },
         {
-          "fluid": true,
+          "fluid": {
+            "max": "1.375rem",
+            "min": "1.2222rem"
+          },
           "name": "Lead",
           "size": "1.375rem",
           "slug": "lead"
         },
         {
-          "fluid": true,
+          "fluid": {
+            "max": "1.5rem",
+            "min": "1.3333rem"
+          },
           "name": "XL",
           "size": "1.5rem",
           "slug": "xl"
@@ -1048,14 +1059,6 @@
             }
           }
         },
-        "spacing": {
-          "padding": {
-            "bottom": "var:preset|spacing|small",
-            "left": "var:preset|spacing|small",
-            "right": "var:preset|spacing|small",
-            "top": "var:preset|spacing|small"
-          }
-        },
         "typography": {
           "textDecoration": "none"
         }
@@ -1063,16 +1066,6 @@
       "core/navigation-submenu": {
         "spacing": {
           "blockGap": "var:preset|spacing|small"
-        }
-      },
-      "core/paragraph": {
-        "color": {
-          "text": "var:preset|color|text-1"
-        },
-        "typography": {
-          "fontFamily": "var:preset|font-family|body",
-          "fontSize": "var:preset|font-size|base",
-          "lineHeight": "var:custom|typography|line-height-body"
         }
       },
       "core/post-content": {
@@ -1172,6 +1165,11 @@
           }
         }
       },
+      "core/read-more": {
+        "typography": {
+          "textDecoration": "underline"
+        }
+      },
       "core/separator": {
         "border": {
           "top": {
@@ -1210,7 +1208,7 @@
           "link": {
             ":hover": {
               "color": {
-                "text": "var:preset|color|primary"
+                "text": "var:preset|color|link"
               },
               "typography": {
                 "textDecoration": "none"
@@ -1267,15 +1265,25 @@
       "background": "var(--wp--preset--color--surface-1)",
       "text": "var(--wp--preset--color--text-1)"
     },
-    "css": "/* ============================================\n * Custom CSS injected into theme.json styles\n * ============================================\n * For front-end styling that theme.json's schema cannot express. Design VALUES do not\n * belong here - they are theme.json tokens (single source of truth). The former dark-mode\n * text-1 softening moved into the text-1 token itself as a light-dark() value, so it follows\n * color-scheme instead of a prefers-color-scheme media query. Intentionally empty for now.\n */",
+    "css": "/* ============================================\n * Custom CSS injected into theme.json styles\n * ============================================\n * For front-end styling that theme.json's schema cannot express. Design VALUES do not\n * belong here - they are theme.json tokens (single source of truth).\n */",
     "elements": {
       "button": {
+        ":active": {
+          "color": {
+            "background": "var(--wp--custom--button--fill--bg-active)"
+          }
+        },
+        ":hover": {
+          "color": {
+            "background": "var(--wp--custom--button--fill--bg-hover)"
+          }
+        },
         "border": {
           "radius": "var(--wp--custom--button--radius)"
         },
         "color": {
-          "background": "var(--wp--custom--button--default--bg)",
-          "text": "var(--wp--custom--button--default--text)"
+          "background": "var(--wp--custom--button--fill--bg)",
+          "text": "var(--wp--custom--button--fill--text)"
         },
         "dimensions": {
           "minHeight": "var(--wp--custom--button--height)"
@@ -1332,7 +1340,7 @@
         },
         "typography": {
           "fontFamily": "var:preset|font-family|headings",
-          "fontSize": "var:preset|font-size|l",
+          "fontSize": "var:preset|font-size|lead",
           "fontWeight": "700",
           "letterSpacing": "var:custom|typography|letter-spacing-tight",
           "lineHeight": "1.2"
@@ -1344,7 +1352,7 @@
         },
         "typography": {
           "fontFamily": "var:preset|font-family|headings",
-          "fontSize": "var:preset|font-size|m",
+          "fontSize": "var:preset|font-size|l",
           "fontWeight": "700",
           "letterSpacing": "var:custom|typography|letter-spacing-tight",
           "lineHeight": "1.25"
@@ -1356,7 +1364,7 @@
         },
         "typography": {
           "fontFamily": "var:preset|font-family|headings",
-          "fontSize": "var:preset|font-size|s",
+          "fontSize": "var:preset|font-size|base",
           "fontWeight": "700",
           "letterSpacing": "var:custom|typography|letter-spacing-tight",
           "lineHeight": "1.3"
@@ -1368,10 +1376,11 @@
         },
         "typography": {
           "fontFamily": "var:preset|font-family|headings",
-          "fontSize": "var:preset|font-size|xs",
+          "fontSize": "var:preset|font-size|base",
           "fontWeight": "700",
-          "letterSpacing": "var:custom|typography|letter-spacing-tight",
-          "lineHeight": "1.35"
+          "letterSpacing": "var:custom|eyebrow|tracking",
+          "lineHeight": "1.35",
+          "textTransform": "uppercase"
         }
       },
       "link": {
@@ -1415,11 +1424,25 @@
     },
     "typography": {
       "fontFamily": "var:preset|font-family|body",
-      "fontSize": "var(--wp--custom--typography--body-base)",
+      "fontSize": "var:preset|font-size|base",
       "lineHeight": "var(--wp--custom--typography--line-height-body)"
     }
   },
   "customTemplates": [
+    {
+      "name": "post-sidebar",
+      "postTypes": [
+        "post"
+      ],
+      "title": "Post with Sidebar"
+    },
+    {
+      "name": "page-blog-sidebar",
+      "postTypes": [
+        "page"
+      ],
+      "title": "Blog with Sidebar"
+    },
     {
       "name": "page-wide",
       "postTypes": [
@@ -1507,6 +1530,16 @@
       "area": "footer",
       "name": "footer-columns",
       "title": "Footer: Columns"
+    },
+    {
+      "area": "navigation-overlay",
+      "name": "navigation-overlay",
+      "title": "Navigation Overlay"
+    },
+    {
+      "area": "navigation-overlay",
+      "name": "navigation-overlay-contact",
+      "title": "Navigation Overlay: Contact"
     },
     {
       "area": "uncategorized",

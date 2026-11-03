@@ -22,7 +22,7 @@
 						},
 						":hover": {
 							"color": {
-								"text": "var:preset|color|primary"
+								"text": "var:preset|color|link"
 							},
 							"typography": {
 								"textDecoration": "none"

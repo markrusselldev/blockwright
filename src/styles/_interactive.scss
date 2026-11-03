@@ -1,5 +1,4 @@
 // _interactive.scss - Interactive element styling
-// Note: Code padding removed (handled by assets/blocks/code.css)
 
 :where(
 	a,
@@ -8,11 +7,42 @@
 	.wp-element-button,
 	input,
 	select,
-	textarea
+	textarea,
+	pre[tabindex]
 ):focus-visible {
 	outline: var(--wp--custom--form--focus-width) solid
 		var(--wp--custom--form--focus-ring);
 	outline-offset: var(--wp--preset--spacing--xx-small);
+}
+
+// The ring color above is fitted to the page surfaces (surface-1 to surface-3). On a band that
+// is not a page surface it can vanish, so there the ring takes the band's own ink:
+// - brand-fill: on-brand-fill (clears 4.5:1 on the band by construction);
+// - the inverted neutral steps 600-1000 (dark in light mode, light in dark mode): neutral-0
+//   (7.5:1 or more in both modes);
+// - a cover with a dark overlay (core adds .is-light only to light ones): on-media, the same
+//   ink its text uses over the photo.
+// The :is() list outranks the form-control rings too.
+$bw-focusable: "a, button, [role='button'], .wp-element-button, input, select, textarea, pre[tabindex]";
+
+.has-brand-fill-background-color :is(#{$bw-focusable}):focus-visible {
+	outline-color: var(--wp--preset--color--on-brand-fill);
+}
+
+:is(
+		.has-neutral-600-background-color,
+		.has-neutral-700-background-color,
+		.has-neutral-800-background-color,
+		.has-neutral-900-background-color,
+		.has-neutral-950-background-color,
+		.has-neutral-1000-background-color
+	)
+	:is(#{$bw-focusable}):focus-visible {
+	outline-color: var(--wp--preset--color--neutral-0);
+}
+
+.wp-block-cover:not(.is-light) :is(#{$bw-focusable}):focus-visible {
+	outline-color: var(--wp--preset--color--on-media);
 }
 
 a {
@@ -23,9 +53,19 @@ a {
 		text-decoration-color 0.15s ease;
 }
 
+// theme.json's text-decoration shorthand on the Read More block resets the thickness set on `a` above.
+.wp-block-read-more {
+	text-decoration-thickness: var(--wp--custom--border--width--thin);
+}
+
+// The underline thickens on hover and focus, so the state change is not color alone.
+a:hover,
+a:focus {
+	text-decoration-thickness: var(--wp--custom--border--width--medium);
+}
+
 // ── Finishing polish ────────────────────────────────────────────────
-// Small, modern typographic touches that read as "considered" without
-// changing layout. All degrade gracefully on older browsers.
+// Typographic rules that do not change layout. All degrade gracefully on older browsers.
 
 // Even, intentional heading wraps (no lonely last word).
 :where(h1, h2, h3, h4, h5, h6) {
@@ -42,15 +82,20 @@ a {
 }
 
 // text-wrap: pretty avoids orphan single-word last lines. overflow-wrap stays
-// normal: break-word was splitting ordinary short words (e.g. "it") mid-word at
-// the wrap inside constrained columns. Genuinely overlong tokens (raw URLs) are
-// rare in body copy and, if they ever appear, get a targeted break-word there.
-:where(p, li, dd, figcaption, blockquote) {
+// normal, because break-word splits ordinary short words at the wrap inside
+// constrained columns. word-break goes back to normal too: core's Columns block
+// sets `word-break: break-word` on every column, which breaks words anywhere
+// whatever overflow-wrap says.
+// Genuinely overlong tokens (raw URLs) are rare in body copy and, if they ever
+// appear, get a targeted break-word there; a table too narrow for a word scrolls
+// sideways inside core's `overflow-x: auto` table wrapper.
+:where(p, li, dd, figcaption, blockquote, th, td) {
 	text-wrap: pretty;
 	overflow-wrap: normal;
+	word-break: normal;
 }
 
-// Anchored headings clear a sticky header when jumped to (TOC / showcase nav).
+// Anchored headings clear a sticky header when jumped to (tables of contents, in-page links).
 :where(h1, h2, h3, h4, h5, h6)[id] {
 	/* Clear the sticky header: its bar height plus a little breathing room, both tokens. */
 	scroll-margin-top: calc(
@@ -72,7 +117,7 @@ a {
 		border-color 0.15s ease;
 }
 
-// A considered text selection instead of the browser default.
+// Text selection in the theme colors.
 ::selection {
 	background-color: color-mix(
 		in oklab,
@@ -82,7 +127,7 @@ a {
 }
 
 // Page header - the post-title on a page reads as a proper page title
-// (calmer than a hero headline, with an underline) instead of a shouty H1.
+// (smaller than a hero headline, with an underline).
 // Applied via the bw-page-header wrapper in the page templates.
 .bw-page-header {
 	margin-bottom: var(--wp--preset--spacing--large);
@@ -96,8 +141,8 @@ a {
 }
 
 // Linked post titles (archives, query loops, related lists) read as ink, with
-// the accent held back for hover. Without this they inherit the global link
-// color, washing whole title lists in the accent hue.
+// the link color held back for hover. Without this they inherit the global link
+// color, turning whole title lists the link color.
 .wp-block-post-title a {
 	color: var(--wp--preset--color--text-1);
 	text-decoration: none;
@@ -118,8 +163,7 @@ p.has-text-2-color[style*="text-transform:uppercase"] {
 }
 
 // Stats band: keep the big figures on one line, and let labels wrap only at
-// spaces (never mid-word) even in tight columns - overriding the global
-// break-word so "2,500+" and "RECOMMEND" don't split.
+// spaces (never mid-word) even in tight columns.
 .bw-stats .has-xxl-font-size {
 	white-space: nowrap;
 }
@@ -176,20 +220,23 @@ p.has-text-2-color[style*="text-transform:uppercase"] {
 // Raw/classic <pre> (pasted or classic-editor preformatted/code) ships no
 // overflow containment, so a long line overflows the content column - the
 // body's overflow-x guard then clips it, leaving it unreadable (and it can
-// push page width when the guard isn't in force). Scroll long lines WITHIN the
-// block instead. Block variants (.wp-block-code / .wp-block-preformatted) keep
-// their own rules via higher specificity.
+// push page width when the guard isn't in force). Wrap long lines, as core's
+// Preformatted block does: a scrolling <pre> here would have no tab stop, so a
+// keyboard user could not reach the rest of the line. Block variants
+// (.wp-block-code / .wp-block-preformatted) keep their own rules via higher
+// specificity.
 pre {
 	max-width: 100%;
-	overflow-x: auto;
+	overflow-wrap: anywhere;
+	white-space: pre-wrap;
 }
 
 // Visually-hidden text (skip links, hidden labels, screen-reader context).
 .screen-reader-text {
 	border: 0;
 	clip-path: inset(50%);
-	height: 1px; /* token-exempt: screen-reader-text clip idiom - a fixed a11y hiding technique, not a design value */
-	width: 1px; /* token-exempt: screen-reader-text clip idiom */
+	height: 1px; // token-exempt: screen-reader-text clip idiom - a fixed a11y hiding technique, not a design value
+	width: 1px; // token-exempt: screen-reader-text clip idiom
 	margin: -1px;
 	padding: 0;
 	overflow: hidden;
@@ -225,8 +272,9 @@ pre {
 }
 
 // Mobile nav overlay polish. Scoped to the open overlay, so the desktop header
-// nav is untouched.
-.wp-block-navigation__responsive-container.is-menu-open {
+// nav is untouched, and to core's default overlay: a custom overlay template part
+// (.disable-default-overlay) brings its own padding and close button.
+.wp-block-navigation__responsive-container.is-menu-open:not(.disable-default-overlay) {
 	// Panel breathing room + inset the close button out of the corner.
 	.wp-block-navigation__responsive-container-content {
 		padding-inline: var(--wp--preset--spacing--medium);
@@ -253,24 +301,30 @@ figure.wp-block-image figcaption {
 	margin-block-start: 0.5em;
 }
 
-// Classic [gallery] shortcode grids.
+// Classic [gallery] shortcode grids. minmax(0, 1fr) keeps the columns equal and
+// inside the content width even when one item has a long caption or a broken
+// image shows its alt text (plain 1fr grows to fit the widest item).
 .gallery {
 	display: grid;
 	gap: var(--wp--preset--spacing--small);
 	margin-block: var(--wp--preset--spacing--medium);
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .gallery-columns-2 {
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .gallery-columns-4 {
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 .gallery-columns-5 {
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 .gallery-item {
 	margin: 0;
+}
+// A narrow column can be shorter than one long word in a caption.
+.gallery-caption {
+	overflow-wrap: anywhere;
 }
 .gallery img {
 	width: 100%;
@@ -284,6 +338,13 @@ figure.wp-block-image figcaption {
 		var(--wp--preset--color--border-subtle);
 	outline-offset: var(--wp--preset--spacing--x-small, 0.5rem);
 	border-radius: var(--wp--preset--border-radius--m, 0.25rem);
+}
+
+// In a one-column post list, the divider under each post would sit inside the sticky post's outline. It is set per
+// instance in the layouts, so only !important reaches it.
+.sticky > .wp-block-group {
+	padding-bottom: 0 !important;
+	border-bottom-width: 0 !important;
 }
 
 // Respect a reduced-motion preference: neutralize transitions/animations and

@@ -11,11 +11,11 @@
  * @package Blockwright
  */
 ?>
-<!-- wp:group {"metadata":{"name":"Steps Process"},"align":"full","style":{"spacing":{"blockGap":"var:preset|spacing|large","margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"surface-1","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Steps Process', 'blockwright' ); ?>"},"align":"full","style":{"spacing":{"blockGap":"var:preset|spacing|large","margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"surface-1","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-surface-1-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large)">
 
-	<!-- wp:group {"align":"wide","layout":{"type":"constrained"}} -->
-	<div class="wp-block-group alignwide">
+	<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"right":"var:preset|spacing|small","left":"var:preset|spacing|small"}}},"layout":{"type":"constrained","justifyContent":"left"}} -->
+	<div class="wp-block-group alignwide" style="padding-right:var(--wp--preset--spacing--small);padding-left:var(--wp--preset--spacing--small)">
 		<!-- wp:paragraph {"className":"is-style-eyebrow","fontSize":"s"} -->
 		<p class="is-style-eyebrow has-s-font-size"><?php esc_html_e( 'Our process', 'blockwright' ); ?></p>
 		<!-- /wp:paragraph -->
@@ -36,7 +36,7 @@
 		<!-- wp:column -->
 		<div class="wp-block-column">
 			<!-- wp:paragraph {"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"link","fontSize":"xxl"} -->
-			<p class="has-link-color has-text-color has-xxl-font-size" style="font-weight:700;line-height:1">01</p>
+			<p class="has-link-color has-text-color has-xxl-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '01', 'blockwright' ); ?></p>
 			<!-- /wp:paragraph -->
 			<!-- wp:heading {"level":3,"fontSize":"l"} -->
 			<h3 class="wp-block-heading has-l-font-size"><?php esc_html_e( 'Get in touch', 'blockwright' ); ?></h3>
@@ -50,7 +50,7 @@
 		<!-- wp:column -->
 		<div class="wp-block-column">
 			<!-- wp:paragraph {"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"link","fontSize":"xxl"} -->
-			<p class="has-link-color has-text-color has-xxl-font-size" style="font-weight:700;line-height:1">02</p>
+			<p class="has-link-color has-text-color has-xxl-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '02', 'blockwright' ); ?></p>
 			<!-- /wp:paragraph -->
 			<!-- wp:heading {"level":3,"fontSize":"l"} -->
 			<h3 class="wp-block-heading has-l-font-size"><?php esc_html_e( 'We make a plan', 'blockwright' ); ?></h3>
@@ -64,13 +64,13 @@
 		<!-- wp:column -->
 		<div class="wp-block-column">
 			<!-- wp:paragraph {"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"link","fontSize":"xxl"} -->
-			<p class="has-link-color has-text-color has-xxl-font-size" style="font-weight:700;line-height:1">03</p>
+			<p class="has-link-color has-text-color has-xxl-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '03', 'blockwright' ); ?></p>
 			<!-- /wp:paragraph -->
 			<!-- wp:heading {"level":3,"fontSize":"l"} -->
 			<h3 class="wp-block-heading has-l-font-size"><?php esc_html_e( 'Get started', 'blockwright' ); ?></h3>
 			<!-- /wp:heading -->
 			<!-- wp:paragraph -->
-			<p><?php esc_html_e( 'Describe the final step and the outcome the reader can expect once it\'s done.', 'blockwright' ); ?></p>
+			<p><?php esc_html_e( 'Describe the third step and the outcome the reader can expect once it\'s done.', 'blockwright' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
@@ -78,7 +78,7 @@
 		<!-- wp:column -->
 		<div class="wp-block-column">
 			<!-- wp:paragraph {"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"link","fontSize":"xxl"} -->
-			<p class="has-link-color has-text-color has-xxl-font-size" style="font-weight:700;line-height:1">04</p>
+			<p class="has-link-color has-text-color has-xxl-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '04', 'blockwright' ); ?></p>
 			<!-- /wp:paragraph -->
 			<!-- wp:heading {"level":3,"fontSize":"l"} -->
 			<h3 class="wp-block-heading has-l-font-size"><?php esc_html_e( 'And you\'re set', 'blockwright' ); ?></h3>

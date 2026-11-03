@@ -6,7 +6,7 @@
  * Block Types: core/post-content
  * Post Types: page
  * Inserter: true
- * Description: A full portfolio page - hero, a short intro, selected work, skills, testimonials, and a call to action.
+ * Description: A full portfolio page - hero, a short intro, selected work, skills, testimonials, and a call to action. Use the No Title or Landing Page template so the page title does not show above it.
  *
  * @package Blockwright
  */

@@ -4,7 +4,7 @@
  * Slug: blockwright/post-meta
  * Categories: blockwright
  * Inserter: true
- * Description: Author, date, and categories below titles. Icon-styled variant available via block styles.
+ * Description: Author, date, and categories below titles.
  *
  * @package Blockwright
  */

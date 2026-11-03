@@ -12,19 +12,24 @@
 ?>
 <!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group">
-	<!-- wp:query {"query":{"perPage":6,"postType":"post"}} -->
+	<!-- wp:query {"query":{"perPage":6,"postType":"post","sticky":"ignore"}} -->
 	<div class="wp-block-query">
 		<!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
 		<!-- wp:group -->
 		<div class="wp-block-group">
 			<!-- wp:post-featured-image {"isLink":true} /-->
-			<!-- wp:post-title {"isLink":true,"level":3} /-->
-			<!-- wp:post-excerpt {"moreText":"Read more"} /-->
+			<!-- wp:post-title {"isLink":true,"level":2,"fontSize":"lead"} /-->
+			<!-- wp:post-excerpt /-->
+			<!-- wp:read-more /-->
 		</div>
 		<!-- /wp:group -->
 		<!-- /wp:post-template -->
 
-		<!-- wp:query-pagination /-->
+		<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"space-between"}} -->
+		<!-- wp:query-pagination-previous /-->
+		<!-- wp:query-pagination-numbers /-->
+		<!-- wp:query-pagination-next /-->
+		<!-- /wp:query-pagination -->
 	</div>
 	<!-- /wp:query -->
 </div>

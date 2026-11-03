@@ -10,6 +10,13 @@
 	color: var(--wp--preset--color--text-1);
 }
 
+/* theme.json has no logical border side, so its bar is on the left. In a right-to-left language the bar moves to
+   the start of the text. */
+.wp-block-quote:dir(rtl) {
+	border-left: 0;
+	border-right: var(--wp--custom--border--width--thick) solid var(--wp--preset--color--link);
+}
+
 /* Quote text: italic with slightly larger size for emphasis */
 .wp-block-quote p {
 	font-style: italic;
@@ -26,6 +33,3 @@
 	color: var(--wp--preset--color--text-2);
 }
 
-/* Pullquote appearance moved to assets/blocks/pullquote.css (enqueued on
-   core/pullquote), so it loads with the pullquote itself rather than only when a
-   core/quote block happens to be on the page. */

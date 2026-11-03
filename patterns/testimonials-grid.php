@@ -13,11 +13,11 @@
 
 $avatar_url = get_theme_file_uri( 'assets/images/placeholder-avatar.svg' );
 ?>
-<!-- wp:group {"metadata":{"name":"Testimonials Grid"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"surface-2","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Testimonials Grid', 'blockwright' ); ?>"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"surface-2","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-surface-2-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large)">
 
-	<!-- wp:heading {"textAlign":"center","level":2,"fontSize":"2xl"} -->
-	<h2 class="wp-block-heading has-text-align-center has-2-xl-font-size"><?php esc_html_e( 'What people say', 'blockwright' ); ?></h2>
+	<!-- wp:heading {"textAlign":"center","level":2} -->
+	<h2 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'What people say', 'blockwright' ); ?></h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:columns {"align":"wide"} -->
@@ -27,7 +27,7 @@ $avatar_url = get_theme_file_uri( 'assets/images/placeholder-avatar.svg' );
 		<div class="wp-block-column has-border-color has-border-subtle-border-color has-surface-1-background-color has-background" style="border-width:var(--wp--custom--border--width--thin);border-radius:var(--wp--preset--border-radius--l);padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)">
 
 			<!-- wp:paragraph {"style":{"typography":{"fontStyle":"italic"}}} -->
-			<p style="font-style:italic"><?php esc_html_e( '"A specific, believable quote about the result you delivered. Real names and concrete outcomes beat vague praise."', 'blockwright' ); ?></p>
+			<p style="font-style:italic"><?php esc_html_e( '"A specific quote from a real customer about the result you delivered."', 'blockwright' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-small","margin":{"top":"var:preset|spacing|x-small"}}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
@@ -39,11 +39,11 @@ $avatar_url = get_theme_file_uri( 'assets/images/placeholder-avatar.svg' );
 				<!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 				<div class="wp-block-group">
 					<!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"fontSize":"s"} -->
-					<p class="has-s-font-size" style="font-weight:600"><?php esc_html_e( 'Sarah Chen', 'blockwright' ); ?></p>
+					<p class="has-s-font-size" style="font-weight:600"><?php esc_html_e( 'Customer name', 'blockwright' ); ?></p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {"textColor":"text-2","fontSize":"xs"} -->
-					<p class="has-text-2-color has-text-color has-xs-font-size"><?php esc_html_e( 'Owner, Example Co.', 'blockwright' ); ?></p>
+					<p class="has-text-2-color has-text-color has-xs-font-size"><?php esc_html_e( 'Role, company', 'blockwright' ); ?></p>
 					<!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->
@@ -69,11 +69,11 @@ $avatar_url = get_theme_file_uri( 'assets/images/placeholder-avatar.svg' );
 				<!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 				<div class="wp-block-group">
 					<!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"fontSize":"s"} -->
-					<p class="has-s-font-size" style="font-weight:600"><?php esc_html_e( 'Marcus Rodriguez', 'blockwright' ); ?></p>
+					<p class="has-s-font-size" style="font-weight:600"><?php esc_html_e( 'Customer name', 'blockwright' ); ?></p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {"textColor":"text-2","fontSize":"xs"} -->
-					<p class="has-text-2-color has-text-color has-xs-font-size"><?php esc_html_e( 'Director, Sample Group', 'blockwright' ); ?></p>
+					<p class="has-text-2-color has-text-color has-xs-font-size"><?php esc_html_e( 'Role, company', 'blockwright' ); ?></p>
 					<!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->
@@ -99,11 +99,11 @@ $avatar_url = get_theme_file_uri( 'assets/images/placeholder-avatar.svg' );
 				<!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 				<div class="wp-block-group">
 					<!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"fontSize":"s"} -->
-					<p class="has-s-font-size" style="font-weight:600"><?php esc_html_e( 'Emily Foster', 'blockwright' ); ?></p>
+					<p class="has-s-font-size" style="font-weight:600"><?php esc_html_e( 'Customer name', 'blockwright' ); ?></p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {"textColor":"text-2","fontSize":"xs"} -->
-					<p class="has-text-2-color has-text-color has-xs-font-size"><?php esc_html_e( 'Founder, Creative Studio', 'blockwright' ); ?></p>
+					<p class="has-text-2-color has-text-color has-xs-font-size"><?php esc_html_e( 'Role, company', 'blockwright' ); ?></p>
 					<!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->

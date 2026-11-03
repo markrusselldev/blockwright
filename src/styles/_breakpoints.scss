@@ -1,10 +1,11 @@
 // Breakpoint mixins. The VALUES live in a single source - the JSON config
 // (config/theme/settings/custom.json -> settings.custom.layout.breakpoints),
 // emitted to _breakpoints.generated.scss by `npm run compose`. This file owns only
-// the query LOGIC, so no width is ever hardcoded in a media query again.
+// the query LOGIC, so a media query does not hardcode a width.
 //
 // Usage:  @use "breakpoints" as bp;  ... @include bp.below(lg) { ... }
 @use "sass:map";
+@use "sass:math";
 @use "breakpoints.generated" as gen;
 
 // Resolve a named breakpoint to its length; fail loudly on a typo.
@@ -15,17 +16,24 @@
 	@return map.get(gen.$breakpoints, $name);
 }
 
+// A media query's em is the browser's default text size, so a visitor who sets larger text gets
+// the narrower layout their text needs, instead of a header that overflows. At the default size
+// (16px) each query matches at the same width as its px value.
+@function em($name) {
+	@return math.div(bp($name), 16px) * 1em;
+}
+
 // Below a named breakpoint (exclusive). `not all and (min-width: X)` matches every
 // width < X, so we need no sub-pixel epsilon and no literal length in source.
 @mixin below($name) {
-	@media not all and (min-width: bp($name)) {
+	@media not all and (min-width: em($name)) {
 		@content;
 	}
 }
 
 // At a named breakpoint and up (inclusive).
 @mixin above($name) {
-	@media (min-width: bp($name)) {
+	@media (min-width: em($name)) {
 		@content;
 	}
 }

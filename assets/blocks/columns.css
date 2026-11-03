@@ -12,3 +12,16 @@
 .wp-block-columns.bw-price-cards > .wp-block-column > .wp-block-buttons {
 	margin-block-start: auto;
 }
+
+/* Core stacks columns below 782px, measured in px, so 200% browser text keeps four narrow columns
+   side by side and long words run out of them. The same width in em stacks them when the text is
+   larger, and at the default text size it matches core exactly. */
+@media not all and (min-width: 48.875em) {
+	.wp-block-columns:not(.is-not-stacked-on-mobile) {
+		flex-wrap: wrap !important; /* token-exempt: outranks core's own !important */
+	}
+
+	.wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
+		flex-basis: 100% !important;
+	}
+}

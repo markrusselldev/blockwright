@@ -6,17 +6,17 @@
  * Keywords: faq, questions, answers, accordion, help, support, details
  * Block Types: core/group
  * Inserter: true
- * Description: A frequently-asked-questions accordion - collapsible question-and-answer pairs (core Details block, no plugin) that handle objections before they stop the sale.
+ * Description: A frequently-asked-questions accordion - collapsible question-and-answer pairs (core Details block, no plugin).
  *
  * @package Blockwright
  */
 
 ?>
-<!-- wp:group {"metadata":{"name":"FAQ"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"surface-2","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'FAQ', 'blockwright' ); ?>"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"surface-2","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-surface-2-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large)">
 
-	<!-- wp:heading {"level":2,"fontSize":"2xl"} -->
-	<h2 class="wp-block-heading has-2-xl-font-size"><?php esc_html_e( 'Frequently asked questions', 'blockwright' ); ?></h2>
+	<!-- wp:heading {"level":2} -->
+	<h2 class="wp-block-heading"><?php esc_html_e( 'Frequently asked questions', 'blockwright' ); ?></h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph -->
@@ -29,11 +29,11 @@
 $items = array(
 	array(
 		__( 'A question your customers actually ask', 'blockwright' ),
-		__( 'Answer it plainly in two or three sentences. Address the worry behind the question, not just the literal words.', 'blockwright' ),
+		__( 'Answer it plainly in two or three sentences. Address the worry behind the question.', 'blockwright' ),
 	),
 	array(
 		__( 'A common objection, phrased as a question', 'blockwright' ),
-		__( 'Keep the answer short and reassuring. This is where you remove doubt before it stops the sale.', 'blockwright' ),
+		__( 'Keep the answer short and reassuring.', 'blockwright' ),
 	),
 	array(
 		__( 'A question about how it works', 'blockwright' ),

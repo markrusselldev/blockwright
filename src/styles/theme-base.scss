@@ -14,11 +14,38 @@
 		--rail-wide-lg: var(--wp--custom--layout--rail--wide-lg);
 	}
 
-	/* Site chrome: neutralize any legacy inset shadows (borders now in template parts) */
+	/* Site chrome: borders belong to the template parts, so no inset shadows here. */
 	.wp-site-blocks > header,
 	.wp-site-blocks > footer {
 		box-shadow: none !important;
 	}
+}
+
+/* WordPress pins a constrained Group's Left justification with physical margins, while its flex layouts use
+   flex-start, which follows the writing direction. In a right-to-left language, make both follow it. */
+.is-layout-constrained.is-content-justification-left:dir(rtl) > :where(:not(.alignleft, .alignright, .alignfull)) {
+	margin-left: auto !important;
+	margin-right: 0 !important;
+}
+.is-layout-constrained.is-content-justification-right:dir(rtl) > :where(:not(.alignleft, .alignright, .alignfull)) {
+	margin-left: 0 !important;
+	margin-right: auto !important;
+}
+
+/* The line between a sidebar and the content: at the sidebar's start, on either side of the page, and above the
+   sidebar once the columns stack. */
+.bw-sidebar-column {
+	border-inline-start: var(--wp--custom--border--width--thin) solid var(--wp--preset--color--border-subtle);
+
+	@include bp.below(md) {
+		border-inline-start: 0;
+		border-block-start: var(--wp--custom--border--width--thin) solid var(--wp--preset--color--border-subtle);
+	}
+}
+
+/* Text at the end of the line in either writing direction. */
+.bw-text-end {
+	text-align: end;
 }
 
 /* === Header/Footer edge-to-edge override ===
@@ -27,7 +54,7 @@
 
    This override ensures alignfull outer groups in headers/footers stay edge-to-edge,
    whether their layout is flow (is-layout-flow) or constrained (is-layout-constrained) -
-   e.g. header-standard/footer-simple use a constrained alignfull outer group, and a
+   e.g. a header or footer with a constrained alignfull outer group, and a
    builder can switch any part's inner group to Full width.
 
    Both need the override because the page's own constrained layout applies margins.
@@ -82,8 +109,7 @@
    declares its own (Header + Header: Contact use space-between; Header:
    Centered uses a vertical, centered stack), and WordPress emits it natively.
    A blanket space-between + global block-gap here would override those, e.g.
-   forcing Header: Centered off-center - the same trap that split the footer
-   brand lockup (see _layout.scss note). Scoped narrowly to the header
+   forcing Header: Centered off-center. Scoped narrowly to the header
    structure Gutenberg emits. */
 .wp-site-blocks
 	> header
@@ -122,15 +148,29 @@
 	flex: 0 0 auto;
 }
 
+/* The group that holds the menu (the contact header's phone + button + menu) may
+   shrink, so its own wrapping row moves items to a further line instead of running
+   off the screen: a long menu, the page-list fallback when no menu is assigned, or
+   enlarged browser text. The plain header's menu is a direct child of the row and
+   already wraps this way. The site-title group keeps flex: 0 0 auto above. */
+.wp-site-blocks
+	> header
+	> .wp-block-group.alignfull
+	> .wp-block-group.is-layout-flex
+	> .wp-block-group:has(.wp-block-navigation) {
+	flex: 0 1 auto;
+	min-width: 0;
+}
+
+/* Header menu links: the padding goes on the link only, so it is also the hover/focus
+   target. The list item (li.wp-block-navigation-link) carries none. */
 .wp-site-blocks
 	> header
 	.wp-block-navigation
 	.wp-block-navigation-item
-	.wp-block-navigation-item__content,
-.wp-site-blocks > header .wp-block-navigation .wp-block-navigation-link {
+	.wp-block-navigation-item__content {
 	padding-inline: var(--wp--custom--nav--link--pad-inline, 0.75rem);
 	padding-block: var(--wp--custom--nav--link--pad-block, 0.125rem);
-	/* border-radius comes from assets/blocks/navigation.css (site-wide) */
 }
 
 /* Primary content wrappers take the token-driven root padding (the site gutter).
@@ -197,12 +237,13 @@ figure.wp-block-pullquote {
 	line-height: 1.2;
 }
 
-/* Opt-in "Brand color" site title (is-style-brand, registered in
-   assets/js/editor-block-styles.js). Default stays the neutral wordmark (brand on
-   hover); this switches the whole title link to the brand link tone. The
-   `.is-style-brand` class is (0,2,1), above the global theme.json site-title link
-   color (`:root :where(...)`, 0,1,0). The header/footer patterns no longer pin the
-   link color per-instance, so the global control and this style both apply cleanly. */
+/* Opt-in "Brand color" site title (is-style-brand, registered by the
+   styles/site-title-brand.json partial). Default stays the neutral wordmark; this
+   paints the title link in the exact brand color. The brand color is held to 3:1
+   only, which is enough for WCAG large text, so the partial makes the style bold 700
+   at the Lead size (19.6px or more at every width). A partial cannot color the inner
+   <a>, so the color is here: `.is-style-brand` is (0,2,1), above the global theme.json
+   site-title link color (`:root :where(...)`, 0,1,0). */
 .wp-block-site-title.is-style-brand a {
 	color: var(--wp--preset--color--primary);
 }
@@ -220,23 +261,23 @@ figure.wp-block-pullquote {
 	margin-block-start: 0;
 }
 
-/* Compact mobile header: below the sm breakpoint the one-line row (logo + hamburger +
-   phone + CTA) overflows, so we shrink two things to keep it a single slim sticky row
-   without burying the phone/CTA in the menu:
-   1. Hide the site-title wordmark (the site-logo carries the name via alt text; the
-      title is level:0, a <p>, so nothing is lost to assistive tech or heading structure).
-   2. Turn the phone NUMBER (.bw-call, a tel: link) into the Dashicons handset glyph -
-      the same tap-to-call link, just the number collapsed and the icon shown via ::before.
-      The full number stays on desktop. Dashicons is core (enqueued front-end in inc/assets.php).
-   Responsive show/hide is a theme CSS media query on purpose - WP 6.9 has no block-level
-   device visibility. */
+/* Compact mobile header: below the sm breakpoint the phone NUMBER (.bw-call, a tel: link)
+   becomes a handset icon - the same tap-to-call link, with the number collapsed and the icon
+   drawn in the link's color via ::before - so the logo, site title, phone and menu button fit
+   on one row. The full number stays on desktop. Hiding whole blocks per screen size (the contact header's button) uses
+   core's block visibility setting in the pattern, not CSS here. */
 /* The header phone link (number on desktop, handset on mobile) is an action, not body
    copy - no underline, matching the theme's nav links (textDecoration:none). */
 .wp-site-blocks > header .bw-call a {
 	text-decoration: none;
 }
 @include bp.below(sm) {
-	.wp-site-blocks > header .wp-block-site-title {
+	/* A contact header whose button directly follows the phone and is not set to hide on mobile
+	   (a copy saved in the Site Editor before the button carried that setting) has no room for the
+	   site title on phones, so the title is hidden there instead. */
+	.wp-site-blocks
+		> header:has(.bw-call ~ .wp-block-buttons:not(.wp-block-hidden-mobile))
+		.wp-block-site-title {
 		display: none;
 	}
 	/* collapse the number text, keep the link tappable, show the handset glyph */
@@ -246,37 +287,45 @@ figure.wp-block-pullquote {
 		padding: var(--wp--preset--spacing--xx-small);
 	}
 	.wp-site-blocks > header .bw-call a::before {
-		font-family: dashicons; /* token-exempt: core Dashicons font family name */
-		content: "\f525"; /* token-exempt: Dashicons "phone" (handset) glyph */
-		font-size: var(
-			--wp--preset--font-size--xxl
-		); /* ~22-24px at mobile widths (icon is hidden on desktop) */
-		line-height: 1;
+		content: "";
+		width: var(--wp--preset--font-size--xxl);
+		height: var(--wp--preset--font-size--xxl);
+		background-color: currentColor;
+		// token-exempt: Phosphor Icons "phone-fill" (MIT)
+		mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath d='M231.88,175.08A56.26,56.26,0,0,1,176,224C96.6,224,32,159.4,32,80A56.26,56.26,0,0,1,80.92,24.12a16,16,0,0,1,16.62,9.52l21.12,47.15,0,.12A16,16,0,0,1,117.39,96c-.18.27-.37.52-.57.77L96,121.45c7.49,15.22,23.41,31,38.83,38.51l24.34-20.71a8.12,8.12,0,0,1,.75-.56,16,16,0,0,1,15.17-1.4l.13.06,47.11,21.11A16,16,0,0,1,231.88,175.08Z'/%3E%3C/svg%3E")
+			center / contain no-repeat;
 	}
 }
 
 /* === Typography Rhythm: Section Spacing ===
-   Give major section headings (H2) breathing room when they follow content.
-   Subsection headings (H3/H4) get moderate spacing for clear hierarchy. */
+   In a post or page body typed in the editor, give major section headings (H2)
+   breathing room when they follow content, and subsection headings (H3/H4) moderate
+   spacing. Only headings placed directly in the body: inside a section built from a
+   pattern (a Group), the section's own block spacing decides the gap, so an eyebrow
+   label and its heading stay together. `.is-root-container` is the post body in the
+   editor canvas, so the editor matches the front end. */
 
 /* H2 section headings: generous top margin for visual separation */
-.wp-site-blocks :where(h2):not(:first-child),
-.wp-site-blocks :where(.wp-block-heading[class*="h2"]):not(:first-child) {
+:is(.wp-block-post-content, .is-root-container) > :where(h2):not(:first-child),
+:is(.wp-block-post-content, .is-root-container)
+	> :where(.wp-block-heading[class*="h2"]):not(:first-child) {
 	margin-block-start: var(--wp--preset--spacing--x-large);
 }
 
 /* H3/H4 subsection headings: moderate spacing when following paragraphs/content */
-.wp-site-blocks :where(h3, h4):not(:first-child),
-.wp-site-blocks
-	:where(.wp-block-heading[class*="h3"], .wp-block-heading[class*="h4"]):not(
+:is(.wp-block-post-content, .is-root-container) > :where(h3, h4):not(:first-child),
+:is(.wp-block-post-content, .is-root-container)
+	> :where(.wp-block-heading[class*="h3"], .wp-block-heading[class*="h4"]):not(
 		:first-child
 	) {
 	margin-block-start: var(--wp--preset--spacing--large);
 }
 
-/* Tighten spacing when headings directly follow other headings (ladder effect) */
-.wp-site-blocks
-	:where(h1, h2, h3, h4, h5, h6)
-	+ :where(h1, h2, h3, h4, h5, h6) {
+/* Tighten spacing when headings directly follow other headings (ladder effect).
+   :not(:first-child) is always true here; it raises this rule to the same
+   specificity as the two above, so source order lets it win. */
+:is(.wp-block-post-content, .is-root-container)
+	> :where(h1, h2, h3, h4, h5, h6)
+	+ :where(h1, h2, h3, h4, h5, h6):not(:first-child) {
 	margin-block-start: var(--wp--preset--spacing--medium);
 }

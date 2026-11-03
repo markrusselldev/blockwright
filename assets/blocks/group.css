@@ -4,16 +4,8 @@
 		var(--wp--custom--panel--border-color);
 }
 
-/* Surface swatch style */
-.wp-block-group.is-style-surface-swatch {
-	border: var(--wp--custom--panel--border-width) solid
-		var(--wp--custom--surface--border);
-}
-
 /* Card styles (surface-2 background). One elevation step from the surface-1 page - the
-   thin divider border does the separating, so a single-step fill (~4-6 lightness pts, in
-   line with the ~3-4 pts/layer elevation guidance) is enough; surface-3 (two steps) read
-   heavy. Mirrors per scheme, so cards elevate in light AND dark. */
+   thin divider border does the separating, so a single-step fill is enough. Mirrors per scheme, so cards elevate in light AND dark. */
 .wp-block-group.is-style-card,
 .wp-block-group.is-style-card-divided {
 	background-color: var(--wp--preset--color--surface-2);
@@ -61,8 +53,7 @@
 /* Callout band (is-style-callout): a SUBTLE brand-tinted aside, fainter than the
    scorecard footer. A low share of the brand color mixed into surface-1 (both operands
    light-dark(), so the tint stays constant light/dark and re-hues per scheme); a brand
-   left-bar marks it, text stays the neutral token. Moved here from _blocks.scss so it
-   lazy-loads with the group block alongside panel / card / icon-divider (2026-09-16). */
+   left-bar marks it, text stays the neutral token. */
 .wp-block-group.is-style-callout {
 	background-color: color-mix(
 		in oklab,
@@ -78,23 +69,21 @@
 
 /* Resolved-card "Fixed" stamp. Lives here (a core/group style loaded via
    wp_enqueue_block_style) so it renders in BOTH the front end and the editor
-   iframe - editor-canvas.css / enqueue_block_assets does not reach the post
-   editor's iframe. The card group holding the stamp is the position context. */
+   iframe. The card group holding the stamp is the position context. */
 .wp-block-group:has(> .bw-scorecard-stamp) {
 	position: relative;
 }
 .bw-scorecard-stamp {
 	position: absolute;
-	/* Shifted right (over the right edge) so it clears the footer text in both the
-	   editor and front end, where the footer wraps differently. Vertical position
-	   unchanged. Nothing in the ancestry clips it. */
-	right: calc(-1 * var(--wp--preset--spacing--xx-small));
+	/* Shifted over the card's end edge so it clears the footer text in both the
+	   editor and front end, where the footer wraps differently. Nothing in the
+	   ancestry clips it. */
+	inset-inline-end: calc(-1 * var(--wp--preset--spacing--xx-small));
 	bottom: var(--wp--preset--spacing--x-small);
 	margin: 0;
 	transform: rotate(-18deg);
-	/* Adaptive success tokens (same family the chips use), which DO resolve in the
-	   editor canvas (verified 1.0.43 - the earlier "editor can't do mid-scale"
-	   note was stale). Text is success-800 for weight; the frame is success-700,
+	/* Adaptive success tokens (same family the chips use), which resolve in the
+	   editor canvas. Text is success-800 for weight; the frame is success-700,
 	   one step softer so it is not too heavy on light / too bright on dark. Both
 	   flip per mode via light-dark(). */
 	color: var(--wp--preset--color--success-800);

@@ -8,20 +8,12 @@
 /* Blockwright - front-end styles */
 
 /* -------------------------------------------------------------------------- */
-/* Vendor CSS includes                                                         */
-/* -------------------------------------------------------------------------- */
-/* Open Props runtime removed: values copied into Blockwright tokens. No runtime import. */
-
-/* -------------------------------------------------------------------------- */
 /* Root & base                                                                 */
 /* -------------------------------------------------------------------------- */
 :root {
 	color-scheme: light dark;
 }
 
-html {
-	/* scrollbar-gutter removed - was causing edge-to-edge layout issues */
-}
 body {
 	margin: 0;
 	background: var(--wp--preset--color--surface-1);
@@ -56,7 +48,7 @@ body.admin-bar {
 	--bw-adminbar: var(--wp--custom--layout--adminbar--desktop);
 }
 
-@media (max-width: 48.875rem) { /* token-exempt: fixed WP admin-bar breakpoint (782px), not a design token - media queries aren't expressible in theme.json */
+@media (max-width: 48.875rem) { // token-exempt: fixed WP admin-bar breakpoint (782px), not a design token - media queries aren't expressible in theme.json
 	/* WP admin-bar mobile breakpoint (782px) */
 	body.admin-bar {
 		--bw-adminbar: var(--wp--custom--layout--adminbar--mobile);
@@ -70,7 +62,6 @@ body.admin-bar {
 /* IMPORTANT: Core already applies global padding to .wp-site-blocks when
    useRootPaddingAwareAlignments = true. Do NOT add our own side padding here
    or we get double gutters. */
-/* (Removed the old padding-inline on .wp-site-blocks) */
 
 /* Sticky footer: push footer to bottom on short pages */
 .wp-site-blocks {
@@ -84,10 +75,6 @@ body.admin-bar {
 .wp-site-blocks > main.wp-block-group {
 	flex: 1 1 auto;
 }
-
-/* -------------------------------------------------------------------------- */
-/* Header / Footer rows = clamp to content width                               */
-/* -------------------------------------------------------------------------- */
 
 /* Remove list padding blowout for post templates when global padding is active */
 .wp-site-blocks > main.has-global-padding > ul.wp-block-post-template,
@@ -117,10 +104,7 @@ body.admin-bar {
 	border-radius: var(--wp--preset--border-radius--m, 0.5rem);
 }
 
-/* Button appearance lives in _buttons.scss (the single source); native form
-   submit/reset buttons live in _forms.scss. A duplicate base-button block that
-   re-declared the same button tokens used to sit here - removed in the button
-   consolidation so there is one owner per button type. */
+/* Button appearance lives in the button styles (the single source); native form submit/reset buttons live in the form styles. */
 
 button {
 	border: 0;

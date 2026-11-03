@@ -99,27 +99,27 @@
         {
           "slug": "link-visited",
           "name": "Link Visited",
-          "color": "light-dark(oklch(0.44 0 240), oklch(0.73 0 240))"
+          "color": "light-dark(oklch(0.37 0 240), oklch(0.84 0 240))"
         },
         {
           "slug": "link",
           "name": "Link",
-          "color": "light-dark(oklch(0.56 0 240), oklch(0.61 0 240))"
+          "color": "light-dark(oklch(0.49 0 240), oklch(0.72 0 240))"
         },
         {
           "slug": "link-hover",
           "name": "Link Hover",
-          "color": "light-dark(oklch(0.49 0 240), oklch(0.68 0 240))"
+          "color": "light-dark(oklch(0.42 0 240), oklch(0.79 0 240))"
         },
         {
           "slug": "link-active",
           "name": "Link Active",
-          "color": "light-dark(oklch(0.42 0 240), oklch(0.75 0 240))"
+          "color": "light-dark(oklch(0.35 0 240), oklch(0.86 0 240))"
         },
         {
           "slug": "focus",
           "name": "Focus",
-          "color": "light-dark(oklch(0.65 0 240), oklch(0.52 0 240))"
+          "color": "light-dark(oklch(0.58 0 240), oklch(0.62 0 240))"
         },
         {
           "slug": "btn-soft-bg",

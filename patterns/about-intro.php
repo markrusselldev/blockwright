@@ -11,7 +11,7 @@
  * @package Blockwright
  */
 ?>
-<!-- wp:group {"metadata":{"name":"About Intro"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"surface-1","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'About Intro', 'blockwright' ); ?>"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"surface-1","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-surface-1-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large)">
 
 	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained","contentSize":"680px"}} -->
@@ -25,7 +25,7 @@
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph {"align":"center","fontSize":"l"} -->
-		<p class="has-text-align-center has-l-font-size"><?php esc_html_e( 'Give the reader the essentials in two or three sentences - what you offer, who it\'s for, and why it matters. Keep it plain and warm; this is the block people read to decide whether to keep going.', 'blockwright' ); ?></p>
+		<p class="has-text-align-center has-l-font-size"><?php esc_html_e( 'Give the reader the essentials in two or three sentences - what you offer, who it\'s for, and why it matters. Keep it plain.', 'blockwright' ); ?></p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|small"}}}} -->

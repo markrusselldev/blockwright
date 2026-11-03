@@ -1,5 +1,5 @@
 // vite.config.js - Blockwright minimal production build
-// Compiles src/index.js (which only imports CSS/SCSS partials) into
+// Compiles src/index.js (the CSS/SCSS partials and a small front-end script) into
 // dist/theme.js + dist/theme.css. No third-party component-library plugin
 // or external asset copy step.
 import { defineConfig } from 'vite';
@@ -16,7 +16,7 @@ export default defineConfig(({ mode }) => ({
 		emptyOutDir: true,
 		sourcemap: mode === 'development',
 		// WP.org requires shipped CSS to be human-readable (the SCSS source is
-		// not in the release zip), so don't minify - the file is ~20KB anyway.
+		// not in the release zip), so don't minify.
 		cssMinify: false,
 		rollupOptions: {
 			input: { theme: path.resolve(__dirname, 'src/index.js') },

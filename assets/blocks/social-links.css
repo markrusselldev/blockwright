@@ -17,8 +17,3 @@
 	color: var(--wp--preset--color--text-1);
 }
 
-.wp-block-social-links .wp-block-social-link:focus-visible {
-	outline: var(--wp--custom--button--focus-ring-width) solid
-		var(--wp--custom--button--focus-ring-color);
-	outline-offset: var(--wp--preset--spacing--xx-small);
-}

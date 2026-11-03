@@ -3,7 +3,7 @@
  * Title: Project Grid
  * Slug: blockwright/project-grid
  * Categories: portfolio, featured
- * Description: Display portfolio projects in a responsive grid layout. Shows featured image, title, excerpt, and link to full project.
+ * Description: Portfolio projects in a responsive grid - an image, title, summary, and a link to the full project.
  * Keywords: portfolio, projects, work, grid, gallery, case study
  * Block Types: core/columns
  * Inserter: true
@@ -13,11 +13,11 @@
 
 $placeholder_image = get_theme_file_uri( 'assets/images/placeholder-image.svg' );
 ?>
-<!-- wp:group {"metadata":{"name":"Project Grid"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"surface-1","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Project Grid', 'blockwright' ); ?>"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"surface-1","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-surface-1-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large)">
 
-	<!-- wp:heading {"textAlign":"center","level":2,"fontSize":"2xl"} -->
-	<h2 class="wp-block-heading has-text-align-center has-2-xl-font-size"><?php esc_html_e( 'Selected Work', 'blockwright' ); ?></h2>
+	<!-- wp:heading {"textAlign":"center","level":2} -->
+	<h2 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'Selected work', 'blockwright' ); ?></h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph {"align":"center","textColor":"text-2","fontSize":"l"} -->
@@ -34,18 +34,18 @@ $placeholder_image = get_theme_file_uri( 'assets/images/placeholder-image.svg' )
 			<div class="wp-block-group has-surface-2-background-color has-background" style="border-radius:var(--wp--preset--border-radius--m);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
 				<!-- wp:image {"aspectRatio":"16/9","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"spacing":{"margin":{"top":"0"}},"border":{"width":"var:custom|border|width|thin","color":"var:preset|color|border-subtle","radius":{"topLeft":"var:preset|border-radius|m","topRight":"var:preset|border-radius|m"}}}} -->
-				<figure class="wp-block-image size-large has-custom-border" style="margin-top:0"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="Project thumbnail" class="has-border-color" style="border-color:var(--wp--preset--color--border-subtle);border-width:var(--wp--custom--border--width--thin);border-top-left-radius:var(--wp--preset--border-radius--m);border-top-right-radius:var(--wp--preset--border-radius--m);aspect-ratio:16/9;object-fit:cover"/></figure>
+				<figure class="wp-block-image size-large has-custom-border" style="margin-top:0"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="<?php esc_attr_e( 'Project thumbnail', 'blockwright' ); ?>" class="has-border-color" style="border-color:var(--wp--preset--color--border-subtle);border-width:var(--wp--custom--border--width--thin);border-top-left-radius:var(--wp--preset--border-radius--m);border-top-right-radius:var(--wp--preset--border-radius--m);aspect-ratio:16/9;object-fit:cover"/></figure>
 				<!-- /wp:image -->
 
 				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|small","right":"var:preset|spacing|small","bottom":"var:preset|spacing|small","left":"var:preset|spacing|small"},"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 				<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--small);padding-left:var(--wp--preset--spacing--small)">
 
 					<!-- wp:heading {"level":3,"fontSize":"m"} -->
-					<h3 class="wp-block-heading has-m-font-size"><?php esc_html_e( 'E-Commerce Redesign', 'blockwright' ); ?></h3>
+					<h3 class="wp-block-heading has-m-font-size"><?php esc_html_e( 'Project name', 'blockwright' ); ?></h3>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph {"textColor":"text-2","fontSize":"s"} -->
-					<p class="has-text-2-color has-text-color has-s-font-size"><?php esc_html_e( 'Complete UX overhaul for a fashion retailer, resulting in 40% increase in conversions.', 'blockwright' ); ?></p>
+					<p class="has-text-2-color has-text-color has-s-font-size"><?php esc_html_e( 'One sentence on what you did and the result it had.', 'blockwright' ); ?></p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {"fontSize":"s"} -->
@@ -68,18 +68,18 @@ $placeholder_image = get_theme_file_uri( 'assets/images/placeholder-image.svg' )
 			<div class="wp-block-group has-surface-2-background-color has-background" style="border-radius:var(--wp--preset--border-radius--m);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
 				<!-- wp:image {"aspectRatio":"16/9","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"spacing":{"margin":{"top":"0"}},"border":{"width":"var:custom|border|width|thin","color":"var:preset|color|border-subtle","radius":{"topLeft":"var:preset|border-radius|m","topRight":"var:preset|border-radius|m"}}}} -->
-				<figure class="wp-block-image size-large has-custom-border" style="margin-top:0"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="Project thumbnail" class="has-border-color" style="border-color:var(--wp--preset--color--border-subtle);border-width:var(--wp--custom--border--width--thin);border-top-left-radius:var(--wp--preset--border-radius--m);border-top-right-radius:var(--wp--preset--border-radius--m);aspect-ratio:16/9;object-fit:cover"/></figure>
+				<figure class="wp-block-image size-large has-custom-border" style="margin-top:0"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="<?php esc_attr_e( 'Project thumbnail', 'blockwright' ); ?>" class="has-border-color" style="border-color:var(--wp--preset--color--border-subtle);border-width:var(--wp--custom--border--width--thin);border-top-left-radius:var(--wp--preset--border-radius--m);border-top-right-radius:var(--wp--preset--border-radius--m);aspect-ratio:16/9;object-fit:cover"/></figure>
 				<!-- /wp:image -->
 
 				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|small","right":"var:preset|spacing|small","bottom":"var:preset|spacing|small","left":"var:preset|spacing|small"},"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 				<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--small);padding-left:var(--wp--preset--spacing--small)">
 
 					<!-- wp:heading {"level":3,"fontSize":"m"} -->
-					<h3 class="wp-block-heading has-m-font-size"><?php esc_html_e( 'SaaS Dashboard', 'blockwright' ); ?></h3>
+					<h3 class="wp-block-heading has-m-font-size"><?php esc_html_e( 'Project name', 'blockwright' ); ?></h3>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph {"textColor":"text-2","fontSize":"s"} -->
-					<p class="has-text-2-color has-text-color has-s-font-size"><?php esc_html_e( 'Analytics dashboard design for a B2B software company with real-time data visualization.', 'blockwright' ); ?></p>
+					<p class="has-text-2-color has-text-color has-s-font-size"><?php esc_html_e( 'One sentence on what you did and the result it had.', 'blockwright' ); ?></p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {"fontSize":"s"} -->
@@ -102,18 +102,18 @@ $placeholder_image = get_theme_file_uri( 'assets/images/placeholder-image.svg' )
 			<div class="wp-block-group has-surface-2-background-color has-background" style="border-radius:var(--wp--preset--border-radius--m);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
 				<!-- wp:image {"aspectRatio":"16/9","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"spacing":{"margin":{"top":"0"}},"border":{"width":"var:custom|border|width|thin","color":"var:preset|color|border-subtle","radius":{"topLeft":"var:preset|border-radius|m","topRight":"var:preset|border-radius|m"}}}} -->
-				<figure class="wp-block-image size-large has-custom-border" style="margin-top:0"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="Project thumbnail" class="has-border-color" style="border-color:var(--wp--preset--color--border-subtle);border-width:var(--wp--custom--border--width--thin);border-top-left-radius:var(--wp--preset--border-radius--m);border-top-right-radius:var(--wp--preset--border-radius--m);aspect-ratio:16/9;object-fit:cover"/></figure>
+				<figure class="wp-block-image size-large has-custom-border" style="margin-top:0"><img src="<?php echo esc_url( $placeholder_image ); ?>" alt="<?php esc_attr_e( 'Project thumbnail', 'blockwright' ); ?>" class="has-border-color" style="border-color:var(--wp--preset--color--border-subtle);border-width:var(--wp--custom--border--width--thin);border-top-left-radius:var(--wp--preset--border-radius--m);border-top-right-radius:var(--wp--preset--border-radius--m);aspect-ratio:16/9;object-fit:cover"/></figure>
 				<!-- /wp:image -->
 
 				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|small","right":"var:preset|spacing|small","bottom":"var:preset|spacing|small","left":"var:preset|spacing|small"},"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 				<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--small);padding-left:var(--wp--preset--spacing--small)">
 
 					<!-- wp:heading {"level":3,"fontSize":"m"} -->
-					<h3 class="wp-block-heading has-m-font-size"><?php esc_html_e( 'Brand Identity System', 'blockwright' ); ?></h3>
+					<h3 class="wp-block-heading has-m-font-size"><?php esc_html_e( 'Project name', 'blockwright' ); ?></h3>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph {"textColor":"text-2","fontSize":"s"} -->
-					<p class="has-text-2-color has-text-color has-s-font-size"><?php esc_html_e( 'Complete brand refresh including logo, color system, typography, and brand guidelines.', 'blockwright' ); ?></p>
+					<p class="has-text-2-color has-text-color has-s-font-size"><?php esc_html_e( 'One sentence on what you did and the result it had.', 'blockwright' ); ?></p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {"fontSize":"s"} -->

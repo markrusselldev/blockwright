@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Drop WordPress core's default spacing and font-size presets.
  *
  * The theme ships its own named scales and sets `defaultSpacingSizes: false` /
- * `defaultFontSizes: false`. In WP 6.9 those flags remove the defaults from the
+ * `defaultFontSizes: false`. Those flags remove the defaults from the
  * editor pickers but NOT from the generated CSS, so core's numeric spacing
  * (20–80) and its `small`–`huge` font sizes still get emitted as
  * `--wp--preset--*` variables alongside the theme's. Clearing the default

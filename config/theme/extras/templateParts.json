@@ -31,6 +31,16 @@
 			"area": "footer"
 		},
 		{
+			"name": "navigation-overlay",
+			"title": "Navigation Overlay",
+			"area": "navigation-overlay"
+		},
+		{
+			"name": "navigation-overlay-contact",
+			"title": "Navigation Overlay: Contact",
+			"area": "navigation-overlay"
+		},
+		{
 			"name": "sidebar",
 			"title": "Sidebar",
 			"area": "uncategorized"

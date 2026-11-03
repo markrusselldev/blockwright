@@ -8,7 +8,7 @@
 	padding-inline: 0.25em;
 }
 
-/* Code blocks: generous padding and polished appearance */
+/* Code blocks */
 .wp-block-code {
 	background-color: var(--wp--preset--color--surface-2);
 	background-clip: padding-box;
@@ -16,13 +16,8 @@
 		var(--wp--preset--color--border-subtle);
 	border-radius: var(--wp--preset--border-radius--m);
 	padding: var(--wp--preset--spacing--medium);
-	/* Scroll long code lines within the block; `hidden` clipped them unreadable. */
+	/* Scroll long code lines within the block. */
 	overflow-x: auto;
-}
-
-.wp-block-code > pre {
-	border-radius: inherit;
-	margin: 0;
 }
 
 .wp-block-code code {
@@ -36,6 +31,3 @@
 	white-space: pre;
 }
 
-/* Preformatted (assets/blocks/preformatted.css) and verse (assets/blocks/verse.css)
-   moved to their own shims, enqueued on core/preformatted and core/verse, so each loads
-   on its own block instead of riding on core/code / core/paragraph. */

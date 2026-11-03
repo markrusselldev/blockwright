@@ -15,10 +15,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Register block style variations via JS (editor runtime).
  *
- * Button accent/subtle are name-only variations (styling lives in
- * the button styles). registerBlockStyle in JS is used instead of
- * PHP register_block_style so all name registration goes through one path;
- * group variations are registered declaratively in /styles/*.json.
+ * The Soft and Subtle buttons and the other styles in that script are name-only
+ * variations whose styling lives in CSS. The Card, Card Divided and Panel group styles
+ * and the Brand color site title are registered by their /styles/*.json files.
  */
 add_action(
 	'enqueue_block_editor_assets',
@@ -37,6 +36,7 @@ add_action(
 			(string) filemtime( $path ),
 			true
 		);
+		wp_set_script_translations( 'blockwright-editor-block-styles', 'blockwright' );
 	}
 );
 
@@ -52,6 +52,7 @@ add_action(
 				'handle' => 'blockwright-code-inline',
 				'src'    => get_theme_file_uri( 'assets/blocks/code.css' ),
 				'path'   => get_theme_file_path( 'assets/blocks/code.css' ),
+				'ver'    => filemtime( get_theme_file_path( 'assets/blocks/code.css' ) ),
 			)
 		);
 	}

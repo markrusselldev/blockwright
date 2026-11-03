@@ -11,7 +11,7 @@
  */
 
 ?>
-<!-- wp:group {"metadata":{"name":"Author Bio"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|small"},"border":{"top":{"color":"var:preset|color|divider","width":"var:custom|border|width|thin"}}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Author Bio', 'blockwright' ); ?>"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|small"},"border":{"top":{"color":"var:preset|color|divider","width":"var:custom|border|width|thin"}}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
 <div class="wp-block-group" style="border-top-color:var(--wp--preset--color--divider);border-top-width:var(--wp--custom--border--width--thin);padding-top:var(--wp--preset--spacing--medium)">
 	<!-- wp:avatar {"size":56,"style":{"border":{"radius":"50%"}}} /-->
 

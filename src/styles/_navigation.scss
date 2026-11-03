@@ -53,7 +53,7 @@
    collapsed to the overlay hamburger until `lg`
    (1024), where the full header fits, then let core's horizontal menu
    take over.
-   These rules live in the UNLAYERED global bundle (not theme-base.css's @layer, which
+   These rules live in the UNLAYERED global bundle (not the base layer's @layer, which
    would lose to core's unlayered display rules) and are header-scoped, so they beat core
    by specificity + source order - no !important. The `:not(.is-menu-open)` gate mirrors
    core's own and is REQUIRED: without it, hiding the container also blocks the overlay
@@ -73,7 +73,7 @@
 	}
 }
 
-/* The hamburger toggle uses the gold accent whenever it shows (every collapsed width,
+/* The hamburger toggle uses the brand color whenever it shows (every collapsed width,
    not just the deep-mobile band), matching the header's other foreground icons (phone
    glyph, wp:icon blocks). Core hides this button at `lg` and up, so it is a no-op on
    desktop. */
@@ -81,13 +81,33 @@
 	color: var(--wp--preset--color--primary);
 }
 
-/* Submenu dropdown container - must match core specificity (.has-child) */
-.wp-block-navigation .has-child .wp-block-navigation__submenu-container {
+/* Submenu dropdown container - must match core specificity (.has-child). A submenu set to
+   always show (.open-always, as in the navigation overlay) is an inline list, not a dropdown,
+   so it keeps no border or shadow. Its background and text colors come from the Navigation
+   block's own overlay color settings (core puts their preset classes on the container), so a
+   site owner sets them in the editor; the border and shadow make it a card on any color. */
+.wp-block-navigation .has-child:not(.open-always) .wp-block-navigation__submenu-container {
 	gap: var(--wp--preset--spacing--small);
-	background-color: var(--wp--preset--color--surface-2);
-	color: var(--wp--preset--color--text-1);
 	border: var(--wp--custom--border--width--thin) solid
 		var(--wp--preset--color--border-subtle);
 	border-radius: var(--wp--preset--border-radius--m);
 	box-shadow: var(--wp--custom--shadow--m);
+}
+
+/* Custom mobile menu (a navigation-overlay template part): header nav links keep their inline
+   padding for the current-item highlight, so the vertical menu is pulled out by that padding to
+   line its text up with the phone link and button above it. */
+.wp-site-blocks
+	> header
+	.disable-default-overlay
+	.wp-block-navigation.is-vertical:not(.wp-block-navigation__container) {
+	margin-inline-start: calc(-1 * var(--wp--custom--nav--link--pad-inline, 0.75rem));
+}
+
+// A hover-opened submenu dismissed with Esc (src/index.js) stays shut until the pointer leaves.
+.wp-block-navigation
+	.has-child:not(.open-on-click).bw-submenu-dismissed:hover
+	> .wp-block-navigation__submenu-container {
+	opacity: 0;
+	visibility: hidden;
 }

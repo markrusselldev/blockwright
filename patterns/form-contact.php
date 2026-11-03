@@ -4,14 +4,17 @@
  * Slug: blockwright/form-contact
  * Categories: contact
  * Keywords: form, contact, message, name, email, enquiry, get in touch
- * Block Types: core/columns
  * Inserter: true
  * Description: A simple name / email / message contact form. Style-only: connect delivery with a form plugin (the bare form does not send on its own).
  *
  * @package Blockwright
  */
+
+$name_id    = wp_unique_id( 'bw-form-name-' );
+$email_id   = wp_unique_id( 'bw-form-email-' );
+$message_id = wp_unique_id( 'bw-form-message-' );
 ?>
-<!-- wp:group {"metadata":{"name":"Contact Form"},"align":"full","style":{"spacing":{"blockGap":"var:preset|spacing|large","margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"surface-1","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Contact Form', 'blockwright' ); ?>"},"align":"full","style":{"spacing":{"blockGap":"var:preset|spacing|large","margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"surface-1","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-surface-1-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large)">
 
 	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained","contentSize":"600px"}} -->
@@ -25,10 +28,19 @@
 		<!-- /wp:heading -->
 
 		<!-- wp:html -->
-		<form method="post" action="" style="display:grid;gap:var(--wp--preset--spacing--small);max-width:var(--wp--custom--form--max-width)">
-			<input type="text" name="name" required placeholder="Your name" aria-label="Your name">
-			<input type="email" name="email" required placeholder="you@example.com" aria-label="Email address">
-			<textarea name="message" rows="5" required placeholder="How can we help?" aria-label="Message"></textarea>
+		<form method="post" action="" style="display:grid;gap:var(--wp--preset--spacing--small)">
+			<div style="display:grid;gap:var(--wp--preset--spacing--xx-small)">
+				<label for="<?php echo esc_attr( $name_id ); ?>" style="font-size:var(--wp--preset--font-size--s)"><?php esc_html_e( 'Your name', 'blockwright' ); ?></label>
+				<input id="<?php echo esc_attr( $name_id ); ?>" type="text" name="your-name" required>
+			</div>
+			<div style="display:grid;gap:var(--wp--preset--spacing--xx-small)">
+				<label for="<?php echo esc_attr( $email_id ); ?>" style="font-size:var(--wp--preset--font-size--s)"><?php esc_html_e( 'Email address', 'blockwright' ); ?></label>
+				<input id="<?php echo esc_attr( $email_id ); ?>" type="email" name="email" required>
+			</div>
+			<div style="display:grid;gap:var(--wp--preset--spacing--xx-small)">
+				<label for="<?php echo esc_attr( $message_id ); ?>" style="font-size:var(--wp--preset--font-size--s)"><?php esc_html_e( 'How can we help?', 'blockwright' ); ?></label>
+				<textarea id="<?php echo esc_attr( $message_id ); ?>" name="message" rows="5" required></textarea>
+			</div>
 			<button type="submit" class="wp-element-button" style="justify-self:start"><?php esc_html_e( 'Send message', 'blockwright' ); ?></button>
 		</form>
 		<!-- /wp:html -->

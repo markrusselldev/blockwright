@@ -8,3 +8,23 @@
 	aspect-ratio: 1;
 	object-fit: cover;
 }
+
+/* Testimonial avatars (blockwright-avatar-sm / -md on core/image, set by the Testimonial and
+   Testimonials Grid patterns): a small round photo instead of a full-column image. Width
+   only, with a 1:1 box: a width set with the Image block's own control is an inline style
+   on the img, so it still wins, and the height follows. */
+.blockwright-avatar-sm img,
+.blockwright-avatar-md img {
+	height: auto;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.blockwright-avatar-sm img {
+	width: var(--wp--custom--avatar--sm);
+}
+
+.blockwright-avatar-md img {
+	width: var(--wp--custom--avatar--md);
+}

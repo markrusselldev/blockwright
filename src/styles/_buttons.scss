@@ -1,14 +1,18 @@
 /*
  * Button appearance - the SINGLE source for Gutenberg block buttons (core/button,
  * plus the search/file block buttons). Token-driven; author overrides respected via
- * revert-layer. Base look + the three CTA variants (fill / accent / subtle) + hover /
- * active / disabled all live here.
+ * revert-layer. Base box + the Soft / Outline / Subtle variants + active / disabled
+ * live here. The plain and Fill button COLORS (rest, hover, active) do not: they are
+ * theme.json elements.button, so a site owner's button colors in Styles apply. A
+ * color rule here would out-specify WordPress's `:root :where()` output and silently
+ * defeat those choices.
  *
  * Related by design - NOT duplicates:
- *   - theme.json elements.button - same tokens, for editor parity + the block controls.
- *   - _interactive.scss - the shared focus-ring + base transition baseline for ALL
+ *   - theme.json elements.button - the plain/Fill colors and states, and the base box
+ *     for editor parity + the block controls.
+ *   - the interactive styles - the shared focus-ring + base transition baseline for ALL
  *     interactive controls, so buttons/links/inputs focus identically.
- *   - _forms.scss - native form submit/reset <input> buttons (form controls, amber CTA).
+ *   - the form styles - native form submit/reset <input> buttons (form controls, the brand fill).
  */
 :where(
 	.wp-element-button,
@@ -16,18 +20,12 @@
 	.wp-block-search__button,
 	.wp-block-file__button
 ) {
-	--_bg: var(--wp--custom--button--default--bg);
-	--_bg-h: var(--wp--custom--button--default--bg-hover);
-	--_bg-a: var(--wp--custom--button--default--bg-active);
-	--_tx: var(--wp--custom--button--default--text);
 	--_border: transparent;
 
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	gap: var(--wp--custom--button--text-gap, 0.5ch);
-	background: var(--_bg);
-	color: var(--_tx);
 	border: var(--wp--custom--border--width--thin, 1px) solid var(--_border);
 	border-radius: var(--wp--custom--button--radius);
 	padding-block: var(--wp--custom--button--py);
@@ -64,16 +62,11 @@
 	color: revert-layer;
 }
 
-:where(.wp-element-button, .wp-block-button__link):hover {
-	background: var(--_bg-h);
-}
-
 :where(.wp-element-button, .wp-block-button__link):active {
-	background: var(--_bg-a);
 	transform: translateY(var(--wp--custom--border--width--thin));
 }
 
-/* Focus ring: provided by the shared interactive baseline in _interactive.scss
+/* Focus ring: provided by the shared interactive baseline
    (identical tokens - link color, form focus-width). Not redefined here. */
 
 :where(.wp-element-button, .wp-block-button__link)[disabled],
@@ -89,8 +82,8 @@
 
 /* Shared CTA base - generous padding and prominent typography.
    is-style-outline is qualified with :not() so it out-specificities core's
-   own outline padding rule (0,4,0) and takes the SAME box as the primary -
-   fixes the size inversion (secondary must never be larger than primary).
+   own outline padding rule (0,4,0) and takes the SAME box as the primary
+   (secondary must never be larger than primary).
    The classless (default) button is in here too: core marks the "fill" style
    isDefault:true, so a button with no style class IS the primary CTA and must
    carry the same generous box - not the small form-control base. */
@@ -116,56 +109,12 @@
 	line-height: 1.2;
 }
 
-/* PRIMARY CTA - Solid background, highest emphasis.
-   is-style-fill AND the classless default button (core marks fill isDefault:true,
-   so a button with no style class is the primary). Both share these primary
-   tokens; author overrides (.has-background / inline style) are respected. */
-.wp-block-button.is-style-fill
-	.wp-block-button__link:not(.has-background):not([style*="background"]),
-.wp-block-button:not(.is-style-fill):not(.is-style-soft):not(.is-style-accent):not(
-		.is-style-outline
-	):not(.is-style-subtle)
-	.wp-block-button__link:not(.has-background):not([style*="background"]) {
-	--_bg: var(--wp--custom--button--fill--bg);
-	--_bg-h: var(--wp--custom--button--fill--bg-hover);
-	--_bg-a: var(--wp--custom--button--fill--bg-active);
-	--_tx: var(--wp--custom--button--fill--text);
-	/* Borderless solid (Radix solid-button model). The engine guarantees the fill clears 3:1 vs the
-	   page AND carries a WHITE label (large-text 3:1), so the fill is >=3:1 vs a white page by
-	   symmetry - a defining edge is redundant. Keep the transparent base border from :where() so the
-	   box size matches the bordered variants (outline/soft); it just paints nothing. */
-	background: var(--_bg);
-	color: var(--_tx);
-}
+/* PRIMARY CTA (is-style-fill and the classless default button): its colors and
+   hover/active states are theme.json elements.button, NOT rules here - see the file
+   header. It takes the CTA box above, and is borderless: the transparent base border
+   keeps its box the same size as the bordered variants. */
 
-.wp-block-button.is-style-fill
-	.wp-block-button__link:not(.has-background):not(
-		[style*="background"]
-	):hover,
-.wp-block-button:not(.is-style-fill):not(.is-style-soft):not(.is-style-accent):not(
-		.is-style-outline
-	):not(.is-style-subtle)
-	.wp-block-button__link:not(.has-background):not(
-		[style*="background"]
-	):hover {
-	background: var(--wp--custom--button--fill--bg-hover);
-}
-
-.wp-block-button.is-style-fill
-	.wp-block-button__link:not(.has-background):not(
-		[style*="background"]
-	):active,
-.wp-block-button:not(.is-style-fill):not(.is-style-soft):not(.is-style-accent):not(
-		.is-style-outline
-	):not(.is-style-subtle)
-	.wp-block-button__link:not(.has-background):not(
-		[style*="background"]
-	):active {
-	background: var(--wp--custom--button--fill--bg-active);
-	transform: translateY(var(--wp--custom--border--width--thin));
-}
-
-/* SOFT button (is-style-soft; is-style-accent kept 1 release as an alias) - tonal tint, medium emphasis */
+/* SOFT button (is-style-soft, and the older class is-style-accent) - tonal tint, medium emphasis */
 .wp-block-button:is(.is-style-soft, .is-style-accent)
 	.wp-block-button__link:not(.has-background):not([style*="background"]) {
 	--_bg: var(--wp--custom--button--soft--bg);
@@ -193,7 +142,7 @@
 	transform: translateY(var(--wp--custom--border--width--thin));
 }
 
-/* SUBTLE CTA (is-style-subtle) - Ghost: accent text only, no border, lowest emphasis */
+/* SUBTLE CTA (is-style-subtle) - Ghost: brand text only, no border, lowest emphasis */
 .wp-block-button.is-style-subtle
 	.wp-block-button__link:not(.has-background):not([style*="background"]) {
 	--_bg: var(--wp--custom--button--subtle--bg);
@@ -221,11 +170,10 @@
 	transform: translateY(var(--wp--custom--border--width--thin));
 }
 
-/* OUTLINE (core "Outline" style) - themed as the accent secondary.
+/* OUTLINE (core "Outline" style) - themed as the brand-colored secondary.
    Core leaves this transparent with a currentColor (neutral) 2px border, so it
    renders black/white in every color scheme AND misses the CTA sizing above.
-   Re-point it at the subtle (accent-outline)
-   tokens and a thin border so it reads gold, adapts per scheme, and sits at the
+   Re-point it at the outline tokens and a thin border so it adapts per scheme, and sits at the
    same size as the primary. Selectors are :not()-qualified (0,5,0) to beat
    core's outline rules (0,4,0). This corrects already-placed buttons (they
    already carry .is-style-outline) with no pattern re-insert. */
@@ -323,13 +271,45 @@
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
+   OUTLINE + SUBTLE BUTTONS OVER A PHOTO - a cover with a dark overlay (core adds
+   .is-light only to light ones) is not a page surface, so the link-colored label and
+   border of these transparent styles disappear over it. They
+   take the photo's own text ink, on-media, as the brand-fill band's outline does.
+   Fill and Soft carry their own background and stay as they are.
+   ───────────────────────────────────────────────────────────────────────────── */
+.wp-block-cover:not(.is-light) {
+	.wp-block-button:is(.is-style-outline, .is-style-subtle)
+		.wp-block-button__link:not(.has-background):not([style*="background"]):not(
+			.has-text-color
+		) {
+		color: var(--wp--preset--color--on-media);
+		border-color: var(--wp--preset--color--on-media);
+	}
+
+	.wp-block-button.is-style-subtle
+		.wp-block-button__link:not(.has-background):not([style*="background"]):not(
+			.has-text-color
+		) {
+		border-color: transparent;
+	}
+
+	.wp-block-button:is(.is-style-outline, .is-style-subtle)
+		.wp-block-button__link:not(.has-background):not([style*="background"]):hover {
+		background: color-mix(
+			in oklab,
+			var(--wp--preset--color--on-media) 12%,
+			transparent
+		);
+	}
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
    HEADER CTA is compact. Every button carries the generous CTA box above, which
    reads right in a hero but overwhelms the header bar (and its height pushes
    content like a hero-side scorecard below the fold). Scope a smaller box to the
    header TEMPLATE PART only: the `<header class="wp-block-template-part">` wrapper
    is emitted at render time, NOT frozen in the pattern snapshot, so this reaches
-   already-placed headers live (styling against existing structure, best-practices
-   §7) and never touches hero/body CTAs. Specificity clears the CTA-base rule.
+   already-placed headers live and never touches hero/body CTAs. Specificity clears the CTA-base rule.
    ───────────────────────────────────────────────────────────────────────────── */
 .wp-site-blocks header.wp-block-template-part .wp-block-button .wp-block-button__link {
 	padding-block: var(--wp--preset--spacing--xx-small);

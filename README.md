@@ -7,7 +7,7 @@ typography style variations and a library of block patterns.
 
 **Install from WordPress.org:** https://wordpress.org/themes/blockwright/
 
-Companion plugin (Icon Box, Icon List, Stat Counter, Timeline, a Light/Dark Toggle, dynamic
+Companion plugin (the Design tool, which builds a color scheme from your brand color; Icon Box, Icon List, Stat Counter, Timeline, a Light/Dark Toggle, dynamic
 content, and a curated icon collection): https://wordpress.org/plugins/blockwright-blocks/
 
 License: GPL-2.0-or-later

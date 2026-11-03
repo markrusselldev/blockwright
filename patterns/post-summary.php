@@ -22,6 +22,7 @@
 		<!-- wp:post-author {"showAvatar":false,"showBio":false,"isLink":true} /-->
 	</div>
 	<!-- /wp:group -->
-	<!-- wp:post-excerpt {"moreText":"Read more"} /-->
+	<!-- wp:post-excerpt /-->
+	<!-- wp:read-more /-->
 </div>
 <!-- /wp:group -->

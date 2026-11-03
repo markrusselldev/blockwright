@@ -7,12 +7,12 @@
  * Post Types: page
  * Keywords: coming soon, launch, placeholder, holding page, under construction
  * Inserter: true
- * Description: A minimal holding page for a site that has not launched - one headline, one line, and an email signup so visitors can hear when it does. Pairs well with a blank or landing template (no nav).
+ * Description: A minimal holding page for a site that has not launched - one headline, one line, and an email signup. Connect the form to a newsletter plugin; it does not send on its own. Use the No Title or Landing Page template so the page title does not show above it.
  *
  * @package Blockwright
  */
 ?>
-<!-- wp:group {"metadata":{"name":"Coming Soon Intro"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|xx-large","bottom":"var:preset|spacing|large"}}},"backgroundColor":"surface-1","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Coming Soon Intro', 'blockwright' ); ?>"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|xx-large","bottom":"var:preset|spacing|large"}}},"backgroundColor":"surface-1","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-surface-1-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xx-large);padding-bottom:var(--wp--preset--spacing--large)">
 
 	<!-- wp:heading {"level":1,"textAlign":"center"} -->

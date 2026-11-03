@@ -3,7 +3,7 @@
  * Title: Subsection (H3 Constrained)
  * Slug: blockwright/subsection-constrained
  * Categories: blockwright, layout
- * Description: Canonical H3 subsection wrapper for use inside a larger section. H3 is first child with blockGap-driven spacing.
+ * Description: An H3 subsection for use inside a larger section.
  * Inserter: true
  *
  * @package Blockwright
@@ -17,7 +17,7 @@
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph -->
-	<p><?php esc_html_e( 'Subsection content goes here. This wrapper ensures consistent spacing via blockGap.', 'blockwright' ); ?></p>
+	<p><?php esc_html_e( 'Subsection content goes here.', 'blockwright' ); ?></p>
 	<!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->

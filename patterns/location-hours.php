@@ -11,11 +11,11 @@
  * @package Blockwright
  */
 ?>
-<!-- wp:group {"metadata":{"name":"Location & Hours"},"align":"full","style":{"spacing":{"blockGap":"var:preset|spacing|large","margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"surface-2","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"<?php esc_attr_e( 'Location & Hours', 'blockwright' ); ?>"},"align":"full","style":{"spacing":{"blockGap":"var:preset|spacing|large","margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"surface-2","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-surface-2-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large)">
 
-	<!-- wp:group {"align":"wide","layout":{"type":"constrained"}} -->
-	<div class="wp-block-group alignwide">
+	<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"right":"var:preset|spacing|small","left":"var:preset|spacing|small"}}},"layout":{"type":"constrained","justifyContent":"left"}} -->
+	<div class="wp-block-group alignwide" style="padding-right:var(--wp--preset--spacing--small);padding-left:var(--wp--preset--spacing--small)">
 		<!-- wp:paragraph {"className":"is-style-eyebrow","fontSize":"s"} -->
 		<p class="is-style-eyebrow has-s-font-size"><?php esc_html_e( 'Visit', 'blockwright' ); ?></p>
 		<!-- /wp:paragraph -->
@@ -40,13 +40,13 @@
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph -->
-			<p><a href="tel:+15550000000">(555) 000-0000</a><br><a href="mailto:hello@example.com"><?php esc_html_e( 'hello@example.com', 'blockwright' ); ?></a></p>
+			<p><a href="tel:+15555550100"><?php esc_html_e( '(555) 555-0100', 'blockwright' ); ?></a><br><a href="mailto:hello@example.com"><?php esc_html_e( 'hello@example.com', 'blockwright' ); ?></a></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|small"}}}} -->
 			<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--small)">
 				<!-- wp:button {"className":"is-style-outline"} -->
-				<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="https://maps.google.com/?q=123+Example+Street" target="_blank" rel="noreferrer noopener"><?php esc_html_e( 'Get directions →', 'blockwright' ); ?></a></div>
+				<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#"><?php esc_html_e( 'Get directions →', 'blockwright' ); ?></a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->
@@ -60,7 +60,7 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"style":{"typography":{"lineHeight":"2"}},"fontSize":"l"} -->
-			<p class="has-l-font-size" style="line-height:2"><?php esc_html_e( 'Monday-Thursday · 9:00-5:00', 'blockwright' ); ?><br><?php esc_html_e( 'Friday · 9:00-4:00', 'blockwright' ); ?><br><?php esc_html_e( 'Saturday · By appointment', 'blockwright' ); ?><br><?php esc_html_e( 'Sunday · Closed', 'blockwright' ); ?></p>
+			<p class="has-l-font-size" style="line-height:2"><?php esc_html_e( 'Monday–Thursday · 9:00–5:00', 'blockwright' ); ?><br><?php esc_html_e( 'Friday · 9:00–4:00', 'blockwright' ); ?><br><?php esc_html_e( 'Saturday · By appointment', 'blockwright' ); ?><br><?php esc_html_e( 'Sunday · Closed', 'blockwright' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->

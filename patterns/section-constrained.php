@@ -3,7 +3,7 @@
  * Title: Section (Constrained)
  * Slug: blockwright/section-constrained
  * Categories: blockwright, layout
- * Description: Canonical constrained section wrapper with consistent blockGap spacing for general page building.
+ * Description: A section at the site's content width, for general page building.
  * Inserter: true
  *
  * @package Blockwright
@@ -23,7 +23,7 @@
 	<!-- wp:buttons -->
 	<div class="wp-block-buttons">
 		<!-- wp:button -->
-		<div class="wp-block-button"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Learn more', 'blockwright' ); ?></a></div>
+		<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#"><?php esc_html_e( 'Learn more', 'blockwright' ); ?></a></div>
 		<!-- /wp:button -->
 	</div>
 	<!-- /wp:buttons -->

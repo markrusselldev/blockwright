@@ -1,6 +1,6 @@
 /* Per-block shim: verse block (theme.json schema gap). Enqueued on core/verse so it
-   loads with the block. Previously lived in code.css (enqueued on core/code and
-   core/paragraph), so a standalone verse relied on a paragraph being present. */
+   loads with the block. Keep these rules here, not in code.css: code.css is enqueued on
+   core/code and core/paragraph, so a standalone verse would render unstyled. */
 .wp-block-verse {
 	font-family: var(--wp--preset--font-family--body);
 	font-style: italic;

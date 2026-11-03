@@ -6,7 +6,7 @@
 		},
 		"typography": {
 			"fontFamily": "var:preset|font-family|body",
-			"fontSize": "var(--wp--custom--typography--body-base)",
+			"fontSize": "var:preset|font-size|base",
 			"lineHeight": "var(--wp--custom--typography--line-height-body)"
 		},
 		"spacing": {
@@ -55,7 +55,7 @@
 			"h3": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|headings",
-					"fontSize": "var:preset|font-size|l",
+					"fontSize": "var:preset|font-size|lead",
 					"fontWeight": "700",
 					"lineHeight": "1.2",
 					"letterSpacing": "var:custom|typography|letter-spacing-tight"
@@ -67,7 +67,7 @@
 			"h4": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|headings",
-					"fontSize": "var:preset|font-size|m",
+					"fontSize": "var:preset|font-size|l",
 					"fontWeight": "700",
 					"lineHeight": "1.25",
 					"letterSpacing": "var:custom|typography|letter-spacing-tight"
@@ -79,7 +79,7 @@
 			"h5": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|headings",
-					"fontSize": "var:preset|font-size|s",
+					"fontSize": "var:preset|font-size|base",
 					"fontWeight": "700",
 					"lineHeight": "1.3",
 					"letterSpacing": "var:custom|typography|letter-spacing-tight"
@@ -91,10 +91,11 @@
 			"h6": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|headings",
-					"fontSize": "var:preset|font-size|xs",
+					"fontSize": "var:preset|font-size|base",
 					"fontWeight": "700",
 					"lineHeight": "1.35",
-					"letterSpacing": "var:custom|typography|letter-spacing-tight"
+					"letterSpacing": "var:custom|eyebrow|tracking",
+					"textTransform": "uppercase"
 				},
 				"color": {
 					"text": "var:preset|color|text-1"
@@ -131,8 +132,18 @@
 			},
 			"button": {
 				"color": {
-					"background": "var(--wp--custom--button--default--bg)",
-					"text": "var(--wp--custom--button--default--text)"
+					"background": "var(--wp--custom--button--fill--bg)",
+					"text": "var(--wp--custom--button--fill--text)"
+				},
+				":hover": {
+					"color": {
+						"background": "var(--wp--custom--button--fill--bg-hover)"
+					}
+				},
+				":active": {
+					"color": {
+						"background": "var(--wp--custom--button--fill--bg-active)"
+					}
 				},
 				"border": {
 					"radius": "var(--wp--custom--button--radius)"
